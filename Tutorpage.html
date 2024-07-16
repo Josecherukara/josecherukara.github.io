@@ -45,11 +45,15 @@
         }
         .container {
             max-width: 1000px;
+            width:100%;
             margin: 80px auto 30px;
             padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .IMage{
+            width:90%;
         }
         h1, h2, h3 {
             color: #3498db;
@@ -61,7 +65,7 @@
             list-style-type: disc;
             margin-left: 20px;
         }
-        @media (max-width: 768px) {
+        /*@media (max-width: 768px) {
             .fixed-header {
                 flex-direction: column;
             }
@@ -70,6 +74,11 @@
             }
             nav ul li {
                 padding: 5px;
+            }
+        }*/
+        @media (max-width: 768px) {
+            .flex-item {
+                width: 100%;
             }
         }
     </style>
@@ -99,7 +108,7 @@
             <ul>
                 <a href="Honours Physics Syllabus.pdf"><h3> Syllabus</h3></a>
                 <h3>Time Table</h3>
-                <a href="Timetable.jpg" target="_blank"><img src="Timetable.jpg" alt="Timetable"></a>
+                <a href="Timetable.jpg" target="_blank" ><img src="Timetable.jpg" alt="Timetable" class="IMage"></a>
                 
             </ul>
         </section>

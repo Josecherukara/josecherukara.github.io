@@ -189,8 +189,8 @@ nav ul li a:hover::after {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 53%;
-    bottom: auto;
+    top: auto;
+    bottom: 5%;
     text-align: right;
     right: 0%;
     padding: 5%;
