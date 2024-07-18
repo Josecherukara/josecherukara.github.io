@@ -87,6 +87,9 @@ main {
     
     color: white;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .middle {
@@ -105,6 +108,9 @@ main {
     background-color: rgb(8, 94, 109);
     color: white;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 a {
@@ -306,7 +312,7 @@ canvas {
         height:auto;
     }
 }*/
-/* Small devices (up to 576px) */
+/* Small devices (up to 576px) 
 @media (max-width: 500px){
     body {
         background-color: #2c3e50;
@@ -411,8 +417,8 @@ canvas {
         width:100%;
         height:auto;
     }
-}
-@media (max-width: 800px){
+}*/
+@media (max-width: 850px){
     body {
         background-color: #2c3e50;
         width: 100%;
@@ -495,6 +501,9 @@ canvas {
         width:100%;
         height:100%;
         padding:3%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
     }
     .middle{
         height:100vh;
@@ -524,7 +533,7 @@ canvas {
     }
 }
 
-/* Large devices (above 992px) */
+/* Large devices (above 992px) 
 @media (min-width: 993px) {
     .content {
         margin: 5px;

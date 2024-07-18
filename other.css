@@ -174,16 +174,16 @@ footer {
     }
 }
 
-/* Medium devices (between 577px and 992px) */
+/* Medium devices (between 577px and 992px) 
 @media (min-width: 577px) and (max-width: 992px) {
     .column1, .column2 {
         width: 50%;
     }
 }
 
-/* Large devices (above 993px) */
+/* Large devices (above 993px) 
 @media (min-width: 993px) {
     .column1, .column2, .column3 {
         width: 33.33%;
     }
-}
+}*/
