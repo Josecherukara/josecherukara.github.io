@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Mechanics</title>
+    <link rel="icon" type="image/png" href="Images/JMcover.jpg"/>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .fixed-header {
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            z-index: 1;
+        }
+
+        .fixed-header .buttons {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            color: white;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f1c40f;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .custom-line {
+            width: 100%;
+            height: 2px;
+            background-color: #3498db;
+            margin: 20px 0;
+        }
+
+        header h1 {
+            margin: 10px;
+            font-size: 2.5em;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #5389bb;
+            font-size: 2.0em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #4a84aa;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.0em;
+            color: #3498db;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 20px;
+            color: #777;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .flex-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="buttons">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teachingportfolio.html">Teaching</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="others.html">Other</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <div class="section-header">
+                <br>
+                <h1>Classical Mechanics</h1>
+            </div>
+
+            <!-- Syllabus Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Syllabus</h2>
+                </div>
+                <div class="section-content">
+                    <p><b>Unit I</b> - Lagrangian formulation (14 hrs)</p>
+                    <p>1.1 Review of Newtonian Mechanics: Mechanics of a Particle; Mechanics of a System of Particles; Constraints.</p>
+                    <p>1.2 D' Alembert's principle and Lagrange’s equations; velocity-Dependent potentials and the Dissipation Function; Lagrangian for a charged particle in electromagnetic field.</p>
+                    <p>1.3 Application of Lagrange’s equation to: motion of a single particle in Cartesian coordinate system and plane polar coordinate system; bead sliding on a rotating wire.</p>
+                    <p>1.4 Hamilton’s Principle; Technique of Calculus of variations; The Brachistochrone problem.</p>
+                    <p>1.5 Derivation of Lagrange’s equations from Hamilton’s Principle.</p>
+                    <p>1.6 Canonical momentum; cyclic coordinates; Conservation laws and Symmetry properties—homogeneity of space and conservation of linear momentum; isotropy of space and conservation of angular momentum; homogeneity of time and conservation of energy; Noether’s theorem (statement only; no proof is expected).</p>
+                    <p><b>Hamiltonian formulation:</b> (4 hrs)</p>
+                    <p>1.7 Legendre Transformations; Hamilton’s canonical equations of motion; Hamiltonian for a charged particle in electromagnetic field.</p>
+                    <p>1.8 Cyclic coordinates and conservation theorems; Hamilton’s equations of motion from modified Hamilton’s principle.</p>
+
+                    <p><b>Unit II</b> - Small oscillations (8 hrs)</p>
+                    <p>2.1 Stable equilibrium, unstable equilibrium, and neutral equilibrium; motion of a system near stable equilibrium—Lagrangian of the system and equations of motion.</p>
+                    <p>2.2 Small oscillations—frequencies of free vibrations; normal coordinates and normal modes.</p>
+                    <p>2.3 System of two coupled pendula—resonant frequencies, normal modes, and normal coordinates; free vibrations of CO<sub>2</sub> molecule—resonant frequencies, normal modes, and normal coordinates.</p>
+                    <p>Canonical transformations and Poisson brackets (10 hrs)</p>
+                    <p>2.4 Equations of canonical transformations; Four basic types of generating functions and the corresponding basic canonical transformations.</p>
+                    <p>2.5 Solution of harmonic oscillator using canonical transformations.</p>
+                    <p>2.6 Poisson Brackets; Fundamental Poisson Brackets; Properties of Poisson Brackets.</p>
+                    <p>2.7 Equations of motion in Poisson Bracket form; Poisson Bracket and integrals of motion; Poisson’s theorem; Canonical invariance of the Poisson bracket.</p>
+
+                    <p><b>Unit III</b> - Central force problem (9 hrs)</p>
+                    <p>3.1 Reduction of two-body problem to one-body problem; Equation of motion for conservative central forces—angular momentum and energy as first integrals; law of equal areas.</p>
+                    <p>3.2 Equivalent one-dimensional problem—centrifugal potential; classification of orbits.</p>
+                    <p>3.3 Differential Equations for the orbit; equation of the orbit using the energy method; The Kepler Problem of the inverse square law force; Scattering in a central force field—Scattering in a Coulomb field and Rutherford scattering cross section.</p>
+
+                    <p><b>Rigid body dynamics</b> (9 hrs)</p>
+                    <p>3.4 Independent coordinates of a rigid body; Orthogonal transformations; Euler Angles.</p>
+                    <p>3.5 Infinitesimal rotations: polar and axial vectors; rate of change of vectors in space and body frames; Coriolis effect.</p>
+                    <p>3.6 Angular momentum and kinetic energy of motion about a point; Inertia tensor and the Moment of Inertia; Eigenvalues of the inertia tensor and the Principal axis transformation.</p>
+                    <p>3.7 Euler equations of motion; force-free motion of a symmetrical top.</p>
+
+                    <p><b>Unit IV</b> - Hamilton-Jacobi theory and action-angle variables (12 hrs)</p>
+                    <p>4.1 Hamilton-Jacobi Equation for Hamilton’s Principal Function; physical significance of the principal function.</p>
+                    <p>4.2 Harmonic oscillator problem using the Hamilton-Jacobi method; Hamilton-Jacobi Equation for Hamilton’s characteristic function.</p>
+                    <p>4.3 Separation of variables in the Hamilton-Jacobi Equation; Separability of a cyclic coordinate in Hamilton-Jacobi equation; Hamilton-Jacobi equation for a particle moving in a central force field (plane polar coordinates).</p>
+                    <p>4.4 Action-Angle variables; harmonic oscillator problem in action-angle variables.</p>
+
+                    <p><b>Classical mechanics of relativity</b> (6 hrs)</p>
+                    <p>4.5 Lorentz transformation in matrix form; velocity addition; Thomas precession.</p>
+                    <p>4.6 Lagrangian formulation of relativistic mechanics; Application of relativistic Lagrangian to (i) motion under a constant force, (ii) harmonic oscillator, and (iii) charged particle under constant magnetic field.</p>
+                </div>
+            </section>
+
+            <!-- Notes Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Notes</h2>
+                </div>
+                <div class="section-content">
+                    <ul>
+                        <li><a href="Classical_Mechanics_Note_1.pdf">Classical Mechanics - Note 1</a></li>
+                        <li><a href="Classical_Mechanics_Note_2.pdf">Classical Mechanics - Note 2</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Assignments Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Assignments</h2>
+                </div>
+                <div class="section-content">
+                    <ul>
+                        <li><a href="Assignment_1_Classical_Mechanics.pdf">Assignment 1 (Due Date: 30th October)</a></li>
+                        <li><a href="Assignment_2_Classical_Mechanics.pdf">Assignment 2 (Due Date: 15th November)</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Exams Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Exams</h2>
+                </div>
+                <div class="section-content">
+                    <ul>
+                        <li><a href="Classical_Mechanics_Midterm_Exam.pdf">Midterm Exam</a></li>
+                        <li><a href="Classical_Mechanics_Final_Exam.pdf">Final Exam</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="button-container">
+                <a href="teachingportfolio.html" class="button">Back to Teaching Portfolio</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

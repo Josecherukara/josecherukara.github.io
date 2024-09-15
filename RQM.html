@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relativistic Quantum Mechanics</title>
+    <link rel="icon" type="image/png" href="Images/JMcover.jpg"/>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .fixed-header {
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            z-index: 1;
+        }
+
+        .fixed-header .buttons {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            color: white;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f1c40f;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #5389bb;
+        }
+
+        h3 {
+            color: #3498db;
+            font-size: 1.2em;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="buttons">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teachingportfolio.html">Teaching</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="others.html">Other</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Syllabus Section -->
+        <section class="section">
+            <div class="section-header">
+                <br>
+                <h1>Relativistic Quantum Mechanics - Syllabus</h1>
+            </div>
+            <div class="section-content">
+                <p>The syllabus will be updated soon.</p>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Notes</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="Note_1_RelativisticQuantumMechanics.pdf">Relativistic Quantum Mechanics - Note 1</a></li>
+                    <li><a href="Note_2_RelativisticQuantumMechanics.pdf">Relativistic Quantum Mechanics - Note 2</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Assignments Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Assignments</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="Assig_I_RelativisticQuantumMechanics.pdf">Assignment 1</a></li>
+                    <li><a href="Assig_2_RelativisticQuantumMechanics.pdf">Assignment 2</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Exams Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Exams</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="RelativisticQuantumMechanics_Midterm.pdf">Midterm Exam</a></li>
+                    <li><a href="RelativisticQuantumMechanics_Final.pdf">Final Exam</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <a href="teachingportfolio.html" class="button">Back to Teaching Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>

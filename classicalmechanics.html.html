@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Mechanics</title>
+    <link rel="icon" type="image/png" href="Images/JMcover.jpg"/>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        .fixed-header {
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            z-index: 1;
+        }
+
+        .fixed-header .buttons {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            color: white;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #5389bb;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="buttons">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teachingportfolio.html">Teaching</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="others.html">Other</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Classical Mechanics</h1>
+
+        <h2>Course Syllabus</h2>
+        <p><strong>UNIT I: Lagrangian Formulation (14 hrs)</strong></p>
+        <ul>
+            <li>1.1 Review of Newtonian Mechanics: Mechanics of a Particle; Mechanics of a System of Particles; Constraints.</li>
+            <li>1.2 D' Alembert's principle and Lagrange’s equations; velocity-Dependent potentials and the Dissipation Function.</li>
+            <li>1.3 Application of Lagrange’s equation to: motion of a single particle in Cartesian coordinate system and plane polar coordinate system; bead sliding on a rotating wire.</li>
+            <li>1.4 Hamilton’s Principle; Calculus of variations.</li>
+            <li>1.5 Canonical momentum, cyclic coordinates, and Conservation laws.</li>
+        </ul>
+
+        <p><strong>UNIT II: Small Oscillations (8 hrs)</strong></p>
+        <ul>
+            <li>2.1 Stable equilibrium and unstable equilibrium; motion near stable equilibrium.</li>
+            <li>2.2 Small oscillations, resonant frequencies, normal modes, and coordinates.</li>
+        </ul>
+
+        <p><strong>UNIT III: Central Force Problem (9 hrs)</strong></p>
+        <ul>
+            <li>3.1 Reduction of two-body problem to one-body problem.</li>
+            <li>3.2 Equation of motion for conservative central forces; energy and angular momentum conservation.</li>
+        </ul>
+
+        <p><strong>UNIT IV: Hamilton-Jacobi Theory (12 hrs)</strong></p>
+        <ul>
+            <li>4.1 Hamilton-Jacobi Equation for Hamilton’s Principal Function.</li>
+            <li>4.2 Action-Angle variables; harmonic oscillator problem in action-angle variables.</li>
+        </ul>
+
+        <div class="button-container">
+            <a href="index.html" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
