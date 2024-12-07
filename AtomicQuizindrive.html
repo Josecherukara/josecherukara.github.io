@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+   
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <h1>Physics Quiz</h1>
+    <form id="quiz-form">
+        <fieldset>
+            <legend><h3>Participant Details</h3></legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="roll-number">Roll Number:</label>
+            <input type="text" id="roll-number" name="rollNumber" required><br><br>
+
+            <label for="class">Class:</label>
+            <input type="text" id="class" name="class" required><br><br>
+        </fieldset>
+        <!-- Questions -->
+        <fieldset>
+        <div>
+            <h3>1. The degeneracy of energy levels in a hydrogen atom for a given \( n \) is:</h3>
+            <label><input type="radio" name="q1" value="A"> \( n^2 \)</label><br>
+            <label><input type="radio" name="q1" value="B"> \( 2n^2 \)</label><br>
+            <label><input type="radio" name="q1" value="C"> \( n \)</label><br>
+            <label><input type="radio" name="q1" value="D"> \( 2n - 1 \)</label>
+        </div>
+        <div>
+            <h3>2. The radial wavefunction \( R(r) \) for the hydrogen atom is dependent on:</h3>
+            <label><input type="radio" name="q2" value="A"> \( n \) only</label><br>
+            <label><input type="radio" name="q2" value="B"> \( l \) only</label><br>
+            <label><input type="radio" name="q2" value="C"> Both \( n \) and \( l \)</label><br>
+            <label><input type="radio" name="q2" value="D"> Neither \( n \) nor \( l \)</label>
+        </div>
+        <div>
+            <h3>3. The azimuthal quantum number \( l \) defines the:</h3>
+            <label><input type="radio" name="q3" value="A"> Total energy of the electron</label><br>
+            <label><input type="radio" name="q3" value="B"> Probability density at the nucleus</label><br>
+            <label><input type="radio" name="q3" value="C"> Magnitude of orbital angular momentum</label><br>
+            <label><input type="radio" name="q3" value="D"> Number of nodes in the wavefunction</label>
+        </div>
+        <div>
+            <h3>4. In the spectra of alkali metals, the deviation from the hydrogen spectrum is due to:</h3>
+            <label><input type="radio" name="q4" value="A"> Increased nuclear charge</label><br>
+            <label><input type="radio" name="q4" value="B"> Core penetration and shielding</label><br>
+            <label><input type="radio" name="q4" value="C"> Higher angular momentum states</label><br>
+            <label><input type="radio" name="q4" value="D"> Absence of \( d \)-orbitals</label>
+        </div>
+        <div>
+            <h3>5. For a hydrogen atom, the probability of finding an electron at the nucleus is:</h3>
+            <label><input type="radio" name="q5" value="A"> Maximum for \( l = 0 \)</label><br>
+            <label><input type="radio" name="q5" value="B"> Zero for \( l = 0 \)</label><br>
+            <label><input type="radio" name="q5" value="C"> Maximum for \( l = 1 \)</label><br>
+            <label><input type="radio" name="q5" value="D"> Independent of \( l \)</label>
+        </div>
+        <div>
+            <h3>6. The spin-orbit coupling energy for a hydrogen-like atom is proportional to:</h3>
+            <label><input type="radio" name="q6" value="A"> \( \frac{Z}{n^2} \)</label><br>
+            <label><input type="radio" name="q6" value="B"> \( \frac{Z^2}{n} \)</label><br>
+            <label><input type="radio" name="q6" value="C"> \( \frac{n}{Z} \)</label><br>
+            <label><input type="radio" name="q6" value="D"> \( \frac{1}{Z \cdot n^2} \)</label>
+        </div>
+        <div>
+            <h3>7. How can the component of \( \mathbf{L} \) in the direction of \( \mathbf{J} \) be obtained?</h3>
+            <label><input type="radio" name="q31" value="A"> By projecting \( \mathbf{L} \) along \( \mathbf{J} \) using \( \mathbf{L} \cdot \mathbf{J} \)</label><br>
+            <label><input type="radio" name="q31" value="B"> Using the commutator of \( \mathbf{L} \) and \( \mathbf{J} \)</label><br>
+            <label><input type="radio" name="q31" value="C"> By using the relation \( L_J = \frac{\mathbf{L} \cdot \mathbf{J}}{|\mathbf{J}|} \)</label><br>
+            <label><input type="radio" name="q31" value="D"> By solving the eigenvalue equation for \( \mathbf{L} \) in the basis of \( \mathbf{J} \)</label>
+        </div>
+        <div>
+            <h3>8. How can \( \mathbf{L} \cdot \mathbf{J} \) be obtained?</h3>
+            <label><input type="radio" name="q32" value="A"> By using the equation \( \mathbf{J} = \mathbf{L} + \mathbf{S} \) and calculating \( (\mathbf{J} - \mathbf{L}) \cdot (\mathbf{J} - \mathbf{L}) = \mathbf{S} \cdot \mathbf{S} \)</label><br>
+            <label><input type="radio" name="q32" value="B"> By expanding \( \mathbf{J} \cdot \mathbf{J} = \mathbf{L} \cdot \mathbf{L} + \mathbf{S} \cdot \mathbf{S} + 2 \mathbf{L} \cdot \mathbf{S} \) and isolating \( \mathbf{L} \cdot \mathbf{J} \)</label><br>
+            <label><input type="radio" name="q32" value="C"> By directly measuring the projection of \( \mathbf{L} \) on \( \mathbf{J} \) in experimental data</label><br>
+            <label><input type="radio" name="q32" value="D"> By solving eigenvalue equations for \( \mathbf{L} \) and \( \mathbf{J} \)</label>
+        </div>
+        <div>
+            <h3>9. The magnetic quantum numbers \( m_l \) and \( m_s \) define the:</h3>
+            <label><input type="radio" name="q33" value="A"> Total angular momentum \( J_z \)</label><br>
+            <label><input type="radio" name="q33" value="B"> Orbital angular momentum \( L \)</label><br>
+            <label><input type="radio" name="q33" value="C"> Components of angular momentum \( L_z \) and spin angular momentum \( S_z \)</label><br>
+            <label><input type="radio" name="q33" value="D"> Radial probability distribution</label>
+        </div>
+        
+        <div>
+            <h3>10. Fine structure splitting in a sodium atom is more prominent than in hydrogen due to:</h3>
+            <label><input type="radio" name="q7" value="A"> Higher nuclear charge and penetration effects</label><br>
+            <label><input type="radio" name="q7" value="B"> Stronger Zeeman splitting</label><br>
+            <label><input type="radio" name="q7" value="C"> Larger \( s \)-orbitals</label><br>
+            <label><input type="radio" name="q7" value="D"> Weak spin-orbit interaction</label>
+        </div>
+        <div>
+            <h3>11. In the spin-orbit interaction, the effective magnetic field experienced by the electron is due to:</h3>
+            <label><input type="radio" name="q8" value="A"> The nucleus</label><br>
+            <label><input type="radio" name="q8" value="B"> Orbital motion of the electron</label><br>
+            <label><input type="radio" name="q8" value="C"> External magnetic field</label><br>
+            <label><input type="radio" name="q8" value="D"> Hyperfine interactions</label>
+        </div>
+        <div>
+            <h3>12. Fine structure in sodium \( D \)-lines is characterized by:</h3>
+            <label><input type="radio" name="q9" value="A"> Equal energy spacing between \( D_1 \) and \( D_2 \)</label><br>
+            <label><input type="radio" name="q9" value="B"> Unequal energy spacing due to \( j = l \pm s \)</label><br>
+            <label><input type="radio" name="q9" value="C"> Splitting into multiple components</label><br>
+            <label><input type="radio" name="q9" value="D"> Zeeman effect dominance</label>
+        </div>
+        <div>
+            <h3>13. The normal Zeeman effect occurs when:</h3>
+            <label><input type="radio" name="q11" value="A"> Spin angular momentum \( s = 0 \)</label><br>
+            <label><input type="radio" name="q11" value="B"> \( j = l + s \)</label><br>
+            <label><input type="radio" name="q11" value="C"> Spin-orbit coupling dominates</label><br>
+            <label><input type="radio" name="q11" value="D"> Nuclear spin contributes significantly</label>
+        </div>
+        <!-- Repeat the above format for remaining questions: 12, 13, 14, ..., 30 -->
+        <div>
+            <h3>14. In the anomalous Zeeman effect, the number of spectral lines observed depends on:</h3>
+            <label><input type="radio" name="q12" value="A"> \( n \) and \( m_l \)</label><br>
+            <label><input type="radio" name="q12" value="B"> \( j \), \( m_j \), and \( g \)-factor</label><br>
+            <label><input type="radio" name="q12" value="C"> \( l \) and \( s \)</label><br>
+            <label><input type="radio" name="q12" value="D"> The Landé interval rule</label>
+        </div>
+        <div>
+            <h3>15. For a hydrogen atom in a magnetic field, the energy shift is given by:</h3>
+            <label><input type="radio" name="q13" value="A"> \( \mu_B m_l B \)</label><br>
+            <label><input type="radio" name="q13" value="B"> \( \mu_B l B \)</label><br>
+            <label><input type="radio" name="q13" value="C"> \( g \mu_B j B \)</label><br>
+            <label><input type="radio" name="q13" value="D"> \( g \mu_B m_j B \)</label>
+        </div>
+        <div>
+            <h3>16. The Landé \( g \)-factor for a \( p \)-electron is:</h3>
+            <label><input type="radio" name="q14" value="A"> 1</label><br>
+            <label><input type="radio" name="q14" value="B"> 2</label><br>
+            <label><input type="radio" name="q14" value="C"> \( 1 + \frac{3}{4} \)</label><br>
+            <label><input type="radio" name="q14" value="D"> \( \frac{1}{2} \)</label>
+        </div>
+        <div>
+            <h3>17. The Zeeman effect is reduced to the Paschen–Back effect when:</h3>
+            <label><input type="radio" name="q15" value="A"> The spin-orbit coupling is negligible compared to the magnetic field strength</label><br>
+            <label><input type="radio" name="q15" value="B"> The magnetic field is weak</label><br>
+            <label><input type="radio" name="q15" value="C"> Quadratic terms dominate</label><br>
+            <label><input type="radio" name="q15" value="D"> The nucleus has spin</label>
+        </div>
+        <div>
+            <h3>18. In the Paschen–Back effect, the \( m_l \) and \( m_s \) values:</h3>
+            <label><input type="radio" name="q16" value="A"> Are coupled strongly</label><br>
+            <label><input type="radio" name="q16" value="B"> Become independent of each other</label><br>
+            <label><input type="radio" name="q16" value="C"> Are zero</label><br>
+            <label><input type="radio" name="q16" value="D"> Contribute equally</label>
+        </div>
+        <div>
+            <h3>19. The splitting of sodium \( D \)-lines in the Paschen–Back effect results in:</h3>
+            <label><input type="radio" name="q17" value="A"> A single line</label><br>
+            <label><input type="radio" name="q17" value="B"> Four equally spaced lines</label><br>
+            <label><input type="radio" name="q17" value="C"> Two doublets separated by a constant energy gap</label><br>
+            <label><input type="radio" name="q17" value="D"> A continuum spectrum</label>
+        </div>
+        <div>
+            <h3>20. The Stark effect splits spectral lines into components due to:</h3>
+            <label><input type="radio" name="q18" value="A"> Spin-orbit coupling</label><br>
+            <label><input type="radio" name="q18" value="B"> Interaction with an external electric field</label><br>
+            <label><input type="radio" name="q18" value="C"> Zeeman splitting</label><br>
+            <label><input type="radio" name="q18" value="D"> Hyperfine interaction</label>
+        </div>
+        <div>
+            <h3>21. The quadratic Stark effect is significant for:</h3>
+            <label><input type="radio" name="q19" value="A"> Ground state energy levels</label><br>
+            <label><input type="radio" name="q19" value="B"> States with \( n \gg 1 \)</label><br>
+            <label><input type="radio" name="q19" value="C"> Linear polarization of light</label><br>
+            <label><input type="radio" name="q19" value="D"> Weak electric fields</label>
+        </div>
+        <div>
+            <h3>22. The \( L \)-\( S \) coupling scheme is valid when:</h3>
+            <label><input type="radio" name="q21" value="A"> Spin-orbit coupling dominates</label><br>
+            <label><input type="radio" name="q21" value="B"> Orbital and spin angular momenta are separately conserved</label><br>
+            <label><input type="radio" name="q21" value="C"> Nuclear spin dominates</label><br>
+            <label><input type="radio" name="q21" value="D"> External magnetic fields are strong</label>
+        </div>
+        <div>
+            <h3>23. For two equivalent \( s \)-electrons, the allowed spectroscopic terms are:</h3>
+            <label><input type="radio" name="q23" value="A"> \( ^1S \) only</label><br>
+            <label><input type="radio" name="q23" value="B"> \( ^3P \) and \( ^1P \)</label><br>
+            <label><input type="radio" name="q23" value="C"> \( ^1S \) and \( ^3P \)</label><br>
+            <label><input type="radio" name="q23" value="D"> \( ^3S \) and \( ^1P \)</label>
+        </div>
+        <div>
+            <h3>24. The energy difference between two \( j \)-levels in \( j \)-\( j \) coupling is proportional to:</h3>
+            <label><input type="radio" name="q24" value="A"> \( j \)</label><br>
+            <label><input type="radio" name="q24" value="B"> \( \frac{1}{j(j + 1)} \)</label><br>
+            <label><input type="radio" name="q24" value="C"> \( j(j + 1) \)</label><br>
+            <label><input type="radio" name="q24" value="D"> \( \sqrt{j(j + 1)} \)</label>
+        </div>
+        <div>
+            <h3>25. Hund’s rule predicts the ground state configuration by maximizing:</h3>
+            <label><input type="radio" name="q25" value="A"> Orbital angular momentum</label><br>
+            <label><input type="radio" name="q25" value="B"> Total spin and orbital angular momenta</label><br>
+            <label><input type="radio" name="q25" value="C"> Energy splitting</label><br>
+            <label><input type="radio" name="q25" value="D"> Fine structure levels</label>
+        </div>
+        <div>
+            <h3>26. Hyperfine structure in hydrogen is due to:</h3>
+            <label><input type="radio" name="q26" value="A"> Nuclear spin coupling with electron spin</label><br>
+            <label><input type="radio" name="q26" value="B"> Relativistic effects</label><br>
+            <label><input type="radio" name="q26" value="C"> Quadratic Stark effect</label><br>
+            <label><input type="radio" name="q26" value="D"> Fine structure splitting</label>
+        </div>
+        <div>
+            <h3>27. The hyperfine splitting in alkali metals is larger than in hydrogen because:</h3>
+            <label><input type="radio" name="q27" value="A"> Higher nuclear spin and charge density</label><br>
+            <label><input type="radio" name="q27" value="B"> Stronger spin-orbit coupling</label><br>
+            <label><input type="radio" name="q27" value="C"> Penetrating orbits dominate</label><br>
+            <label><input type="radio" name="q27" value="D"> Weak nuclear spin</label>
+        </div>
+        <div>
+            <h3>28. In the hyperfine structure, the total angular momentum \( F \) is given by:</h3>
+            <label><input type="radio" name="q28" value="A"> \( F = I + J \)</label><br>
+            <label><input type="radio" name="q28" value="B"> \( F = J + L \)</label><br>
+            <label><input type="radio" name="q28" value="C"> \( F = L + S \)</label><br>
+            <label><input type="radio" name="q28" value="D"> \( F = J - S \)</label>
+        </div>
+        <div>
+            <h3>29. The hyperfine structure splitting in a spectrum is proportional to:</h3>
+            <label><input type="radio" name="q29" value="A"> Nuclear charge and \( S \)</label><br>
+            <label><input type="radio" name="q29" value="B"> \( I \cdot J \)</label><br>
+            <label><input type="radio" name="q29" value="C"> \( n^2 / Z \)</label><br>
+            <label><input type="radio" name="q29" value="D"> \( m_s \cdot m_l \)</label>
+        </div>
+        <div>
+            <h3>30. The hydrogen hyperfine transition at 21 cm is caused by:</h3>
+            <label><input type="radio" name="q30" value="A"> Quadrupole splitting</label><br>
+            <label><input type="radio" name="q30" value="B"> Magnetic dipole interaction</label><br>
+            <label><input type="radio" name="q30" value="C"> Spin-orbit coupling</label><br>
+            <label><input type="radio" name="q30" value="D"> Zeeman effect</label>
+        </div>
+    </fieldset>
+    <h2>Download the excel file on your machine and upload it to the google form provided below</h2>
+    <button type="button" onclick="submitQuiz()">Submit and Download</button>
+</form>
+<p>
+    <a href="https://forms.gle/McvaDYB1vibnL3ZU7" target="_blank" style="font-size: 18px; color: blue; text-decoration: underline;">
+        Upload the excel file
+    </a>
+</p>
+<script>
+    function submitQuiz() {
+        const form = document.getElementById('quiz-form');
+        const formData = new FormData(form);
+        const details = {
+            Name: formData.get("name"),
+            Email: formData.get("email"),
+            RollNumber: formData.get("rollNumber"),
+            Class: formData.get("class"),
+        };
+
+        const answers = {};
+        formData.forEach((value, key) => {
+            if (!["name", "email", "rollNumber", "class"].includes(key)) {
+                answers[key] = value;
+            }
+        });
+
+        const worksheetData = [["Field", "Response"]];
+        for (const [key, value] of Object.entries(details)) {
+            worksheetData.push([key, value]);
+        }
+        worksheetData.push([], ["Question", "Selected Answer"]);
+        for (const [key, value] of Object.entries(answers)) {
+            worksheetData.push([key, value]);
+        }
+
+        const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Quiz Answers");
+
+        XLSX.writeFile(workbook, "quiz_answers.xlsx");
+    }
+</script>
+</body>
+</html>
