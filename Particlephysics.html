@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Physics</title>
+    <link rel="icon" type="image/png" href="Images/JMcover.jpg"/>
+    <style>
+        body{
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .fixed-header {
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            z-index: 1;
+        }
+
+        .fixed-header .buttons {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            color: white;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f1c40f;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #5389bb;
+        }
+
+        h3 {
+            color: #3498db;
+            font-size: 1.2em;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="buttons">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teachingportfolio.html">Teaching</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="others.html">Other</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Syllabus Section -->
+        <section class="section">
+            <div class="section-header">
+                <br>
+                <h1>Particle Physics Syllabus- Syllabus</h1>
+            </div>
+            <h2>
+                Prerequisits (You can skip this if you want)
+            </h2>
+            <div class="section-content">
+                <p>Interactions and Particles - Leptons - Neutrinos and Antineutrinos, other leptons - 
+                    Hadrons - Resonance particles - Elementary particle quantum numbers - Basic 
+                    concepts of symmetries and conservation principles - Basic concepts of Quarks - color,  
+                    flavor, Quark confinement - Higgs boson   </p>
+            </div>
+        </section>
+            <h2>Syllabus</h2>
+            <div class="section-content">
+                <p>4.1 Yukawa’s  hypothesis; properties of pi mesons- electric charge, isospin, mass, 
+                    spin and parity.  4.2 Decay modes and production of pi-mesons 4.3 Types of 
+                    interactions between elementary particles, Hadrons and leptons .4.4 Symmetries and 
+                    conservation laws, C P and CPT invariance, applications of symmetry arguments to 
+                    particle reactions, parity non-conservation in weak interactions.4.5 Quark model, 
+                    confined quarks, coloured quarks and gluons, experimental evidences for quark 
+                    model, quark-gluon interaction, quark dynamics.4.6 Grand unified theories, standard 
+                    model of particle physics.</p>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Notes</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="Particle_Physics_Notes_0.pdf">Interactions and Particles - Basic classification</a></li>
+                </ul>
+            </div>
+        </section>
+
+         <!-- Notes Section -->
+         <section class="section">
+            <div class="section-header">
+                <h2>Video Lectures</h2>
+                <p>
+                    Note that these were made in a hurry due to the pressure to complete portions
+                </p>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="https://youtu.be/Zty1aOLGwUc?si=R8uCTfWHsrDmhcJv">Pre requisits</a></li>
+                        <a href="https://nitsri.ac.in/department/PHYSICS/Beiser_Modern_Physics.pdf">Book followed is Arthur Beiser</a>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Assignments Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Assignments</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="Assig_I_AtomicMolecularSpectra.pdf">Assignment 1</a></li>
+                    <li><a href="Assig_2_AtomicMolecularSpectra.pdf">Assignment 2</a></li>
+                    <li><a href="Assig_I_AtomicMolecularSpectra.pdf">Assignment 3</a></li>
+                    <li><a href="Assig_2_AtomicMolecularSpectra.pdf">Assignment 4</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Exams Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Exams</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="AtomicMolecularSpectra_Midterm.pdf">Midterm Exam</a></li>
+                    <li><a href="AtomicMolecularSpectra_Final.pdf">Final Exam (University Exam)</a></li>
+                </ul>
+            </div>
+            <div class="section-header">
+                <h2>Quizes</h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="Quiz 1_Atomic Spectroscopy.html">Quiz 0</a></li>
+                    <li><a href="Quiz 1_Atomic Spectroscopy.html">Quiz 1</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <a href="teachingportfolio.html" class="button">Back to Teaching Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>
