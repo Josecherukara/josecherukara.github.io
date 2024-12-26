@@ -171,6 +171,32 @@
     background-color: #2980b9;
     transform: scale(1.05);
 }
+.custom-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: #003366; /* Primary color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.custom-button:hover {
+    background-color: #00509e; /* Slightly lighter shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.custom-button:active {
+    background-color: #002244; /* Darker shade when clicked */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transform: translateY(1px); /* Pressed effect */
+}
+
 
         footer {
             text-align: center;
@@ -232,10 +258,22 @@
             <div class="section-content">
                 <p>BSc Physics 2019-22</p>
                 <p>MSc Physics 2022-24</p>
-                <a href="Tutorpage.html">BSc Honours Physics 2024-</a>
+                <a href="Tutorpage.html" class="custom-button">BSc Honours Physics 2024-28</a>
+                <!--<a href="Tutorpage.html">BSc Honours Physics 2024-</a>-->
             </div>
         </section>
-         <!-- Course Navigation Buttons -->
+        <section class="section">
+            <div class="section-header">
+                <h1>For Competitive Exams</h1>
+            </div>
+            <div class="section-content">
+                <div class="button-container">
+                    <a href="Physics Renick Quiz.html" class="button">JAM, JEST and NET Quiz 0</a>
+            
+                </div>
+            </div>
+        </section>
+        <!-- Course Navigation Buttons -->
          <section class="section">
             <div class="section-header">
                 <h1>Courses handling in 2024-2025 Even Semester</h1>
@@ -247,6 +285,7 @@
                     <a href="MaterialScPracticals.html" class="button">Material Science Practicals</a>
                 </div>
             </div>
+
         </section>
         <!-- Course Navigation Buttons -->
         <section class="section">
