@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Thermodynamics Quiz</h1>
+    <form id="quiz-form">
+        <fieldset>
+            <legend><h3>Participant Details</h3></legend>
+            <label>Name:</label>
+            <input type="text" name="name" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required><br><br>
+            <label>Roll Number:</label>
+            <input type="text" name="rollNumber" required><br><br>
+            <label>Class:</label>
+            <input type="text" name="class" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <!-- Start of 8 Additional Thermodynamics Quiz Questions -->
+
+<div>
+    <h3>1. Real gases differ from ideal gases mainly because:</h3>
+    <label><input type="radio" name="real_gases_diff" value="A" data-marks="0"> They follow Boyle’s law</label><br>
+    <label><input type="radio" name="real_gases_diff" value="B" data-marks="0"> Their molecules move randomly</label><br>
+    <label><input type="radio" name="real_gases_diff" value="C" data-marks="1"> They experience intermolecular attractions and have volume</label><br>
+    <label><input type="radio" name="real_gases_diff" value="D" data-marks="0"> Their pressure is always low</label>
+</div>
+
+<div>
+    <h3>2. The two-phase region of a gas refers to:</h3>
+    <label><input type="radio" name="two_phase_region" value="A" data-marks="1"> Coexistence of liquid and vapor states</label><br>
+    <label><input type="radio" name="two_phase_region" value="B" data-marks="0"> Region where gas is ideal</label><br>
+    <label><input type="radio" name="two_phase_region" value="C" data-marks="0"> Solid and liquid equilibrium</label><br>
+    <label><input type="radio" name="two_phase_region" value="D" data-marks="0"> Region of zero pressure</label>
+</div>
+
+<div>
+    <h3>3. Critical constants (Pc, Vc, Tc) for gases indicate:</h3>
+    <label><input type="radio" name="critical_constants" value="A" data-marks="0"> Ideal behavior of gases</label><br>
+    <label><input type="radio" name="critical_constants" value="B" data-marks="1"> Conditions at critical point for gas liquefaction</label><br>
+    <label><input type="radio" name="critical_constants" value="C" data-marks="0"> The point where gas behaves ideally at high pressure</label><br>
+    <label><input type="radio" name="critical_constants" value="D" data-marks="0"> Temperature where gas solidifies directly</label>
+</div>
+
+<div>
+    <h3>4. The Van der Waals equation modifies ideal gas law by introducing:</h3>
+    <label><input type="radio" name="vdw_modifications" value="A" data-marks="0"> Gravitational forces</label><br>
+    <label><input type="radio" name="vdw_modifications" value="B" data-marks="0"> Electric forces</label><br>
+    <label><input type="radio" name="vdw_modifications" value="C" data-marks="1"> Correction for molecular attraction and volume</label><br>
+    <label><input type="radio" name="vdw_modifications" value="D" data-marks="0"> Magnetic forces</label>
+</div>
+
+<div>
+    <h3>5. What happens at temperatures above the critical temperature?</h3>
+    <label><input type="radio" name="above_critical_temp" value="A" data-marks="1"> Gas cannot be liquefied by pressure alone</label><br>
+    <label><input type="radio" name="above_critical_temp" value="B" data-marks="0"> Gas behaves ideally</label><br>
+    <label><input type="radio" name="above_critical_temp" value="C" data-marks="0"> Gas solidifies immediately</label><br>
+    <label><input type="radio" name="above_critical_temp" value="D" data-marks="0"> Gas volume becomes zero</label>
+</div>
+
+<div>
+    <h3>6. Limitations of Van der Waals equation are evident particularly at:</h3>
+    <label><input type="radio" name="vdw_limitations" value="A" data-marks="0"> Moderate pressures and temperatures</label><br>
+    <label><input type="radio" name="vdw_limitations" value="B" data-marks="0"> Ideal conditions only</label><br>
+    <label><input type="radio" name="vdw_limitations" value="C" data-marks="0"> Conditions well-predicted by ideal gas law</label><br>
+    <label><input type="radio" name="vdw_limitations" value="D" data-marks="1"> High pressures and very low temperatures</label>
+</div>
+
+<div>
+    <h3>7. Van der Waals isotherms show a flat region indicating:</h3>
+    <label><input type="radio" name="vdw_isotherms" value="A" data-marks="0"> Gas behavior at high temperatures</label><br>
+    <label><input type="radio" name="vdw_isotherms" value="B" data-marks="0"> Solid phase</label><br>
+    <label><input type="radio" name="vdw_isotherms" value="C" data-marks="1"> Phase transition between liquid and vapor</label><br>
+    <label><input type="radio" name="vdw_isotherms" value="D" data-marks="0"> Infinite compressibility of gas</label>
+</div>
+
+<div>
+    <h3>8. The critical state in gases refers to:</h3>
+    <label><input type="radio" name="critical_state" value="A" data-marks="0"> Gas at maximum volume</label><br>
+    <label><input type="radio" name="critical_state" value="B" data-marks="1"> Unique conditions of pressure, volume, and temperature at which gas and liquid phases become indistinguishable</label><br>
+    <label><input type="radio" name="critical_state" value="C" data-marks="0"> Lowest possible temperature</label><br>
+    <label><input type="radio" name="critical_state" value="D" data-marks="0"> Highest possible pressure</label>
+</div>
+
+<!-- End of 8 Additional Thermodynamics Quiz Questions -->
+
+            <div>
+                <h3>9. What exactly does Andrew's experiment demonstrate?</h3>
+                <label><input type="radio" name="andrews_exp" value="A" data-marks="0"> Behavior of ideal gases under low pressures</label><br>
+                <label><input type="radio" name="andrews_exp" value="B" data-marks="1"> Critical phenomena and gas liquefaction in real gases</label><br>
+                <label><input type="radio" name="andrews_exp" value="C" data-marks="0"> Molecular diffusion rates of gases</label><br>
+                <label><input type="radio" name="andrews_exp" value="D" data-marks="0"> Ideal gas law validity under high temperature</label>
+            </div>
+            <div>
+                <h3>10. What does Andrew's experiment involve?</h3>
+                <label><input type="radio" name="andrews_experiment" value="A" data-marks="1"> Measuring pressure using air as a manometer ✅</label><br>
+                <label><input type="radio" name="andrews_experiment" value="B" data-marks="0"> Measuring temperature changes in ideal gases</label><br>
+                <label><input type="radio" name="andrews_experiment" value="C" data-marks="0"> Measuring the speed of gas molecules</label><br>
+                <label><input type="radio" name="andrews_experiment" value="D" data-marks="0"> Determining molecular weights of gases</label>
+            </div>
+            <!-- Question 1 -->
+<div>
+    <h3>11. A thermodynamic system refers to:</h3>
+    <label><input type="radio" name="q1" value="A" data-marks="1"> A region or quantity of matter chosen for study</label><br>
+    <label><input type="radio" name="q1" value="B" data-marks="0"> The entire universe excluding surroundings</label><br>
+    <label><input type="radio" name="q1" value="C" data-marks="0"> Only gases undergoing expansion</label><br>
+    <label><input type="radio" name="q1" value="D" data-marks="0"> A solid-liquid boundary</label>
+</div>
+
+<!-- Question 2 -->
+<div>
+    <h3>12. Surroundings in thermodynamics typically mean:</h3>
+    <label><input type="radio" name="q2" value="A" data-marks="0"> Internal components of a system</label><br>
+    <label><input type="radio" name="q2" value="B" data-marks="1"> Everything external to the system boundaries</label><br>
+    <label><input type="radio" name="q2" value="C" data-marks="0"> The internal energy of the system</label><br>
+    <label><input type="radio" name="q2" value="D" data-marks="0"> Part of the system under high pressure</label>
+</div>
+
+<!-- Question 3 -->
+<div>
+    <h3>13. An intensive thermodynamic variable is:</h3>
+    <label><input type="radio" name="q3" value="A" data-marks="0"> Volume</label><br>
+    <label><input type="radio" name="q3" value="B" data-marks="1"> Temperature</label><br>
+    <label><input type="radio" name="q3" value="C" data-marks="0"> Mass</label><br>
+    <label><input type="radio" name="q3" value="D" data-marks="0"> Internal energy</label>
+</div>
+
+<!-- Question 4 -->
+<div>
+    <h3>14. The zeroth law of thermodynamics defines:</h3>
+    <label><input type="radio" name="q4" value="A" data-marks="0"> Conservation of energy</label><br>
+    <label><input type="radio" name="q4" value="B" data-marks="1"> Thermal equilibrium between systems</label><br>
+    <label><input type="radio" name="q4" value="C" data-marks="0"> Entropy of isolated systems</label><br>
+    <label><input type="radio" name="q4" value="D" data-marks="0"> Relationship between heat and work</label>
+</div>
+
+<!-- Question 5 -->
+<div>
+    <h3>15. Thermodynamic equilibrium means:</h3>
+    <label><input type="radio" name="q5" value="A" data-marks="1"> No net flow of energy or matter</label><br>
+    <label><input type="radio" name="q5" value="B" data-marks="0"> Continuous energy exchange</label><br>
+    <label><input type="radio" name="q5" value="C" data-marks="0"> Maximum pressure state</label><br>
+    <label><input type="radio" name="q5" value="D" data-marks="0"> Minimum temperature state</label>
+</div>
+
+<!-- Question 6 -->
+<div>
+    <h3>16. A reversible thermodynamic process:</h3>
+    <label><input type="radio" name="q6" value="A" data-marks="1"> Occurs infinitely slowly through equilibrium states</label><br>
+    <label><input type="radio" name="q6" value="B" data-marks="0"> Occurs spontaneously</label><br>
+    <label><input type="radio" name="q6" value="C" data-marks="0"> Cannot be returned to original state</label><br>
+    <label><input type="radio" name="q6" value="D" data-marks="0"> Always increases entropy drastically</label>
+</div>
+
+<!-- Question 7 -->
+<div>
+    <h3>17. An irreversible process is characterized by:</h3>
+    <label><input type="radio" name="q7" value="A" data-marks="0"> Constant entropy</label><br>
+    <label><input type="radio" name="q7" value="B" data-marks="0"> Equilibrium at every step</label><br>
+    <label><input type="radio" name="q7" value="C" data-marks="1"> Generation of entropy</label><br>
+    <label><input type="radio" name="q7" value="D" data-marks="0"> No net change in state variables</label>
+</div>
+
+<!-- Question 8 -->
+<div>
+    <h3>18. An equation of state relates:</h3>
+    <label><input type="radio" name="q8" value="A" data-marks="1"> Pressure, volume, and temperature</label><br>
+    <label><input type="radio" name="q8" value="B" data-marks="0"> Energy and work only</label><br>
+    <label><input type="radio" name="q8" value="C" data-marks="0"> Mass and volume only</label><br>
+    <label><input type="radio" name="q8" value="D" data-marks="0"> Temperature and entropy only</label>
+</div>
+
+<!-- Question 9 -->
+<div>
+    <h3>19. Expansivity (\(\beta\)) measures how much:</h3>
+    <label><input type="radio" name="q9" value="A" data-marks="1"> Volume changes with temperature at constant pressure</label><br>
+    <label><input type="radio" name="q9" value="B" data-marks="0"> Pressure changes with volume</label><br>
+    <label><input type="radio" name="q9" value="C" data-marks="0"> Temperature changes with entropy</label><br>
+    <label><input type="radio" name="q9" value="D" data-marks="0"> Mass changes with pressure</label>
+</div>
+
+<!-- Question 10 -->
+<div>
+    <h3>20. Compressibility (\(\kappa\)) is defined as:</h3>
+    <label><input type="radio" name="q10" value="A" data-marks="0"> Change in entropy with temperature</label><br>
+    <label><input type="radio" name="q10" value="B" data-marks="1"> Change in volume with pressure at constant temperature</label><br>
+    <label><input type="radio" name="q10" value="C" data-marks="0"> Change in temperature with pressure</label><br>
+    <label><input type="radio" name="q10" value="D" data-marks="0"> Change in mass with volume</label>
+</div>
+
+<!-- Question 21 -->
+<div>
+    <h3>21. Internal energy of an ideal gas depends upon:</h3>
+    <label><input type="radio" name="q21" value="A" data-marks="0"> Pressure only</label><br>
+    <label><input type="radio" name="q21" value="B" data-marks="0"> Volume only</label><br>
+    <label><input type="radio" name="q21" value="C" data-marks="1"> Temperature only</label><br>
+    <label><input type="radio" name="q21" value="D" data-marks="0"> Both pressure and volume</label>
+</div>
+
+<!-- Question 22 -->
+<div>
+    <h3>22. In thermodynamics, heat is defined as:</h3>
+    <label><input type="radio" name="q22" value="A" data-marks="1"> Energy transfer due to temperature difference</label><br>
+    <label><input type="radio" name="q22" value="B" data-marks="0"> Energy stored due to volume</label><br>
+    <label><input type="radio" name="q22" value="C" data-marks="0"> Work done by the system</label><br>
+    <label><input type="radio" name="q22" value="D" data-marks="0"> Total internal energy</label>
+</div>
+
+<!-- Question 23 -->
+<div>
+    <h3>23. Work done by a gas expanding against external pressure is:</h3>
+    <label><input type="radio" name="q23" value="A" data-marks="0"> Always zero</label><br>
+    <label><input type="radio" name="q23" value="B" data-marks="0"> Always positive</label><br>
+    <label><input type="radio" name="q23" value="C" data-marks="1"> Positive if system expands</label><br>
+    <label><input type="radio" name="q23" value="D" data-marks="0"> Negative if system expands</label>
+</div>
+
+<!-- Question 24 -->
+<div>
+    <h3>24. In a cyclic process, the net change in internal energy of a system is:</h3>
+    <label><input type="radio" name="q24" value="A" data-marks="0"> Maximum</label><br>
+    <label><input type="radio" name="q24" value="B" data-marks="0"> Minimum</label><br>
+    <label><input type="radio" name="q24" value="C" data-marks="0"> Always positive</label><br>
+    <label><input type="radio" name="q24" value="D" data-marks="1"> Always zero</label>
+</div>
+
+<!-- Question 25 -->
+<div>
+    <h3>25. The first law of thermodynamics is a statement of:</h3>
+    <label><input type="radio" name="q25" value="A" data-marks="0"> Entropy conservation</label><br>
+    <label><input type="radio" name="q25" value="B" data-marks="1"> Conservation of energy</label><br>
+    <label><input type="radio" name="q25" value="C" data-marks="0"> Mass conservation</label><br>
+    <label><input type="radio" name="q25" value="D" data-marks="0"> Heat transfer only</label>
+</div>
+
+<!-- Question 26 -->
+<div>
+    <h3>26. Heat capacity of a substance is defined as:</h3>
+    <label><input type="radio" name="q26" value="A" data-marks="1"> Amount of heat needed to raise its temperature by one degree</label><br>
+    <label><input type="radio" name="q26" value="B" data-marks="0"> Energy stored at constant pressure only</label><br>
+    <label><input type="radio" name="q26" value="C" data-marks="0"> Work done during expansion</label><br>
+    <label><input type="radio" name="q26" value="D" data-marks="0"> Internal energy change only</label>
+</div>
+
+<!-- Question 27 -->
+<div>
+    <h3>27. Difference between \( C_p \) and \( C_v \) for an ideal gas equals:</h3>
+    <label><input type="radio" name="q27" value="A" data-marks="0"> \( R/2 \)</label><br>
+    <label><input type="radio" name="q27" value="B" data-marks="1"> Gas constant \( R \)</label><br>
+    <label><input type="radio" name="q27" value="C" data-marks="0"> Zero</label><br>
+    <label><input type="radio" name="q27" value="D" data-marks="0"> \( 2R \)</label>
+</div>
+
+<!-- Question 28 -->
+<div>
+    <h3>28. Indicator diagram (P–V diagram) represents:</h3>
+    <label><input type="radio" name="q28" value="A" data-marks="0"> Heat absorbed by system</label><br>
+    <label><input type="radio" name="q28" value="B" data-marks="1"> Work done by or on the system</label><br>
+    <label><input type="radio" name="q28" value="C" data-marks="0"> Entropy changes only</label><br>
+    <label><input type="radio" name="q28" value="D" data-marks="0"> Internal energy changes only</label>
+</div>
+
+<!-- Question 29 -->
+<div>
+    <h3>29. Work done in reversible isothermal expansion of an ideal gas is given by:</h3>
+    <label><input type="radio" name="q29" value="A" data-marks="0"> \(W = nRT\)</label><br>
+    <label><input type="radio" name="q29" value="B" data-marks="0"> \(W = P(V_2 - V_1)\)</label><br>
+    <label><input type="radio" name="q29" value="C" data-marks="1"> \(W = nRT \ln\frac{V_2}{V_1}\)</label><br>
+    <label><input type="radio" name="q29" value="D" data-marks="0"> \(W = 0\)</label>
+</div>
+
+<!-- Question 30 -->
+<div>
+    <h3>30. Work done in reversible adiabatic expansion of an ideal gas results in:</h3>
+    <label><input type="radio" name="q30" value="A" data-marks="0"> Increase in internal energy</label><br>
+    <label><input type="radio" name="q30" value="B" data-marks="1"> Decrease in internal energy</label><br>
+    <label><input type="radio" name="q30" value="C" data-marks="0"> No change in internal energy</label><br>
+    <label><input type="radio" name="q30" value="D" data-marks="0"> Infinite heat absorption</label>
+</div>
+
+<!-- Question 31 -->
+<div>
+    <h3>31. The Kelvin-Planck statement of the second law states that:</h3>
+    <label><input type="radio" name="q31" value="A" data-marks="0"> Heat can flow spontaneously from cold to hot</label><br>
+    <label><input type="radio" name="q31" value="B" data-marks="1"> It is impossible to convert all heat absorbed into work completely</label><br>
+    <label><input type="radio" name="q31" value="C" data-marks="0"> Internal energy always decreases</label><br>
+    <label><input type="radio" name="q31" value="D" data-marks="0"> Entropy of isolated systems decreases</label>
+</div>
+
+<!-- Question 32 -->
+<div>
+    <h3>32. A heat engine operates between two reservoirs by:</h3>
+    <label><input type="radio" name="q32" value="A" data-marks="1"> Absorbing heat from a hot reservoir and releasing part to a cold reservoir</label><br>
+    <label><input type="radio" name="q32" value="B" data-marks="0"> Absorbing heat from a cold reservoir only</label><br>
+    <label><input type="radio" name="q32" value="C" data-marks="0"> Converting work completely into heat</label><br>
+    <label><input type="radio" name="q32" value="D" data-marks="0"> Rejecting heat only to a hot reservoir</label>
+</div>
+
+<!-- Question 33 -->
+<div>
+    <h3>33. Thermal efficiency of a heat engine is defined as:</h3>
+    <label><input type="radio" name="q33" value="A" data-marks="0"> Ratio of heat rejected to heat absorbed</label><br>
+    <label><input type="radio" name="q33" value="B" data-marks="1"> Ratio of work output to heat absorbed</label><br>
+    <label><input type="radio" name="q33" value="C" data-marks="0"> Ratio of heat absorbed to work input</label><br>
+    <label><input type="radio" name="q33" value="D" data-marks="0"> Difference of temperatures only</label>
+</div>
+
+<!-- Question 34 -->
+<div>
+    <h3>34. Carnot's engine is an ideal heat engine that:</h3>
+    <label><input type="radio" name="q34" value="A" data-marks="0"> Has zero efficiency</label><br>
+    <label><input type="radio" name="q34" value="B" data-marks="1"> Has the maximum possible efficiency between two temperatures</label><br>
+    <label><input type="radio" name="q34" value="C" data-marks="0"> Converts all heat absorbed into work completely</label><br>
+    <label><input type="radio" name="q34" value="D" data-marks="0"> Operates without heat absorption</label>
+</div>
+
+<!-- Question 35 -->
+<div>
+    <h3>35. Work done by a Carnot engine per cycle is given by:</h3>
+    <label><input type="radio" name="q35" value="A" data-marks="0"> Zero</label><br>
+    <label><input type="radio" name="q35" value="B" data-marks="0"> Total heat absorbed only</label><br>
+    <label><input type="radio" name="q35" value="C" data-marks="1"> Difference between heat absorbed and rejected</label><br>
+    <label><input type="radio" name="q35" value="D" data-marks="0"> Sum of absorbed and rejected heat</label>
+</div>
+
+<!-- Question 36 -->
+<div>
+    <h3>36. Reversibility in thermodynamics means:</h3>
+    <label><input type="radio" name="q36" value="A" data-marks="0"> Processes increase entropy drastically</label><br>
+    <label><input type="radio" name="q36" value="B" data-marks="0"> Processes are spontaneous and irreversible</label><br>
+    <label><input type="radio" name="q36" value="C" data-marks="0"> Processes occur at infinite speed</label><br>
+    <label><input type="radio" name="q36" value="D" data-marks="1"> Processes occur without entropy production</label>
+</div>
+
+<!-- Question 37 -->
+<div>
+    <h3>37. A Carnot refrigerator operates by:</h3>
+    <label><input type="radio" name="q37" value="A" data-marks="0"> Transferring heat spontaneously from hot to cold</label><br>
+    <label><input type="radio" name="q37" value="B" data-marks="1"> Transferring heat from a cold reservoir to a hot reservoir by consuming work</label><br>
+    <label><input type="radio" name="q37" value="C" data-marks="0"> Producing maximum work output</label><br>
+    <label><input type="radio" name="q37" value="D" data-marks="0"> Operating without work input</label>
+</div>
+
+<!-- Question 38 -->
+<div>
+    <h3>38. A heat pump is a device that:</h3>
+    <label><input type="radio" name="q38" value="A" data-marks="0"> Converts heat directly into work completely</label><br>
+    <label><input type="radio" name="q38" value="B" data-marks="1"> Transfers heat from cold to hot reservoir using work</label><br>
+    <label><input type="radio" name="q38" value="C" data-marks="0"> Only absorbs heat from hot reservoir</label><br>
+    <label><input type="radio" name="q38" value="D" data-marks="0"> Only rejects heat to a cold reservoir</label>
+</div>
+
+<!-- Question 39 -->
+<div>
+    <h3>39. Carnot’s theorem states that:</h3>
+    <label><input type="radio" name="q39" value="A" data-marks="1"> No engine between two reservoirs is more efficient than a Carnot engine</label><br>
+    <label><input type="radio" name="q39" value="B" data-marks="0"> All engines have equal efficiency</label><br>
+    <label><input type="radio" name="q39" value="C" data-marks="0"> Engines can have 100% efficiency at low temperature</label><br>
+    <label><input type="radio" name="q39" value="D" data-marks="0"> Entropy always decreases in isolated systems</label>
+</div>
+
+<!-- Question 40 -->
+<div>
+    <h3>40. Clausius-Clapeyron equation relates:</h3>
+    <label><input type="radio" name="q40" value="A" data-marks="0"> Heat absorbed and work done only</label><br>
+    <label><input type="radio" name="q40" value="B" data-marks="0"> Efficiency and temperature difference</label><br>
+    <label><input type="radio" name="q40" value="C" data-marks="1"> Change in vapor pressure and temperature to latent heat</label><br>
+    <label><input type="radio" name="q40" value="D" data-marks="0"> Internal energy and entropy</label>
+</div>
+<!-- Question 41 -->
+<div>
+    <h3>41. Maxwell's thermodynamic relations are derived from:</h3>
+    <label><input type="radio" name="q41" value="A" data-marks="0"> Conservation of mass</label><br>
+    <label><input type="radio" name="q41" value="B" data-marks="0"> Zeroth law of thermodynamics</label><br>
+    <label><input type="radio" name="q41" value="C" data-marks="1"> Exactness of thermodynamic differentials</label><br>
+    <label><input type="radio" name="q41" value="D" data-marks="0"> First law only</label>
+</div>
+
+<!-- Question 42 -->
+<div>
+    <h3>42. TdS equations connect:</h3>
+    <label><input type="radio" name="q42" value="A" data-marks="1"> Changes in entropy with temperature, volume, and pressure</label><br>
+    <label><input type="radio" name="q42" value="B" data-marks="0"> Mass with volume changes</label><br>
+    <label><input type="radio" name="q42" value="C" data-marks="0"> Pressure with mass and density</label><br>
+    <label><input type="radio" name="q42" value="D" data-marks="0"> Only temperature and energy</label>
+</div>
+
+<!-- Question 43 -->
+<div>
+    <h3>43. The fundamental thermodynamic energy equation for internal energy (U) is:</h3>
+    <label><input type="radio" name="q43" value="A" data-marks="0"> dU = PdV - TdS</label><br>
+    <label><input type="radio" name="q43" value="B" data-marks="1"> dU = TdS - PdV</label><br>
+    <label><input type="radio" name="q43" value="C" data-marks="0"> dU = VdP + SdT</label><br>
+    <label><input type="radio" name="q43" value="D" data-marks="0"> dU = SdT - VdP</label>
+</div>
+
+<!-- Question 44 -->
+<div>
+    <h3>44. Heat capacity at constant volume (C<sub>V</sub>) is given by:</h3>
+    <label><input type="radio" name="q44" value="A" data-marks="0"> (∂U/∂P)<sub>V</sub></label><br>
+    <label><input type="radio" name="q44" value="B" data-marks="0"> (∂S/∂T)<sub>P</sub></label><br>
+    <label><input type="radio" name="q44" value="C" data-marks="1"> (∂U/∂T)<sub>V</sub></label><br>
+    <label><input type="radio" name="q44" value="D" data-marks="0"> (∂V/∂T)<sub>P</sub></label>
+</div>
+
+<!-- Question 45 -->
+<div>
+    <h3>45. Heat capacity at constant pressure (C<sub>P</sub>) is expressed as:</h3>
+    <label><input type="radio" name="q45" value="A" data-marks="1"> (∂H/∂T)<sub>P</sub></label><br>
+    <label><input type="radio" name="q45" value="B" data-marks="0"> (∂U/∂T)<sub>P</sub></label><br>
+    <label><input type="radio" name="q45" value="C" data-marks="0"> (∂S/∂P)<sub>T</sub></label><br>
+    <label><input type="radio" name="q45" value="D" data-marks="0"> (∂V/∂T)<sub>S</sub></label>
+</div>
+
+<!-- Question 46 -->
+<div>
+    <h3>46. Gibbs free energy (G) is defined thermodynamically as:</h3>
+    <label><input type="radio" name="q46" value="A" data-marks="0"> G = U - TS</label><br>
+    <label><input type="radio" name="q46" value="B" data-marks="1"> G = H - TS</label><br>
+    <label><input type="radio" name="q46" value="C" data-marks="0"> G = U + PV</label><br>
+    <label><input type="radio" name="q46" value="D" data-marks="0"> G = T + PV</label>
+</div>
+
+<!-- Question 47 -->
+<div>
+    <h3>47. Which thermodynamic function measures the useful work obtainable at constant temperature and pressure?</h3>
+    <label><input type="radio" name="q47" value="A" data-marks="0"> Helmholtz free energy</label><br>
+    <label><input type="radio" name="q47" value="B" data-marks="1"> Gibbs free energy</label><br>
+    <label><input type="radio" name="q47" value="C" data-marks="0"> Internal energy</label><br>
+    <label><input type="radio" name="q47" value="D" data-marks="0"> Entropy</label>
+</div>
+
+<!-- Question 48 -->
+<div>
+    <h3>48. The third law of thermodynamics states:</h3>
+    <label><input type="radio" name="q48" value="A" data-marks="0"> Entropy always increases spontaneously</label><br>
+    <label><input type="radio" name="q48" value="B" data-marks="1"> Entropy approaches zero as temperature approaches absolute zero</label><br>
+    <label><input type="radio" name="q48" value="C" data-marks="0"> Internal energy remains constant at absolute zero</label><br>
+    <label><input type="radio" name="q48" value="D" data-marks="0"> Heat cannot flow from cold to hot spontaneously</label>
+</div>
+
+<!-- Question 49 -->
+<div>
+    <h3>49. Helmholtz free energy (F) is defined as:</h3>
+    <label><input type="radio" name="q49" value="A" data-marks="1"> F = U - TS</label><br>
+    <label><input type="radio" name="q49" value="B" data-marks="0"> F = H + TS</label><br>
+    <label><input type="radio" name="q49" value="C" data-marks="0"> F = U + PV</label><br>
+    <label><input type="radio" name="q49" value="D" data-marks="0"> F = G + PV</label>
+</div>
+
+<!-- Question 50 -->
+<div>
+    <h3>50. The Clapeyron equation specifically describes:</h3>
+    <label><input type="radio" name="q50" value="A" data-marks="0"> Pressure-volume relation for ideal gases</label><br>
+    <label><input type="radio" name="q50" value="B" data-marks="0"> Internal energy and entropy at absolute zero</label><br>
+    <label><input type="radio" name="q50" value="C" data-marks="1"> Relationship between vapor pressure and temperature for phase transitions</label><br>
+    <label><input type="radio" name="q50" value="D" data-marks="0"> Entropy change at constant volume</label>
+</div>
+<!-- Question 51 -->
+<div>
+    <h3>51. Heat transfer by conduction occurs through:</h3>
+    <label><input type="radio" name="q51" value="A" data-marks="0"> Electromagnetic waves</label><br>
+    <label><input type="radio" name="q51" value="B" data-marks="0"> Movement of fluid molecules</label><br>
+    <label><input type="radio" name="q51" value="C" data-marks="1"> Direct molecular collisions</label><br>
+    <label><input type="radio" name="q51" value="D" data-marks="0"> Gravitational forces</label>
+</div>
+
+<!-- Question 52 -->
+<div>
+    <h3>52. Thermal conductivity (\(k\)) is highest in:</h3>
+    <label><input type="radio" name="q52" value="A" data-marks="0"> Gases</label><br>
+    <label><input type="radio" name="q52" value="B" data-marks="1"> Metals</label><br>
+    <label><input type="radio" name="q52" value="C" data-marks="0"> Liquids</label><br>
+    <label><input type="radio" name="q52" value="D" data-marks="0"> Vacuum</label>
+</div>
+
+<!-- Question 53 -->
+<div>
+    <h3>53. Lee’s disc experiment is primarily used to measure:</h3>
+    <label><input type="radio" name="q53" value="A" data-marks="0"> Heat radiation</label><br>
+    <label><input type="radio" name="q53" value="B" data-marks="0"> Heat convection</label><br>
+    <label><input type="radio" name="q53" value="C" data-marks="1"> Thermal conductivity of poor conductors</label><br>
+    <label><input type="radio" name="q53" value="D" data-marks="0"> Specific heat capacity</label>
+</div>
+
+<!-- Question 54 -->
+<div>
+    <h3>54. Thermal resistance in conduction is defined as:</h3>
+    <label><input type="radio" name="q54" value="A" data-marks="1"> Ratio of temperature difference to heat flow rate</label><br>
+    <label><input type="radio" name="q54" value="B" data-marks="0"> Ratio of heat flow rate to temperature difference</label><br>
+    <label><input type="radio" name="q54" value="C" data-marks="0"> Rate of heat flow per unit area</label><br>
+    <label><input type="radio" name="q54" value="D" data-marks="0"> Rate of temperature change per unit mass</label>
+</div>
+
+<!-- Question 55 -->
+<div>
+    <h3>55. Thermal radiation differs from conduction and convection because:</h3>
+    <label><input type="radio" name="q55" value="A" data-marks="0"> It occurs only in fluids</label><br>
+    <label><input type="radio" name="q55" value="B" data-marks="0"> It requires a medium</label><br>
+    <label><input type="radio" name="q55" value="C" data-marks="1"> It does not require any medium</label><br>
+    <label><input type="radio" name="q55" value="D" data-marks="0"> It only happens at high pressure</label>
+</div>
+
+<!-- Question 56 -->
+<div>
+    <h3>56. Radiant intensity is defined as:</h3>
+    <label><input type="radio" name="q56" value="A" data-marks="1"> Radiant energy emitted per unit solid angle</label><br>
+    <label><input type="radio" name="q56" value="B" data-marks="0"> Total energy radiated per unit area</label><br>
+    <label><input type="radio" name="q56" value="C" data-marks="0"> Energy radiated per unit volume</label><br>
+    <label><input type="radio" name="q56" value="D" data-marks="0"> Heat flow per unit time</label>
+</div>
+
+<!-- Question 57 -->
+<div>
+    <h3>57. Radiant emittance is the:</h3>
+    <label><input type="radio" name="q57" value="A" data-marks="0"> Energy radiated in all directions per unit solid angle</label><br>
+    <label><input type="radio" name="q57" value="B" data-marks="1"> Radiant energy emitted per unit surface area per unit time</label><br>
+    <label><input type="radio" name="q57" value="C" data-marks="0"> Total energy emitted per unit mass</label><br>
+    <label><input type="radio" name="q57" value="D" data-marks="0"> Energy radiated per unit length</label>
+</div>
+
+<!-- Question 58 -->
+<div>
+    <h3>58. According to Stefan’s law, total energy radiated by a blackbody is proportional to:</h3>
+    <label><input type="radio" name="q58" value="A" data-marks="0"> T²</label><br>
+    <label><input type="radio" name="q58" value="B" data-marks="0"> T³</label><br>
+    <label><input type="radio" name="q58" value="C" data-marks="1"> T⁴</label><br>
+    <label><input type="radio" name="q58" value="D" data-marks="0"> T⁵</label>
+</div>
+
+<!-- Question 59 -->
+<div>
+    <h3>59. The Stefan-Boltzmann law can be mathematically written as:</h3>
+    <label><input type="radio" name="q59" value="A" data-marks="1"> E = σT⁴</label><br>
+    <label><input type="radio" name="q59" value="B" data-marks="0"> E = σT³</label><br>
+    <label><input type="radio" name="q59" value="C" data-marks="0"> E = σT²</label><br>
+    <label><input type="radio" name="q59" value="D" data-marks="0"> E = σT</label>
+</div>
+
+<!-- Question 60 -->
+<div>
+    <h3>60. Thermal conductivity of a poor conductor (insulator) is typically measured by:</h3>
+    <label><input type="radio" name="q60" value="A" data-marks="0"> Searle’s method</label><br>
+    <label><input type="radio" name="q60" value="B" data-marks="1"> Lee’s disc method</label><br>
+    <label><input type="radio" name="q60" value="C" data-marks="0"> Joule’s calorimeter method</label><br>
+    <label><input type="radio" name="q60" value="D" data-marks="0"> Newton’s cooling method</label>
+</div>
+<!-- Question 61 -->
+<div>
+    <h3>61. A microstate in statistical mechanics represents:</h3>
+    <label><input type="radio" name="q61" value="A" data-marks="1"> A complete specification of all particle positions and momenta</label><br>
+    <label><input type="radio" name="q61" value="B" data-marks="0"> Only the total energy of the system</label><br>
+    <label><input type="radio" name="q61" value="C" data-marks="0"> The overall volume of the system</label><br>
+    <label><input type="radio" name="q61" value="D" data-marks="0"> A state defined by macroscopic properties only</label>
+</div>
+
+<!-- Question 62 -->
+<div>
+    <h3>62. Phase space in statistical mechanics is defined as:</h3>
+    <label><input type="radio" name="q62" value="A" data-marks="0"> A space of energies only</label><br>
+    <label><input type="radio" name="q62" value="B" data-marks="0"> A space describing pressure and volume only</label><br>
+    <label><input type="radio" name="q62" value="C" data-marks="1"> A multidimensional space of positions and momenta</label><br>
+    <label><input type="radio" name="q62" value="D" data-marks="0"> A space with only particle velocities</label>
+</div>
+
+<!-- Question 63 -->
+<div>
+    <h3>63. Density of states refers to:</h3>
+    <label><input type="radio" name="q63" value="A" data-marks="0"> Number of particles per unit volume</label><br>
+    <label><input type="radio" name="q63" value="B" data-marks="1"> Number of accessible states per unit energy range</label><br>
+    <label><input type="radio" name="q63" value="C" data-marks="0"> Total number of particles in a system</label><br>
+    <label><input type="radio" name="q63" value="D" data-marks="0"> Energy per particle</label>
+</div>
+
+<!-- Question 64 -->
+<div>
+    <h3>64. Gamma (Γ) space is associated with:</h3>
+    <label><input type="radio" name="q64" value="A" data-marks="1"> Phase space of the entire system</label><br>
+    <label><input type="radio" name="q64" value="B" data-marks="0"> Phase space for a single particle</label><br>
+    <label><input type="radio" name="q64" value="C" data-marks="0"> Momentum space only</label><br>
+    <label><input type="radio" name="q64" value="D" data-marks="0"> Position space only</label>
+</div>
+
+<!-- Question 65 -->
+<div>
+    <h3>65. Principle of equal a priori probabilities assumes:</h3>
+    <label><input type="radio" name="q65" value="A" data-marks="0"> Lower energy states are more probable</label><br>
+    <label><input type="radio" name="q65" value="B" data-marks="0"> Higher energy states dominate equilibrium</label><br>
+    <label><input type="radio" name="q65" value="C" data-marks="1"> All accessible microstates are equally probable at equilibrium</label><br>
+    <label><input type="radio" name="q65" value="D" data-marks="0"> Probability depends on external fields only</label>
+</div>
+
+<!-- Question 66 -->
+<div>
+    <h3>66. Ergodic hypothesis suggests that:</h3>
+    <label><input type="radio" name="q66" value="A" data-marks="0"> Systems spontaneously move to lower energy</label><br>
+    <label><input type="radio" name="q66" value="B" data-marks="1"> Time averages equal ensemble averages</label><br>
+    <label><input type="radio" name="q66" value="C" data-marks="0"> Systems never reach equilibrium</label><br>
+    <label><input type="radio" name="q66" value="D" data-marks="0"> Microstates change only at absolute zero</label>
+</div>
+
+<!-- Question 67 -->
+<div>
+    <h3>67. Canonical ensemble describes a system with fixed:</h3>
+    <label><input type="radio" name="q67" value="A" data-marks="0"> Energy, volume, and number of particles</label><br>
+    <label><input type="radio" name="q67" value="B" data-marks="1"> Temperature, volume, and number of particles</label><br>
+    <label><input type="radio" name="q67" value="C" data-marks="0"> Temperature, pressure, and energy</label><br>
+    <label><input type="radio" name="q67" value="D" data-marks="0"> Volume, energy, and temperature</label>
+</div>
+
+<!-- Question 68 -->
+<div>
+    <h3>68. Partition function (Z) in canonical ensemble is defined as:</h3>
+    <label><input type="radio" name="q68" value="A" data-marks="0"> Sum of energy states</label><br>
+    <label><input type="radio" name="q68" value="B" data-marks="1"> Sum over states of \( e^{-E/kT} \)</label><br>
+    <label><input type="radio" name="q68" value="C" data-marks="0"> Total energy multiplied by temperature</label><br>
+    <label><input type="radio" name="q68" value="D" data-marks="0"> Product of energy and entropy</label>
+</div>
+
+<!-- Question 69 -->
+<div>
+    <h3>69. Grand canonical ensemble allows exchange of:</h3>
+    <label><input type="radio" name="q69" value="A" data-marks="0"> Volume and temperature only</label><br>
+    <label><input type="radio" name="q69" value="B" data-marks="1"> Energy and particles with reservoir</label><br>
+    <label><input type="radio" name="q69" value="C" data-marks="0"> Only energy</label><br>
+    <label><input type="radio" name="q69" value="D" data-marks="0"> Only particles</label>
+</div>
+
+<!-- Question 70 -->
+<div>
+    <h3>70. Equipartition theorem states that each quadratic energy degree of freedom contributes:</h3>
+    <label><input type="radio" name="q70" value="A" data-marks="0"> \( kT \) to total energy</label><br>
+    <label><input type="radio" name="q70" value="B" data-marks="0"> \( 3kT/2 \) to total energy</label><br>
+    <label><input type="radio" name="q70" value="C" data-marks="1"> \( kT/2 \) to total energy</label><br>
+    <label><input type="radio" name="q70" value="D" data-marks="0"> \( kT/4 \) to total energy</label>
+</div>
+<!-- Question 71 -->
+<div>
+    <h3>71. Maxwell-Boltzmann statistics applies to:</h3>
+    <label><input type="radio" name="q71" value="A" data-marks="0"> Electrons</label><br>
+    <label><input type="radio" name="q71" value="B" data-marks="1"> Classical distinguishable particles</label><br>
+    <label><input type="radio" name="q71" value="C" data-marks="0"> Bosons</label><br>
+    <label><input type="radio" name="q71" value="D" data-marks="0"> Photons only</label>
+</div>
+
+<!-- Question 72 -->
+<div>
+    <h3>72. Fermi-Dirac statistics applies to particles that:</h3>
+    <label><input type="radio" name="q72" value="A" data-marks="0"> Have integer spin</label><br>
+    <label><input type="radio" name="q72" value="B" data-marks="1"> Obey the Pauli exclusion principle</label><br>
+    <label><input type="radio" name="q72" value="C" data-marks="0"> Are indistinguishable bosons</label><br>
+    <label><input type="radio" name="q72" value="D" data-marks="0"> Have zero rest mass</label>
+</div>
+
+<!-- Question 73 -->
+<div>
+    <h3>73. Bose-Einstein statistics describe the distribution of:</h3>
+    <label><input type="radio" name="q73" value="A" data-marks="1"> Bosons</label><br>
+    <label><input type="radio" name="q73" value="B" data-marks="0"> Electrons in metals</label><br>
+    <label><input type="radio" name="q73" value="C" data-marks="0"> Classical gases</label><br>
+    <label><input type="radio" name="q73" value="D" data-marks="0"> Fermions</label>
+</div>
+
+<!-- Question 74 -->
+<div>
+    <h3>74. Maxwell-Boltzmann distribution assumes particles are:</h3>
+    <label><input type="radio" name="q74" value="A" data-marks="0"> Quantum indistinguishable</label><br>
+    <label><input type="radio" name="q74" value="B" data-marks="1"> Classical and distinguishable</label><br>
+    <label><input type="radio" name="q74" value="C" data-marks="0"> Fermions</label><br>
+    <label><input type="radio" name="q74" value="D" data-marks="0"> Always at absolute zero</label>
+</div>
+
+<!-- Question 75 -->
+<div>
+    <h3>75. In Fermi-Dirac distribution, occupancy of energy states is limited by:</h3>
+    <label><input type="radio" name="q75" value="A" data-marks="1"> Pauli exclusion principle</label><br>
+    <label><input type="radio" name="q75" value="B" data-marks="0"> Temperature only</label><br>
+    <label><input type="radio" name="q75" value="C" data-marks="0"> Pressure</label><br>
+    <label><input type="radio" name="q75" value="D" data-marks="0"> Volume of container</label>
+</div>
+
+<!-- Question 76 -->
+<div>
+    <h3>76. According to Bose-Einstein statistics, particles can occupy:</h3>
+    <label><input type="radio" name="q76" value="A" data-marks="0"> At most one particle per state</label><br>
+    <label><input type="radio" name="q76" value="B" data-marks="0"> Only energy states above a certain threshold</label><br>
+    <label><input type="radio" name="q76" value="C" data-marks="1"> The same quantum state without limit</label><br>
+    <label><input type="radio" name="q76" value="D" data-marks="0"> States limited strictly by spin</label>
+</div>
+
+<!-- Question 77 -->
+<div>
+    <h3>77. The Maxwell-Boltzmann distribution describes particle distribution in terms of:</h3>
+    <label><input type="radio" name="q77" value="A" data-marks="1"> Speeds and energies at thermal equilibrium</label><br>
+    <label><input type="radio" name="q77" value="B" data-marks="0"> Spin and angular momentum</label><br>
+    <label><input type="radio" name="q77" value="C" data-marks="0"> Quantum numbers only</label><br>
+    <label><input type="radio" name="q77" value="D" data-marks="0"> Zero energy states only</label>
+</div>
+
+<!-- Question 78 -->
+<div>
+    <h3>78. The Fermi energy represents:</h3>
+    <label><input type="radio" name="q78" value="A" data-marks="0"> Energy at absolute zero for bosons</label><br>
+    <label><input type="radio" name="q78" value="B" data-marks="1"> Highest occupied energy state at absolute zero for fermions</label><br>
+    <label><input type="radio" name="q78" value="C" data-marks="0"> Energy of photons at equilibrium</label><br>
+    <label><input type="radio" name="q78" value="D" data-marks="0"> Average energy per particle</label>
+</div>
+
+<!-- Question 79 -->
+<div>
+    <h3>79. Bose-Einstein condensation occurs when bosons:</h3>
+    <label><input type="radio" name="q79" value="A" data-marks="1"> Occupy the lowest quantum state at very low temperatures</label><br>
+    <label><input type="radio" name="q79" value="B" data-marks="0"> Achieve maximum energy state</label><br>
+    <label><input type="radio" name="q79" value="C" data-marks="0"> Behave like fermions</label><br>
+    <label><input type="radio" name="q79" value="D" data-marks="0"> Become distinguishable</label>
+</div>
+
+<!-- Question 80 -->
+<div>
+    <h3>80. At high temperature and low density, all distributions (Maxwell-Boltzmann, Fermi-Dirac, Bose-Einstein) approach:</h3>
+    <label><input type="radio" name="q80" value="A" data-marks="0"> Bose-Einstein distribution</label><br>
+    <label><input type="radio" name="q80" value="B" data-marks="0"> Fermi-Dirac distribution</label><br>
+    <label><input type="radio" name="q80" value="C" data-marks="1"> Maxwell-Boltzmann distribution</label><br>
+    <label><input type="radio" name="q80" value="D" data-marks="0"> Zero energy distribution</label>
+</div>
+<!-- Question 81 (Easy) -->
+<div>
+    <h3>81. Which gas law combines Boyle’s, Charles’, and Gay-Lussac’s laws?</h3>
+    <label><input type="radio" name="q81" value="A" data-marks="1"> Ideal gas law</label><br>
+    <label><input type="radio" name="q81" value="B" data-marks="0"> Dalton’s law</label><br>
+    <label><input type="radio" name="q81" value="C" data-marks="0"> Graham’s law</label><br>
+    <label><input type="radio" name="q81" value="D" data-marks="0"> Avogadro’s law</label>
+</div>
+
+<!-- Question 82 (Easy) -->
+<div>
+    <h3>82. In an adiabatic process, which quantity remains constant?</h3>
+    <label><input type="radio" name="q82" value="A" data-marks="0"> Temperature</label><br>
+    <label><input type="radio" name="q82" value="B" data-marks="0"> Pressure</label><br>
+    <label><input type="radio" name="q82" value="C" data-marks="1"> Heat exchange</label><br>
+    <label><input type="radio" name="q82" value="D" data-marks="0"> Volume</label>
+</div>
+
+<!-- Question 83 (Easy) -->
+<div>
+    <h3>83. Heat always flows spontaneously from:</h3>
+    <label><input type="radio" name="q83" value="A" data-marks="1"> Hot body to cold body</label><br>
+    <label><input type="radio" name="q83" value="B" data-marks="0"> Cold body to hot body</label><br>
+    <label><input type="radio" name="q83" value="C" data-marks="0"> Low pressure to high pressure</label><br>
+    <label><input type="radio" name="q83" value="D" data-marks="0"> Low volume to high volume</label>
+</div>
+
+<!-- Question 84 (Easy) -->
+<div>
+    <h3>84. Carnot engine efficiency depends only on:</h3>
+    <label><input type="radio" name="q84" value="A" data-marks="1"> Temperatures of hot and cold reservoirs</label><br>
+    <label><input type="radio" name="q84" value="B" data-marks="0"> Pressure and volume of gas</label><br>
+    <label><input type="radio" name="q84" value="C" data-marks="0"> Amount of gas</label><br>
+    <label><input type="radio" name="q84" value="D" data-marks="0"> Type of gas</label>
+</div>
+
+<!-- Question 85 (Easy) -->
+<div>
+    <h3>85. Third law of thermodynamics states entropy at absolute zero is:</h3>
+    <label><input type="radio" name="q85" value="A" data-marks="0"> Infinite</label><br>
+    <label><input type="radio" name="q85" value="B" data-marks="1"> Zero</label><br>
+    <label><input type="radio" name="q85" value="C" data-marks="0"> Maximum</label><br>
+    <label><input type="radio" name="q85" value="D" data-marks="0"> Negative</label>
+</div>
+
+<!-- Question 86 (Easy) -->
+<div>
+    <h3>86. Which particles obey Fermi-Dirac statistics?</h3>
+    <label><input type="radio" name="q86" value="A" data-marks="0"> Bosons</label><br>
+    <label><input type="radio" name="q86" value="B" data-marks="1"> Fermions</label><br>
+    <label><input type="radio" name="q86" value="C" data-marks="0"> Photons</label><br>
+    <label><input type="radio" name="q86" value="D" data-marks="0"> Classical particles</label>
+</div>
+
+<!-- Question 87 (Easy) -->
+<div>
+    <h3>87. Unit of thermal conductivity is:</h3>
+    <label><input type="radio" name="q87" value="A" data-marks="0"> J·kg⁻¹·K⁻¹</label><br>
+    <label><input type="radio" name="q87" value="B" data-marks="0"> J·s⁻¹</label><br>
+    <label><input type="radio" name="q87" value="C" data-marks="1"> W·m⁻¹·K⁻¹</label><br>
+    <label><input type="radio" name="q87" value="D" data-marks="0"> J·m⁻²·K⁻¹</label>
+</div>
+
+<!-- Question 88 (Easy) -->
+<div>
+    <h3>88. Equipartition theorem assigns how much energy per degree of freedom?</h3>
+    <label><input type="radio" name="q88" value="A" data-marks="1"> kT/2</label><br>
+    <label><input type="radio" name="q88" value="B" data-marks="0"> kT</label><br>
+    <label><input type="radio" name="q88" value="C" data-marks="0"> 3kT/2</label><br>
+    <label><input type="radio" name="q88" value="D" data-marks="0"> kT/4</label>
+</div>
+
+<!-- Question 89 (Easy) -->
+<div>
+    <h3>89. Absolute zero temperature corresponds to:</h3>
+    <label><input type="radio" name="q89" value="A" data-marks="1"> 0 K</label><br>
+    <label><input type="radio" name="q89" value="B" data-marks="0"> -273 K</label><br>
+    <label><input type="radio" name="q89" value="C" data-marks="0"> 273°C</label><br>
+    <label><input type="radio" name="q89" value="D" data-marks="0"> 0°C</label>
+</div>
+
+<!-- Question 90 (Easy) -->
+<div>
+    <h3>90. Van der Waals equation corrects for:</h3>
+    <label><input type="radio" name="q90" value="A" data-marks="1"> Molecular attraction and volume</label><br>
+    <label><input type="radio" name="q90" value="B" data-marks="0"> Ideal gas behavior</label><br>
+    <label><input type="radio" name="q90" value="C" data-marks="0"> Zero pressure</label><br>
+    <label><input type="radio" name="q90" value="D" data-marks="0"> Absolute zero</label>
+</div>
+<!-- Question 91 (Difficult) -->
+<div>
+    <h3>91. If a Carnot engine operates between temperatures 600 K and 300 K, its maximum efficiency is:</h3>
+    <label><input type="radio" name="q91" value="A" data-marks="0"> 25%</label><br>
+    <label><input type="radio" name="q91" value="B" data-marks="0"> 33%</label><br>
+    <label><input type="radio" name="q91" value="C" data-marks="1"> 50%</label><br>
+    <label><input type="radio" name="q91" value="D" data-marks="0"> 75%</label>
+</div>
+
+<!-- Question 92 (Difficult) -->
+<div>
+    <h3>92. The internal energy U of an ideal monoatomic gas of N particles at temperature T is given by:</h3>
+    <label><input type="radio" name="q92" value="A" data-marks="1"> \( \frac{3}{2}NkT \)</label><br>
+    <label><input type="radio" name="q92" value="B" data-marks="0"> \( NkT \)</label><br>
+    <label><input type="radio" name="q92" value="C" data-marks="0"> \( \frac{5}{2}NkT \)</label><br>
+    <label><input type="radio" name="q92" value="D" data-marks="0"> \( \frac{1}{2}NkT \)</label>
+</div>
+
+<!-- Question 93 (Difficult) -->
+<div>
+    <h3>93. For a reversible isothermal expansion of 1 mole of an ideal gas at 300 K from 2 liters to 4 liters, the work done is approximately:</h3>
+    <label><input type="radio" name="q93" value="A" data-marks="0"> 345 J</label><br>
+    <label><input type="radio" name="q93" value="B" data-marks="0"> 718 J</label><br>
+    <label><input type="radio" name="q93" value="C" data-marks="1"> 1728 J</label><br>
+    <label><input type="radio" name="q93" value="D" data-marks="0"> 1382 J</label>
+</div>
+
+<!-- Question 94 (Difficult) -->
+<div>
+    <h3>94. The partition function Z for two distinguishable particles each with two energy states (0 and ε) at temperature T is:</h3>
+    <label><input type="radio" name="q94" value="A" data-marks="1"> \( (1+e^{-ε/kT})^2 \)</label><br>
+    <label><input type="radio" name="q94" value="B" data-marks="0"> \( 1+2e^{-ε/kT}+e^{-2ε/kT} \)</label><br>
+    <label><input type="radio" name="q94" value="C" data-marks="0"> \( e^{-ε/kT}+e^{-2ε/kT} \)</label><br>
+    <label><input type="radio" name="q94" value="D" data-marks="0"> \( 2+2e^{-ε/kT} \)</label>
+</div>
+
+<!-- Question 95 (Difficult) -->
+<div>
+    <h3>95. Entropy change (ΔS) for melting 1 kg of ice at 0°C (Latent heat = 334 kJ/kg) is:</h3>
+    <label><input type="radio" name="q95" value="A" data-marks="0"> 1200 J/K</label><br>
+    <label><input type="radio" name="q95" value="B" data-marks="1"> 1225 J/K</label><br>
+    <label><input type="radio" name="q95" value="C" data-marks="0"> 1400 J/K</label><br>
+    <label><input type="radio" name="q95" value="D" data-marks="0"> 1670 J/K</label>
+</div>
+
+<!-- Question 96 (Difficult) -->
+<div>
+    <h3>96. For a given Maxwell velocity distribution, the most probable speed (v<sub>mp</sub>) is related to average speed (v̅) by:</h3>
+    <label><input type="radio" name="q96" value="A" data-marks="1"> \( v_{mp} < \bar{v} \)</label><br>
+    <label><input type="radio" name="q96" value="B" data-marks="0"> \( v_{mp} = \bar{v} \)</label><br>
+    <label><input type="radio" name="q96" value="C" data-marks="0"> \( v_{mp} > \bar{v} \)</label><br>
+    <label><input type="radio" name="q96" value="D" data-marks="0"> No fixed relation</label>
+</div>
+
+<!-- Question 97 (Difficult) -->
+<div>
+    <h3>97. Bose-Einstein condensation occurs significantly at:</h3>
+    <label><input type="radio" name="q97" value="A" data-marks="1"> Very low temperature and high particle density</label><br>
+    <label><input type="radio" name="q97" value="B" data-marks="0"> High temperature only</label><br>
+    <label><input type="radio" name="q97" value="C" data-marks="0"> Low pressure and high temperature</label><br>
+    <label><input type="radio" name="q97" value="D" data-marks="0"> Room temperature only</label>
+</div>
+
+<!-- Question 98 (Difficult) -->
+<div>
+    <h3>98. Fermi energy in metals typically has the order of magnitude:</h3>
+    <label><input type="radio" name="q98" value="A" data-marks="1"> Electron-volts (eV)</label><br>
+    <label><input type="radio" name="q98" value="B" data-marks="0"> Joules (J)</label><br>
+    <label><input type="radio" name="q98" value="C" data-marks="0"> milli-electron-volts (meV)</label><br>
+    <label><input type="radio" name="q98" value="D" data-marks="0"> kilo-electron-volts (keV)</label>
+</div>
+
+<!-- Question 99 (Difficult) -->
+<div>
+    <h3>99. Clausius-Clapeyron equation is primarily used to:</h3>
+    <label><input type="radio" name="q99" value="A" data-marks="1"> Predict vapor-pressure variation with temperature</label><br>
+    <label><input type="radio" name="q99" value="B" data-marks="0"> Find internal energy at absolute zero</label><br>
+    <label><input type="radio" name="q99" value="C" data-marks="0"> Determine heat capacity at constant volume</label><br>
+    <label><input type="radio" name="q99" value="D" data-marks="0"> Calculate thermal conductivity</label>
+</div>
+
+<!-- Question 100 (Difficult) -->
+<div>
+    <h3>100. Ergodic hypothesis relates ensemble averages to:</h3>
+    <label><input type="radio" name="q100" value="A" data-marks="1"> Time averages of a single system</label><br>
+    <label><input type="radio" name="q100" value="B" data-marks="0"> Spatial averages only</label><br>
+    <label><input type="radio" name="q100" value="C" data-marks="0"> Quantum states averages</label><br>
+    <label><input type="radio" name="q100" value="D" data-marks="0"> Thermodynamic potentials</label>
+</div>
+
+        </fieldset>
+
+        <button type="button" onclick="submitQuiz()">Submit & Download Excel</button>
+    </form>
+
+<script>
+function submitQuiz() {
+    const data = new FormData(document.getElementById('quiz-form'));
+    const responses = {};
+
+    // Participant details
+    responses['Name'] = data.get('name');
+    responses['Email'] = data.get('email');
+    responses['Roll Number'] = data.get('rollNumber');
+    responses['Class'] = data.get('class');
+
+    let totalMarks = 0;
+
+    // Extract actual question number from each question
+    document.querySelectorAll('div').forEach((questionDiv) => {
+        const questionText = questionDiv.querySelector('h3');
+        const checkedOption = questionDiv.querySelector('input[type="radio"]:checked');
+        
+        if (questionText && checkedOption) {
+            const questionNumberMatch = questionText.textContent.trim().match(/^(\d+)/);
+            let questionNumber;
+
+            if (questionNumberMatch) {
+                questionNumber = "Q" + questionNumberMatch[1];
+            } else {
+                // For questions without explicit numbers, use full text or a keyword
+                questionNumber = questionText.textContent.trim().slice(0, 20) + '...';
+            }
+
+            const answerValue = checkedOption.value;
+            const marks = parseInt(checkedOption.getAttribute('data-marks'));
+            responses[questionNumber] = answerValue;
+            totalMarks += marks;
+        }
+    });
+
+    // Add total marks
+    responses['Total Marks'] = totalMarks;
+
+    // Create Excel worksheet
+    const worksheet = XLSX.utils.json_to_sheet([responses]);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "QuizResults");
+    XLSX.writeFile(workbook, "Thermodynamics_Quiz.xlsx");
+
+    alert("Your total marks: " + totalMarks);
+}
+
+
+</script>
+
+</body>
+</html>
