@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrews' Experiment MCQ Exam</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    .question {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .question h3 {
+      margin-top: 0;
+    }
+    .options {
+      margin-top: 10px;
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+    .submit-btn, .answer-link {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover, .answer-link:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Exam: Andrews' Experiment</h1>
+
+  <form id="quiz-form">
+    <div class="question">
+      <h3>1. In Andrews' experiment, the critical temperature is identified as the temperature at which:</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A"> (A) Pressure becomes zero</label>
+        <label><input type="radio" name="q1" value="B"> (B) Volume becomes infinite</label>
+        <label><input type="radio" name="q1" value="C"> (C) Distinction between gas and liquid vanishes</label>
+        <label><input type="radio" name="q1" value="D"> (D) Isotherms intersect</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2. The isotherms in Andrews’ experiment show a flat portion at certain temperatures. What physical process does this represent?</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A"> (A) Sublimation</label>
+        <label><input type="radio" name="q2" value="B"> (B) Condensation of gas into liquid</label>
+        <label><input type="radio" name="q2" value="C"> (C) Solidification</label>
+        <label><input type="radio" name="q2" value="D"> (D) Heating at constant pressure</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. Using the van der Waals equation, derive the critical constants in terms of the constants \( a \) and \( b \). Which of the following correctly represents the critical volume \( V_c \)?</h3>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A"> (A) \( V_c = b \)</label>
+        <label><input type="radio" name="q3" value="B"> (B) \( V_c = 2b \)</label>
+        <label><input type="radio" name="q3" value="C"> (C) \( V_c = 3b \)</label>
+        <label><input type="radio" name="q3" value="D"> (D) \( V_c = 4b \)</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>4. Calculate the work done during the isothermal compression from point A to point B on an isotherm below the critical temperature using the van der Waals equation. Assume 1 mole of gas.</h3>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A"> (A) \( W = nRT \ln(V_B/V_A) \)</label>
+        <label><input type="radio" name="q4" value="B"> (B) \( W = nRT \ln\left( \frac{V_B - b}{V_A - b} \right) - a\left( \frac{1}{V_B} - \frac{1}{V_A} \right) \)</label>
+        <label><input type="radio" name="q4" value="C"> (C) \( W = -a(V_B - V_A) \)</label>
+        <label><input type="radio" name="q4" value="D"> (D) None of the above</label>
+      </div>
+    </div>
+
+    <div class="question">
+        <h3>5. For a van der Waals gas undergoing an isothermal expansion from \( V_1 \) to \( V_2 \), what is the condition for the work done to be positive?</h3>
+        <div class="options">
+          <label><input type="radio" name="q5" value="A"> (A) \( V_2 &lt; V_1 \)</label>
+          <label><input type="radio" name="q5" value="B"> (B) \( V_2 &gt; V_1 \)</label>
+          <label><input type="radio" name="q5" value="C"> (C) Work is always zero</label>
+          <label><input type="radio" name="q5" value="D"> (D) Only at the critical point</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>6. Using the van der Waals equation, derive the critical pressure \( P_c \) in terms of \( a \) and \( b \). Which of the following is correct?</h3>
+        <div class="options">
+          <label><input type="radio" name="q6" value="A"> (A) \( P_c = \frac{a}{b^2} \)</label>
+          <label><input type="radio" name="q6" value="B"> (B) \( P_c = \frac{a}{27b^2} \)</label>
+          <label><input type="radio" name="q6" value="C"> (C) \( P_c = \frac{3a}{8b^2} \)</label>
+          <label><input type="radio" name="q6" value="D"> (D) \( P_c = \frac{a}{9b^2} \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>7. Consider a gas that obeys the van der Waals equation. Which of the following graphs best explains the Andrews isotherms for temperatures below the critical temperature?</h3>
+        <div class="options">
+          <label><input type="radio" name="q7" value="A"> (A) Monotonically increasing \( P \) with \( V \)</label>
+          <label><input type="radio" name="q7" value="B"> (B) Horizontal line for all \( V \)</label>
+          <label><input type="radio" name="q7" value="C"> (C) A curve with a region of negative slope and a flat portion</label>
+          <label><input type="radio" name="q7" value="D"> (D) An ellipse</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>8. Which of the following correctly expresses the critical compressibility factor \( Z_c = \frac{P_c V_c}{RT_c} \) for a van der Waals gas?</h3>
+        <div class="options">
+          <label><input type="radio" name="q8" value="A"> (A) \( Z_c = \frac{1}{3} \)</label>
+          <label><input type="radio" name="q8" value="B"> (B) \( Z_c = \frac{3}{8} \)</label>
+          <label><input type="radio" name="q8" value="C"> (C) \( Z_c = \frac{8}{27} \)</label>
+          <label><input type="radio" name="q8" value="D"> (D) \( Z_c = 1 \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>9. At the critical point, the van der Waals isotherm has:</h3>
+        <div class="options">
+          <label><input type="radio" name="q9" value="A"> (A) A maximum</label>
+          <label><input type="radio" name="q9" value="B"> (B) A minimum</label>
+          <label><input type="radio" name="q9" value="C"> (C) An inflection point</label>
+          <label><input type="radio" name="q9" value="D"> (D) A point of discontinuity</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>10. For a van der Waals gas, suppose at temperature \( T = 0.9 T_c \), the isotherm shows a flat horizontal segment between volumes \( V_l \) and \( V_g \). What does the area under this flat portion represent?</h3>
+        <div class="options">
+          <label><input type="radio" name="q10" value="A"> (A) The work done during isothermal compression</label>
+          <label><input type="radio" name="q10" value="B"> (B) The latent heat</label>
+          <label><input type="radio" name="q10" value="C"> (C) The coexistence pressure and phase transition</label>
+          <label><input type="radio" name="q10" value="D"> (D) It has no physical meaning</label>
+        </div>
+      </div>
+      <div class="question">
+        <h3>11. According to the Zeroth Law of Thermodynamics, if system A is in thermal equilibrium with system B, and B is in thermal equilibrium with system C, then:</h3>
+        <div class="options">
+          <label><input type="radio" name="q11" value="A"> (A) System A is hotter than system C</label>
+          <label><input type="radio" name="q11" value="B"> (B) System A is in thermal equilibrium with system C</label>
+          <label><input type="radio" name="q11" value="C"> (C) System A and C exchange no heat</label>
+          <label><input type="radio" name="q11" value="D"> (D) System B is cooler than A and C</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>12. Derive the condition for thermodynamic equilibrium considering thermal, mechanical, and chemical equilibrium.</h3>
+        <div class="options">
+          <label><input type="radio" name="q12" value="A"> (A) Temperature must be different throughout the system</label>
+          <label><input type="radio" name="q12" value="B"> (B) Pressure should vary to balance heat flow</label>
+          <label><input type="radio" name="q12" value="C"> (C) Temperature, pressure, and chemical potential must be uniform</label>
+          <label><input type="radio" name="q12" value="D"> (D) Only thermal equilibrium is required</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>13. Derive the isothermal compressibility \( \kappa_T \) of an ideal gas. Use the ideal gas law \( PV = nRT \).</h3>
+        <div class="options">
+          <label><input type="radio" name="q13" value="A"> (A) \( \kappa_T = \frac{1}{P} \)</label>
+          <label><input type="radio" name="q13" value="B"> (B) \( \kappa_T = -\frac{1}{V} \left( \frac{\partial V}{\partial P} \right)_T \)</label>
+          <label><input type="radio" name="q13" value="C"> (C) \( \kappa_T = \left( \frac{\partial T}{\partial V} \right)_P \)</label>
+          <label><input type="radio" name="q13" value="D"> (D) \( \kappa_T = -\left( \frac{\partial P}{\partial V} \right)_T \)</label>
+        </div>
+      </div>
+      <div class="question">
+        <h3>14. Derive the expression for work done during a reversible isothermal expansion of an ideal gas from volume \( V_1 \) to \( V_2 \).</h3>
+        <div class="options">
+          <label><input type="radio" name="q14" value="A"> (A) \( W = nRT \ln\left( \frac{V_1}{V_2} \right) \)</label>
+          <label><input type="radio" name="q14" value="B"> (B) \( W = nRT \ln\left( \frac{V_2}{V_1} \right) \)</label>
+          <label><input type="radio" name="q14" value="C"> (C) \( W = \frac{P_1 - P_2}{V} \)</label>
+          <label><input type="radio" name="q14" value="D"> (D) \( W = \frac{1}{2} nRT \ln(V) \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>15. Derive the work done in a reversible adiabatic expansion of an ideal gas from \( V_1 \) to \( V_2 \).</h3>
+        <div class="options">
+          <label><input type="radio" name="q15" value="A"> (A) \( W = \frac{nR(T_2 - T_1)}{\gamma - 1} \)</label>
+          <label><input type="radio" name="q15" value="B"> (B) \( W = \frac{P_1V_1 - P_2V_2}{\gamma - 1} \)</label>
+          <label><input type="radio" name="q15" value="C"> (C) \( W = \frac{P_1V_1}{\gamma - 1} \left[ 1 - \left( \frac{V_1}{V_2} \right)^{\gamma - 1} \right] \)</label>
+          <label><input type="radio" name="q15" value="D"> (D) All of the above</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>16. Show that for an ideal gas, the difference in specific heats is \( C_P - C_V = R \).</h3>
+        <div class="options">
+          <label><input type="radio" name="q16" value="A"> (A) \( C_P + C_V = R \)</label>
+          <label><input type="radio" name="q16" value="B"> (B) \( C_P - C_V = R \)</label>
+          <label><input type="radio" name="q16" value="C"> (C) \( C_P / C_V = R \)</label>
+          <label><input type="radio" name="q16" value="D"> (D) \( C_P = C_V \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>17. A system absorbs 300 J of heat and does 100 J of work. What is the change in internal energy?</h3>
+        <div class="options">
+          <label><input type="radio" name="q17" value="A"> (A) 400 J</label>
+          <label><input type="radio" name="q17" value="B"> (B) 200 J</label>
+          <label><input type="radio" name="q17" value="C"> (C) 100 J</label>
+          <label><input type="radio" name="q17" value="D"> (D) -200 J</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>18. Derive the efficiency of a Carnot engine operating between temperatures \( T_H \) and \( T_C \).</h3>
+        <div class="options">
+          <label><input type="radio" name="q18" value="A"> (A) \( \eta = \frac{T_H - T_C}{T_H} \)</label>
+          <label><input type="radio" name="q18" value="B"> (B) \( \eta = \frac{T_C}{T_H} \)</label>
+          <label><input type="radio" name="q18" value="C"> (C) \( \eta = 1 - \frac{T_C}{T_H} \)</label>
+          <label><input type="radio" name="q18" value="D"> (D) \( \eta = 1 - \frac{T_H}{T_C} \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>19. A Carnot engine absorbs 800 J from a hot reservoir and expels 500 J to the cold reservoir. What is the work done per cycle?</h3>
+        <div class="options">
+          <label><input type="radio" name="q19" value="A"> (A) 1300 J</label>
+          <label><input type="radio" name="q19" value="B"> (B) 300 J</label>
+          <label><input type="radio" name="q19" value="C"> (C) 500 J</label>
+          <label><input type="radio" name="q19" value="D"> (D) 800 J</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>20. Define the second law of thermodynamics using Clausius' statement.</h3>
+        <div class="options">
+          <label><input type="radio" name="q20" value="A"> (A) Heat can flow from cold to hot spontaneously</label>
+          <label><input type="radio" name="q20" value="B"> (B) It is impossible to convert heat into work</label>
+          <label><input type="radio" name="q20" value="C"> (C) No process is possible in which heat is transferred from a colder to a hotter body without work</label>
+          <label><input type="radio" name="q20" value="D"> (D) Work done is always positive</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>21. Show how the Kelvin scale of temperature is derived from the efficiency of a Carnot engine.</h3>
+        <div class="options">
+          <label><input type="radio" name="q21" value="A"> (A) \( \frac{Q_C}{Q_H} = \frac{T_H}{T_C} \)</label>
+          <label><input type="radio" name="q21" value="B"> (B) \( \frac{Q_C}{Q_H} = \frac{T_C}{T_H} \)</label>
+          <label><input type="radio" name="q21" value="C"> (C) \( Q_H = Q_C \)</label>
+          <label><input type="radio" name="q21" value="D"> (D) \( Q_C = 0 \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>22. Derive the expression for the coefficient of performance (COP) of a Carnot refrigerator.</h3>
+        <div class="options">
+          <label><input type="radio" name="q22" value="A"> (A) \( \text{COP} = \frac{T_H}{T_H - T_C} \)</label>
+          <label><input type="radio" name="q22" value="B"> (B) \( \text{COP} = \frac{T_C}{T_H - T_C} \)</label>
+          <label><input type="radio" name="q22" value="C"> (C) \( \text{COP} = \frac{Q_H}{Q_C} \)</label>
+          <label><input type="radio" name="q22" value="D"> (D) \( \text{COP} = \frac{Q_C - Q_H}{T_C} \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>23. Define the Clausius-Clapeyron equation and write its form for a liquid-vapour phase transition.</h3>
+        <div class="options">
+          <label><input type="radio" name="q23" value="A"> (A) \( \frac{dT}{dP} = \frac{L}{T(V_v - V_l)} \)</label>
+          <label><input type="radio" name="q23" value="B"> (B) \( \frac{dP}{dT} = \frac{L}{T(V_v - V_l)} \)</label>
+          <label><input type="radio" name="q23" value="C"> (C) \( \frac{dP}{dT} = \frac{L}{V_v + V_l} \)</label>
+          <label><input type="radio" name="q23" value="D"> (D) \( \frac{dP}{dT} = \frac{T}{L(V_v - V_l)} \)</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>24. A heat pump delivers 1500 J of heat to a room by consuming 500 J of work. What is its coefficient of performance?</h3>
+        <div class="options">
+          <label><input type="radio" name="q24" value="A"> (A) 1</label>
+          <label><input type="radio" name="q24" value="B"> (B) 2</label>
+          <label><input type="radio" name="q24" value="C"> (C) 3</label>
+          <label><input type="radio" name="q24" value="D"> (D) 4</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <h3>25. Show that entropy change \( \Delta S \) for an ideal gas heated from \( T_1 \) to \( T_2 \) at constant volume is \( \Delta S = nC_V \ln\left( \frac{T_2}{T_1} \right) \).</h3>
+        <div class="options">
+          <label><input type="radio" name="q25" value="A"> (A) \( \Delta S = nR \ln\left( \frac{T_2}{T_1} \right) \)</label>
+          <label><input type="radio" name="q25" value="B"> (B) \( \Delta S = nC_P \ln\left( \frac{T_2}{T_1} \right) \)</label>
+          <label><input type="radio" name="q25" value="C"> (C) \( \Delta S = nC_V \ln\left( \frac{T_2}{T_1} \right) \)</label>
+          <label><input type="radio" name="q25" value="D"> (D) \( \Delta S = nT \ln\left( \frac{C_P}{C_V} \right) \)</label>
+        </div>
+      </div>
+      
+    <button type="button" class="submit-btn" onclick="calculateScore()">Submit and Get Score</button>
+  </form>
+
+  <div id="result"></div>
+  <div class="question">
+    <h3>26. Using Clausius' and Kelvin's statements, explain why all heat engines must reject some heat to a cold reservoir and cannot be 100% efficient.</h3>
+    <div class="options">
+      <label><input type="radio" name="q26" value="A"> (A) Because temperature is always changing</label>
+      <label><input type="radio" name="q26" value="B"> (B) Because heat flow always occurs from hot to cold spontaneously</label>
+      <label><input type="radio" name="q26" value="C"> (C) Because Clausius' statement forbids perfect heat-to-work conversion</label>
+      <label><input type="radio" name="q26" value="D"> (D) Both B and C</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>27. A Carnot engine operates between \( T_H = 600\,\mathrm{K} \) and \( T_C = 300\,\mathrm{K} \). Derive its efficiency and calculate how much work is done if it absorbs 900 J of heat from the hot reservoir.</h3>
+    <div class="options">
+      <label><input type="radio" name="q27" value="A"> (A) 300 J</label>
+      <label><input type="radio" name="q27" value="B"> (B) 450 J</label>
+      <label><input type="radio" name="q27" value="C"> (C) 600 J</label>
+      <label><input type="radio" name="q27" value="D"> (D) 900 J</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>28. Derive the expression for the coefficient of performance (COP) of a Carnot heat pump operating between \( T_H \) and \( T_C \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q28" value="A"> (A) \( \frac{T_H}{T_H - T_C} \)</label>
+      <label><input type="radio" name="q28" value="B"> (B) \( \frac{T_C}{T_H - T_C} \)</label>
+      <label><input type="radio" name="q28" value="C"> (C) \( \frac{T_C}{T_H} \)</label>
+      <label><input type="radio" name="q28" value="D"> (D) \( \frac{T_H - T_C}{T_C} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>29. Derive the Clausius-Clapeyron equation for a first-order phase transition and explain its physical significance.</h3>
+    <div class="options">
+      <label><input type="radio" name="q29" value="A"> (A) \( \frac{dT}{dP} = \frac{L}{T(V_v - V_l)} \)</label>
+      <label><input type="radio" name="q29" value="B"> (B) \( \frac{dP}{dT} = \frac{L}{T(V_v - V_l)} \)</label>
+      <label><input type="radio" name="q29" value="C"> (C) \( \frac{dP}{dT} = \frac{T}{L(V_v - V_l)} \)</label>
+      <label><input type="radio" name="q29" value="D"> (D) \( \frac{dP}{dT} = \frac{L}{V_v + V_l} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>30. A Carnot refrigerator operates between 277 K and 300 K. Calculate its coefficient of performance (COP).</h3>
+    <div class="options">
+      <label><input type="radio" name="q30" value="A"> (A) 11.1</label>
+      <label><input type="radio" name="q30" value="B"> (B) 12.0</label>
+      <label><input type="radio" name="q30" value="C"> (C) 13.5</label>
+      <label><input type="radio" name="q30" value="D"> (D) 14.3</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>31. Define entropy and derive its expression for a reversible process. Use the second law to explain the physical meaning of entropy.</h3>
+    <div class="options">
+      <label><input type="radio" name="q31" value="A"> (A) \( dS = \frac{dQ}{T} \) for all processes</label>
+      <label><input type="radio" name="q31" value="B"> (B) \( dS = \frac{dQ_{\text{rev}}}{T} \) for reversible processes only</label>
+      <label><input type="radio" name="q31" value="C"> (C) \( dS = TdQ \)</label>
+      <label><input type="radio" name="q31" value="D"> (D) \( dS = \frac{dQ}{T^2} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>32. State and prove the principle of increase of entropy for an isolated system. Which of the following is true for irreversible processes?</h3>
+    <div class="options">
+      <label><input type="radio" name="q32" value="A"> (A) \( \Delta S = 0 \)</label>
+      <label><input type="radio" name="q32" value="B"> (B) \( \Delta S < 0 \)</label>
+      <label><input type="radio" name="q32" value="C"> (C) \( \Delta S > 0 \)</label>
+      <label><input type="radio" name="q32" value="D"> (D) Entropy is undefined</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>33. Derive the expression for the change in entropy during heat conduction between two bodies at temperatures \( T_1 \) and \( T_2 \), where \( T_1 > T_2 \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q33" value="A"> (A) \( \Delta S = 0 \)</label>
+      <label><input type="radio" name="q33" value="B"> (B) \( \Delta S = Q \left( \frac{1}{T_2} - \frac{1}{T_1} \right) \)</label>
+      <label><input type="radio" name="q33" value="C"> (C) \( \Delta S = Q \left( \frac{T_2 - T_1}{T_1 T_2} \right) \)</label>
+      <label><input type="radio" name="q33" value="D"> (D) \( \Delta S = \ln\left( \frac{T_2}{T_1} \right) \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>34. Calculate the change in entropy for an ideal gas when it is reversibly heated from \( T_1 \) to \( T_2 \) at constant volume. Let \( C_V \) be the specific heat at constant volume.</h3>
+    <div class="options">
+      <label><input type="radio" name="q34" value="A"> (A) \( \Delta S = C_P \ln\left( \frac{T_2}{T_1} \right) \)</label>
+      <label><input type="radio" name="q34" value="B"> (B) \( \Delta S = nR \ln\left( \frac{T_2}{T_1} \right) \)</label>
+      <label><input type="radio" name="q34" value="C"> (C) \( \Delta S = nC_V \ln\left( \frac{T_2}{T_1} \right) \)</label>
+      <label><input type="radio" name="q34" value="D"> (D) \( \Delta S = nT \ln\left( \frac{C_P}{C_V} \right) \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>35. Using a TS diagram, derive the efficiency of a Carnot engine and relate it to entropy changes of the system and reservoirs.</h3>
+    <div class="options">
+      <label><input type="radio" name="q35" value="A"> (A) \( \eta = \frac{T_C}{T_H} \)</label>
+      <label><input type="radio" name="q35" value="B"> (B) \( \eta = 1 - \frac{T_C}{T_H} \)</label>
+      <label><input type="radio" name="q35" value="C"> (C) \( \eta = \frac{T_H}{T_C} \)</label>
+      <label><input type="radio" name="q35" value="D"> (D) \( \eta = \frac{T_H - T_C}{T_H + T_C} \)</label>
+    </div>
+  </div>
+  <div class="question">
+    <h3>36. Derive any one of Maxwell’s thermodynamic relations starting from a thermodynamic potential and explain the physical significance of the relation.</h3>
+    <div class="options">
+      <label><input type="radio" name="q36" value="A"> (A) \( \left( \frac{\partial T}{\partial V} \right)_S = \left( \frac{\partial P}{\partial S} \right)_V \)</label>
+      <label><input type="radio" name="q36" value="B"> (B) \( \left( \frac{\partial S}{\partial V} \right)_T = \left( \frac{\partial P}{\partial T} \right)_V \)</label>
+      <label><input type="radio" name="q36" value="C"> (C) \( \left( \frac{\partial S}{\partial P} \right)_T = -\left( \frac{\partial V}{\partial T} \right)_P \)</label>
+      <label><input type="radio" name="q36" value="D"> (D) All of the above</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>37. Derive the two TdS equations from the first and second laws of thermodynamics for a simple compressible system.</h3>
+    <div class="options">
+      <label><input type="radio" name="q37" value="A"> (A) \( TdS = dU + PdV \)</label>
+      <label><input type="radio" name="q37" value="B"> (B) \( TdS = dH - VdP \)</label>
+      <label><input type="radio" name="q37" value="C"> (C) Both A and B</label>
+      <label><input type="radio" name="q37" value="D"> (D) None of these</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>38. Show that \( C_P - C_V = T \left( \frac{\partial P}{\partial T} \right)_V \left( \frac{\partial V}{\partial T} \right)_P \) using Maxwell relations and the TdS equations.</h3>
+    <div class="options">
+      <label><input type="radio" name="q38" value="A"> (A) \( C_P - C_V = T\left( \frac{\partial V}{\partial T} \right)_P^2 \left( \frac{\partial P}{\partial V} \right)_T \)</label>
+      <label><input type="radio" name="q38" value="B"> (B) \( C_P - C_V = T \left( \frac{\partial P}{\partial T} \right)_V \left( \frac{\partial V}{\partial T} \right)_P \)</label>
+      <label><input type="radio" name="q38" value="C"> (C) \( C_P - C_V = R \)</label>
+      <label><input type="radio" name="q38" value="D"> (D) None of the above</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>39. Starting from appropriate thermodynamic potentials, derive the expressions for enthalpy \( H \), Helmholtz free energy \( F \), and Gibbs free energy \( G \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q39" value="A"> (A) \( H = U + PV, F = U - TS, G = H - TS \)</label>
+      <label><input type="radio" name="q39" value="B"> (B) \( H = U - PV, F = TS - U, G = PV - TS \)</label>
+      <label><input type="radio" name="q39" value="C"> (C) \( H = TS + PV, F = U + TS, G = H + TS \)</label>
+      <label><input type="radio" name="q39" value="D"> (D) \( H = U + TS, F = U + PV, G = F - TS \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>40. State the third law of thermodynamics and explain its consequences on the behavior of entropy at absolute zero temperature.</h3>
+    <div class="options">
+      <label><input type="radio" name="q40" value="A"> (A) Entropy at absolute zero is zero for all substances</label>
+      <label><input type="radio" name="q40" value="B"> (B) Entropy at zero temperature is undefined</label>
+      <label><input type="radio" name="q40" value="C"> (C) Entropy approaches a constant as \( T \to 0 \)</label>
+      <label><input type="radio" name="q40" value="D"> (D) Entropy becomes infinite as \( T \to 0 \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>41. Derive the equation for steady-state one-dimensional heat conduction through a slab. Define thermal conductivity in terms of heat flux.</h3>
+    <div class="options">
+      <label><input type="radio" name="q41" value="A"> (A) \( q = -k \frac{dT}{dx} \)</label>
+      <label><input type="radio" name="q41" value="B"> (B) \( q = - \frac{dT}{dx} \)</label>
+      <label><input type="radio" name="q41" value="C"> (C) \( q = -kT \)</label>
+      <label><input type="radio" name="q41" value="D"> (D) \( q = -k \frac{dx}{dT} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>42. In Lee’s disc experiment, derive the expression for the thermal conductivity \( k \) of a bad conductor using steady state condition.</h3>
+    <div class="options">
+      <label><input type="radio" name="q42" value="A"> (A) \( k = \frac{m s (\Delta T)}{A t} \)</label>
+      <label><input type="radio" name="q42" value="B"> (B) \( k = \frac{m s \frac{dT}{dt} \cdot x}{A(T_1 - T_2)} \)</label>
+      <label><input type="radio" name="q42" value="C"> (C) \( k = \frac{A(T_1 - T_2)}{x \cdot t} \)</label>
+      <label><input type="radio" name="q42" value="D"> (D) \( k = \frac{x \cdot (T_1 - T_2)}{m s \cdot t} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>43. Define thermal resistance and derive its expression for a conducting slab of thickness \( x \), area \( A \), and thermal conductivity \( k \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q43" value="A"> (A) \( R_{th} = \frac{x}{kA} \)</label>
+      <label><input type="radio" name="q43" value="B"> (B) \( R_{th} = \frac{k}{Ax} \)</label>
+      <label><input type="radio" name="q43" value="C"> (C) \( R_{th} = kAx \)</label>
+      <label><input type="radio" name="q43" value="D"> (D) \( R_{th} = \frac{1}{kAx} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>44. Define energy flux, intensity, and radiant emittance. Which of the following correctly expresses Stefan's law of radiation?</h3>
+    <div class="options">
+      <label><input type="radio" name="q44" value="A"> (A) \( Q = \sigma A T \)</label>
+      <label><input type="radio" name="q44" value="B"> (B) \( Q = \sigma A T^4 \)</label>
+      <label><input type="radio" name="q44" value="C"> (C) \( Q = \sigma T^4 \)</label>
+      <label><input type="radio" name="q44" value="D"> (D) \( Q = A T^4 \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>45. A black body emits thermal radiation with a power \( Q \). If its absolute temperature is doubled, what happens to the power emitted?</h3>
+    <div class="options">
+      <label><input type="radio" name="q45" value="A"> (A) It doubles</label>
+      <label><input type="radio" name="q45" value="B"> (B) It increases four times</label>
+      <label><input type="radio" name="q45" value="C"> (C) It increases eight times</label>
+      <label><input type="radio" name="q45" value="D"> (D) It increases sixteen times</label>
+    </div>
+  </div>
+  <div class="question">
+    <h3>46. Define microstates and macrostates. Derive the relation between entropy and the number of microstates \( \Omega \) using Boltzmann’s principle.</h3>
+    <div class="options">
+      <label><input type="radio" name="q46" value="A"> (A) \( S = k \Omega \)</label>
+      <label><input type="radio" name="q46" value="B"> (B) \( S = k \ln(\Omega) \)</label>
+      <label><input type="radio" name="q46" value="C"> (C) \( S = \ln(\Omega^k) \)</label>
+      <label><input type="radio" name="q46" value="D"> (D) \( S = \frac{1}{\Omega} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>47. Explain the concept of phase space. For a system of \( N \) particles, how many dimensions does the phase space have? Distinguish between \( \mu \)-space and \( \Gamma \)-space.</h3>
+    <div class="options">
+      <label><input type="radio" name="q47" value="A"> (A) \( 6N \) and \( \mu \)-space is 6D</label>
+      <label><input type="radio" name="q47" value="B"> (B) \( 6N \) and \( \mu \)-space is single-particle space</label>
+      <label><input type="radio" name="q47" value="C"> (C) \( \mu \)-space for N particles is same as \( \Gamma \)-space</label>
+      <label><input type="radio" name="q47" value="D"> (D) None of the above</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>48. State and explain the principle of equal a priori probability. Derive its implication in microcanonical ensemble.</h3>
+    <div class="options">
+      <label><input type="radio" name="q48" value="A"> (A) All states have unequal probability</label>
+      <label><input type="radio" name="q48" value="B"> (B) Probability \( p_i = \frac{1}{\Omega} \) in microcanonical ensemble</label>
+      <label><input type="radio" name="q48" value="C"> (C) Only ground state is accessible</label>
+      <label><input type="radio" name="q48" value="D"> (D) Probabilities are time-dependent</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>49. Explain the ergodic hypothesis. How is it related to statistical equilibrium and time averages?</h3>
+    <div class="options">
+      <label><input type="radio" name="q49" value="A"> (A) Ergodicity implies all microstates are visited equally</label>
+      <label><input type="radio" name="q49" value="B"> (B) Time average equals ensemble average</label>
+      <label><input type="radio" name="q49" value="C"> (C) System evolves to statistical equilibrium</label>
+      <label><input type="radio" name="q49" value="D"> (D) All of the above</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>50. Derive the expression for the number of microstates \( \Omega(E) \) for a microcanonical ensemble confined to energy shell \( [E, E + \delta E] \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q50" value="A"> (A) \( \Omega = \frac{1}{h^{3N} N!} \int \delta(E - H(p,q)) \, d^{3N}p \, d^{3N}q \)</label>
+      <label><input type="radio" name="q50" value="B"> (B) \( \Omega = \sum \delta(E + H(p,q)) \)</label>
+      <label><input type="radio" name="q50" value="C"> (C) \( \Omega = \int e^{-\beta E} \, dE \)</label>
+      <label><input type="radio" name="q50" value="D"> (D) \( \Omega = \frac{1}{Z} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>51. Define the canonical ensemble. Derive the expression for the canonical partition function \( Z \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q51" value="A"> (A) \( Z = \int e^{-\beta H} \, d\Gamma \)</label>
+      <label><input type="radio" name="q51" value="B"> (B) \( Z = \sum e^{-\beta E_i} \)</label>
+      <label><input type="radio" name="q51" value="C"> (C) Both A and B</label>
+      <label><input type="radio" name="q51" value="D"> (D) \( Z = e^{\beta E} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>52. Using the canonical ensemble, derive an expression for the average energy \( \langle E \rangle \) in terms of the partition function \( Z \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q52" value="A"> (A) \( \langle E \rangle = -\frac{\partial \ln Z}{\partial \beta} \)</label>
+      <label><input type="radio" name="q52" value="B"> (B) \( \langle E \rangle = \frac{1}{Z} \sum E_i \)</label>
+      <label><input type="radio" name="q52" value="C"> (C) \( \langle E \rangle = \frac{\partial Z}{\partial \beta} \)</label>
+      <label><input type="radio" name="q52" value="D"> (D) \( \langle E \rangle = -\frac{\partial Z}{\partial T} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>53. Derive the equipartition theorem and show that each quadratic degree of freedom contributes \( \frac{1}{2}kT \) to the average energy.</h3>
+    <div class="options">
+      <label><input type="radio" name="q53" value="A"> (A) \( \langle E \rangle = \frac{1}{2}kT \) per quadratic term</label>
+      <label><input type="radio" name="q53" value="B"> (B) \( \langle E \rangle = kT \) per particle</label>
+      <label><input type="radio" name="q53" value="C"> (C) \( \langle E \rangle = \frac{3}{2}kT \) per ensemble</label>
+      <label><input type="radio" name="q53" value="D"> (D) Energy is constant</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>54. Define the grand canonical ensemble. Derive the grand partition function \( \mathcal{Z} \) and the average particle number.</h3>
+    <div class="options">
+      <label><input type="radio" name="q54" value="A"> (A) \( \mathcal{Z} = \sum_{N} \sum_{i} e^{\beta (\mu N - E_i)} \)</label>
+      <label><input type="radio" name="q54" value="B"> (B) \( \langle N \rangle = \frac{\partial \ln \mathcal{Z}}{\partial \mu} \)</label>
+      <label><input type="radio" name="q54" value="C"> (C) Both A and B</label>
+      <label><input type="radio" name="q54" value="D"> (D) \( \mathcal{Z} = \int \Omega(E) \, dE \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>55. Explain how the partition function encodes the thermodynamic properties of a system. Which of the following quantities can be derived from it?</h3>
+    <div class="options">
+      <label><input type="radio" name="q55" value="A"> (A) Average energy</label>
+      <label><input type="radio" name="q55" value="B"> (B) Entropy</label>
+      <label><input type="radio" name="q55" value="C"> (C) Helmholtz free energy</label>
+      <label><input type="radio" name="q55" value="D"> (D) All of the above</label>
+    </div>
+  </div>
+  <div class="question">
+    <h3>56. Derive the Maxwell-Boltzmann distribution function for a classical ideal gas.</h3>
+    <div class="options">
+      <label><input type="radio" name="q56" value="A"> (A) \( f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} + 1} \)</label>
+      <label><input type="radio" name="q56" value="B"> (B) \( f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} - 1} \)</label>
+      <label><input type="radio" name="q56" value="C"> (C) \( f(\epsilon) = A e^{-\epsilon/kT} \)</label>
+      <label><input type="radio" name="q56" value="D"> (D) \( f(\epsilon) = A \epsilon^2 e^{-\epsilon/kT} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>57. Derive the Fermi-Dirac distribution function for indistinguishable fermions and explain its significance at \( T = 0 \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q57" value="A"> (A) \( f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} + 1} \)</label>
+      <label><input type="radio" name="q57" value="B"> (B) \( f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} - 1} \)</label>
+      <label><input type="radio" name="q57" value="C"> (C) \( f(\epsilon) = e^{-\epsilon/kT} \)</label>
+      <label><input type="radio" name="q57" value="D"> (D) \( f(\epsilon) = A \epsilon^2 e^{-\epsilon/kT} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>58. Derive the Bose-Einstein distribution law for indistinguishable bosons and explain the conditions under which Bose-Einstein condensation occurs.</h3>
+    <div class="options">
+      <label><input type="radio" name="q58" value="A"> (A) \( f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} - 1} \)</label>
+      <label><input type="radio" name="q58" value="B"> (B) \( f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} + 1} \)</label>
+      <label><input type="radio" name="q58" value="C"> (C) \( f(\epsilon) = e^{-\epsilon/kT} \)</label>
+      <label><input type="radio" name="q58" value="D"> (D) \( f(\epsilon) = \frac{1}{e^{-\mu/kT}} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>59. Using Maxwell-Boltzmann distribution, derive the expression for the average energy of a particle in a classical ideal gas.</h3>
+    <div class="options">
+      <label><input type="radio" name="q59" value="A"> (A) \( \langle E \rangle = \frac{1}{2}kT \)</label>
+      <label><input type="radio" name="q59" value="B"> (B) \( \langle E \rangle = \frac{3}{2}kT \)</label>
+      <label><input type="radio" name="q59" value="C"> (C) \( \langle E \rangle = \frac{5}{2}kT \)</label>
+      <label><input type="radio" name="q59" value="D"> (D) \( \langle E \rangle = kT \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>60. Show that the Fermi energy is the energy of the highest occupied level at absolute zero. Derive an expression for Fermi energy \( \epsilon_F \) of a 3D free electron gas.</h3>
+    <div class="options">
+      <label><input type="radio" name="q60" value="A"> (A) \( \epsilon_F = \frac{\hbar^2}{2m} \left( 3\pi^2 n \right)^{2/3} \)</label>
+      <label><input type="radio" name="q60" value="B"> (B) \( \epsilon_F = \frac{1}{2}mv^2 \)</label>
+      <label><input type="radio" name="q60" value="C"> (C) \( \epsilon_F = \frac{3}{2}kT \)</label>
+      <label><input type="radio" name="q60" value="D"> (D) \( \epsilon_F = \frac{h}{2\pi} \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>61. A classical gas of \( N \) particles occupies volume \( V \). Using MB statistics, derive the expression for the number of particles with energy between \( \epsilon \) and \( \epsilon + d\epsilon \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q61" value="A"> (A) \( n(\epsilon) = A e^{-\epsilon/kT} \)</label>
+      <label><input type="radio" name="q61" value="B"> (B) \( n(\epsilon) = A \epsilon^2 e^{-\epsilon/kT} \, d\epsilon \)</label>
+      <label><input type="radio" name="q61" value="C"> (C) \( n(\epsilon) = A \epsilon e^{-\epsilon/kT} \, d\epsilon \)</label>
+      <label><input type="radio" name="q61" value="D"> (D) \( n(\epsilon) = A e^{\epsilon/kT} \, d\epsilon \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>62. Compare the three distributions — MB, BE, and FD — and determine their limits when \( (\epsilon - \mu) \gg kT \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q62" value="A"> (A) All reduce to Bose-Einstein form</label>
+      <label><input type="radio" name="q62" value="B"> (B) All reduce to \( f(\epsilon) = A e^{-\epsilon/kT} \)</label>
+      <label><input type="radio" name="q62" value="C"> (C) All reduce to Maxwell-Boltzmann form</label>
+      <label><input type="radio" name="q62" value="D"> (D) None of the above</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>63. At what temperature does Bose-Einstein condensation begin? Derive an expression for the critical temperature \( T_c \) for an ideal Bose gas in 3D.</h3>
+    <div class="options">
+      <label><input type="radio" name="q63" value="A"> (A) \( T_c = \frac{2\pi \hbar^2}{mk} \left( \frac{n}{\zeta(3/2)} \right)^{2/3} \)</label>
+      <label><input type="radio" name="q63" value="B"> (B) \( T_c = \frac{n}{\zeta(3/2)} \)</label>
+      <label><input type="radio" name="q63" value="C"> (C) \( T_c = \frac{1}{2}kT \)</label>
+      <label><input type="radio" name="q63" value="D"> (D) \( T_c = \frac{3}{2}kT \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>64. For a 3D Fermi gas at \( T = 0 \), derive the total energy and show that the average energy per particle is \( \frac{3}{5} \epsilon_F \).</h3>
+    <div class="options">
+      <label><input type="radio" name="q64" value="A"> (A) \( \langle E \rangle = \epsilon_F \)</label>
+      <label><input type="radio" name="q64" value="B"> (B) \( \langle E \rangle = \frac{3}{5} \epsilon_F \)</label>
+      <label><input type="radio" name="q64" value="C"> (C) \( \langle E \rangle = \frac{1}{2} \epsilon_F \)</label>
+      <label><input type="radio" name="q64" value="D"> (D) \( \langle E \rangle = \frac{5}{3} \epsilon_F \)</label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>65. Derive the expression for pressure of a Fermi gas at \( T = 0 \) and show that it is related to the Fermi energy.</h3>
+    <div class="options">
+      <label><input type="radio" name="q65" value="A"> (A) \( P = \frac{2}{5} n \epsilon_F \)</label>
+      <label><input type="radio" name="q65" value="B"> (B) \( P = n \epsilon_F \)</label>
+      <label><input type="radio" name="q65" value="C"> (C) \( P = \frac{3}{5} n \epsilon_F \)</label>
+      <label><input type="radio" name="q65" value="D"> (D) \( P = \epsilon_F \)</label>
+    </div>
+  </div>
+  
+  <br />
+  <a class="answer-link" href="Quiz2ans.html" target="_blank">View All Detailed Answers</a>
+
+  <script>
+    function calculateScore() {
+      const answers = {
+        q1: "C",
+        q2: "B",
+        q3: "C",
+        q4: "B",
+        q5: "C"
+      };
+      let score = 0;
+      for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+          score++;
+        }
+      }
+      document.getElementById("result").innerText = `Your score: ${score} / ${Object.keys(answers).length}`;
+    }
+  </script>
+</body>
+</html>

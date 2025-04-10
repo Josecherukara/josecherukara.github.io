@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detailed Answers: Andrews' Experiment MCQs</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #fdfdfd; line-height: 1.6; }
+    h2 { color: #222; margin-top: 30px; }
+    code, pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    a { color: #0066cc; }
+  </style>
+</head>
+<body>
+  <h1>Detailed Answers: Andrews' Experiment MCQs</h1>
+
+  <h2>Question 1</h2>
+  <p>Andrews' experiment revealed the existence of a <strong>critical temperature</strong> above which gases cannot be liquefied regardless of applied pressure. At this point, the distinction between liquid and gas disappears and the substance becomes a supercritical fluid.</p>
+  <p>At the critical point, the isotherm has an inflection point defined by:</p>
+  <p>
+    \[
+      \left( \frac{\partial P}{\partial V} \right)_T = 0, \quad \left( \frac{\partial^2 P}{\partial V^2} \right)_T = 0
+    \]
+  </p>
+  <p><strong>Correct Answer: (C) Distinction between gas and liquid vanishes</strong></p>
+
+  <h2>Question 2</h2>
+  <p>The flat region on the isotherms in Andrews' experiment represents the phase transition from gas to liquid, i.e., condensation. This region corresponds to a constant pressure at which both liquid and gas phases coexist in equilibrium.</p>
+  <p><strong>Correct Answer: (B) Condensation of gas into liquid</strong></p>
+  <h2>Question 3</h2>
+  <p>
+    The van der Waals equation for one mole of a real gas is:
+  </p>
+  <p>
+    \[
+      \left( P + \frac{a}{V^2} \right)(V - b) = RT
+    \]
+  </p>
+  
+  <p>
+    At the <strong>critical point</strong>, the isotherm has a point of inflection:
+  </p>
+  <p>
+    \[
+      \left( \frac{\partial P}{\partial V} \right)_T = 0, \quad 
+      \left( \frac{\partial^2 P}{\partial V^2} \right)_T = 0
+    \]
+  </p>
+  
+  <h3>Derivation:</h3>
+  
+  <p>Rewriting the van der Waals equation in terms of pressure:</p>
+  <p>
+    \[
+      P = \frac{RT}{V - b} - \frac{a}{V^2}
+    \]
+  </p>
+  
+  <p>First derivative with respect to \( V \):</p>
+  <p>
+    \[
+      \frac{\partial P}{\partial V} = -\frac{RT}{(V - b)^2} + \frac{2a}{V^3}
+    \]
+  </p>
+  
+  <p>Set it to zero at the critical point:</p>
+  <p>
+    \[
+      -\frac{RT_c}{(V_c - b)^2} + \frac{2a}{V_c^3} = 0 \tag{1}
+    \]
+  </p>
+  
+  <p>Second derivative:</p>
+  <p>
+    \[
+      \frac{\partial^2 P}{\partial V^2} = \frac{2RT}{(V - b)^3} - \frac{6a}{V^4}
+    \]
+  </p>
+  
+  <p>Set it to zero at the critical point:</p>
+  <p>
+    \[
+      \frac{2RT_c}{(V_c - b)^3} - \frac{6a}{V_c^4} = 0 \tag{2}
+    \]
+  </p>
+  
+  <h3>Solving equations (1) and (2):</h3>
+  
+  <p>From (1):</p>
+  <p>
+    \[
+      RT_c = \frac{2a (V_c - b)^2}{V_c^3}
+    \]
+  </p>
+  
+  <p>From (2):</p>
+  <p>
+    \[
+      RT_c = \frac{3a (V_c - b)^3}{V_c^4}
+    \]
+  </p>
+  
+  <p>Equating both expressions for \( RT_c \):</p>
+  <p>
+    \[
+      \frac{2a (V_c - b)^2}{V_c^3} = \frac{3a (V_c - b)^3}{V_c^4}
+    \]
+  </p>
+  
+  <p>Canceling \( a \) and \( (V_c - b)^2 \):</p>
+  <p>
+    \[
+      \frac{2}{V_c^3} = \frac{3(V_c - b)}{V_c^4}
+    \]
+  </p>
+  
+  <p>Multiplying both sides by \( V_c^4 \):</p>
+  <p>
+    \[
+      2V_c = 3(V_c - b)
+    \]
+  </p>
+  
+  <p>Simplifying:</p>
+  <p>
+    \[
+      2V_c = 3V_c - 3b \Rightarrow V_c = 3b
+    \]
+  </p>
+  
+  <h3>Final Result:</h3>
+  <p>
+    \[
+      \boxed{V_c = 3b}
+    \]
+  </p>
+  
+  <p>Also, we can now find the critical temperature and pressure:</p>
+  <p>
+    \[
+      T_c = \frac{8a}{27Rb}, \quad P_c = \frac{a}{27b^2}
+    \]
+  </p>
+  
+  <p><strong>Correct Answer: (C)</strong></p>
+  
+  <h2>Question 4</h2>
+<p>
+  To compute the work done during an <strong>isothermal compression</strong> of a real gas following the van der Waals equation, we begin with the general formula for work:
+</p>
+<p>
+  \[
+    W = \int_{V_A}^{V_B} P \, dV
+  \]
+</p>
+
+<p>
+  For 1 mole of a van der Waals gas, the pressure is given by:
+</p>
+<p>
+  \[
+    P = \frac{RT}{V - b} - \frac{a}{V^2}
+  \]
+</p>
+
+<p>
+  Substituting into the work integral:
+</p>
+<p>
+  \[
+    W = \int_{V_A}^{V_B} \left( \frac{RT}{V - b} - \frac{a}{V^2} \right) dV
+  \]
+</p>
+
+<p>
+  Now evaluate each term separately:
+</p>
+
+<ul>
+  <li>For the first term:
+    \[
+      \int_{V_A}^{V_B} \frac{RT}{V - b} \, dV = RT \ln\left( \frac{V_B - b}{V_A - b} \right)
+    \]
+  </li>
+  <li>For the second term:
+    \[
+      \int_{V_A}^{V_B} \left( -\frac{a}{V^2} \right) \, dV = -a \left( \frac{1}{V_B} - \frac{1}{V_A} \right)
+    \]
+  </li>
+</ul>
+
+<p>
+  So the total work is:
+</p>
+<p>
+  \[
+    W = RT \ln\left( \frac{V_B - b}{V_A - b} \right) - a \left( \frac{1}{V_B} - \frac{1}{V_A} \right)
+  \]
+</p>
+
+<p>
+  This is the expression for the isothermal work done on a van der Waals gas.
+</p>
+
+<h3>Final Answer:</h3>
+<p>
+  \[
+    \boxed{
+      W = RT \ln\left( \frac{V_B - b}{V_A - b} \right) - a \left( \frac{1}{V_B} - \frac{1}{V_A} \right)
+    }
+  \]
+</p>
+
+<p><strong>Correct Answer: (B)</strong></p>
+
+<h2>Question 5</h2>
+<p><strong>Correct Option: (B)</strong></p>
+<p>The work done during isothermal expansion is given by:</p>
+<p>
+  \[
+  W = \int_{V_1}^{V_2} P \, dV
+  \]
+</p>
+<p>In isothermal expansion, the gas expands from \( V_1 \) to \( V_2 \), with \( V_2 > V_1 \). Since pressure \( P \) is always positive and \( dV > 0 \), this integral is positive:</p>
+<p>
+  \[
+  W > 0 \quad \text{if} \quad V_2 > V_1
+  \]
+</p>
+<p>Hence, the condition for positive work is that the final volume is greater than the initial volume.</p>
+
+<hr>
+
+<h2>Question 6</h2>
+<p><strong>Correct Option: (B)</strong></p>
+<p>The van der Waals equation for 1 mole of a gas is:</p>
+<p>
+  \[
+  \left( P + \frac{a}{V^2} \right)(V - b) = RT
+  \]
+</p>
+<p>To find the critical point, apply the inflection conditions:</p>
+<p>
+  \[
+  \left( \frac{\partial P}{\partial V} \right)_T = 0, \quad
+  \left( \frac{\partial^2 P}{\partial V^2} \right)_T = 0
+  \]
+</p>
+<p>From solving these conditions, we obtain:</p>
+<p>
+  \[
+  V_c = 3b, \quad T_c = \frac{8a}{27Rb}, \quad P_c = \frac{a}{27b^2}
+  \]
+</p>
+<p>Therefore:</p>
+<p>
+  \[
+  \boxed{P_c = \frac{a}{27b^2}}
+  \]
+</p>
+
+<hr>
+
+<h2>Question 7</h2>
+<p><strong>Correct Option: (C)</strong></p>
+<p>At temperatures below the critical point (\( T < T_c \)), van der Waals isotherms show a region with positive slope:</p>
+<p>
+  \[
+  \left( \frac{\partial P}{\partial V} \right)_T > 0
+  \]
+</p>
+<p>This indicates instability and is physically not realizable. In reality, a phase transition occurs at constant pressure.</p>
+<p>To correct this, Maxwell’s construction replaces the unstable part of the curve with a horizontal segment representing liquid-gas coexistence. The resulting curve includes:</p>
+<ul>
+  <li>Monotonic decrease for liquid region</li>
+  <li>Flat region at coexistence pressure</li>
+  <li>Monotonic decrease for gas region</li>
+</ul>
+<p>So, the isotherm has a curve with a region of negative slope and a flat portion.</p>
+
+<hr>
+
+<h2>Question 8</h2>
+<p><strong>Correct Option: (C)</strong></p>
+<p>The compressibility factor at the critical point is defined as:</p>
+<p>
+  \[
+  Z_c = \frac{P_c V_c}{R T_c}
+  \]
+</p>
+<p>Using the van der Waals critical constants:</p>
+<p>
+  \[
+  V_c = 3b, \quad T_c = \frac{8a}{27Rb}, \quad P_c = \frac{a}{27b^2}
+  \]
+</p>
+<p>Substitute into the expression for \( Z_c \):</p>
+<p>
+  \[
+  Z_c = \frac{ \left( \frac{a}{27b^2} \right)(3b) }{ R \cdot \left( \frac{8a}{27Rb} \right) }
+  \]
+</p>
+<p>Simplifying:</p>
+<p>
+  \[
+  Z_c = \frac{3a}{27b} \cdot \frac{27Rb}{8a} = \frac{8}{27}
+  \]
+</p>
+<p>So the critical compressibility factor is:</p>
+<p>
+  \[
+  \boxed{Z_c = \frac{8}{27}}
+  \]
+</p>
+
+<hr>
+
+<h2>Question 9</h2>
+<p><strong>Correct Option: (C)</strong></p>
+<p>At the critical point, the van der Waals isotherm just touches the horizontal line that defines phase coexistence — this point is an <strong>inflection point</strong>.</p>
+<p>This is defined mathematically by:</p>
+<p>
+  \[
+  \left( \frac{\partial P}{\partial V} \right)_T = 0, \quad
+  \left( \frac{\partial^2 P}{\partial V^2} \right)_T = 0
+  \]
+</p>
+<p>The isotherm has no local maximum or minimum, but it does have a change in curvature (i.e., from concave up to concave down or vice versa). This is the defining feature of an inflection point.</p>
+<p>
+  \[
+  \boxed{\text{Inflection point at the critical point}}
+  \]
+</p>
+
+<h2>Question 10</h2>
+
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Explanation:</h3>
+<p>Below the critical temperature \( T_c \), the van der Waals equation predicts a region in the isotherm where:</p>
+<p>
+  \[
+  \left( \frac{\partial P}{\partial V} \right)_T &gt; 0
+  \]
+</p>
+<p>This implies negative compressibility, which is unphysical. In reality, the system undergoes a phase transition between liquid and gas at a constant pressure \( P_{\text{eq}} \).</p>
+
+<h4>🔁 Maxwell's Equal Area Rule:</h4>
+<p>To correct this, <strong>Maxwell proposed</strong> that the pressure during the phase transition be determined by ensuring the areas above and below the flat portion of the isotherm (between volumes \( V_l \) and \( V_g \)) are equal:</p>
+
+<p>
+  \[
+  \int_{V_l}^{V_g} \left( P(V) - P_{\text{eq}} \right) \, dV = 0
+  \]
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>\( P(V) \) is the van der Waals pressure</li>
+  <li>\( P_{\text{eq}} \) is the equilibrium (coexistence) pressure</li>
+  <li>\( V_l \) and \( V_g \) are the molar volumes of the liquid and gas phases, respectively</li>
+</ul>
+
+<p>This rule replaces the unstable part of the curve with a horizontal line, ensuring mechanical and thermodynamic stability.</p>
+
+<h4>🔍 Interpretation:</h4>
+<p>The <strong>area under the flat segment</strong> of the isotherm from \( V_l \) to \( V_g \) represents the phase transition at constant pressure and corresponds to the coexistence of the gas and liquid phases. This is the essence of the phase transition as corrected by Maxwell’s construction.</p>
+
+<h3>Conclusion:</h3>
+<p>The flat segment represents the pressure of phase coexistence determined using Maxwell's equal area rule.</p>
+<p><strong>Correct Answer: (C)</strong></p>
+
+<h2>Answer to Question 11</h2>
+<p><strong>Correct Option: (B)</strong></p>
+<p>The Zeroth Law of Thermodynamics forms the foundation for the concept of temperature. It states:</p>
+<p>
+  <em>If two systems A and B are in thermal equilibrium with a third system C, then A and B are in thermal equilibrium with each other.</em>
+</p>
+<p>This implies that temperature is a transitive property. Mathematically, if:</p>
+<p>
+  \[
+  T_A = T_B \quad \text{and} \quad T_B = T_C \quad \Rightarrow \quad T_A = T_C
+  \]
+</p>
+<p>Therefore, system A must be in thermal equilibrium with system C.</p>
+<p><strong>Correct answer: (B)</strong></p>
+<hr>
+
+
+<h2>Answer to Question 12</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Definition:</h3>
+<p>A system is in thermodynamic equilibrium if all three types of equilibrium exist simultaneously:</p>
+<ul>
+  <li><strong>Thermal equilibrium:</strong> \( T_1 = T_2 \)</li>
+  <li><strong>Mechanical equilibrium:</strong> \( P_1 = P_2 \)</li>
+  <li><strong>Chemical equilibrium:</strong> \( \mu_1 = \mu_2 \)</li>
+</ul>
+
+<p>These must hold throughout the system for equilibrium to persist. Any imbalance leads to a net change (heat flow, volume change, or mass transfer).</p>
+<p><strong>Correct answer: (C)</strong></p>
+<hr>
+
+<h2>Answer to Question 13</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Definition:</h3>
+<p>Isothermal compressibility is defined as:</p>
+<p>
+  \[
+  \kappa_T = -\frac{1}{V} \left( \frac{\partial V}{\partial P} \right)_T
+  \]
+</p>
+
+<h3>Derivation from Ideal Gas Law:</h3>
+<p>Start from:</p>
+<p>
+  \[
+  PV = nRT \Rightarrow V = \frac{nRT}{P}
+  \]
+</p>
+<p>Now, take the partial derivative at constant temperature:</p>
+<p>
+  \[
+  \left( \frac{\partial V}{\partial P} \right)_T = -\frac{nRT}{P^2} = -\frac{V}{P}
+  \]
+</p>
+
+<p>Substitute into the definition:</p>
+<p>
+  \[
+  \kappa_T = -\frac{1}{V} \cdot \left( -\frac{V}{P} \right) = \frac{1}{P}
+  \]
+</p>
+
+<p>So although the correct numerical value for an ideal gas is \( \kappa_T = \frac{1}{P} \), the <strong>definitional form</strong> is:</p>
+<p>
+  \[
+  \boxed{ \kappa_T = -\frac{1}{V} \left( \frac{\partial V}{\partial P} \right)_T }
+  \]
+</p>
+<p><strong>Correct answer: (B)</strong></p>
+<hr>
+
+<h2>Question 14</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Problem Statement:</h3>
+<p>Derive the expression for the work done by an ideal gas during a <strong>reversible isothermal expansion</strong> from volume \( V_1 \) to \( V_2 \).</p>
+
+<h3>Conceptual Background:</h3>
+<p>In an <strong>isothermal process</strong>, the temperature remains constant throughout the transformation. For an ideal gas, internal energy \( U \) depends only on temperature. Thus:</p>
+<p>
+\[
+\Delta U = 0 \quad \Rightarrow \quad Q = W
+\]
+</p>
+<p>According to the first law of thermodynamics, any heat added to the system is fully converted to work.</p>
+
+<h3>Step-by-Step Derivation:</h3>
+
+<ol>
+  <li><strong>Start with the definition of work:</strong></li>
+  <p>
+  \[
+  W = \int_{V_1}^{V_2} P \, dV
+  \]
+  </p>
+
+  <li><strong>Use the ideal gas law:</strong></li>
+  <p>For an ideal gas undergoing an isothermal process, pressure as a function of volume is:
+  \[
+  P = \frac{nRT}{V}
+  \]
+  where \( n \) is the number of moles, \( R \) is the gas constant, and \( T \) is the constant temperature.
+  </p>
+
+  <li><strong>Substitute into the integral:</strong></li>
+  <p>
+  \[
+  W = \int_{V_1}^{V_2} \frac{nRT}{V} \, dV
+  \]
+  Since \( nRT \) is constant (as \( T \) is constant), we factor it out:
+  \[
+  W = nRT \int_{V_1}^{V_2} \frac{1}{V} \, dV
+  \]
+
+  \[
+  W = nRT \left[ \ln V \right]_{V_1}^{V_2}
+  \]
+
+  \[
+  W = nRT \ln\left( \frac{V_2}{V_1} \right)
+  \]
+  </p>
+
+  <li><strong>Check signs and physical meaning:</strong></li>
+  <p>
+    If \( V_2 > V_1 \) (expansion), then \( \ln(V_2/V_1) > 0 \Rightarrow W > 0 \): work is done <em>by</em> the gas.
+  </p>
+</ol>
+
+<h3>Final Answer:</h3>
+<p>
+\[
+\boxed{W = nRT \ln\left( \frac{V_2}{V_1} \right)}
+\]
+</p>
+
+<p><strong>Correct option: (B)</strong></p>
+
+
+<!-- ===================== QUESTION 14 ===================== -->
+<h2>Question 14</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Reversible Isothermal Expansion Work</h3>
+<p>In an isothermal process, temperature remains constant. From the first law:
+\[
+\Delta U = 0 \Rightarrow Q = W
+\]
+</p>
+<p>Work done by the gas:
+\[
+W = \int_{V_1}^{V_2} P \, dV
+\]
+Substitute the ideal gas law \( P = \frac{nRT}{V} \):
+\[
+W = nRT \int_{V_1}^{V_2} \frac{1}{V} dV = nRT \ln\left( \frac{V_2}{V_1} \right)
+\]
+</p>
+<p><strong>Final Answer:</strong>
+\[
+\boxed{W = nRT \ln\left( \frac{V_2}{V_1} \right)}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 15 ===================== -->
+<h2>Question 15</h2>
+<p><strong>Correct Option: (D)</strong></p>
+
+<h3>Reversible Adiabatic Expansion Work</h3>
+<p>For adiabatic processes: \( Q = 0 \)</p>
+<p>The relation:
+\[
+PV^\gamma = \text{constant}
+\]
+Work done:
+\[
+W = \int_{V_1}^{V_2} P \, dV
+\]
+Use:
+\[
+P = \frac{P_1V_1^\gamma}{V^\gamma}
+\Rightarrow W = \frac{P_1V_1^\gamma}{1 - \gamma} \left( V_2^{1-\gamma} - V_1^{1-\gamma} \right)
+\]
+Other valid forms:
+<ul>
+  <li>\( W = \frac{P_1V_1 - P_2V_2}{\gamma - 1} \)</li>
+  <li>\( W = \frac{nR(T_2 - T_1)}{\gamma - 1} \)</li>
+</ul>
+
+<p><strong>Final Answer:</strong> All are valid.
+\[
+\boxed{W = \frac{nR(T_2 - T_1)}{\gamma - 1}} \quad \text{or similar}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 16 ===================== -->
+<h2>Question 16</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Heat Capacity Relation</h3>
+<p>Start from definitions:
+\[
+C_V = \left( \frac{\partial U}{\partial T} \right)_V, \quad C_P = \left( \frac{\partial H}{\partial T} \right)_P
+\]
+where \( H = U + PV \). For an ideal gas:
+\[
+H = U + nRT \Rightarrow dH = dU + nR dT
+\]
+So:
+\[
+C_P = C_V + nR \Rightarrow \boxed{C_P - C_V = nR}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 17 ===================== -->
+<h2>Question 17</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Internal Energy Change</h3>
+<p>Using first law:
+\[
+\Delta U = Q - W = 300\,\text{J} - 100\,\text{J} = \boxed{200\,\text{J}}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 18 ===================== -->
+<h2>Question 18</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Efficiency of a Carnot Engine</h3>
+<p>
+\[
+\eta = 1 - \frac{T_C}{T_H}
+\]
+This arises from:
+\[
+\frac{Q_C}{Q_H} = \frac{T_C}{T_H}
+\Rightarrow \eta = \frac{W}{Q_H} = \frac{Q_H - Q_C}{Q_H} = 1 - \frac{Q_C}{Q_H}
+\]
+</p>
+<p><strong>Final Answer:</strong>
+\[
+\boxed{\eta = 1 - \frac{T_C}{T_H}}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 19 ===================== -->
+<h2>Question 19</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Work Done by Carnot Engine</h3>
+<p>
+\[
+W = Q_H - Q_C = 800\,\text{J} - 500\,\text{J} = \boxed{300\,\text{J}}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 20 ===================== -->
+<h2>Question 20</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Clausius Statement of Second Law</h3>
+<p>It is impossible to transfer heat from a colder body to a hotter one without external work.</p>
+<p>This prohibits spontaneous heat flow against gradient.</p>
+<p><strong>Answer:</strong> <em>No process is possible in which heat is transferred from a colder to a hotter body without work.</em></p>
+
+<hr>
+
+<!-- ===================== QUESTION 21 ===================== -->
+<h2>Question 21</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Kelvin Scale via Carnot Cycle</h3>
+<p>
+\[
+\frac{Q_C}{Q_H} = \frac{T_C}{T_H} \Rightarrow T = \text{proportional to heat exchanged reversibly}
+\]
+</p>
+<p><strong>Answer:</strong>
+\[
+\boxed{ \frac{Q_C}{Q_H} = \frac{T_C}{T_H} }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 22 ===================== -->
+<h2>Question 22</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>COP of Carnot Refrigerator</h3>
+<p>
+\[
+\text{COP} = \frac{Q_C}{W} = \frac{T_C}{T_H - T_C}
+\]</p>
+<p><strong>Answer:</strong>
+\[
+\boxed{ \text{COP} = \frac{T_C}{T_H - T_C} }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 23 ===================== -->
+<h2>Question 23</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Clausius-Clapeyron Equation</h3>
+<p>For a first-order phase transition (e.g., liquid to vapor), the slope of the coexistence curve is:
+\[
+\frac{dP}{dT} = \frac{L}{T(V_v - V_l)}
+\]</p>
+<p>Derived from equality of Gibbs free energies and Maxwell relations.</p>
+<p><strong>Answer:</strong>
+\[
+\boxed{ \frac{dP}{dT} = \frac{L}{T(V_v - V_l)} }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 24 ===================== -->
+<h2>Question 24</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Heat Pump COP</h3>
+<p>
+\[
+\text{COP}_{\text{heat pump}} = \frac{Q_H}{W} = \frac{1500}{500} = \boxed{3}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 25 ===================== -->
+<h2>Question 25</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Entropy Change at Constant Volume</h3>
+<p>From:
+\[
+dS = \frac{dQ_{\text{rev}}}{T}
+\]
+At constant volume:
+\[
+dQ = nC_V dT \Rightarrow dS = \frac{nC_V dT}{T}
+\Rightarrow \Delta S = \int_{T_1}^{T_2} \frac{nC_V dT}{T} = nC_V \ln\left( \frac{T_2}{T_1} \right)
+\]</p>
+
+<p><strong>Final Answer:</strong>
+\[
+\boxed{ \Delta S = nC_V \ln\left( \frac{T_2}{T_1} \right) }
+\]</p>
+
+<!-- ===================== QUESTION 26 ===================== -->
+<h2>Question 26</h2>
+<p><strong>Correct Option: (D)</strong></p>
+
+<h3>Explanation:</h3>
+<p>The second law of thermodynamics has two equivalent forms:</p>
+<ul>
+  <li><strong>Clausius' Statement:</strong> No process is possible whose sole result is the transfer of heat from a colder body to a hotter body.</li>
+  <li><strong>Kelvin-Planck Statement:</strong> No process is possible whose sole result is the complete conversion of heat into work.</li>
+</ul>
+
+<h3>Application to Heat Engines:</h3>
+<p>These statements imply that:</p>
+<ul>
+  <li>Some heat must be rejected to a cold reservoir.</li>
+  <li>No heat engine can have 100% efficiency: \( \eta = \frac{W}{Q_H} &lt; 1 \)</li>
+</ul>
+
+<p>Both Clausius and Kelvin-Planck statements reinforce the idea that <strong>complete conversion of heat to work is impossible without compensation.</strong></p>
+
+<p><strong>Correct Answer:</strong> (D) Both B and C</p>
+
+<hr>
+
+<!-- ===================== QUESTION 27 ===================== -->
+<h2>Question 27</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Given:</h3>
+<ul>
+  <li>Hot reservoir temperature: \( T_H = 600\,\mathrm{K} \)</li>
+  <li>Cold reservoir temperature: \( T_C = 300\,\mathrm{K} \)</li>
+  <li>Heat absorbed: \( Q_H = 900\,\mathrm{J} \)</li>
+</ul>
+
+<h3>Step 1: Carnot Efficiency</h3>
+<p>
+\[
+\eta = 1 - \frac{T_C}{T_H} = 1 - \frac{300}{600} = 1 - 0.5 = 0.5
+\]
+</p>
+
+<h3>Step 2: Work Done</h3>
+<p>
+\[
+W = \eta Q_H = 0.5 \times 900 = \boxed{450\,\mathrm{J}}
+\]
+</p>
+
+<p><strong>Answer:</strong> (B)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 28 ===================== -->
+<h2>Question 28</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Coefficient of Performance of a Heat Pump:</h3>
+<p>
+A heat pump extracts heat \( Q_C \) from a cold body and delivers \( Q_H \) to a hot body using work \( W \). From energy balance:
+\[
+Q_H = Q_C + W
+\]
+</p>
+<p>The coefficient of performance (COP) is:
+\[
+\text{COP} = \frac{Q_H}{W}
+\Rightarrow \frac{Q_C + W}{W} = \frac{Q_C}{W} + 1
+\Rightarrow \text{COP} = \frac{T_H}{T_H - T_C}
+\]
+(Using Carnot relations: \( \frac{Q_C}{Q_H} = \frac{T_C}{T_H} \))</p>
+
+<p><strong>Final Answer:</strong>
+\[
+\boxed{ \text{COP}_{\text{heat pump}} = \frac{T_H}{T_H - T_C} }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 29 ===================== -->
+<h2>Question 29</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Clausius-Clapeyron Derivation:</h3>
+<p>At phase equilibrium (e.g., liquid-vapour), Gibbs free energy per mole is equal:</p>
+<p>
+\[
+dG = V dP - S dT = 0 \Rightarrow \frac{dP}{dT} = \frac{\Delta S}{\Delta V}
+\]</p>
+
+<p>But \( \Delta S = \frac{L}{T} \), where \( L \) is latent heat per mole:</p>
+<p>
+\[
+\frac{dP}{dT} = \frac{L}{T(V_v - V_l)}
+\]</p>
+
+<p>This is the <strong>Clausius-Clapeyron equation</strong>, and it gives the slope of the phase boundary in a P–T diagram.</p>
+
+<p><strong>Final Answer:</strong>
+\[
+\boxed{ \frac{dP}{dT} = \frac{L}{T(V_v - V_l)} }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 30 ===================== -->
+<h2>Question 30</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Given:</h3>
+<ul>
+  <li>Cold temperature \( T_C = 277\,\mathrm{K} \)</li>
+  <li>Hot temperature \( T_H = 300\,\mathrm{K} \)</li>
+</ul>
+
+<h3>Coefficient of Performance for a Refrigerator:</h3>
+<p>
+\[
+\text{COP}_{\text{refrigerator}} = \frac{T_C}{T_H - T_C}
+= \frac{277}{300 - 277} = \frac{277}{23} \approx \boxed{12.04}
+\]
+</p>
+<p>Rounding to one decimal place: \( \boxed{12.0} \)</p>
+
+<p><strong>Answer:</strong> (A)</p>
+<!-- ===================== QUESTION 31 ===================== -->
+<h2>Question 31</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Definition of Entropy:</h3>
+<p>Entropy is a thermodynamic state function that quantifies the degree of disorder or the number of microstates associated with a macroscopic state.</p>
+
+<h3>Mathematical Definition (Reversible Process):</h3>
+<p>
+\[
+dS = \frac{dQ_{\text{rev}}}{T}
+\]
+</p>
+<p>This relation is valid only for reversible processes, where the system is always in thermodynamic equilibrium with its surroundings.</p>
+
+<h3>Physical Meaning:</h3>
+<ul>
+  <li>Entropy is a measure of energy dispersal in a system.</li>
+  <li>It increases when heat is added to a system at a given temperature.</li>
+</ul>
+
+<p><strong>Correct Answer:</strong> (B)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 32 ===================== -->
+<h2>Question 32</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Principle of Increase of Entropy:</h3>
+<p>For an <strong>isolated system</strong>, the second law states:</p>
+<ul>
+  <li>\( \Delta S = 0 \) for a reversible process</li>
+  <li>\( \Delta S > 0 \) for an irreversible process</li>
+</ul>
+
+<h3>Proof Outline (Isolated System with Irreversible Heat Flow):</h3>
+<p>If heat flows from a hot reservoir at \( T_1 \) to a cold reservoir at \( T_2 \), with \( T_1 > T_2 \), then:</p>
+<p>
+\[
+\Delta S = \frac{-Q}{T_1} + \frac{Q}{T_2} = Q\left( \frac{1}{T_2} - \frac{1}{T_1} \right) > 0
+\]
+</p>
+
+<p>Therefore, entropy of the universe always increases for irreversible processes.</p>
+
+<p><strong>Correct Answer:</strong> (C)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 33 ===================== -->
+<h2>Question 33</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Entropy Change in Heat Conduction:</h3>
+<p>Let heat \( Q \) transfer from a body at temperature \( T_1 \) to another at \( T_2 \), where \( T_1 > T_2 \).</p>
+<p>
+Entropy loss of hot body: \( \Delta S_1 = -\frac{Q}{T_1} \) <br>
+Entropy gain of cold body: \( \Delta S_2 = \frac{Q}{T_2} \)
+</p>
+<p>
+Total entropy change:
+\[
+\Delta S = \Delta S_1 + \Delta S_2 = Q \left( \frac{1}{T_2} - \frac{1}{T_1} \right)
+\]
+</p>
+<p>This is always positive for \( T_1 > T_2 \), confirming irreversibility.</p>
+
+<p><strong>Answer:</strong>
+\[
+\boxed{ \Delta S = Q \left( \frac{1}{T_2} - \frac{1}{T_1} \right) }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 34 ===================== -->
+<h2>Question 34</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Entropy Change of an Ideal Gas at Constant Volume:</h3>
+<p>For a reversible process at constant volume:</p>
+<p>
+\[
+dQ = nC_V dT
+\Rightarrow dS = \frac{dQ}{T} = \frac{nC_V dT}{T}
+\Rightarrow \Delta S = nC_V \int_{T_1}^{T_2} \frac{dT}{T} = nC_V \ln\left( \frac{T_2}{T_1} \right)
+\]
+</p>
+
+<p><strong>Final Answer:</strong>
+\[
+\boxed{ \Delta S = nC_V \ln\left( \frac{T_2}{T_1} \right) }
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 35 ===================== -->
+<h2>Question 35</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Derivation of Carnot Efficiency from TS Diagram:</h3>
+<p>In a TS diagram for a Carnot cycle:</p>
+<ul>
+  <li>Heat absorbed at \( T_H \): \( Q_H = T_H \Delta S \)</li>
+  <li>Heat rejected at \( T_C \): \( Q_C = T_C \Delta S \)</li>
+</ul>
+
+<p>Work done per cycle:
+\[
+W = Q_H - Q_C = T_H \Delta S - T_C \Delta S = \Delta S (T_H - T_C)
+\]
+</p>
+<p>Efficiency:
+\[
+\eta = \frac{W}{Q_H} = \frac{T_H - T_C}{T_H}
+\Rightarrow \boxed{ \eta = 1 - \frac{T_C}{T_H} }
+\]</p>
+
+<p><strong>Correct Answer:</strong> (B)</p>
+
+<!-- ===================== QUESTION 41 ===================== -->
+<h2>Question 41</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Fourier’s Law of Heat Conduction (One Dimension):</h3>
+<p>Let heat \( Q \) flow in steady state through a slab of thickness \( dx \) and area \( A \) across a temperature difference \( dT \).</p>
+
+<h3>Definition of Heat Flux:</h3>
+<p>
+\[
+q = \frac{dQ}{A \, dt}
+\]
+</p>
+
+<h3>Fourier’s Law:</h3>
+<p>The rate of heat flow per unit area (heat flux) is proportional to the negative temperature gradient:</p>
+<p>
+\[
+q = -k \frac{dT}{dx}
+\]
+</p>
+<p>where:
+<ul>
+  <li>\( k \): thermal conductivity</li>
+  <li>\( \frac{dT}{dx} \): temperature gradient</li>
+</ul></p>
+
+<p><strong>Answer:</strong> \( \boxed{q = -k \frac{dT}{dx}} \)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 42 ===================== -->
+<h2>Question 42</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Lee's Disc Experiment Setup:</h3>
+<p>A bad conductor is placed between a heated metallic disc and a cold one. After steady state, the top disc is removed, and its cooling rate is measured.</p>
+
+<h3>Heat Loss Rate After Removal:</h3>
+<p>Let:
+<ul>
+  <li>\( m \): mass of disc</li>
+  <li>\( s \): specific heat of disc</li>
+  <li>\( \frac{dT}{dt} \): cooling rate</li>
+</ul>
+</p>
+<p>
+\[
+\text{Rate of heat loss} = ms \frac{dT}{dt}
+\]
+</p>
+
+<h3>Steady-State Heat Conduction:</h3>
+<p>In steady state, this is equal to the heat flow through the poor conductor of thickness \( x \), area \( A \), and temperature difference \( T_1 - T_2 \):</p>
+<p>
+\[
+\frac{Q}{t} = k A \frac{T_1 - T_2}{x}
+\Rightarrow k = \frac{ms \frac{dT}{dt} \cdot x}{A(T_1 - T_2)}
+\]
+</p>
+
+<p><strong>Answer:</strong> \( \boxed{k = \frac{ms \cdot \frac{dT}{dt} \cdot x}{A(T_1 - T_2)} } \)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 43 ===================== -->
+<h2>Question 43</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Thermal Resistance:</h3>
+<p>Thermal resistance is defined as the resistance to heat flow through a material.</p>
+
+<p>
+\[
+R_{th} = \frac{\Delta T}{Q/t}
+\Rightarrow R_{th} = \frac{x}{kA}
+\]
+</p>
+
+<h3>Where:</h3>
+<ul>
+  <li>\( x \): thickness</li>
+  <li>\( A \): cross-sectional area</li>
+  <li>\( k \): thermal conductivity</li>
+</ul>
+
+<p><strong>Answer:</strong> \( \boxed{R_{th} = \frac{x}{kA}} \)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 44 ===================== -->
+<h2>Question 44</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Definitions:</h3>
+<ul>
+  <li><strong>Energy Flux:</strong> Energy per unit area per unit time</li>
+  <li><strong>Radiant Intensity:</strong> Power per unit solid angle</li>
+  <li><strong>Radiant Emittance:</strong> Power radiated per unit area</li>
+</ul>
+
+<h3>Stefan’s Law:</h3>
+<p>
+Total energy radiated per second per unit area by a black body:
+\[
+Q = \sigma A T^4
+\]
+</p>
+<p>Where:
+<ul>
+  <li>\( \sigma = 5.67 \times 10^{-8} \, \mathrm{W\,m^{-2}\,K^{-4}} \)</li>
+  <li>\( A \): area</li>
+  <li>\( T \): absolute temperature</li>
+</ul></p>
+
+<p><strong>Answer:</strong> \( \boxed{Q = \sigma A T^4} \)</p>
+
+<hr>
+
+<!-- ===================== QUESTION 45 ===================== -->
+<h2>Question 45</h2>
+<p><strong>Correct Option: (D)</strong></p>
+
+<h3>From Stefan-Boltzmann Law:</h3>
+<p>
+\[
+Q \propto T^4
+\Rightarrow Q_2 = Q_1 \left( \frac{T_2}{T_1} \right)^4
+\]
+</p>
+
+<h3>If \( T_2 = 2T_1 \):</h3>
+<p>
+\[
+Q_2 = Q_1 \cdot 2^4 = 16 Q_1
+\Rightarrow \boxed{\text{Power increases 16 times}}
+\]
+</p>
+
+<p><strong>Answer:</strong> (D)</p>
+<!-- ===================== QUESTION 46 ===================== -->
+<h2>Question 46</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Microstates vs Macrostates:</h3>
+<ul>
+  <li><strong>Microstate:</strong> A specific detailed configuration of a system.</li>
+  <li><strong>Macrostate:</strong> Defined by macroscopic variables (e.g., energy, pressure) and corresponds to many microstates.</li>
+</ul>
+
+<h3>Boltzmann’s Entropy Formula:</h3>
+<p>
+\[
+S = k \ln(\Omega)
+\]
+</p>
+<ul>
+  <li>\( \Omega \): Number of microstates corresponding to a macrostate</li>
+  <li>\( k \): Boltzmann constant</li>
+</ul>
+
+<p>This defines entropy statistically.</p>
+
+<hr>
+
+<!-- ===================== QUESTION 47 ===================== -->
+<h2>Question 47</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Phase Space:</h3>
+<p>Each particle has 3 position + 3 momentum coordinates → 6 coordinates.</p>
+<p>For \( N \) particles: \( 6N \)-dimensional phase space</p>
+
+<ul>
+  <li><strong>\( \mu \)-space:</strong> 6D space for a single particle.</li>
+  <li><strong>\( \Gamma \)-space:</strong> Combined 6N-dimensional space for the whole system.</li>
+</ul>
+
+<p>Hence, the system is represented as one point in \( \Gamma \)-space, but \( N \) points in \( \mu \)-space.</p>
+
+<hr>
+
+<!-- ===================== QUESTION 48 ===================== -->
+<h2>Question 48</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Principle of Equal A Priori Probability:</h3>
+<p>If a system is isolated and in equilibrium, each accessible microstate is equally probable.</p>
+
+<p>In the microcanonical ensemble:
+\[
+p_i = \frac{1}{\Omega}, \quad \text{for all states within energy shell}
+\]
+</p>
+<p>This allows us to define entropy as:
+\[
+S = -k \sum p_i \ln p_i = k \ln \Omega
+\]
+</p>
+
+<hr>
+
+<!-- ===================== QUESTION 49 ===================== -->
+<h2>Question 49</h2>
+<p><strong>Correct Option: (D)</strong></p>
+
+<h3>Ergodic Hypothesis:</h3>
+<p>Time average of a quantity = Ensemble average:</p>
+\[
+\langle A \rangle_{\text{time}} = \langle A \rangle_{\text{ensemble}}
+\]
+<p>This means the system explores all accessible microstates over time.</p>
+
+<ul>
+  <li>Guarantees statistical equilibrium</li>
+  <li>Foundation for ensemble theory</li>
+</ul>
+
+<hr>
+
+<!-- ===================== QUESTION 50 ===================== -->
+<h2>Question 50</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Microcanonical Ensemble:</h3>
+<p>The number of accessible states with energy in \( [E, E + \delta E] \) is:</p>
+<p>
+\[
+\Omega(E) = \frac{1}{h^{3N} N!} \int \delta(E - H(p,q)) \, d^{3N}p \, d^{3N}q
+\]
+</p>
+
+<ul>
+  <li>\( H(p,q) \): Hamiltonian</li>
+  <li>\( h \): Planck’s constant for unit consistency</li>
+</ul>
+
+<p>This integral is over the constant energy hypersurface in phase space.</p>
+
+<hr>
+
+<!-- ===================== QUESTION 51 ===================== -->
+<h2>Question 51</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Canonical Ensemble:</h3>
+<p>Describes systems at fixed \( N, V, T \). Probability of a microstate with energy \( E_i \):</p>
+<p>
+\[
+p_i = \frac{e^{-\beta E_i}}{Z}, \quad \beta = \frac{1}{kT}
+\]
+</p>
+
+<h3>Partition Function:</h3>
+<p>Discrete case:
+\[
+Z = \sum_i e^{-\beta E_i}
+\]
+</p>
+<p>Continuous case:
+\[
+Z = \int e^{-\beta H(p,q)} \, d\Gamma
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 52 ===================== -->
+<h2>Question 52</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Average Energy from Canonical Partition Function:</h3>
+<p>
+\[
+\langle E \rangle = \sum_i p_i E_i = \frac{1}{Z} \sum_i E_i e^{-\beta E_i}
+\]
+</p>
+<p>This can be written as:
+\[
+\langle E \rangle = -\frac{\partial \ln Z}{\partial \beta}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 53 ===================== -->
+<h2>Question 53</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Equipartition Theorem:</h3>
+<p>Each quadratic degree of freedom contributes:
+\[
+\langle E \rangle = \frac{1}{2}kT
+\]</p>
+
+<h3>Derivation:</h3>
+<p>For energy of form \( E = \frac{1}{2} a x^2 \), the probability:
+\[
+P(x) \propto e^{-\beta \frac{1}{2} a x^2}
+\Rightarrow \langle x^2 \rangle = \frac{kT}{a} \Rightarrow \langle E \rangle = \frac{1}{2}kT
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 54 ===================== -->
+<h2>Question 54</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Grand Canonical Ensemble:</h3>
+<ul>
+  <li>Fixed \( T, V, \mu \); variable \( N \)</li>
+</ul>
+
+<h3>Grand Partition Function:</h3>
+<p>
+\[
+\mathcal{Z} = \sum_N \sum_i e^{\beta(\mu N - E_i)}
+\]
+</p>
+
+<h3>Average Particle Number:</h3>
+<p>
+\[
+\langle N \rangle = \frac{\partial \ln \mathcal{Z}}{\partial (\beta \mu)} = \frac{1}{\beta} \frac{\partial \ln \mathcal{Z}}{\partial \mu}
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 55 ===================== -->
+<h2>Question 55</h2>
+<p><strong>Correct Option: (D)</strong></p>
+
+<h3>Partition Function Encodes Thermodynamics:</h3>
+<ul>
+  <li>Average energy:
+  \[
+  \langle E \rangle = -\frac{\partial \ln Z}{\partial \beta}
+  \]</li>
+
+  <li>Entropy:
+  \[
+  S = k \left( \ln Z + \beta \langle E \rangle \right)
+  \]</li>
+
+  <li>Helmholtz Free Energy:
+  \[
+  F = -kT \ln Z
+  \]</li>
+</ul>
+
+<p><strong>Answer:</strong> \( \boxed{\text{All of the above}} \)</p>
+<!-- ===================== QUESTION 56 ===================== -->
+<h2>Question 56</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>Derivation of Maxwell-Boltzmann Distribution:</h3>
+<p>For distinguishable, non-interacting particles, the number of ways to arrange \( n_i \) particles in energy level \( \epsilon_i \) is:</p>
+<p>
+\[
+W = \frac{N!}{\prod_i n_i!}
+\]
+</p>
+<p>Subject to constraints:
+\[
+\sum_i n_i = N, \quad \sum_i n_i \epsilon_i = E
+\]
+Using Stirling's approximation and Lagrange multipliers, we get:
+\[
+n_i = A e^{-\epsilon_i / kT}
+\Rightarrow f(\epsilon) = A e^{-\epsilon / kT}
+\]
+</p>
+
+<hr>
+
+<!-- ===================== QUESTION 57 ===================== -->
+<h2>Question 57</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Fermi-Dirac Distribution:</h3>
+<p>For indistinguishable fermions (obey Pauli exclusion), the number of ways to arrange \( n_i = 0 \text{ or } 1 \) particles is:
+\[
+f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} + 1}
+\]
+</p>
+
+<h3>At \( T = 0 \):</h3>
+<p>
+\[
+f(\epsilon) = 
+\begin{cases}
+1, & \epsilon < \mu = \epsilon_F \\
+0, & \epsilon > \epsilon_F
+\end{cases}
+\]
+</p>
+
+<hr>
+
+<!-- ===================== QUESTION 58 ===================== -->
+<h2>Question 58</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Bose-Einstein Distribution:</h3>
+<p>For bosons:
+\[
+f(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/kT} - 1}
+\]
+</p>
+
+<h3>BEC Condition:</h3>
+<p>Bose-Einstein condensation occurs when the chemical potential \( \mu \to 0 \), and the ground state is macroscopically occupied at \( T < T_c \).</p>
+
+<hr>
+
+<!-- ===================== QUESTION 59 ===================== -->
+<h2>Question 59</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Average Energy (Maxwell-Boltzmann):</h3>
+<p>
+\[
+\langle E \rangle = \int_0^\infty \epsilon f(\epsilon) g(\epsilon) d\epsilon
+\]
+For ideal gas in 3D:
+\[
+g(\epsilon) \propto \epsilon^{1/2}, \quad f(\epsilon) \propto e^{-\epsilon/kT}
+\Rightarrow \langle E \rangle = \frac{3}{2}kT
+\]
+</p>
+
+<hr>
+
+<!-- ===================== QUESTION 60 ===================== -->
+<h2>Question 60</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Fermi Energy of 3D Electron Gas:</h3>
+<p>
+At \( T = 0 \), all states up to \( \epsilon_F \) are filled. Using density of states:
+\[
+N = \int_0^{\epsilon_F} g(\epsilon) d\epsilon
+\Rightarrow \epsilon_F = \frac{\hbar^2}{2m} \left( 3\pi^2 n \right)^{2/3}
+\]
+</p>
+
+<hr>
+
+<!-- ===================== QUESTION 61 ===================== -->
+<h2>Question 61</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Number of Particles with Energy \( \epsilon \):</h3>
+<p>
+\[
+n(\epsilon) = g(\epsilon) f(\epsilon)
+\]
+For classical gas in 3D:
+\[
+g(\epsilon) \propto \epsilon^{1/2}, \quad f(\epsilon) \propto e^{-\epsilon/kT}
+\Rightarrow n(\epsilon) = A \epsilon^{1/2} e^{-\epsilon/kT}
+\]
+When converted to momentum space:
+\[
+n(\epsilon) = A \epsilon^2 e^{-\epsilon/kT} \, d\epsilon
+\]</p>
+
+<hr>
+
+<!-- ===================== QUESTION 62 ===================== -->
+<h2>Question 62</h2>
+<p><strong>Correct Option: (C)</strong></p>
+
+<h3>High Energy Limit:</h3>
+<p>For \( \epsilon - \mu \gg kT \):</p>
+<ul>
+  <li>FD: \( f(\epsilon) \approx e^{-(\epsilon - \mu)/kT} \)</li>
+  <li>BE: \( f(\epsilon) \approx e^{-(\epsilon - \mu)/kT} \)</li>
+  <li>MB: \( f(\epsilon) = A e^{-\epsilon/kT} \)</li>
+</ul>
+<p><strong>Conclusion:</strong> All reduce to Maxwell-Boltzmann form.</p>
+
+<hr>
+
+<!-- ===================== QUESTION 63 ===================== -->
+<h2>Question 63</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Critical Temperature for BEC:</h3>
+<p>
+\[
+n = \frac{1}{\lambda_T^3} \zeta(3/2)
+\Rightarrow T_c = \frac{2\pi \hbar^2}{mk} \left( \frac{n}{\zeta(3/2)} \right)^{2/3}
+\]
+</p>
+
+<ul>
+  <li>\( \lambda_T \): Thermal de Broglie wavelength</li>
+  <li>\( \zeta(3/2) \approx 2.612 \)</li>
+</ul>
+
+<hr>
+
+<!-- ===================== QUESTION 64 ===================== -->
+<h2>Question 64</h2>
+<p><strong>Correct Option: (B)</strong></p>
+
+<h3>Total Energy at \( T = 0 \):</h3>
+<p>
+\[
+E = \int_0^{\epsilon_F} \epsilon g(\epsilon) d\epsilon
+\Rightarrow E = \frac{3}{5} N \epsilon_F
+\Rightarrow \langle E \rangle = \frac{E}{N} = \frac{3}{5} \epsilon_F
+\]
+</p>
+
+<hr>
+
+<!-- ===================== QUESTION 65 ===================== -->
+<h2>Question 65</h2>
+<p><strong>Correct Option: (A)</strong></p>
+
+<h3>Pressure of Fermi Gas at \( T = 0 \):</h3>
+<p>From thermodynamics:
+\[
+P = -\left( \frac{\partial E}{\partial V} \right)_N
+\Rightarrow P = \frac{2}{5} n \epsilon_F
+\]
+</p>
+
+<p>This comes from evaluating energy density and differentiating w.r.t volume.</p>
+
+<p><a href="andrews_exam_page.html">Back to Questions</a></p>
+</body>
+</html>
