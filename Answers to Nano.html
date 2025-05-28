@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Answers - Schrödinger in Nanoworld</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<h1>Detailed Answers: Applications of Schrödinger Equation in Nanoworld</h1>
+
+<h2>Question 1</h2>
+<p><strong>Correct Answer: (B)</strong></p>
+
+<p>
+To find the wavefunction of a particle in a one-dimensional infinite potential well (also known as a quantum box), we solve the time-independent Schrödinger equation:
+</p>
+
+\[
+- \frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{dx^2} = E \psi(x)
+\]
+
+<p>
+For an infinite square well defined from \( x = 0 \) to \( x = L \), the potential is:
+</p>
+
+\[
+V(x) =
+\begin{cases}
+0 & \text{for } 0 < x < L \\
+\infty & \text{otherwise}
+\end{cases}
+\]
+
+<p>
+The boundary conditions require:
+</p>
+
+\[
+\psi(0) = 0, \quad \psi(L) = 0
+\]
+
+<p>
+Solving the differential equation with these boundary conditions gives normalized eigenfunctions:
+</p>
+
+\[
+\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left( \frac{n \pi x}{L} \right), \quad n = 1, 2, 3, \dots
+\]
+
+<p>
+So, for the ground state \( n = 1 \), the wavefunction is:
+</p>
+
+\[
+\psi_1(x) = \sqrt{\frac{2}{L}} \sin\left( \frac{\pi x}{L} \right)
+\]
+
+<p>
+This satisfies:
+<ul>
+  <li>\( \psi(0) = 0 \)</li>
+  <li>\( \psi(L) = 0 \)</li>
+  <li>Maximum probability density at the center \( x = L/2 \)</li>
+</ul>
+</p>
+
+<p>
+Hence, <strong>option (B)</strong> is correct.
+</p>
+
+
+<h2>Question 2</h2>
+<p><strong>Correct Answer: (B)</strong></p>
+<p>Direct derivation from Schrödinger equation gives:</p>
+\[
+E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}
+\]
+
+<hr>
+
+<h2>Question 3</h2>
+<p><strong>Correct Answer: (C)</strong></p>
+<p>The standing wave inside the box has wavelength:</p>
+\[
+\lambda_n = \frac{2L}{n}
+\]
+
+<hr>
+
+<h2>Question 4</h2>
+<p><strong>Correct Answer: (C)</strong></p>
+<p>Outside the finite well, where \( E < V_0 \), the wavefunction decays exponentially:</p>
+\[
+\psi(x) \sim e^{-\kappa x}, \quad \kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}
+\]
+
+<hr>
+
+<h2>Question 5</h2>
+<p><strong>Correct Answer: (B)</strong></p>
+<p>Quantum tunneling allows particles to penetrate classically forbidden regions due to wavefunction non-zero amplitude beyond the barrier.</p>
+
+<hr>
+
+<h2>Question 6</h2>
+<p><strong>Correct Answer: (C)</strong></p>
+<p>Transmission probability for \( E < V_0 \):</p>
+\[
+T \approx e^{-2ka}, \quad k = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}
+\]
+
+<hr>
+
+<h2>Question 7</h2>
+<p><strong>Correct Answer: (C)</strong></p>
+<p>\( k \) is the decay constant in the evanescent wave solution of Schrödinger equation under the barrier:</p>
+\[
+k = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}
+\]
+
+<hr>
+
+<h2>Question 8</h2>
+<p><strong>Correct Answer: (C)</strong></p>
+<p>Bound states in finite wells satisfy \( E < V_0 \), with exponentially decaying tails outside the well.</p>
+
+<hr>
+
+<h2>Question 9</h2>
+<p><strong>Correct Answer: (B)</strong></p>
+<p>First excited state wavefunction:</p>
+\[
+\psi_2(x) = \sqrt{\frac{2}{L}} \sin\left( \frac{2\pi x}{L} \right)
+\]
+<p>At \( x = L/2 \): \( \psi_2(L/2) = 0 \), so the probability is zero.</p>
+
+<hr>
+
+<h2>Question 10</h2>
+<p>Nil</p>
+<!-- ===================== ANSWER 42 ===================== -->
+<div class="answer">
+    <h3>42. Answer: (C)</h3>
+    <p>
+      Superparamagnetic nanoparticles exhibit magnetic behavior only in the presence of an external magnetic field. Due to their small size (usually < 10 nm), thermal energy is enough to randomize the magnetic moment, resulting in zero remanent magnetization once the field is removed. This contrasts with ferromagnetic particles which retain magnetization.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 43 ===================== -->
+  <div class="answer">
+    <h3>43. Answer: (B)</h3>
+    <p>
+      Superparamagnetic behavior arises when the particle size is so small that the entire nanoparticle behaves like a single magnetic domain. Typically, this occurs below a critical size (~10 nm), where thermal fluctuations cause the magnetic moment to randomly flip direction.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 44 ===================== -->
+  <div class="answer">
+    <h3>44. Answer: (C)</h3>
+    <p>
+      In GMR (Giant Magnetoresistance), electrons experience different scattering depending on their spin orientation. When adjacent ferromagnetic layers are aligned antiparallel, spin-dependent scattering is high, increasing resistance. When aligned parallel, scattering is minimized and resistance drops, producing a measurable change.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 45 ===================== -->
+  <div class="answer">
+    <h3>45. Answer: (C)</h3>
+    <p>
+      GMR structures consist of alternating ferromagnetic and nonmagnetic (spacer) layers. The relative alignment of magnetizations across the ferromagnetic layers determines the spin scattering and thus the resistance.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 46 ===================== -->
+  <div class="answer">
+    <h3>46. Answer: (A)</h3>
+    <p>
+      Ferrofluids are colloidal suspensions of magnetic nanoparticles. They are widely used in engineering applications such as damping and sealing of rotating shafts in hard drives and MRI scanners, where they respond to magnetic fields but remain liquid.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 47 ===================== -->
+  <div class="answer">
+    <h3>47. Answer: (B)</h3>
+    <p>
+      Ferrofluids remain stable under magnetic fields because they are stabilized using surfactants to prevent aggregation. The nanoparticles align with magnetic fields but return to random orientation when the field is removed.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 48 ===================== -->
+  <div class="answer">
+    <h3>48. Answer: (B)</h3>
+    <p>
+      Colossal magnetoresistance is observed in perovskite manganites such as La₁₋ₓCaₓMnO₃. These materials exhibit dramatic reductions in electrical resistance in the presence of a magnetic field, often due to magnetic phase transitions.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 49 ===================== -->
+  <div class="answer">
+    <h3>49. Answer: (A)</h3>
+    <p>
+      CMR materials transition from an insulating to a metallic state under magnetic fields. This is due to the alignment of magnetic spins that reduces spin-disorder scattering, enabling conduction.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 50 ===================== -->
+  <div class="answer">
+    <h3>50. Answer: (B)</h3>
+    <p>
+      Nanostructured thermal devices use features like nanowires or nanotubes to enhance heat transfer. These increase the surface-to-volume ratio and introduce phonon scattering that alters thermal conductivity, useful in thermoelectric and microcooling applications.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 51 ===================== -->
+  <div class="answer">
+    <h3>51. Answer: (C)</h3>
+    <p>
+      Superhydrophobic surfaces repel water due to high contact angles (>150°) and low hysteresis. They do not allow water to adhere, thanks to nanostructured roughness and often mimic natural surfaces like lotus leaves. Strong adhesion contradicts superhydrophobic behavior.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 52 ===================== -->
+  <div class="answer">
+    <h3>52. Answer: (B)</h3>
+    <p>
+      The "lotus effect" refers to the self-cleaning property of lotus leaves due to their micro- and nanostructured surface. Water droplets roll off, carrying dirt with them. This is a prime example of superhydrophobicity in biomimetics.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 53 ===================== -->
+  <div class="answer">
+    <h3>53. Answer: (C)</h3>
+    <p>
+      Biomimetics involves drawing inspiration from biological systems to design advanced materials or technologies. Examples include velcro (inspired by plant burrs), gecko-inspired adhesives, and artificial skins.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 54 ===================== -->
+  <div class="answer">
+    <h3>54. Answer: (B)</h3>
+    <p>
+      Gecko feet contain millions of microscopic setae that branch into nanoscale spatulae, allowing adhesion through van der Waals forces. This has inspired synthetic dry adhesives with similar properties using nanostructures.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 55 ===================== -->
+  <div class="answer">
+    <h3>55. Answer: (A)</h3>
+    <p>
+      Moth eyes have nanostructured anti-reflective surfaces that reduce light scattering, inspiring coatings for solar panels and lenses. This is a major example of biomimetic engineering applied to optics and energy.
+    </p>
+  </div>
+  
+</body>
+</html>

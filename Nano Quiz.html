@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nanoworld Quiz</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h2>Quiz: Applications of Schrödinger Equation in the Nanoworld</h2>
+<form id="quizForm">
+
+  <!-- ==================== QUESTION TEMPLATE ==================== -->
+  
+<div class="question">
+    <h3>1. What is the form of the ground state wavefunction \( \psi_1(x) \) for a particle in a 1D infinite potential well of width \( L \)?</h3>
+    <label><input type="radio" name="q1" value="A" data-correct="false"> (A) \( \psi_1(x) = \cos\left(\frac{\pi x}{L}\right) \)</label><br>
+    <label><input type="radio" name="q1" value="B" data-correct="true"> (B) \( \psi_1(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{\pi x}{L}\right) \)</label><br>
+    <label><input type="radio" name="q1" value="C" data-correct="false"> (C) \( \psi_1(x) = \sqrt{\frac{1}{L}} \sin\left(\frac{2\pi x}{L}\right) \)</label><br>
+    <label><input type="radio" name="q1" value="D" data-correct="false"> (D) \( \psi_1(x) = \sqrt{\frac{2}{L}} \cos\left(\frac{\pi x}{L}\right) \)</label>
+</div>
+    
+
+  <!-- ===================== QUESTION 2 ===================== -->
+<div class="question">
+  <h3>2. The energy levels of a particle confined in a 1D infinite potential well of width \( L \) are given by:</h3>
+  <label><input type="radio" name="q2" value="A" data-correct="false"> (A) \( E_n = \frac{n^2 \hbar^2}{mL^2} \)</label><br>
+  <label><input type="radio" name="q2" value="B" data-correct="true"> (B) \( E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2} \)</label><br>
+  <label><input type="radio" name="q2" value="C" data-correct="false"> (C) \( E_n = \frac{n \hbar}{2L} \)</label><br>
+  <label><input type="radio" name="q2" value="D" data-correct="false"> (D) \( E_n = \frac{n \pi \hbar}{mL} \)</label>
+</div>
+
+<!-- ===================== QUESTION 3 ===================== -->
+<div class="question">
+  <h3>3. What is the wavelength of the nth eigenfunction in a 1D infinite potential well of width \( L \)?</h3>
+  <label><input type="radio" name="q3" value="A" data-correct="false"> (A) \( \lambda_n = 2L/n^2 \)</label><br>
+  <label><input type="radio" name="q3" value="B" data-correct="false"> (B) \( \lambda_n = L/n \)</label><br>
+  <label><input type="radio" name="q3" value="C" data-correct="true"> (C) \( \lambda_n = 2L/n \)</label><br>
+  <label><input type="radio" name="q3" value="D" data-correct="false"> (D) \( \lambda_n = 4L/n \)</label>
+</div>
+
+<!-- ===================== QUESTION 4 ===================== -->
+<div class="question">
+  <h3>4. In the region outside a finite potential well (where \( E < V_0 \)), the wavefunction:</h3>
+  <label><input type="radio" name="q4" value="A" data-correct="false"> (A) Oscillates with constant amplitude</label><br>
+  <label><input type="radio" name="q4" value="B" data-correct="false"> (B) Becomes zero</label><br>
+  <label><input type="radio" name="q4" value="C" data-correct="true"> (C) Decays exponentially</label><br>
+  <label><input type="radio" name="q4" value="D" data-correct="false"> (D) Grows exponentially</label>
+</div>
+
+<!-- ===================== QUESTION 5 ===================== -->
+<div class="question">
+  <h3>5. What physical phenomenon allows a particle to exist in a classically forbidden region?</h3>
+  <label><input type="radio" name="q5" value="A" data-correct="false"> (A) Classical leakage</label><br>
+  <label><input type="radio" name="q5" value="B" data-correct="true"> (B) Quantum tunneling</label><br>
+  <label><input type="radio" name="q5" value="C" data-correct="false"> (C) Thermal fluctuation</label><br>
+  <label><input type="radio" name="q5" value="D" data-correct="false"> (D) Resonance</label>
+</div>
+
+<!-- ===================== QUESTION 6 ===================== -->
+<div class="question">
+  <h3>6. The transmission probability \( T \) for a particle of energy \( E < V_0 \) through a barrier of width \( a \) is approximately:</h3>
+  <label><input type="radio" name="q6" value="A" data-correct="false"> (A) \( T \approx e^{ka} \)</label><br>
+  <label><input type="radio" name="q6" value="B" data-correct="false"> (B) \( T \approx a^2 \)</label><br>
+  <label><input type="radio" name="q6" value="C" data-correct="true"> (C) \( T \approx e^{-2ka} \)</label><br>
+  <label><input type="radio" name="q6" value="D" data-correct="false"> (D) \( T \approx \frac{1}{ka} \)</label>
+</div>
+
+<!-- ===================== QUESTION 7 ===================== -->
+<div class="question">
+  <h3>7. What does the parameter \( k \) in the tunneling formula \( T \approx e^{-2ka} \) represent?</h3>
+  <label><input type="radio" name="q7" value="A" data-correct="false"> (A) Momentum of the particle</label><br>
+  <label><input type="radio" name="q7" value="B" data-correct="false"> (B) Energy of the particle</label><br>
+  <label><input type="radio" name="q7" value="C" data-correct="true"> (C) Decay constant: \( k = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}} \)</label><br>
+  <label><input type="radio" name="q7" value="D" data-correct="false"> (D) Wavelength inside the barrier</label>
+</div>
+
+<!-- ===================== QUESTION 8 ===================== -->
+<div class="question">
+  <h3>8. Which of the following correctly describes a bound state in a finite potential well?</h3>
+  <label><input type="radio" name="q8" value="A" data-correct="false"> (A) Energy \( E \ge V_0 \)</label><br>
+  <label><input type="radio" name="q8" value="B" data-correct="false"> (B) Particle is free to escape</label><br>
+  <label><input type="radio" name="q8" value="C" data-correct="true"> (C) Energy \( E < V_0 \), wavefunction decays outside well</label><br>
+  <label><input type="radio" name="q8" value="D" data-correct="false"> (D) Wavefunction is constant throughout</label>
+</div>
+
+<!-- ===================== QUESTION 9 ===================== -->
+<div class="question">
+  <h3>9. For a particle in a 1D box, the probability of finding it at the center \( x = L/2 \) in the first excited state is:</h3>
+  <label><input type="radio" name="q9" value="A" data-correct="false"> (A) Maximum</label><br>
+  <label><input type="radio" name="q9" value="B" data-correct="true"> (B) Zero</label><br>
+  <label><input type="radio" name="q9" value="C" data-correct="false"> (C) Minimum but non-zero</label><br>
+  <label><input type="radio" name="q9" value="D" data-correct="false"> (D) Always 1</label>
+</div>
+
+  <div class="question">
+    <h3>10. Nil</h3>
+    <label><input type="radio" name="q10" value="A" data-correct="true"> (A) Option A</label><br>
+    <label><input type="radio" name="q10" value="B" data-correct="false"> (B) Option B</label><br>
+    <label><input type="radio" name="q10" value="C" data-correct="false"> (C) Option C</label><br>
+    <label><input type="radio" name="q10" value="D" data-correct="false"> (D) Option D</label>
+  </div>
+
+  <!-- ===================== QUESTION 11 ===================== -->
+<div class="question">
+    <h3>11. Which of the following best describes a quantum dot?</h3>
+    <label><input type="radio" name="q11" value="A" data-correct="false"> (A) A 1D nanostructure with length but no confinement in other directions</label><br>
+    <label><input type="radio" name="q11" value="B" data-correct="false"> (B) A periodic layer of two different materials</label><br>
+    <label><input type="radio" name="q11" value="C" data-correct="false"> (C) A thin conducting layer confined in one direction</label><br>
+    <label><input type="radio" name="q11" value="D" data-correct="true"> (D) A 0D structure with confinement in all three spatial dimensions</label>
+  </div>
+  
+  <!-- ===================== QUESTION 12 ===================== -->
+  <div class="question">
+    <h3>12. In a quantum dot, the energy levels are quantized due to:</h3>
+    <label><input type="radio" name="q12" value="A" data-correct="false"> (A) Phonon interactions</label><br>
+    <label><input type="radio" name="q12" value="B" data-correct="true"> (B) Spatial confinement of electrons in all directions</label><br>
+    <label><input type="radio" name="q12" value="C" data-correct="false"> (C) External electric field</label><br>
+    <label><input type="radio" name="q12" value="D" data-correct="false"> (D) Magnetic coupling</label>
+  </div>
+  
+  <!-- ===================== QUESTION 13 ===================== -->
+  <div class="question">
+    <h3>13. Which structure has confinement in two spatial directions?</h3>
+    <label><input type="radio" name="q13" value="A" data-correct="true"> (A) Nanowire</label><br>
+    <label><input type="radio" name="q13" value="B" data-correct="false"> (B) Quantum well</label><br>
+    <label><input type="radio" name="q13" value="C" data-correct="false"> (C) Quantum dot</label><br>
+    <label><input type="radio" name="q13" value="D" data-correct="false"> (D) Bulk crystal</label>
+  </div>
+  
+  <!-- ===================== QUESTION 14 ===================== -->
+  <div class="question">
+    <h3>14. The energy spacing in a quantum dot is approximately given by:</h3>
+    <label><input type="radio" name="q14" value="A" data-correct="true"> (A) \( \Delta E \propto \frac{1}{L^2} \)</label><br>
+    <label><input type="radio" name="q14" value="B" data-correct="false"> (B) \( \Delta E \propto L \)</label><br>
+    <label><input type="radio" name="q14" value="C" data-correct="false"> (C) \( \Delta E \propto \ln(L) \)</label><br>
+    <label><input type="radio" name="q14" value="D" data-correct="false"> (D) \( \Delta E \propto \sqrt{L} \)</label>
+  </div>
+  
+  <!-- ===================== QUESTION 15 ===================== -->
+  <div class="question">
+    <h3>15. A nanowire behaves as a one-dimensional system because:</h3>
+    <label><input type="radio" name="q15" value="A" data-correct="false"> (A) Its length is atomic scale</label><br>
+    <label><input type="radio" name="q15" value="B" data-correct="true"> (B) It allows free motion along one axis with confinement in other two</label><br>
+    <label><input type="radio" name="q15" value="C" data-correct="false"> (C) All electrons are localized</label><br>
+    <label><input type="radio" name="q15" value="D" data-correct="false"> (D) Electrons have zero effective mass</label>
+  </div>
+  
+  <!-- ===================== QUESTION 16 ===================== -->
+  <div class="question">
+    <h3>16. What is a superlattice?</h3>
+    <label><input type="radio" name="q16" value="A" data-correct="false"> (A) A single material structure with quantum confinement</label><br>
+    <label><input type="radio" name="q16" value="B" data-correct="false"> (B) A crystal formed by isotropic atoms</label><br>
+    <label><input type="radio" name="q16" value="C" data-correct="true"> (C) A periodic structure of alternating thin layers of different semiconductors</label><br>
+    <label><input type="radio" name="q16" value="D" data-correct="false"> (D) A doped quantum dot</label>
+  </div>
+  
+  <!-- ===================== QUESTION 17 ===================== -->
+  <div class="question">
+    <h3>17. In heterostructures, band alignment is important because:</h3>
+    <label><input type="radio" name="q17" value="A" data-correct="true"> (A) It determines carrier confinement and transport properties</label><br>
+    <label><input type="radio" name="q17" value="B" data-correct="false"> (B) It ensures isotropic bonding</label><br>
+    <label><input type="radio" name="q17" value="C" data-correct="false"> (C) It prevents electron tunneling</label><br>
+    <label><input type="radio" name="q17" value="D" data-correct="false"> (D) It suppresses phonons</label>
+  </div>
+  
+  <!-- ===================== QUESTION 18 ===================== -->
+  <div class="question">
+    <h3>18. The primary reason quantum confinement occurs in nanostructures is:</h3>
+    <label><input type="radio" name="q18" value="A" data-correct="false"> (A) Surface tension</label><br>
+    <label><input type="radio" name="q18" value="B" data-correct="false"> (B) Thermal motion</label><br>
+    <label><input type="radio" name="q18" value="C" data-correct="true"> (C) Restriction of electron motion due to dimensions comparable to de Broglie wavelength</label><br>
+    <label><input type="radio" name="q18" value="D" data-correct="false"> (D) Electric field at boundary</label>
+  </div>
+  
+  <!-- ===================== QUESTION 19 ===================== -->
+  <div class="question">
+    <h3>19. If a quantum dot radius is halved, the energy level spacing:</h3>
+    <label><input type="radio" name="q19" value="A" data-correct="false"> (A) Halves</label><br>
+    <label><input type="radio" name="q19" value="B" data-correct="true"> (B) Quadruples</label><br>
+    <label><input type="radio" name="q19" value="C" data-correct="false"> (C) Doubles</label><br>
+    <label><input type="radio" name="q19" value="D" data-correct="false"> (D) Remains constant</label>
+  </div>
+  
+  <!-- ===================== QUESTION 20 ===================== -->
+  <div class="question">
+    <h3>20. Which of the following materials systems is typically used in quantum well heterostructures?</h3>
+    <label><input type="radio" name="q20" value="A" data-correct="true"> (A) GaAs/AlGaAs</label><br>
+    <label><input type="radio" name="q20" value="B" data-correct="false"> (B) Si/Cu</label><br>
+    <label><input type="radio" name="q20" value="C" data-correct="false"> (C) Ag/Au</label><br>
+    <label><input type="radio" name="q20" value="D" data-correct="false"> (D) Fe/Co</label>
+  </div>
+
+  <!-- ===================== QUESTION 21 ===================== -->
+<div class="question">
+    <h3>21. Which technique is commonly used for the top-down fabrication of quantum nanostructures?</h3>
+    <label><input type="radio" name="q21" value="A" data-correct="false"> (A) Sol-gel synthesis</label><br>
+    <label><input type="radio" name="q21" value="B" data-correct="false"> (B) Chemical vapor deposition</label><br>
+    <label><input type="radio" name="q21" value="C" data-correct="false"> (C) Self-assembly</label><br>
+    <label><input type="radio" name="q21" value="D" data-correct="true"> (D) Electron beam lithography</label>
+  </div>
+  
+  <!-- ===================== QUESTION 22 ===================== -->
+  <div class="question">
+    <h3>22. In quantum nanostructures, the effect of reduced dimensionality leads to:</h3>
+    <label><input type="radio" name="q22" value="A" data-correct="false"> (A) Increase in density of states</label><br>
+    <label><input type="radio" name="q22" value="B" data-correct="true"> (B) Quantization of energy levels</label><br>
+    <label><input type="radio" name="q22" value="C" data-correct="false"> (C) Increase in thermal conductivity</label><br>
+    <label><input type="radio" name="q22" value="D" data-correct="false"> (D) Linear band structure</label>
+  </div>
+  
+  <!-- ===================== QUESTION 23 ===================== -->
+  <div class="question">
+    <h3>23. What phenomenon allows electrons to tunnel one-by-one through a nanoscale junction?</h3>
+    <label><input type="radio" name="q23" value="A" data-correct="false"> (A) Coulomb explosion</label><br>
+    <label><input type="radio" name="q23" value="B" data-correct="true"> (B) Single electron tunneling</label><br>
+    <label><input type="radio" name="q23" value="C" data-correct="false"> (C) Ballistic transport</label><br>
+    <label><input type="radio" name="q23" value="D" data-correct="false"> (D) Quantum Hall effect</label>
+  </div>
+  
+  <!-- ===================== QUESTION 24 ===================== -->
+  <div class="question">
+    <h3>24. A necessary condition for observing single-electron tunneling is:</h3>
+    <label><input type="radio" name="q24" value="A" data-correct="false"> (A) Low capacitance and high resistance junction</label><br>
+    <label><input type="radio" name="q24" value="B" data-correct="true"> (B) Capacitance such that charging energy exceeds thermal energy</label><br>
+    <label><input type="radio" name="q24" value="C" data-correct="false"> (C) High tunneling rate</label><br>
+    <label><input type="radio" name="q24" value="D" data-correct="false"> (D) Degenerate energy levels</label>
+  </div>
+  
+  <!-- ===================== QUESTION 25 ===================== -->
+  <div class="question">
+    <h3>25. Metal nanoclusters are often characterized by:</h3>
+    <label><input type="radio" name="q25" value="A" data-correct="true"> (A) Discrete electronic energy levels</label><br>
+    <label><input type="radio" name="q25" value="B" data-correct="false"> (B) Continuous band structures</label><br>
+    <label><input type="radio" name="q25" value="C" data-correct="false"> (C) Lack of optical properties</label><br>
+    <label><input type="radio" name="q25" value="D" data-correct="false"> (D) Bulk metallic behavior</label>
+  </div>
+  
+  <!-- ===================== QUESTION 26 ===================== -->
+  <div class="question">
+    <h3>26. Semiconducting nanoparticles exhibit size-dependent color because:</h3>
+    <label><input type="radio" name="q26" value="A" data-correct="false"> (A) Electron spin splitting</label><br>
+    <label><input type="radio" name="q26" value="B" data-correct="false"> (B) Magnetic coupling</label><br>
+    <label><input type="radio" name="q26" value="C" data-correct="true"> (C) Band gap increases as particle size decreases</label><br>
+    <label><input type="radio" name="q26" value="D" data-correct="false"> (D) Surface defects emit white light</label>
+  </div>
+  
+  <!-- ===================== QUESTION 27 ===================== -->
+  <div class="question">
+    <h3>27. Rare gas clusters are held together primarily by:</h3>
+    <label><input type="radio" name="q27" value="A" data-correct="true"> (A) van der Waals interactions</label><br>
+    <label><input type="radio" name="q27" value="B" data-correct="false"> (B) Covalent bonds</label><br>
+    <label><input type="radio" name="q27" value="C" data-correct="false"> (C) Ionic bonding</label><br>
+    <label><input type="radio" name="q27" value="D" data-correct="false"> (D) Metallic bonds</label>
+  </div>
+  
+  <!-- ===================== QUESTION 28 ===================== -->
+  <div class="question">
+    <h3>28. Which of the following is a common method to create self-assembled nanostructures?</h3>
+    <label><input type="radio" name="q28" value="A" data-correct="false"> (A) Ball milling</label><br>
+    <label><input type="radio" name="q28" value="B" data-correct="true"> (B) Langmuir-Blodgett technique</label><br>
+    <label><input type="radio" name="q28" value="C" data-correct="false"> (C) Arc discharge</label><br>
+    <label><input type="radio" name="q28" value="D" data-correct="false"> (D) Laser ablation</label>
+  </div>
+  
+  <!-- ===================== QUESTION 29 ===================== -->
+  <div class="question">
+    <h3>29. In catalytic applications, nanoparticles are preferred due to:</h3>
+    <label><input type="radio" name="q29" value="A" data-correct="false"> (A) High thermal conductivity</label><br>
+    <label><input type="radio" name="q29" value="B" data-correct="false"> (B) High melting point</label><br>
+    <label><input type="radio" name="q29" value="C" data-correct="true"> (C) Large surface area to volume ratio</label><br>
+    <label><input type="radio" name="q29" value="D" data-correct="false"> (D) Strong covalent bonds</label>
+  </div>
+  
+  <!-- ===================== QUESTION 30 ===================== -->
+  <div class="question">
+    <h3>30. Which of the following is true about molecular clusters?</h3>
+    <label><input type="radio" name="q30" value="A" data-correct="false"> (A) They have purely metallic properties</label><br>
+    <label><input type="radio" name="q30" value="B" data-correct="false"> (B) Their properties do not vary with size</label><br>
+    <label><input type="radio" name="q30" value="C" data-correct="true"> (C) Their electronic and optical properties depend on the number of atoms</label><br>
+    <label><input type="radio" name="q30" value="D" data-correct="false"> (D) They are stable only in plasma</label>
+  </div>
+  
+  
+  <div class="question">
+    <h3>41. What is the crystal structure of monolayer graphene?</h3>
+    <label><input type="radio" name="q41" value="A" data-correct="false"> (A) Square lattice of carbon atoms</label><br>
+    <label><input type="radio" name="q41" value="B" data-correct="true"> (B) Two-dimensional hexagonal honeycomb lattice</label><br>
+    <label><input type="radio" name="q41" value="C" data-correct="false"> (C) Body-centered cubic structure</label><br>
+    <label><input type="radio" name="q41" value="D" data-correct="false"> (D) Tetragonal lattice with sp³ hybridization</label>
+  </div>
+<!-- ===================== QUESTION 42 ===================== -->
+<div class="question">
+    <h3>42. What distinguishes superparamagnetic nanoparticles from ferromagnetic ones?</h3>
+    <label><input type="radio" name="q42" value="A" data-correct="false"> (A) They exhibit permanent magnetization without a field</label><br>
+    <label><input type="radio" name="q42" value="B" data-correct="false"> (B) They are always diamagnetic</label><br>
+    <label><input type="radio" name="q42" value="C" data-correct="true"> (C) They have zero remanent magnetization due to thermal fluctuations</label><br>
+    <label><input type="radio" name="q42" value="D" data-correct="false"> (D) Their magnetization increases with temperature</label>
+  </div>
+  
+  <!-- ===================== QUESTION 43 ===================== -->
+  <div class="question">
+    <h3>43. Superparamagnetic behavior is typically observed when:</h3>
+    <label><input type="radio" name="q43" value="A" data-correct="false"> (A) Particle size exceeds 100 nm</label><br>
+    <label><input type="radio" name="q43" value="B" data-correct="true"> (B) Particle size is below a critical size, typically < 10 nm</label><br>
+    <label><input type="radio" name="q43" value="C" data-correct="false"> (C) Particles are in clusters</label><br>
+    <label><input type="radio" name="q43" value="D" data-correct="false"> (D) Magnetic domains are fixed</label>
+  </div>
+  
+  <!-- ===================== QUESTION 44 ===================== -->
+  <div class="question">
+    <h3>44. In Giant Magnetoresistance (GMR), the resistance change is due to:</h3>
+    <label><input type="radio" name="q44" value="A" data-correct="false"> (A) Thermionic emission</label><br>
+    <label><input type="radio" name="q44" value="B" data-correct="false"> (B) Electron tunneling through vacuum</label><br>
+    <label><input type="radio" name="q44" value="C" data-correct="true"> (C) Spin-dependent scattering in multilayers</label><br>
+    <label><input type="radio" name="q44" value="D" data-correct="false"> (D) Lattice distortion</label>
+  </div>
+  
+  <!-- ===================== QUESTION 45 ===================== -->
+  <div class="question">
+    <h3>45. Which structure is key in GMR devices?</h3>
+    <label><input type="radio" name="q45" value="A" data-correct="false"> (A) Graphene monolayer</label><br>
+    <label><input type="radio" name="q45" value="B" data-correct="false"> (B) Nanopillars</label><br>
+    <label><input type="radio" name="q45" value="C" data-correct="true"> (C) Alternating ferromagnetic and nonmagnetic layers</label><br>
+    <label><input type="radio" name="q45" value="D" data-correct="false"> (D) Metal-oxide heterojunction</label>
+  </div>
+  
+  <!-- ===================== QUESTION 46 ===================== -->
+  <div class="question">
+    <h3>46. What is a key application of ferrofluids?</h3>
+    <label><input type="radio" name="q46" value="A" data-correct="true"> (A) Damping and sealing in rotating shafts</label><br>
+    <label><input type="radio" name="q46" value="B" data-correct="false"> (B) Lubrication of solar panels</label><br>
+    <label><input type="radio" name="q46" value="C" data-correct="false"> (C) Electroluminescence</label><br>
+    <label><input type="radio" name="q46" value="D" data-correct="false"> (D) DNA sequencing</label>
+  </div>
+  
+  <!-- ===================== QUESTION 47 ===================== -->
+  <div class="question">
+    <h3>47. A characteristic feature of ferrofluids is:</h3>
+    <label><input type="radio" name="q47" value="A" data-correct="false"> (A) Magnetic ordering at room temperature</label><br>
+    <label><input type="radio" name="q47" value="B" data-correct="true"> (B) Strong response to external magnetic field without aggregation</label><br>
+    <label><input type="radio" name="q47" value="C" data-correct="false"> (C) Permanent magnetization in zero field</label><br>
+    <label><input type="radio" name="q47" value="D" data-correct="false"> (D) Conductivity enhancement</label>
+  </div>
+  
+  <!-- ===================== QUESTION 48 ===================== -->
+  <div class="question">
+    <h3>48. Colossal magnetoresistance (CMR) is most commonly observed in:</h3>
+    <label><input type="radio" name="q48" value="A" data-correct="false"> (A) Nickel-based alloys</label><br>
+    <label><input type="radio" name="q48" value="B" data-correct="true"> (B) Perovskite manganites</label><br>
+    <label><input type="radio" name="q48" value="C" data-correct="false"> (C) Silicon wafers</label><br>
+    <label><input type="radio" name="q48" value="D" data-correct="false"> (D) Metal-graphene composites</label>
+  </div>
+  
+  <!-- ===================== QUESTION 49 ===================== -->
+  <div class="question">
+    <h3>49. CMR materials exhibit a change in resistance due to:</h3>
+    <label><input type="radio" name="q49" value="A" data-correct="true"> (A) Magnetic field-induced transition from insulating to metallic phase</label><br>
+    <label><input type="radio" name="q49" value="B" data-correct="false"> (B) Photoexcitation</label><br>
+    <label><input type="radio" name="q49" value="C" data-correct="false"> (C) Quantum confinement</label><br>
+    <label><input type="radio" name="q49" value="D" data-correct="false"> (D) Lattice strain alone</label>
+  </div>
+  
+  <!-- ===================== QUESTION 50 ===================== -->
+  <div class="question">
+    <h3>50. Nanostructured thermal devices can enhance heat transfer due to:</h3>
+    <label><input type="radio" name="q50" value="A" data-correct="false"> (A) Increased photon emission</label><br>
+    <label><input type="radio" name="q50" value="B" data-correct="true"> (B) Increased surface area and phonon scattering</label><br>
+    <label><input type="radio" name="q50" value="C" data-correct="false"> (C) Reduced thermal conductivity of substrate</label><br>
+    <label><input type="radio" name="q50" value="D" data-correct="false"> (D) Enhanced magnetism</label>
+  </div>
+  
+  <!-- ===================== QUESTION 51 ===================== -->
+  <div class="question">
+    <h3>51. Which of the following is NOT a characteristic of superhydrophobic nanostructured surfaces?</h3>
+    <label><input type="radio" name="q51" value="A" data-correct="false"> (A) Contact angle greater than 150°</label><br>
+    <label><input type="radio" name="q51" value="B" data-correct="false"> (B) Low contact angle hysteresis</label><br>
+    <label><input type="radio" name="q51" value="C" data-correct="true"> (C) Strong adhesion to water droplets</label><br>
+    <label><input type="radio" name="q51" value="D" data-correct="false"> (D) Surface roughness at nano/micro scale</label>
+  </div>
+  
+  <!-- ===================== QUESTION 52 ===================== -->
+  <div class="question">
+    <h3>52. The "lotus effect" is associated with:</h3>
+    <label><input type="radio" name="q52" value="A" data-correct="false"> (A) Surface plasmon resonance</label><br>
+    <label><input type="radio" name="q52" value="B" data-correct="true"> (B) Superhydrophobicity due to hierarchical structures</label><br>
+    <label><input type="radio" name="q52" value="C" data-correct="false"> (C) Magnetic ordering in biological systems</label><br>
+    <label><input type="radio" name="q52" value="D" data-correct="false"> (D) Optical birefringence</label>
+  </div>
+  
+  <!-- ===================== QUESTION 53 ===================== -->
+  <div class="question">
+    <h3>53. A key strategy in biomimetics is to:</h3>
+    <label><input type="radio" name="q53" value="A" data-correct="false"> (A) Mimic physical behavior of noble gases</label><br>
+    <label><input type="radio" name="q53" value="B" data-correct="false"> (B) Enhance friction of materials</label><br>
+    <label><input type="radio" name="q53" value="C" data-correct="true"> (C) Design materials based on biological forms and processes</label><br>
+    <label><input type="radio" name="q53" value="D" data-correct="false"> (D) Replace carbon with nitrogen atoms</label>
+  </div>
+  
+  <!-- ===================== QUESTION 54 ===================== -->
+  <div class="question">
+    <h3>54. Which biomimetic nanostructure has inspired gecko-inspired adhesives?</h3>
+    <label><input type="radio" name="q54" value="A" data-correct="false"> (A) Spider silk structure</label><br>
+    <label><input type="radio" name="q54" value="B" data-correct="true"> (B) Hierarchical setae on gecko foot</label><br>
+    <label><input type="radio" name="q54" value="C" data-correct="false"> (C) Honeycomb cell walls</label><br>
+    <label><input type="radio" name="q54" value="D" data-correct="false"> (D) Sharkskin ridges</label>
+  </div>
+  
+  <!-- ===================== QUESTION 55 ===================== -->
+  <div class="question">
+    <h3>55. Which of the following is a potential use of biomimetic nanostructures?</h3>
+    <label><input type="radio" name="q55" value="A" data-correct="true"> (A) Anti-reflective coatings inspired by moth eyes</label><br>
+    <label><input type="radio" name="q55" value="B" data-correct="false"> (B) Purely decorative coatings</label><br>
+    <label><input type="radio" name="q55" value="C" data-correct="false"> (C) Energy storage by osmosis</label><br>
+    <label><input type="radio" name="q55" value="D" data-correct="false"> (D) Radio wave generation</label>
+  </div>
+   <!-- ===================== ANSWER 56 ===================== -->
+<!-- ===================== ANSWER 56 ===================== -->
+<div class="answer">
+    <h3>56. Answer: (D)</h3>
+    <p>
+      <strong>Explanation:</strong><br>
+      A magnetic nanoparticle in the superparamagnetic regime exhibits no hysteresis in the magnetization vs. magnetic field (M–H) curve. The curve is S-shaped and reversible through the origin, unlike ferromagnetic curves that exhibit coercivity and remanence.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 57 ===================== -->
+  <div class="answer">
+    <h3>57. Answer: (C)</h3>
+    <p>
+      <strong>Explanation:</strong><br>
+      In a spin valve (a key GMR structure), two ferromagnetic layers are separated by a non-magnetic layer. One ferromagnetic layer has fixed magnetization (pinned), and the other can flip. Resistance is low when both are aligned and high when antiparallel due to spin-dependent scattering.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 58 ===================== -->
+  <div class="answer">
+    <h3>58. Answer: (B)</h3>
+    <p>
+      <strong>Explanation:</strong><br>
+      Ferrofluids contain magnetic nanoparticles suspended in a carrier liquid. They exhibit strong response to magnetic fields but return to fluid state without magnetic remanence. This makes them suitable for precision engineering and biomedical applications like targeted drug delivery and MRI contrast agents.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 59 ===================== -->
+  <div class="answer">
+    <h3>59. Answer: (A)</h3>
+    <p>
+      <strong>Explanation:</strong><br>
+      Nanostructured materials such as carbon nanotubes, nanowires, or porous silicon increase surface area and phonon scattering. This leads to reduced thermal conductivity and enhanced thermoelectric performance in nanoscale thermal devices.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 60 ===================== -->
+  <div class="answer">
+    <h3>60. Answer: (B)</h3>
+    <p>
+      <strong>Explanation:</strong><br>
+      Superhydrophobicity is due to both high surface roughness and low surface energy. Nanostructured coatings, especially hierarchical ones, trap air between surface asperities, preventing water from fully wetting the surface. This leads to contact angles >150° and water repellency.
+    </p>
+  </div>
+  
+  <!-- ===================== ANSWER 61 ===================== -->
+  <div class="answer">
+    <h3>61. Answer: (C)</h3>
+    <p>
+      <strong>Explanation:</strong><br>
+      Biomimetics translates natural design into engineering solutions. Examples include surfaces inspired by shark skin (antifouling), moth-eye anti-reflective coatings, and gecko foot-inspired adhesives. These ideas offer functional nanostructuring that enhances performance in various domains.
+    </p>
+  </div>
+  
+
+  <button type="button" onclick="calculateScore()">Submit</button>
+</form>
+
+<div class="result" id="resultArea"></div>
+
+<script>
+function calculateScore() {
+  let score = 0;
+  let total = 10;
+
+  for (let i = 1; i <= total; i++) {
+    let selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected && selected.getAttribute("data-correct") === "true") {
+      score++;
+    }
+  }
+
+  document.getElementById("resultArea").innerText = `You scored ${score} out of ${total}`;
+}
+</script>
+
+</body>
+</html>
