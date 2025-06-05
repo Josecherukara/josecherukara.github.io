@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Thermodynamics Quiz</h1>
+    <form id="quiz-form">
+        <fieldset>
+            <legend><h3>Participant Details</h3></legend>
+            <label>Name:</label>
+            <input type="text" name="name" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required><br><br>
+            <label>Roll Number:</label>
+            <input type="text" name="rollNumber" required><br><br>
+            <label>Class:</label>
+            <input type="text" name="class" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <div>
+                <h3>1. The equation for an ideal gas is:</h3>
+                <label><input type="radio" name="q1" value="A"> \(PV=nRT\)</label><br>
+                <label><input type="radio" name="q1" value="B"> \(PV=nR/T\)</label><br>
+                <label><input type="radio" name="q1" value="C"> \(PV=nR^2T\)</label><br>
+                <label><input type="radio" name="q1" value="D"> \(PV=RT/n\)</label>
+            </div>
+
+            <div>
+                <h3>2. Real gases behave ideally at:</h3>
+                <label><input type="radio" name="q2" value="A"> High pressure and low temperature</label><br>
+                <label><input type="radio" name="q2" value="B"> Low pressure and high temperature</label><br>
+                <label><input type="radio" name="q2" value="C"> High pressure and high temperature</label><br>
+                <label><input type="radio" name="q2" value="D"> Low pressure and low temperature</label>
+            </div>
+
+            <div>
+                <h3>3. Andrew’s experiment demonstrated critical phenomena using:</h3>
+                <label><input type="radio" name="q3" value="A"> Oxygen</label><br>
+                <label><input type="radio" name="q3" value="B"> Carbon dioxide</label><br>
+                <label><input type="radio" name="q3" value="C"> Hydrogen</label><br>
+                <label><input type="radio" name="q3" value="D"> Nitrogen</label>
+            </div>
+
+            <div>
+                <h3>4. Critical temperature is defined as:</h3>
+                <label><input type="radio" name="q4" value="A"> Temperature at which gas becomes ideal</label><br>
+                <label><input type="radio" name="q4" value="B"> Highest temperature at which liquid and vapor coexist</label><br>
+                <label><input type="radio" name="q4" value="C"> Lowest temperature for solid-liquid equilibrium</label><br>
+                <label><input type="radio" name="q4" value="D"> Temperature at which gases solidify</label>
+            </div>
+
+            <div>
+                <h3>5. Van der Waals equation accounts for:</h3>
+                <label><input type="radio" name="q5" value="A"> Intermolecular forces and molecular volume</label><br>
+                <label><input type="radio" name="q5" value="B"> Only molecular collisions</label><br>
+                <label><input type="radio" name="q5" value="C"> Ideal gas behavior only</label><br>
+                <label><input type="radio" name="q5" value="D"> Nuclear forces</label>
+            </div>
+
+            <div>
+                <h3>6. The Van der Waals isotherms differ from ideal gas isotherms due to:</h3>
+                <label><input type="radio" name="q6" value="A"> Straight lines</label><br>
+                <label><input type="radio" name="q6" value="B"> Presence of minima and maxima below critical temperature</label><br>
+                <label><input type="radio" name="q6" value="C"> Constant volume conditions</label><br>
+                <label><input type="radio" name="q6" value="D"> Infinite slopes at all points</label>
+            </div>
+
+            <div>
+                <h3>7. Critical constants from van der Waals equation are related by:</h3>
+                <label><input type="radio" name="q7" value="A"> \(P_cV_c=RT_c\)</label><br>
+                <label><input type="radio" name="q7" value="B"> \(P_cV_c=3RT_c/8\)</label><br>
+                <label><input type="radio" name="q7" value="C"> \(P_cV_c=5RT_c/2\)</label><br>
+                <label><input type="radio" name="q7" value="D"> \(P_cV_c=2RT_c\)</label>
+            </div>
+
+            <div>
+                <h3>8. Limitation of van der Waals equation includes:</h3>
+                <label><input type="radio" name="q8" value="A"> Inaccurate at low pressures</label><br>
+                <label><input type="radio" name="q8" value="B"> Does not predict liquefaction accurately</label><br>
+                <label><input type="radio" name="q8" value="C"> Fails at high temperatures only</label><br>
+                <label><input type="radio" name="q8" value="D"> Assumes no molecular volume</label>
+            </div>
+        </fieldset>
+
+        <button type="button" onclick="submitQuiz()">Submit & Download Excel</button>
+    </form>
+
+<script>
+function submitQuiz(){
+    const data=new FormData(document.getElementById('quiz-form'));
+    const worksheet=XLSX.utils.json_to_sheet([Object.fromEntries(data)]);
+    const workbook=XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook,worksheet,"QuizResults");
+    XLSX.writeFile(workbook,"Thermodynamics_Quiz.xlsx");
+}
+</script>
+
+</body>
+</html>
