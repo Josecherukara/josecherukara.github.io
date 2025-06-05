@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Nanoworld Quiz</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
   <style>
     body { font-family: Arial; margin: 20px; }
     .question { margin-bottom: 20px; }
     .result { font-weight: bold; margin-top: 20px; }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
 </head>
+
+
+
 <body>
     <h2>Student Details</h2>
     <form id="examForm">
@@ -516,68 +524,102 @@
     <label><input type="radio" name="q55" value="C" data-correct="false"> (C) Energy storage by osmosis</label><br>
     <label><input type="radio" name="q55" value="D" data-correct="false"> (D) Radio wave generation</label>
   </div>
-   <!-- ===================== ANSWER 56 ===================== -->
-
-
-  <button type="button" onclick="calculateScore()">Submit</button>
+   <!-- ===================== ANSWER 56 ===================== -->  
 </form>
-<button type="button" onclick="downloadResults()">Submit & Download Excel</button>
-</form>
+<!-- Quiz form content here (omitted for brevity) -->
 
-<script>
-  function downloadResults() {
-    const name = document.getElementById("studentName").value;
-    const email = document.getElementById("studentEmail").value;
-    const roll = document.getElementById("rollNumber").value;
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
 
-    if (!name || !email || !roll) {
-      alert("Please fill in all student details.");
-      return;
-    }
+  <div class="result" id="resultArea"></div>
 
-    let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
-    const totalQuestions = 55;  // Update this if you add more questions
-
-    for (let i = 1; i <= totalQuestions; i++) {
-      const options = document.getElementsByName("q" + i);
-      let selected = "Not Answered";
-      for (const opt of options) {
-        if (opt.checked) selected = opt.value;
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
       }
-      data.push(["Q" + i, selected]);
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 55;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
     }
 
-    // Convert to CSV
-    const csvContent = data.map(row => row.join(",")).join("\n");
-    //const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    //const url = URL.createObjectURL(blob);
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    saveAs(blob, "student_response.csv");
-
-    //const a = document.createElement("a");
-    //a.href = url;
-    //a.download = `Response_${roll}.csv`;
-    //a.click();
-  }
-</script>
-<div class="result" id="resultArea"></div>
-
-<script>
-function calculateScore() {
-  let score = 0;
-  let total = 55;   
-
-  for (let i = 1; i <= total; i++) {
-    let selected = document.querySelector(`input[name="q${i}"]:checked`);
-    if (selected && selected.getAttribute("data-correct") === "true") {
-      score++;
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
     }
-  }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
 
-  document.getElementById("resultArea").innerText = `You scored ${score} out of ${total}`;
+      const { blob, scoreText } = result;
 
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}) Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
 }
-</script>
 
+    function downloadCSVLocally() {
+      const blob = generateCSVBlob();
+      if (!blob) return;
+      saveAs(blob, "jose.csv");
+    }
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
 </body>
 </html>
