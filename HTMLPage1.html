@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Workshop Brochure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .left-panel {
+            width: 50%;
+            background: #ffffff;
+            padding-top: 30px;
+            padding-bottom: 0;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            position: relative;
+        }
+
+            .left-panel::-webkit-scrollbar {
+                display: none;
+            }
+
+        .banner {
+            background: #181818;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            z-index: 1000;
+        }
+
+            .banner img {
+                width: 60px;
+                height: 60px;
+                margin-right: 20px;
+            }
+
+            .banner h1 {
+                font-size: 1.8rem;
+                margin: 0;
+            }
+
+        .content {
+            padding: 50px;
+           
+            margin-top: 90px;
+        }
+
+        .right-panel {
+            width: 50%;
+            background: #181818;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+            .right-panel img {
+                width: 60%;
+                height: auto;
+                max-height: calc(100vh - 40px);
+                object-fit: contain;
+                display: block;
+                margin: auto;
+                transition: transform 0.3s ease;
+            }
+
+                .right-panel img:hover {
+                    transform: scale(1.25);
+                }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .left-panel, .right-panel {
+                width: 100%;
+                height: auto;
+            }
+
+            .banner {
+                width: 100%;
+                position: static;
+            }
+        }
+
+        .right-footer {
+            width: 100%;
+            background: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #333;
+            display: block;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #004080;
+            margin-bottom: 10px;
+            border-left: 5px solid #0073e6;
+            padding-left: 10px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-panel">
+        <div class="banner">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Logo">
+            <h1>Unleashing the Power of ChatGPT</h1>
+        </div>
+        <div class="content">
+            <div class="section">
+                <p><strong>Date & Time:</strong> July 20, 2025 | 10:00 AM – 4:00 PM</p>
+                <p><strong>Venue:</strong> Seminar Hall, The Cochin College, Kochi, Kerala</p>
+            </div>
+
+            <div class="section">
+                <h2>🎯 Objectives</h2>
+                <ul>
+                    <li>Understand the fundamentals of ChatGPT and Generative AI</li>
+                    <li>Explore real-world applications in teaching, research, and creativity</li>
+                    <li>Learn effective prompt engineering techniques</li>
+                    <li>Discuss responsible and ethical use of AI</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>👥 Target Audience</h2>
+                <ul>
+                    <li>Faculty & Researchers</li>
+                    <li>Students (UG/PG/PhD)</li>
+                    <li>Content Creators, Journalists</li>
+                    <li>Entrepreneurs, Curious Minds</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🗂 Workshop Modules</h2>
+                <ol>
+                    <li>Introduction to ChatGPT & Generative AI</li>
+                    <li>Hands-on Demonstration</li>
+                    <li>Prompt Engineering</li>
+                    <li>Using ChatGPT for Research & Education</li>
+                    <li>AI Ethics & Limitations</li>
+                    <li>Live Prompt Challenge</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>👨‍🏫 Resource Person</h2>
+                <p>
+                    <strong>Dr. Jose Mathew</strong><br>
+                    Assistant Professor of Physics,<br>
+                    The Cochin College, Kochi<br>
+                    Researcher in Cosmology, AI Enthusiast
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📝 Registration</h2>
+                <p><strong>Fee:</strong> ₹100 (Students), ₹200 (Faculty/Professionals)</p>
+                <p><strong>Includes:</strong> Lunch & Certificate</p>
+                <p>
+                    <strong>Register at:</strong> <a href="#">[Registration Link]</a><br>
+                    <strong>Deadline:</strong> July 10, 2025
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📞 Contact</h2>
+                <p>
+                    Email: <a href="mailto:jose.mathew@thecochincollege.edu.in">jose.mathew@thecochincollege.edu.in</a><br>
+                    Phone: +91-XXXXXXXXXX
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📚 Organized By</h2>
+                <p>
+                    Department of Physics, The Cochin College<br>
+                    In association with IQAC
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <img src="AI2.webp" alt="AI GIF">
+        <div class="right-footer">© 2025 The Cochin College | All Rights Reserved</div>
+    </div>
+</body>
+</html>

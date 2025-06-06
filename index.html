@@ -18,6 +18,8 @@
     <title>Jose Mathew's Personal Portfolio Website</title>
 </head>
 <body>
+
+
     <header class="fixed-header">
         <div class="buttons">
             <nav>
@@ -25,15 +27,32 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="teachingportfolio.html">Teaching</a></li>
                     <li><a href="research.html">Research</a></li>
-                   <!-- <li><a href="#">Group</a></li>-->
+                    <!-- <li><a href="#">Group</a></li>-->
                     <li><a href="others.html">Other</a></li>
                 </ul>
             </nav>
         </div>
+        <br>
+        
     </header>
+    <main class="mainticker">
+        <div class="ticker" onclick="window.location.href='HTMLPage1.html'">
+            <p>Join us for a <span class="highlight-word">WORKSHOP on 3rd week of June</span> to explore the power of AI in education, research, and creativity — powered by ChatGPT!</p>
+        </div>
+        <script>
+            document.querySelector('.ticker').addEventListener('click', function () {
+                document.querySelector('.ticker p').style.animationPlayState = 'paused';
+                setTimeout(() => window.location.href = 't.html', 200); // short pause before redirect
+            });
+        </script>
+
+    </main>
     <main class="main">
+        
         <div class="container">
+
             <div class="column1">
+
                 <br>
                 <!-- Content for the left column -->
                 <div class="name-container">
@@ -45,15 +64,16 @@
                 <!-- Moved the 'ABOUT' section up -->
                 <div class="content">
                     <h3>About Me</h3>
-                        <br>
-                        <p> <a href="https://thecochincollege.edu.in/faculty/jose-mathew/">Dr. Jose Mathew</a> serves as an Assistant Professor in the Department of Physics at The Cochin College in Kochi , Kerala. He specializes in theoretical physics, focusing on cosmology and astrophysics, with particular interests in inflation, bounce, modified gravity, cosmological perturbations, and black holes.
+                    <br>
+                    <p>
+                        <a href="https://thecochincollege.edu.in/faculty/jose-mathew/">Dr. Jose Mathew</a> serves as an Assistant Professor in the Department of Physics at The Cochin College in Kochi , Kerala. He specializes in theoretical physics, focusing on cosmology and astrophysics, with particular interests in inflation, bounce, modified gravity, cosmological perturbations, and black holes.
 
-Dr. Mathew completed his M.Sc. in Physics at the Indian Institute of Technology Bombay (IIT Bombay) in 2010. He then pursued his Ph.D. at the Indian Institute of Science Education and Research Thiruvananthapuram, <a href="https://www.iisertvm.ac.in/"> IISERTVM</a>, which he earned in 2017. His doctoral research, under the guidance of Prof. S. Shankaranarayanan, focused on particle physics models of inflation in modified gravity.
+                        Dr. Mathew completed his M.Sc. in Physics at the Indian Institute of Technology Bombay (IIT Bombay) in 2010. He then pursued his Ph.D. at the Indian Institute of Science Education and Research Thiruvananthapuram, <a href="https://www.iisertvm.ac.in/"> IISERTVM</a>, which he earned in 2017. His doctoral research, under the guidance of Prof. S. Shankaranarayanan, focused on particle physics models of inflation in modified gravity.
 
- <a href="https://homepages.iitb.ac.in/~shanki/">Prof. S. Shankaranarayanan</a>, currently a Professor of Physics at IIT Bombay, is renowned for his work in gravitational physics and quantum field theory, emphasizing early-universe cosmology and black holes.
+                        <a href="https://homepages.iitb.ac.in/~shanki/">Prof. S. Shankaranarayanan</a>, currently a Professor of Physics at IIT Bombay, is renowned for his work in gravitational physics and quantum field theory, emphasizing early-universe cosmology and black holes.
 
-Since joining The Cochin College in 2019, Dr. Mathew has been actively engaged in both teaching and research. His expertise enhances the academic environment, and he is committed to fostering a deep understanding of physics among his students.
-                            
+                        Since joining The Cochin College in 2019, Dr. Mathew has been actively engaged in both teaching and research. His expertise enhances the academic environment, and he is committed to fostering a deep understanding of physics among his students.
+
                         <br>
                         <br>
                         <a href="JOSE_MATHEW_CV.pdf" class="button" data-text="Jostory">Go to Another Page</a>
@@ -64,46 +84,52 @@ Since joining The Cochin College in 2019, Dr. Mathew has been actively engaged i
                         <br>
                         <a href="Answers to Nano.html"><h2>Answers</h2></a>
                         <br><br><br>
-                    <h3>News</h3>
+                        <h3>News</h3>
                         <br>
-                        <ul> 
-                        <li><p> New preprint on the stability of Power-law Cosmological models titled </p><a href="https://arxiv.org/abs/2410.18925">Stability analysis of power-law cosmological models</a><p> have appeared on arXiv.</p>
-                        </li>
-                        <li><p> Our paper titled </p><a href="https://www.worldscientific.com/doi/10.1142/9789811269776_0105"> Infinitely degenerate exact Ricci-flat solutions in f (R) gravity</a><p> was presented in The Sixteenth Marcel Grossmann Meeting. Click here to know more about </p><a href="https://www.icra.it/MG/"> MARCEL GROSSMANN MEETINGS
-                            on general relativity</a></li>
-                        <li><p> New preprint on estimating the parameters of starobinsky inflation titled </p><a href="https://arxiv.org/abs/2307.01899">Starobinsky inflation and its spin-offs in the lights of exact solutions</a><p> have appeared on arXiv.</p>
-                        </li>
-                        <br>
-                        <br>
-                    <div class="cartooncontainer">
-                        <img src="cartoon.jpg" alt="Cartoon" class="cartoonimage">
-                    </div>
-                    <br><br>
+                        <ul>
+                            <li>
+                                <p> New preprint on the stability of Power-law Cosmological models titled </p><a href="https://arxiv.org/abs/2410.18925">Stability analysis of power-law cosmological models</a><p> have appeared on arXiv.</p>
+                            </li>
+                            <li>
+                                <p> Our paper titled </p><a href="https://www.worldscientific.com/doi/10.1142/9789811269776_0105"> Infinitely degenerate exact Ricci-flat solutions in f (R) gravity</a><p> was presented in The Sixteenth Marcel Grossmann Meeting. Click here to know more about </p><a href="https://www.icra.it/MG/">
+                                    MARCEL GROSSMANN MEETINGS
+                                    on general relativity
+                                </a>
+                            </li>
+                            <li>
+                                <p> New preprint on estimating the parameters of starobinsky inflation titled </p><a href="https://arxiv.org/abs/2307.01899">Starobinsky inflation and its spin-offs in the lights of exact solutions</a><p> have appeared on arXiv.</p>
+                            </li>
+                            <br>
+                            <br>
+                            <div class="cartooncontainer">
+                                <img src="cartoon.jpg" alt="Cartoon" class="cartoonimage">
+                            </div>
+                            <br>
+                            <br>
                 </div>
             </div>
             <div class="column2">
                 <!-- Content for the right column -->
-                           
-                    <!--<img src="Images/JMcover.jpg" alt="Fixed Image" class="fixed-image">-->
-                    <!--<p>Image 2 description</p>-->
+                <!--<img src="Images/JMcover.jpg" alt="Fixed Image" class="fixed-image">-->
+                <!--<p>Image 2 description</p>-->
                 <div class="containerRand">
-                   <!-- <div class="box">-->
-                       <!-- <img src="image7.jpg" alt="Image 3" class="random-image">-->
-                        <img src="image8.jpeg" alt="Image 8" class="random-image">
-                        <img src="image4.jpeg" alt="Image 4" class="random-image">
-                        <img src="image1.jpeg" alt="Image 1" class="random-image">
-                        <img src="image24cropped.jpg" alt="Image 24" class="random-image">
-                      <!-- <img src="image5.jpeg" alt="Image 5" class="random-image">
-                        <img src="image6.jpeg" alt="Image 6" class="random-image">
-                        <img src="image10.jpg" alt="Image 10" class="random-image">
-                        <img src="image21.jpeg" alt="Image 21" class="random-image">
-                        <img src="image22.jpeg" alt="Image 22" class="random-image">
-                        <img src="image23.jpg" alt="Image 23" class="random-image">
-                        <img src="image24.jpg" alt="Image 24" class="random-image">
-                        <img src="image25.jpg" alt="Image 25" class="random-image">
+                    <!-- <div class="box">-->
+                    <!-- <img src="image7.jpg" alt="Image 3" class="random-image">-->
+                    <img src="image8.jpeg" alt="Image 8" class="random-image">
+                    <img src="image4.jpeg" alt="Image 4" class="random-image">
+                    <img src="image1.jpeg" alt="Image 1" class="random-image">
+                    <img src="image24cropped.jpg" alt="Image 24" class="random-image">
+                    <!-- <img src="image5.jpeg" alt="Image 5" class="random-image">
+                <img src="image6.jpeg" alt="Image 6" class="random-image">
+                <img src="image10.jpg" alt="Image 10" class="random-image">
+                <img src="image21.jpeg" alt="Image 21" class="random-image">
+                <img src="image22.jpeg" alt="Image 22" class="random-image">
+                <img src="image23.jpg" alt="Image 23" class="random-image">
+                <img src="image24.jpg" alt="Image 24" class="random-image">
+                <img src="image25.jpg" alt="Image 25" class="random-image">
 
-                         Add more images as needed -->
-                   <!-- </div>-->
+                 Add more images as needed -->
+                    <!-- </div>-->
                 </div>
                 <div class="contact">
                     <br><br>
@@ -115,15 +141,16 @@ Since joining The Cochin College in 2019, Dr. Mathew has been actively engaged i
                     <p>682002</p>
                     <p>Ph:8089340082</p>
                     <p>Email:josemathew@thecochincollege.edu.in</p>
-                    <br><br>  
-                    
+                    <br><br>
+
                     <ul>
                         <p>Important Links for aspiring physicists</p>
                         <li><a href="https://www.goodtheorist.science/"> Home page of Gerald Hooft</a></li>
                         <li><a href="https://astro.ucla.edu/~wright/cosmolog.htm"> Ned wrights Cosmology Tutorial</a></li>
                         <li><a href="https://sci-hub.wf/"> Sci-hub</a></li>
                         <li><a href="https://libgen.is/"> Libgen</a></li>
-                        <br><br>
+                        <br>
+                        <br>
                         <div class="custom-line"></div>
                     </ul>
                 </div>
@@ -141,9 +168,9 @@ Since joining The Cochin College in 2019, Dr. Mathew has been actively engaged i
                 <li><a href="https://www.facebook.com/profile.php?id=100007556521942">Facebook</a></li>
             </ul>
         </div>
-        <p class="copyrt">&copy; 2024 Jose Mathew. All rights reserved. Built from scratch using Html, CSS and Java script</p>       
+        <p class="copyrt">&copy; 2024 Jose Mathew. All rights reserved. Built from scratch using Html, CSS and Java script</p>
     </footer>
-    <img src="Images/JMcover.jpg" alt="Fixed Image" class="fixed-image"> 
-    
+    <img src="Images/JMcover.jpg" alt="Fixed Image" class="fixed-image">
+
 </body>
 </html>

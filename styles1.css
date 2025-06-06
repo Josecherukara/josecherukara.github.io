@@ -77,10 +77,58 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+.mainticker {
+    margin-top: 60px; /* Adjust margin to keep content below header */
+     /* Adjust margin to keep content above footer */
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+.ticker {
+    position: fixed;
+    top: 80px;
+    left: 25px;
+    right: 0px;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 9999;
+    /*pointer-events: none;*/
+    cursor: pointer; /* Show pointer on hover */
+}
+
+    .ticker p {
+        display: inline-block;
+        animation: scroll-left 15s linear infinite;
+        font-size: 1.75rem;
+        font-weight: bold;
+        color:dimgray;/* padding-left: 10vw;
+        padding-right: 10vw;*/
+        box-sizing: content-box;
+    }
+    .ticker:hover p {
+        animation-play-state: paused;
+    }
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.highlight-word {
+    color: red;
+    font-weight: bold;
+}
 
 /* Main styles */
 .main {
-    margin-top: 60px; /* Adjust margin to keep content below header */
+    margin-top: relative; /* Adjust margin to keep content below header */
     margin-bottom: 100px; /* Adjust margin to keep content above footer */
     display: flex;
     flex: 1;
