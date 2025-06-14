@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mechanics Quiz</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+  
+<h2>Let's start with Kinematics</h2>
+<form id="quizForm">
+
+  <!-- ==================== QUESTION TEMPLATE ==================== -->
+ <div class="question">
+  <p>Q1. Which of the following is the correct equation for final velocity in uniformly accelerated motion?</p>
+  <label><input type="radio" name="q1" value="v = u + at" data-correct="true"> \( v = u + at \)</label><br>
+  <label><input type="radio" name="q1" value="v = ut + \frac{1}{2}a"> \( v = ut + \frac{1}{2}a \)</label><br>
+  <label><input type="radio" name="q1" value="v = u - at"> \( v = u - at \)</label><br>
+  <label><input type="radio" name="q1" value="v = uat"> \( v = uat \)</label>
+</div>
+
+<div class="question">
+  <p>Q2. Which equation relates displacement \( s \), initial velocity \( u \), time \( t \), and acceleration \( a \)?</p>
+  <label><input type="radio" name="q2" value="s = ut + \frac{1}{2}at^2" data-correct="true"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q2" value="s = u + at"> \( s = u + at \)</label><br>
+  <label><input type="radio" name="q2" value="s = u^2 + at^2"> \( s = u^2 + at^2 \)</label><br>
+  <label><input type="radio" name="q2" value="s = uat"> \( s = uat \)</label>
+</div>
+
+<div class="question">
+  <p>Q3. Which of the following equations gives the relation between velocities and displacement?</p>
+  <label><input type="radio" name="q3" value="v = u + at"> \( v = u + at \)</label><br>
+  <label><input type="radio" name="q3" value="v^2 = u^2 + 2as" data-correct="true"> \( v^2 = u^2 + 2as \)</label><br>
+  <label><input type="radio" name="q3" value="s = ut + \frac{1}{2}at^2"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q3" value="v^2 = 2as"> \( v^2 = 2as \)</label>
+</div>
+
+<div class="question">
+  <p>Q4. Which equation is dimensionally inconsistent?</p>
+  <label><input type="radio" name="q4" value="s = ut + \frac{1}{2}at^2"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q4" value="v^2 = u^2 + 2as"> \( v^2 = u^2 + 2as \)</label><br>
+  <label><input type="radio" name="q4" value="s = vt"> \( s = vt \)</label><br>
+  <label><input type="radio" name="q4" value="v = u + at^2" data-correct="true"> \( v = u + at^2 \)</label>
+</div>
+
+<div class="question">
+  <p>Q5. What is the correct expression for displacement when only initial and final velocities and time are known?</p>
+  <label><input type="radio" name="q5" value="s = \frac{v+u}{2}t" data-correct="true"> \( s = \frac{v+u}{2}t \)</label><br>
+  <label><input type="radio" name="q5" value="s = vt + at"> \( s = vt + at \)</label><br>
+  <label><input type="radio" name="q5" value="s = ut^2 + vt"> \( s = ut^2 + vt \)</label><br>
+  <label><input type="radio" name="q5" value="s = u^2t"> \( s = u^2t \)</label>
+</div>
+
+<div class="question">
+  <p>Q6. Which equation of motion does NOT involve time \( t \)?</p>
+  <label><input type="radio" name="q6" value="v = u + at"> \( v = u + at \)</label><br>
+  <label><input type="radio" name="q6" value="v^2 = u^2 + 2as" data-correct="true"> \( v^2 = u^2 + 2as \)</label><br>
+  <label><input type="radio" name="q6" value="s = ut + \frac{1}{2}at^2"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q6" value="s = \frac{v+u}{2}t"> \( s = \frac{v+u}{2}t \)</label>
+</div>
+
+<div class="question">
+  <p>Q7. Which equation would you use to find displacement when acceleration is zero?</p>
+  <label><input type="radio" name="q7" value="s = vt"> \( s = vt \)</label><br>
+  <label><input type="radio" name="q7" value="s = ut + \frac{1}{2}at^2"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q7" value="s = \frac{v+u}{2}t" data-correct="true"> \( s = \frac{v+u}{2}t \)</label><br>
+  <label><input type="radio" name="q7" value="v = u + at"> \( v = u + at \)</label>
+</div>
+
+<div class="question">
+  <p>Q8. Which of these is a consequence of constant acceleration?</p>
+  <label><input type="radio" name="q8" value="v is constant"> \( v \) is constant</label><br>
+  <label><input type="radio" name="q8" value="a = 0"> \( a = 0 \)</label><br>
+  <label><input type="radio" name="q8" value="v = u + at" data-correct="true"> \( v = u + at \)</label><br>
+  <label><input type="radio" name="q8" value="s = vt"> \( s = vt \)</label>
+</div>
+
+<div class="question">
+  <p>Q9. What is the initial velocity \( u \) of a body that starts from rest?</p>
+  <label><input type="radio" name="q9" value="u = v"> \( u = v \)</label><br>
+  <label><input type="radio" name="q9" value="u = 0" data-correct="true"> \( u = 0 \)</label><br>
+  <label><input type="radio" name="q9" value="u = a"> \( u = a \)</label><br>
+  <label><input type="radio" name="q9" value="u = s"> \( u = s \)</label>
+</div>
+
+<div class="question">
+  <p>Q10. Which of these is not one of the standard three equations of motion?</p>
+  <label><input type="radio" name="q10" value="v = u + at"> \( v = u + at \)</label><br>
+  <label><input type="radio" name="q10" value="s = ut + \frac{1}{2}at^2"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q10" value="v^2 = u^2 + 2as"> \( v^2 = u^2 + 2as \)</label><br>
+  <label><input type="radio" name="q10" value="a = \frac{s}{t}" data-correct="true"> \( a = \frac{s}{t} \)</label>
+</div>
+
+  <!-- ===================== QUESTION 11 ===================== -->
+<div class="question">
+  <p>Q11. An object starts from rest and accelerates uniformly at \( 5 \, \text{m/s}^2 \) for 4 seconds. What is its final velocity?</p>
+  <label><input type="radio" name="q1" value="10"> 10 m/s</label><br>
+  <label><input type="radio" name="q1" value="20" data-correct="true"> 20 m/s</label><br>
+  <label><input type="radio" name="q1" value="30"> 30 m/s</label><br>
+  <label><input type="radio" name="q1" value="40"> 40 m/s</label>
+</div>
+
+<div class="question">
+  <p>Q12. A car traveling at 15 m/s comes to a stop in 5 seconds. What is its acceleration?</p>
+  <label><input type="radio" name="q2" value="-5"> -5 m/s²</label><br>
+  <label><input type="radio" name="q2" value="-2"> -2 m/s²</label><br>
+  <label><input type="radio" name="q2" value="-3" data-correct="true"> -3 m/s²</label><br>
+  <label><input type="radio" name="q2" value="0"> 0 m/s²</label>
+</div>
+
+<div class="question">
+  <p>Q13. A ball is thrown vertically upward with a velocity of 30 m/s. How long will it take to reach the highest point? (Take \( g = 10 \, \text{m/s}^2 \))</p>
+  <label><input type="radio" name="q3" value="1"> 1 s</label><br>
+  <label><input type="radio" name="q3" value="2"> 2 s</label><br>
+  <label><input type="radio" name="q3" value="3" data-correct="true"> 3 s</label><br>
+  <label><input type="radio" name="q3" value="6"> 6 s</label>
+</div>
+
+<div class="question">
+  <p>Q14. A body covers a distance of 80 m in 4 seconds with constant acceleration starting from rest. What is the acceleration?</p>
+  <label><input type="radio" name="q4" value="5"> 5 m/s²</label><br>
+  <label><input type="radio" name="q4" value="8"> 8 m/s²</label><br>
+  <label><input type="radio" name="q4" value="10"> 10 m/s²</label><br>
+  <label><input type="radio" name="q4" value="4" data-correct="true"> 4 m/s²</label>
+</div>
+
+<div class="question">
+  <p>Q15. Which equation relates displacement, initial velocity, time and acceleration?</p>
+  <label><input type="radio" name="q5" value="v = u + at"> \( v = u + at \)</label><br>
+  <label><input type="radio" name="q5" value="s = ut + \frac{1}{2}at^2" data-correct="true"> \( s = ut + \frac{1}{2}at^2 \)</label><br>
+  <label><input type="radio" name="q5" value="v^2 = u^2 + 2as"> \( v^2 = u^2 + 2as \)</label><br>
+  <label><input type="radio" name="q5" value="s = vt"> \( s = vt \)</label>
+</div>
+
+<div class="question">
+  <p>Q16. A vehicle moves with uniform acceleration. If it doubles its speed in 4 seconds, what is the acceleration?</p>
+  <label><input type="radio" name="q6" value="v/2"> \( v/2 \)</label><br>
+  <label><input type="radio" name="q6" value="v/4" data-correct="true"> \( v/4 \)</label><br>
+  <label><input type="radio" name="q6" value="v/8"> \( v/8 \)</label><br>
+  <label><input type="radio" name="q6" value="v"> \( v \)</label>
+</div>
+
+<div class="question">
+  <p>Q17. A car accelerates from 10 m/s to 30 m/s over a distance of 200 m. What is the acceleration?</p>
+  <label><input type="radio" name="q7" value="1"> 1 m/s²</label><br>
+  <label><input type="radio" name="q7" value="2" data-correct="true"> 2 m/s²</label><br>
+  <label><input type="radio" name="q7" value="3"> 3 m/s²</label><br>
+  <label><input type="radio" name="q7" value="4"> 4 m/s²</label>
+</div>
+
+<div class="question">
+  <p>Q18. What is the dimension of acceleration?</p>
+  <label><input type="radio" name="q8" value="[LT^{-2}]" data-correct="true"> [LT<sup>-2</sup>]</label><br>
+  <label><input type="radio" name="q8" value="[L^2T^{-1}]"> [L²T<sup>-1</sup>]</label><br>
+  <label><input type="radio" name="q8" value="[LT]"> [LT]</label><br>
+  <label><input type="radio" name="q8" value="[T^{-2}]"> [T<sup>-2</sup>]</label>
+</div>
+
+<div class="question">
+  <p>Q19. A body moving with velocity 10 m/s is brought to rest by a retardation of 2 m/s². What distance will it travel before stopping?</p>
+  <label><input type="radio" name="q9" value="20"> 20 m</label><br>
+  <label><input type="radio" name="q9" value="25" data-correct="true"> 25 m</label><br>
+  <label><input type="radio" name="q9" value="15"> 15 m</label><br>
+  <label><input type="radio" name="q9" value="30"> 30 m</label>
+</div>
+
+<div class="question">
+  <p>Q20. If a particle’s acceleration is zero, then which of the following is true?</p>
+  <label><input type="radio" name="q10" value="It is at rest"> It is at rest</label><br>
+  <label><input type="radio" name="q10" value="Its velocity is constant" data-correct="true"> Its velocity is constant</label><br>
+  <label><input type="radio" name="q10" value="It moves in a circle"> It moves in a circle</label><br>
+  <label><input type="radio" name="q10" value="It is accelerating"> It is accelerating</label>
+</div>
+
+
+
+<div class="question">
+  <p>Q21. A particle moves with velocity \( \vec{v} = 3\hat{i} + 4\hat{j} \, \text{m/s} \). What is the magnitude of velocity?</p>
+  <label><input type="radio" name="q1" value="5" data-correct="true"> 5 m/s</label><br>
+  <label><input type="radio" name="q1" value="7"> 7 m/s</label><br>
+  <label><input type="radio" name="q1" value="1"> 1 m/s</label><br>
+  <label><input type="radio" name="q1" value="4"> 4 m/s</label>
+</div>
+
+<div class="question">
+  <p>Q22. In projectile motion, what is the shape of the path followed by the object?</p>
+  <label><input type="radio" name="q2" value="Circle"> Circle</label><br>
+  <label><input type="radio" name="q2" value="Straight line"> Straight line</label><br>
+  <label><input type="radio" name="q2" value="Parabola" data-correct="true"> Parabola</label><br>
+  <label><input type="radio" name="q2" value="Ellipse"> Ellipse</label>
+</div>
+
+<div class="question">
+  <p>Q23. A projectile is launched at angle \( 45^\circ \) with initial speed \( u \). What is the ratio of horizontal range to maximum height?</p>
+  <label><input type="radio" name="q3" value="2" data-correct="true"> 2</label><br>
+  <label><input type="radio" name="q3" value="1"> 1</label><br>
+  <label><input type="radio" name="q3" value="0.5"> 0.5</label><br>
+  <label><input type="radio" name="q3" value="4"> 4</label>
+</div>
+
+<div class="question">
+  <p>Q24. In 2-D motion, which component of velocity remains constant during projectile motion (neglecting air resistance)?</p>
+  <label><input type="radio" name="q4" value="Vertical velocity"> Vertical velocity</label><br>
+  <label><input type="radio" name="q4" value="Horizontal velocity" data-correct="true"> Horizontal velocity</label><br>
+  <label><input type="radio" name="q4" value="Total velocity"> Total velocity</label><br>
+  <label><input type="radio" name="q4" value="Acceleration"> Acceleration</label>
+</div>
+
+<div class="question">
+  <p>Q25. What is the time of flight of a projectile launched with velocity \( u \) at angle \( \theta \)?</p>
+  <label><input type="radio" name="q5" value="T = \frac{u}{g}"> \( T = \frac{u}{g} \)</label><br>
+  <label><input type="radio" name="q5" value="T = \frac{2u\cos\theta}{g}"> \( T = \frac{2u\cos\theta}{g} \)</label><br>
+  <label><input type="radio" name="q5" value="T = \frac{2u\sin\theta}{g}" data-correct="true"> \( T = \frac{2u\sin\theta}{g} \)</label><br>
+  <label><input type="radio" name="q5" value="T = \frac{2g}{u\sin\theta}"> \( T = \frac{2g}{u\sin\theta} \)</label>
+</div>
+
+<div class="question">
+  <p>Q26. A ball is projected with a speed of 20 m/s at \( 30^\circ \). What is its initial vertical velocity component?</p>
+  <label><input type="radio" name="q6" value="10 m/s"> 10 m/s</label><br>
+  <label><input type="radio" name="q6" value="20 m/s"> 20 m/s</label><br>
+  <label><input type="radio" name="q6" value="5 m/s"> 5 m/s</label><br>
+  <label><input type="radio" name="q6" value="10 m/s" data-correct="true"> 10 m/s</label>
+</div>
+
+<div class="question">
+  <p>Q27. Which of the following vectors represent acceleration in projectile motion?</p>
+  <label><input type="radio" name="q7" value="0"> \( 0 \)</label><br>
+  <label><input type="radio" name="q7" value="g \hat{i}"> \( g \hat{i} \)</label><br>
+  <label><input type="radio" name="q7" value="-g \hat{j}" data-correct="true"> \( -g \hat{j} \)</label><br>
+  <label><input type="radio" name="q7" value="-g \hat{i}"> \( -g \hat{i} \)</label>
+</div>
+
+<div class="question">
+  <p>Q28. What is the horizontal range \( R \) of a projectile launched at angle \( \theta \) with speed \( u \)?</p>
+  <label><input type="radio" name="q8" value="R = u^2\sin\theta/g"> \( R = \frac{u^2\sin\theta}{g} \)</label><br>
+  <label><input type="radio" name="q8" value="R = u^2\sin(2\theta)/g" data-correct="true"> \( R = \frac{u^2\sin(2\theta)}{g} \)</label><br>
+  <label><input type="radio" name="q8" value="R = u\sin\theta/g"> \( R = \frac{u\sin\theta}{g} \)</label><br>
+  <label><input type="radio" name="q8" value="R = u\cos\theta/g"> \( R = \frac{u\cos\theta}{g} \)</label>
+</div>
+
+<div class="question">
+  <p>Q29. At the top of its trajectory, a projectile’s vertical velocity is:</p>
+  <label><input type="radio" name="q9" value="Maximum"> Maximum</label><br>
+  <label><input type="radio" name="q9" value="Zero" data-correct="true"> Zero</label><br>
+  <label><input type="radio" name="q9" value="Equal to horizontal velocity"> Equal to horizontal velocity</label><br>
+  <label><input type="radio" name="q9" value="Negative"> Negative</label>
+</div>
+
+<div class="question">
+  <p>Q30. What is the angle of projection for maximum horizontal range?</p>
+  <label><input type="radio" name="q10" value="30°"> 30°</label><br>
+  <label><input type="radio" name="q10" value="60°"> 60°</label><br>
+  <label><input type="radio" name="q10" value="45°" data-correct="true"> 45°</label><br>
+  <label><input type="radio" name="q10" value="90°"> 90°</label>
+</div>
+  <!-- ===================== QUESTION 31 ===================== -->
+<div class="question">
+  <p>Q11. A projectile is launched horizontally at 10 m/s from a height of 20 m. How long does it take to reach the ground? (Take \( g = 10 \, \text{m/s}^2 \))</p>
+  <label><input type="radio" name="q11" value="1"> 1 s</label><br>
+  <label><input type="radio" name="q11" value="2" data-correct="true"> 2 s</label><br>
+  <label><input type="radio" name="q11" value="3"> 3 s</label><br>
+  <label><input type="radio" name="q11" value="4"> 4 s</label>
+</div>
+<div class="question">
+  <p>Q31. A projectile is launched horizontally at 10 m/s from a height of 20 m. How long does it take to reach the ground? (Take \( g = 10 \, \text{m/s}^2 \))</p>
+  <label><input type="radio" name="q11" value="1"> 1 s</label><br>
+  <label><input type="radio" name="q11" value="2" data-correct="true"> 2 s</label><br>
+  <label><input type="radio" name="q11" value="3"> 3 s</label><br>
+  <label><input type="radio" name="q11" value="4"> 4 s</label>
+</div>
+
+<div class="question">
+  <p>Q32. In projectile motion, the horizontal acceleration is:</p>
+  <label><input type="radio" name="q12" value="g"> \( g \)</label><br>
+  <label><input type="radio" name="q12" value="0" data-correct="true"> 0</label><br>
+  <label><input type="radio" name="q12" value="9.8 m/s^2"> 9.8 m/s²</label><br>
+  <label><input type="radio" name="q12" value="Depends on mass"> Depends on mass</label>
+</div>
+
+<div class="question">
+  <p>Q33. At the highest point of a projectile's path, its acceleration is:</p>
+  <label><input type="radio" name="q13" value="0"> 0</label><br>
+  <label><input type="radio" name="q13" value="g downward" data-correct="true"> \( g \) downward</label><br>
+  <label><input type="radio" name="q13" value="g upward"> \( g \) upward</label><br>
+  <label><input type="radio" name="q13" value="Horizontal"> Horizontal</label>
+</div>
+
+<div class="question">
+  <p>Q34. A body is projected at 30° and reaches a maximum height of 20 m. What is its vertical velocity at the top?</p>
+  <label><input type="radio" name="q14" value="10 m/s"> 10 m/s</label><br>
+  <label><input type="radio" name="q14" value="0" data-correct="true"> 0</label><br>
+  <label><input type="radio" name="q14" value="20 m/s"> 20 m/s</label><br>
+  <label><input type="radio" name="q14" value="9.8 m/s"> 9.8 m/s</label>
+</div>
+
+<div class="question">
+  <p>Q35. The horizontal range of a projectile increases with:</p>
+  <label><input type="radio" name="q15" value="Increase in mass"> Increase in mass</label><br>
+  <label><input type="radio" name="q15" value="Increase in launch angle beyond 45°"> Increase in launch angle beyond 45°</label><br>
+  <label><input type="radio" name="q15" value="Increasing speed" data-correct="true"> Increasing speed</label><br>
+  <label><input type="radio" name="q15" value="Air resistance"> Air resistance</label>
+</div>
+
+<div class="question">
+  <p>Q36. A projectile takes 4 s to reach the highest point. What is the total time of flight?</p>
+  <label><input type="radio" name="q16" value="2 s"> 2 s</label><br>
+  <label><input type="radio" name="q16" value="4 s"> 4 s</label><br>
+  <label><input type="radio" name="q16" value="8 s" data-correct="true"> 8 s</label><br>
+  <label><input type="radio" name="q16" value="6 s"> 6 s</label>
+</div>
+
+<div class="question">
+  <p>Q37. The horizontal component of velocity of a projectile is:</p>
+  <label><input type="radio" name="q17" value="Zero"> Zero</label><br>
+  <label><input type="radio" name="q17" value="Constant" data-correct="true"> Constant</label><br>
+  <label><input type="radio" name="q17" value="Increasing"> Increasing</label><br>
+  <label><input type="radio" name="q17" value="Decreasing"> Decreasing</label>
+</div>
+
+<div class="question">
+  <p>Q38. If the angle of projection is 90°, the range will be:</p>
+  <label><input type="radio" name="q18" value="Maximum"> Maximum</label><br>
+  <label><input type="radio" name="q18" value="Zero" data-correct="true"> Zero</label><br>
+  <label><input type="radio" name="q18" value="Half of maximum"> Half of maximum</label><br>
+  <label><input type="radio" name="q18" value="Equal to height"> Equal to height</label>
+</div>
+
+<div class="question">
+  <p>Q39. A ball is thrown horizontally with velocity 5 m/s from 45 m height. How far does it travel horizontally before hitting the ground?</p>
+  <label><input type="radio" name="q19" value="10 m"> 10 m</label><br>
+  <label><input type="radio" name="q19" value="20 m"> 20 m</label><br>
+  <label><input type="radio" name="q19" value="30 m"> 30 m</label><br>
+  <label><input type="radio" name="q19" value="15 m" data-correct="true"> 15 m</label>
+</div>
+
+<div class="question">
+  <p>Q40. If the time of flight is \( T \), what is the maximum height attained?</p>
+  <label><input type="radio" name="q20" value="\( \frac{1}{2}gT^2 \)"> \( \frac{1}{2}gT^2 \)</label><br>
+  <label><input type="radio" name="q20" value="\( \frac{1}{4}gT^2 \)" data-correct="true"> \( \frac{1}{4}gT^2 \)</label><br>
+  <label><input type="radio" name="q20" value="\( gT \)"> \( gT \)</label><br>
+  <label><input type="radio" name="q20" value="\( T^2 \)"> \( T^2 \)</label>
+</div>
+
+<!-- Remaining 10 questions will be added next -->
+<h3>Comparison of Linear and Angular Motion</h3>
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Linear Motion</th>
+      <th>Angular Motion</th>
+      <th>Relation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Displacement (\(s\))</td><td>Angular displacement (\(\theta\))</td><td>\( s = r\theta \)</td></tr>
+    <tr><td>Velocity (\(v\))</td><td>Angular velocity (\(\omega\))</td><td>\( v = r\omega \)</td></tr>
+    <tr><td>Acceleration (\(a\))</td><td>Angular acceleration (\(\alpha\))</td><td>\( a = r\alpha \)</td></tr>
+    <tr><td>Mass (\(m\))</td><td>Moment of Inertia (\(I\))</td><td>\( I = \sum m_i r_i^2 \)</td></tr>
+    <tr><td>Force (\(F\))</td><td>Torque (\(\tau\))</td><td>\( \tau = rF\sin\theta \)</td></tr>
+    <tr><td>\( F = ma \)</td><td>\( \tau = I\alpha \)</td><td>—</td></tr>
+    <tr><td>\( W = F \cdot s \)</td><td>\( W = \tau\theta \)</td><td>—</td></tr>
+    <tr><td>\( KE = \frac{1}{2}mv^2 \)</td><td>\( KE = \frac{1}{2}I\omega^2 \)</td><td>—</td></tr>
+    <tr><td>Momentum (\(p = mv\))</td><td>Angular momentum (\(L = I\omega\))</td><td>—</td></tr>
+    <tr><td>Impulse (\(Ft\))</td><td>Angular impulse (\(\tau t\))</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h3>Key Relationships</h3>
+<ul>
+  <li><strong>Displacement:</strong> \( s = r\theta \)</li>
+  <li><strong>Velocity:</strong> \( v = r\omega \)</li>
+  <li><strong>Acceleration:</strong> \( a = r\alpha \)</li>
+</ul>
+
+<h3>Kinematic Equations</h3>
+<p><strong>Linear:</strong><br>
+\( v = u + at \)<br>
+\( s = ut + \frac{1}{2}at^2 \)<br>
+\( v^2 = u^2 + 2as \)</p>
+
+<p><strong>Angular:</strong><br>
+\( \omega = \omega_0 + \alpha t \)<br>
+\( \theta = \omega_0 t + \frac{1}{2}\alpha t^2 \)<br>
+\( \omega^2 = \omega_0^2 + 2\alpha\theta \)</p>
+
+<h3>Conceptual Analogy</h3>
+<ul>
+  <li><strong>Inertia ↔ Moment of Inertia:</strong> Mass resists linear acceleration; moment of inertia resists angular acceleration.</li>
+  <li><strong>Force ↔ Torque:</strong> Force causes linear motion; torque causes rotational motion.</li>
+  <li><strong>Linear KE ↔ Rotational KE:</strong> Translational and rotational forms of kinetic energy.</li>
+</ul>
+
+  
+  <!-- ===================== QUESTION 51 ===================== -->
+  <div class="question">
+  <h3>51. What is the angular counterpart of linear displacement?</h3>
+  <label><input type="radio" name="q51" value="A"> (A) \(\omega\)</label><br>
+  <label><input type="radio" name="q51" value="B"> (B) \(\alpha\)</label><br>
+  <label><input type="radio" name="q51" value="C" data-correct="true"> (C) \(\theta\)</label><br>
+  <label><input type="radio" name="q51" value="D"> (D) \(\tau\)</label>
+</div>
+
+<div class="question">
+  <h3>52. Which quantity is analogous to mass in rotational motion?</h3>
+  <label><input type="radio" name="q52" value="A"> (A) Torque</label><br>
+  <label><input type="radio" name="q52" value="B"> (B) Angular displacement</label><br>
+  <label><input type="radio" name="q52" value="C" data-correct="true"> (C) Moment of Inertia</label><br>
+  <label><input type="radio" name="q52" value="D"> (D) Angular velocity</label>
+</div>
+
+<div class="question">
+  <h3>53. What is the angular equivalent of force?</h3>
+  <label><input type="radio" name="q53" value="A"> (A) Angular acceleration</label><br>
+  <label><input type="radio" name="q53" value="B" data-correct="true"> (B) Torque</label><br>
+  <label><input type="radio" name="q53" value="C"> (C) Moment of Inertia</label><br>
+  <label><input type="radio" name="q53" value="D"> (D) Angular displacement</label>
+</div>
+
+<div class="question">
+  <h3>54. Which of these relations is correct?</h3>
+  <label><input type="radio" name="q54" value="A"> (A) \(v = r\alpha\)</label><br>
+  <label><input type="radio" name="q54" value="B" data-correct="true"> (B) \(v = r\omega\)</label><br>
+  <label><input type="radio" name="q54" value="C"> (C) \(v = rF\)</label><br>
+  <label><input type="radio" name="q54" value="D"> (D) \(v = \omega^2 r\)</label>
+</div>
+
+<div class="question">
+  <h3>55. The equation \(\tau = I\alpha\) is analogous to which linear motion equation?</h3>
+  <label><input type="radio" name="q55" value="A"> (A) \(F = mv\)</label><br>
+  <label><input type="radio" name="q55" value="B"> (B) \(W = F\cdot s\)</label><br>
+  <label><input type="radio" name="q55" value="C"> (C) \(F = ma\)</label><br>
+  <label><input type="radio" name="q55" value="D" data-correct="true"> (D) \(F = ma\)</label>
+</div>
+
+<div class="question">
+  <h3>56. What is the angular analogue of linear momentum?</h3>
+  <label><input type="radio" name="q56" value="A"> (A) Torque</label><br>
+  <label><input type="radio" name="q56" value="B" data-correct="true"> (B) Angular momentum</label><br>
+  <label><input type="radio" name="q56" value="C"> (C) Angular displacement</label><br>
+  <label><input type="radio" name="q56" value="D"> (D) Angular velocity</label>
+</div>
+
+<div class="question">
+  <h3>57. Which rotational quantity is analogous to force × time (impulse) in linear motion?</h3>
+  <label><input type="radio" name="q57" value="A"> (A) Torque</label><br>
+  <label><input type="radio" name="q57" value="B"> (B) Angular momentum</label><br>
+  <label><input type="radio" name="q57" value="C" data-correct="true"> (C) Angular impulse</label><br>
+  <label><input type="radio" name="q57" value="D"> (D) Moment of Inertia</label>
+</div>
+
+<div class="question">
+  <h3>58. What is the correct relation between angular acceleration and linear acceleration?</h3>
+  <label><input type="radio" name="q58" value="A"> (A) \(a = \alpha\)</label><br>
+  <label><input type="radio" name="q58" value="B" data-correct="true"> (B) \(a = r\alpha\)</label><br>
+  <label><input type="radio" name="q58" value="C"> (C) \(\alpha = rv\)</label><br>
+  <label><input type="radio" name="q58" value="D"> (D) \(a = r/\alpha\)</label>
+</div>
+
+<div class="question">
+  <h3>59. Which is the correct rotational kinetic energy expression?</h3>
+  <label><input type="radio" name="q59" value="A"> (A) \(KE = \frac{1}{2}mv^2\)</label><br>
+  <label><input type="radio" name="q59" value="B"> (B) \(KE = I\omega\)</label><br>
+  <label><input type="radio" name="q59" value="C" data-correct="true"> (C) \(KE = \frac{1}{2}I\omega^2\)</label><br>
+  <label><input type="radio" name="q59" value="D"> (D) \(KE = \frac{1}{2}mv\omega\)</label>
+</div>
+
+<div class="question">
+  <h3>60. In rotational motion, which quantity resists angular acceleration?</h3>
+  <label><input type="radio" name="q60" value="A"> (A) Torque</label><br>
+  <label><input type="radio" name="q60" value="B"> (B) Angular velocity</label><br>
+  <label><input type="radio" name="q60" value="C" data-correct="true"> (C) Moment of Inertia</label><br>
+  <label><input type="radio" name="q60" value="D"> (D) Angular displacement</label>
+</div>
+
+<div class="question">
+  <h3>61. Which of the following correctly relates torque and force?</h3>
+  <label><input type="radio" name="q61" value="A"> (A) \(\tau = F/r\)</label><br>
+  <label><input type="radio" name="q61" value="B"> (B) \(\tau = F + r\)</label><br>
+  <label><input type="radio" name="q61" value="C"> (C) \(\tau = F^2r\)</label><br>
+  <label><input type="radio" name="q61" value="D" data-correct="true"> (D) \(\tau = rF\sin\theta\)</label>
+</div>
+
+<div class="question">
+  <h3>62. Which pair correctly matches their linear and angular analogues?</h3>
+  <label><input type="radio" name="q62" value="A"> (A) Velocity – Torque</label><br>
+  <label><input type="radio" name="q62" value="B"> (B) Force – Angular Displacement</label><br>
+  <label><input type="radio" name="q62" value="C" data-correct="true"> (C) Mass – Moment of Inertia</label><br>
+  <label><input type="radio" name="q62" value="D"> (D) Displacement – Angular Impulse</label>
+</div>
+
+<div class="question">
+  <h3>63. Which of these is NOT a valid angular kinematic equation?</h3>
+  <label><input type="radio" name="q63" value="A"> (A) \(\omega = \omega_0 + \alpha t\)</label><br>
+  <label><input type="radio" name="q63" value="B"> (B) \(\theta = \omega_0 t + \frac{1}{2}\alpha t^2\)</label><br>
+  <label><input type="radio" name="q63" value="C"> (C) \(\omega^2 = \omega_0^2 + 2\alpha\theta\)</label><br>
+  <label><input type="radio" name="q63" value="D" data-correct="true"> (D) \(\theta = \omega_0 \alpha + t\)</label>
+</div>
+
+<div class="question">
+  <h3>64. Work done by torque is analogous to:</h3>
+  <label><input type="radio" name="q64" value="A"> (A) Force</label><br>
+  <label><input type="radio" name="q64" value="B" data-correct="true"> (B) Work done by force</label><br>
+  <label><input type="radio" name="q64" value="C"> (C) Momentum</label><br>
+  <label><input type="radio" name="q64" value="D"> (D) Linear acceleration</label>
+</div>
+
+<div class="question">
+  <h3>65. If radius is doubled, what happens to linear velocity for the same angular velocity?</h3>
+  <label><input type="radio" name="q65" value="A"> (A) Halved</label><br>
+  <label><input type="radio" name="q65" value="B"> (B) Same</label><br>
+  <label><input type="radio" name="q65" value="C" data-correct="true"> (C) Doubled</label><br>
+  <label><input type="radio" name="q65" value="D"> (D) Quadrupled</label>
+</div>
+
+<div class="question">
+  <h3>66. Angular displacement is measured in:</h3>
+  <label><input type="radio" name="q66" value="A"> (A) Meters</label><br>
+  <label><input type="radio" name="q66" value="B"> (B) Seconds</label><br>
+  <label><input type="radio" name="q66" value="C"> (C) Radians</label><br>
+  <label><input type="radio" name="q66" value="D" data-correct="true"> (D) Radians</label>
+</div>
+
+<div class="question">
+  <h3>67. Unit of moment of inertia is:</h3>
+  <label><input type="radio" name="q67" value="A"> (A) kg</label><br>
+  <label><input type="radio" name="q67" value="B"> (B) kg·m/s</label><br>
+  <label><input type="radio" name="q67" value="C" data-correct="true"> (C) kg·m²</label><br>
+  <label><input type="radio" name="q67" value="D"> (D) m/s²</label>
+</div>
+
+<div class="question">
+  <h3>68. Rotational motion resists change due to:</h3>
+  <label><input type="radio" name="q68" value="A"> (A) Radius</label><br>
+  <label><input type="radio" name="q68" value="B" data-correct="true"> (B) Moment of Inertia</label><br>
+  <label><input type="radio" name="q68" value="C"> (C) Torque</label><br>
+  <label><input type="radio" name="q68" value="D"> (D) Angular momentum</label>
+</div>
+
+<div class="question">
+  <h3>69. In angular motion, energy conservation implies:</h3>
+  <label><input type="radio" name="q69" value="A"> (A) Angular velocity stays constant</label><br>
+  <label><input type="radio" name="q69" value="B"> (B) Moment of inertia is zero</label><br>
+  <label><input type="radio" name="q69" value="C" data-correct="true"> (C) Total mechanical energy is conserved</label><br>
+  <label><input type="radio" name="q69" value="D"> (D) No work is done</label>
+</div>
+
+<div class="question">
+  <h3>70. Which equation represents rotational work?</h3>
+  <label><input type="radio" name="q70" value="A"> (A) \(W = F \cdot s\)</label><br>
+  <label><input type="radio" name="q70" value="B"> (B) \(W = mv^2\)</label><br>
+  <label><input type="radio" name="q70" value="C"> (C) \(W = I \cdot \omega^2\)</label><br>
+  <label><input type="radio" name="q70" value="D" data-correct="true"> (D) \(W = \tau \cdot \theta\)</label>
+</div>
+<div class="question">
+  <h3>71. Which of the following is a correct angular kinematic equation?</h3>
+  <label><input type="radio" name="q71" value="A"> (A) \(\theta = \omega t + \alpha\)</label><br>
+  <label><input type="radio" name="q71" value="B" data-correct="true"> (B) \(\theta = \omega_0 t + \frac{1}{2} \alpha t^2\)</label><br>
+  <label><input type="radio" name="q71" value="C"> (C) \(\theta = \omega^2 t\)</label><br>
+  <label><input type="radio" name="q71" value="D"> (D) \(\omega = \alpha t^2\)</label>
+</div>
+
+<div class="question">
+  <h3>72. If an object starts from rest, what is its angular displacement after 4 seconds under a constant angular acceleration of 2 rad/s²?</h3>
+  <label><input type="radio" name="q72" value="A"> (A) 8 rad</label><br>
+  <label><input type="radio" name="q72" value="B"> (B) 12 rad</label><br>
+  <label><input type="radio" name="q72" value="C" data-correct="true"> (C) 16 rad</label><br>
+  <label><input type="radio" name="q72" value="D"> (D) 20 rad</label>
+</div>
+
+<div class="question">
+  <h3>73. Angular velocity is defined as:</h3>
+  <label><input type="radio" name="q73" value="A"> (A) \(\theta/t\)</label><br>
+  <label><input type="radio" name="q73" value="B"> (B) \(r/t\)</label><br>
+  <label><input type="radio" name="q73" value="C" data-correct="true"> (C) \(\omega = d\theta/dt\)</label><br>
+  <label><input type="radio" name="q73" value="D"> (D) \(d\omega/dt\)</label>
+</div>
+
+<div class="question">
+  <h3>74. If \(\omega = \omega_0 + \alpha t\), what does \(\omega_0\) represent?</h3>
+  <label><input type="radio" name="q74" value="A"> (A) Final angular velocity</label><br>
+  <label><input type="radio" name="q74" value="B"> (B) Angular displacement</label><br>
+  <label><input type="radio" name="q74" value="C"> (C) Angular acceleration</label><br>
+  <label><input type="radio" name="q74" value="D" data-correct="true"> (D) Initial angular velocity</label>
+</div>
+
+<div class="question">
+  <h3>75. In \(\omega^2 = \omega_0^2 + 2\alpha \theta\), \(\theta\) stands for:</h3>
+  <label><input type="radio" name="q75" value="A"> (A) Angular velocity</label><br>
+  <label><input type="radio" name="q75" value="B"> (B) Angular acceleration</label><br>
+  <label><input type="radio" name="q75" value="C" data-correct="true"> (C) Angular displacement</label><br>
+  <label><input type="radio" name="q75" value="D"> (D) Moment of Inertia</label>
+</div>
+
+<div class="question">
+  <h3>76. An object rotates with angular acceleration of 3 rad/s² from rest. What is its angular velocity after 5 seconds?</h3>
+  <label><input type="radio" name="q76" value="A"> (A) 10 rad/s</label><br>
+  <label><input type="radio" name="q76" value="B" data-correct="true"> (B) 15 rad/s</label><br>
+  <label><input type="radio" name="q76" value="C"> (C) 20 rad/s</label><br>
+  <label><input type="radio" name="q76" value="D"> (D) 25 rad/s</label>
+</div>
+
+<div class="question">
+  <h3>77. A wheel turns through 300 radians in 10 seconds. What is its average angular velocity?</h3>
+  <label><input type="radio" name="q77" value="A"> (A) 20 rad/s</label><br>
+  <label><input type="radio" name="q77" value="B"> (B) 25 rad/s</label><br>
+  <label><input type="radio" name="q77" value="C"> (C) 30 rad/s</label><br>
+  <label><input type="radio" name="q77" value="D" data-correct="true"> (D) 30 rad/s</label>
+</div>
+
+<div class="question">
+  <h3>78. What is the dimension of angular acceleration?</h3>
+  <label><input type="radio" name="q78" value="A"> (A) \([M^0 L^0 T^0]\)</label><br>
+  <label><input type="radio" name="q78" value="B"> (B) \([T]\)</label><br>
+  <label><input type="radio" name="q78" value="C"> (C) \([T^{-1}]\)</label><br>
+  <label><input type="radio" name="q78" value="D" data-correct="true"> (D) \([T^{-2}]\)</label>
+</div>
+
+<div class="question">
+  <h3>79. Which kinematic variable remains constant in uniformly accelerated angular motion?</h3>
+  <label><input type="radio" name="q79" value="A"> (A) Angular velocity</label><br>
+  <label><input type="radio" name="q79" value="B"> (B) Angular displacement</label><br>
+  <label><input type="radio" name="q79" value="C" data-correct="true"> (C) Angular acceleration</label><br>
+  <label><input type="radio" name="q79" value="D"> (D) Time</label>
+</div>
+
+<div class="question">
+  <h3>80. Which angular equation is best suited to find angular velocity when time is not known?</h3>
+  <label><input type="radio" name="q80" value="A"> (A) \(\omega = \omega_0 + \alpha t\)</label><br>
+  <label><input type="radio" name="q80" value="B"> (B) \(\theta = \omega_0 t + \frac{1}{2} \alpha t^2\)</label><br>
+  <label><input type="radio" name="q80" value="C" data-correct="true"> (C) \(\omega^2 = \omega_0^2 + 2\alpha \theta\)</label><br>
+  <label><input type="radio" name="q80" value="D"> (D) \(\theta = \omega t\)</label>
+</div>
+
+<div class="note">
+  <h2>🌀 Flywheel Experiment – Using Time for Rotations</h2>
+
+  <h3>🔷 Objective:</h3>
+  <ul>
+    <li>To determine the <strong>moment of inertia (I)</strong> of a flywheel.</li>
+    <li>To determine the <strong>mass (M)</strong> of the flywheel if not known.</li>
+  </ul>
+
+  <h3>🔷 Apparatus:</h3>
+  <ul>
+    <li>Flywheel with axle</li>
+    <li>String</li>
+    <li>Slotted weights and hanger</li>
+    <li>Stopwatch</li>
+    <li>Meter scale / Vernier caliper</li>
+    <li>Balance</li>
+  </ul>
+
+  <h3>🔷 Principle:</h3>
+  <p>A falling mass unwinds a string wrapped around a flywheel's axle, causing the wheel to rotate. By measuring time for a known number of revolutions, we estimate angular acceleration and moment of inertia.</p>
+
+  <h3>🔷 Definitions:</h3>
+  <ul>
+    <li><strong>r</strong> = radius of axle</li>
+    <li><strong>m</strong> = falling mass</li>
+    <li><strong>n</strong> = number of revolutions</li>
+    <li><strong>t</strong> = time taken for n revolutions</li>
+    <li><strong>g</strong> = 9.8 m/s²</li>
+    <li><strong>I</strong> = moment of inertia</li>
+  </ul>
+
+  <h3>🔷 Equations:</h3>
+  <ol>
+    <li>Angular displacement: <br>
+      <code>&theta; = 2&pi;n</code></li>
+    <li>Angular acceleration: <br>
+      <code>&alpha; = (4 &pi; n) / t²</code></li>
+    <li>Torque: <br>
+      <code>&tau; = Tr = m(g - r&alpha;) r</code></li>
+    <li>Moment of inertia: <br>
+      <code>I = Tr / &alpha; = [m(g - r&alpha;) r] / &alpha;</code></li>
+  </ol>
+
+  <h3>🔷 Procedure:</h3>
+  <ol>
+    <li>Measure <strong>r</strong> using a vernier caliper.</li>
+    <li>Attach known <strong>m</strong> to string wound on axle.</li>
+    <li>Allow mass to fall and record time <strong>t</strong> for <strong>n</strong> turns.</li>
+    <li>Compute angular displacement <code>&theta; = 2&pi;n</code>.</li>
+    <li>Use equations to compute <code>&alpha;</code> and <code>I</code>.</li>
+  </ol>
+
+  <h3>🔷 Sample Calculation:</h3>
+  <pre>
+n = 25 revolutions
+t = 6 s
+m = 0.2 kg
+r = 0.02 m
+
+&alpha; = (4 &pi; n) / t² ≈ 8.73 rad/s²
+T = m(g - r&alpha;) ≈ 0.2 × (9.8 - 0.1746) = 1.925 N
+I = Tr / &alpha; = (1.925 × 0.02) / 8.73 ≈ 0.0044 kg·m²
+  </pre>
+
+  <h3>🔷 Precautions:</h3>
+  <ul>
+    <li>Start the stopwatch exactly when the mass is released.</li>
+    <li>Avoid string slippage or jerky motion.</li>
+    <li>Use precise instruments to measure radius and time.</li>
+    <li>Repeat to reduce error and average the result.</li>
+  </ul>
+</div>
+<div class="question">
+  <h3>81. What is the main objective of the flywheel experiment?</h3>
+  <label><input type="radio" name="q81" value="A"> (A) To find rotational speed</label><br>
+  <label><input type="radio" name="q81" value="B"> (B) To determine angular momentum</label><br>
+  <label><input type="radio" name="q81" value="C"> (C) To calculate angular displacement</label><br>
+  <label><input type="radio" name="q81" value="D" data-correct="true"> (D) To find moment of inertia and mass of the flywheel</label>
+</div>
+<div class="question">
+  <h3>82. Which of the following quantities is directly measured using a stopwatch in the flywheel experiment?</h3>
+  <label><input type="radio" name="q82" value="A"> (A) Torque</label><br>
+  <label><input type="radio" name="q82" value="B" data-correct="true"> (B) Time for n revolutions</label><br>
+  <label><input type="radio" name="q82" value="C"> (C) Radius of axle</label><br>
+  <label><input type="radio" name="q82" value="D"> (D) Angular acceleration</label>
+</div>
+<div class="question">
+  <h3>83. What is the angular displacement in radians if a flywheel makes 10 revolutions?</h3>
+  <label><input type="radio" name="q83" value="A"> (A) 10&pi;</label><br>
+  <label><input type="radio" name="q83" value="B"> (B) 20&pi;</label><br>
+  <label><input type="radio" name="q83" value="C" data-correct="true"> (C) 2&pi;&times;10</label><br>
+  <label><input type="radio" name="q83" value="D"> (D) 4&pi;</label>
+</div>
+<div class="question">
+  <h3>84. The formula for angular acceleration used in the experiment is:</h3>
+  <label><input type="radio" name="q84" value="A"> (A) &alpha; = 2&pi;n/t</label><br>
+  <label><input type="radio" name="q84" value="B"> (B) &alpha; = &omega;/t</label><br>
+  <label><input type="radio" name="q84" value="C" data-correct="true"> (C) &alpha; = 4&pi;n / t&sup2;</label><br>
+  <label><input type="radio" name="q84" value="D"> (D) &alpha; = t/4&pi;n</label>
+</div>
+<div class="question">
+  <h3>85. Which of the following represents torque in the flywheel experiment?</h3>
+  <label><input type="radio" name="q85" value="A"> (A) mg</label><br>
+  <label><input type="radio" name="q85" value="B"> (B) I&alpha;</label><br>
+  <label><input type="radio" name="q85" value="C"> (C) ma</label><br>
+  <label><input type="radio" name="q85" value="D" data-correct="true"> (D) T&times;r</label>
+</div>
+<div class="question">
+  <h3>86. Which physical quantity is calculated using the formula \( I = \frac{Tr}{\alpha} \)?</h3>
+  <label><input type="radio" name="q86" value="A"> (A) Angular momentum</label><br>
+  <label><input type="radio" name="q86" value="B"> (B) Torque</label><br>
+  <label><input type="radio" name="q86" value="C" data-correct="true"> (C) Moment of inertia</label><br>
+  <label><input type="radio" name="q86" value="D"> (D) Angular velocity</label>
+</div>
+<div class="question">
+  <h3>87. The unit of moment of inertia in SI system is:</h3>
+  <label><input type="radio" name="q87" value="A"> (A) kg·m</label><br>
+  <label><input type="radio" name="q87" value="B" data-correct="true"> (B) kg·m²</label><br>
+  <label><input type="radio" name="q87" value="C"> (C) kg·m/s</label><br>
+  <label><input type="radio" name="q87" value="D"> (D) kg/s²</label>
+</div>
+<div class="question">
+  <h3>88. What is the role of the radius of axle in calculating moment of inertia?</h3>
+  <label><input type="radio" name="q88" value="A"> (A) It gives the angular displacement</label><br>
+  <label><input type="radio" name="q88" value="B"> (B) It is multiplied with angular velocity</label><br>
+  <label><input type="radio" name="q88" value="C" data-correct="true"> (C) It helps compute torque using \( T = Tr \)</label><br>
+  <label><input type="radio" name="q88" value="D"> (D) It determines mass of the flywheel</label>
+</div>
+<div class="question">
+  <h3>89. Which formula gives the tension in the string during the experiment?</h3>
+  <label><input type="radio" name="q89" value="A"> (A) T = ma</label><br>
+  <label><input type="radio" name="q89" value="B"> (B) T = mg</label><br>
+  <label><input type="radio" name="q89" value="C" data-correct="true"> (C) T = m(g - rα)</label><br>
+  <label><input type="radio" name="q89" value="D"> (D) T = m(r + α)</label>
+</div>
+<div class="question">
+  <h3>90. Why is it important to ensure that the string does not slip on the axle?</h3>
+  <label><input type="radio" name="q90" value="A"> (A) It avoids sound disturbance</label><br>
+  <label><input type="radio" name="q90" value="B" data-correct="true"> (B) It ensures accurate torque transmission</label><br>
+  <label><input type="radio" name="q90" value="C"> (C) It keeps the mass constant</label><br>
+  <label><input type="radio" name="q90" value="D"> (D) It reduces angular displacement</label>
+</div>
+<div class="question">
+  <h3>91. What is the angular displacement if the wheel completes 30 revolutions?</h3>
+  <label><input type="radio" name="q91" value="A"> (A) 60π rad</label><br>
+  <label><input type="radio" name="q91" value="B"> (B) 30π rad</label><br>
+  <label><input type="radio" name="q91" value="C" data-correct="true"> (C) 2π × 30 rad</label><br>
+  <label><input type="radio" name="q91" value="D"> (D) 2 × 30 rad</label>
+</div>
+<div class="question">
+  <h3>92. What does the term 'α' represent in rotational kinematics?</h3>
+  <label><input type="radio" name="q92" value="A"> (A) Angular displacement</label><br>
+  <label><input type="radio" name="q92" value="B"> (B) Angular velocity</label><br>
+  <label><input type="radio" name="q92" value="C"> (C) Angular momentum</label><br>
+  <label><input type="radio" name="q92" value="D" data-correct="true"> (D) Angular acceleration</label>
+</div>
+<div class="question">
+  <h3>93. What kind of motion does the flywheel undergo?</h3>
+  <label><input type="radio" name="q93" value="A"> (A) Vibrational</label><br>
+  <label><input type="radio" name="q93" value="B"> (B) Translational</label><br>
+  <label><input type="radio" name="q93" value="C" data-correct="true"> (C) Rotational</label><br>
+  <label><input type="radio" name="q93" value="D"> (D) Oscillatory</label>
+</div>
+<div class="question">
+  <h3>94. In the equation \( \tau = Tr \), where \(\tau\) is the torque. Now, what does 'T' stand for?</h3>
+  <label><input type="radio" name="q94" value="A"> (A) Time</label><br>
+  <label><input type="radio" name="q94" value="B"> (B) Tension</label><br>
+  <label><input type="radio" name="q94" value="C" data-correct="true"> (C) Torque</label><br>
+  <label><input type="radio" name="q94" value="D"> (D) Temperature</label>
+</div>
+<div class="question">
+  <h3>95. Which of these steps is <strong>not</strong> required in the flywheel experiment?</h3>
+  <label><input type="radio" name="q95" value="A"> (A) Measuring time for revolutions</label><br>
+  <label><input type="radio" name="q95" value="B"> (B) Measuring radius of axle</label><br>
+  <label><input type="radio" name="q95" value="C"> (C) Calculating angular acceleration</label><br>
+  <label><input type="radio" name="q95" value="D" data-correct="true"> (D) Measuring angular frequency with Lissajous figures</label>
+</div>
+<div class="question">
+  <h3>96. Which instrument is commonly used to measure the radius of the axle?</h3>
+  <label><input type="radio" name="q96" value="A"> (A) Stopwatch</label><br>
+  <label><input type="radio" name="q96" value="B" data-correct="true"> (B) Vernier caliper</label><br>
+  <label><input type="radio" name="q96" value="C"> (C) Thermometer</label><br>
+  <label><input type="radio" name="q96" value="D"> (D) Scale</label>
+</div>
+<div class="question">
+  <h3>97. The role of the falling mass is to:</h3>
+  <label><input type="radio" name="q97" value="A"> (A) Reduce friction</label><br>
+  <label><input type="radio" name="q97" value="B"> (B) Help in balancing the wheel</label><br>
+  <label><input type="radio" name="q97" value="C"> (C) Convert rotational to linear motion</label><br>
+  <label><input type="radio" name="q97" value="D" data-correct="true"> (D) Provide torque to set flywheel in motion</label>
+</div>
+<div class="question">
+  <h3>98. What is the value of angular displacement for 1 revolution?</h3>
+  <label><input type="radio" name="q98" value="A"> (A) 90°</label><br>
+  <label><input type="radio" name="q98" value="B"> (B) π rad</label><br>
+  <label><input type="radio" name="q98" value="C"> (C) π/2 rad</label><br>
+  <label><input type="radio" name="q98" value="D" data-correct="true"> (D) 2π rad</label>
+</div>
+<div class="question">
+  <h3>99. The SI unit of torque is:</h3>
+  <label><input type="radio" name="q99" value="A"> (A) Nm</label><br>
+  <label><input type="radio" name="q99" value="B" data-correct="true"> (B) newton·meter</label><br>
+  <label><input type="radio" name="q99" value="C"> (C) watt</label><br>
+  <label><input type="radio" name="q99" value="D"> (D) kg·m/s²</label>
+</div>
+<div class="question">
+  <h3>100. Which quantity is considered constant during the descent in the flywheel experiment?</h3>
+  <label><input type="radio" name="q100" value="A"> (A) Angular displacement</label><br>
+  <label><input type="radio" name="q100" value="B"> (B) Angular Velocity</label><br>
+  <label><input type="radio" name="q100" value="C"> (C) Tension</label><br>
+  <label><input type="radio" name="q100" value="D" data-correct="true"> (D) Angular acceleration</label>
+</div>
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 100;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+    function downloadCSVLocally() {
+      const blob = generateCSVBlob();
+      if (!blob) return;
+      saveAs(blob, "jose.csv");
+    }
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
