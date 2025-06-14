@@ -1036,11 +1036,15 @@ if    (!result) return;
   reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
 }
 
-    function downloadCSVLocally() {
-      const blob = generateCSVBlob();
-      if (!blob) return;
-      saveAs(blob, "jose.csv");
-    }
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
   </script>
   <h3>After completing the Quiz press Submit and Email</h3>
   <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
