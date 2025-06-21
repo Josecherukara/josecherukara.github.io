@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Material Science Practical Quiz</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+  
+<h2>Let's start with Kinematics</h2>
+<form id="quizForm">
+
+  <!-- ==================== QUESTION TEMPLATE ==================== -->
+ <div class="question">
+  <h3>1. What is the mathematical expression of Malus’s Law?</h3>
+  <label><input type="radio" name="q1" value="A"> (A) I = I₀sinθ</label><br>
+  <label><input type="radio" name="q1" value="B"> (B) I = I₀tan²θ</label><br>
+  <label><input type="radio" name="q1" value="C"> (C) I = I₀cosθ</label><br>
+  <label><input type="radio" name="q1" value="D" data-correct="true"> (D) I = I₀cos²θ</label>
+</div>
+
+<div class="question">
+  <h3>2. In a Malus’s law experiment, what happens to the intensity when the analyzer is perpendicular to the polarizer?</h3>
+  <label><input type="radio" name="q2" value="A"> (A) Maximum</label><br>
+  <label><input type="radio" name="q2" value="B"> (B) Constant</label><br>
+  <label><input type="radio" name="q2" value="C"> (C) Doubles</label><br>
+  <label><input type="radio" name="q2" value="D" data-correct="true"> (D) Zero</label>
+</div>
+
+<div class="question">
+  <h3>3. If the analyzer is rotated by 45°, what is the transmitted intensity as per Malus’s Law?</h3>
+  <label><input type="radio" name="q3" value="A"> (A) I₀</label><br>
+  <label><input type="radio" name="q3" value="B"> (B) 0</label><br>
+  <label><input type="radio" name="q3" value="C" data-correct="true"> (C) I₀/2</label><br>
+  <label><input type="radio" name="q3" value="D"> (D) I₀/4</label>
+</div>
+
+<div class="question">
+  <h3>4. A graph of intensity vs cos²θ should ideally be:</h3>
+  <label><input type="radio" name="q4" value="A"> (A) A parabolic curve</label><br>
+  <label><input type="radio" name="q4" value="B"> (B) Exponential decay</label><br>
+  <label><input type="radio" name="q4" value="C" data-correct="true"> (C) A straight line</label><br>
+  <label><input type="radio" name="q4" value="D"> (D) Sinusoidal wave</label>
+</div>
+
+<div class="question">
+  <h3>5. Which component is responsible for producing plane polarized light in the experiment?</h3>
+  <label><input type="radio" name="q5" value="A"> (A) Analyzer</label><br>
+  <label><input type="radio" name="q5" value="B"> (B) Mirror</label><br>
+  <label><input type="radio" name="q5" value="C" data-correct="true"> (C) Polarizer</label><br>
+  <label><input type="radio" name="q5" value="D"> (D) Photodiode</label>
+</div>
+
+<div class="question">
+  <h3>6. In Malus's experiment, which instrument is used to measure intensity of light?</h3>
+  <label><input type="radio" name="q6" value="A"> (A) Spectrometer</label><br>
+  <label><input type="radio" name="q6" value="B"> (B) Multimeter</label><br>
+  <label><input type="radio" name="q6" value="C" data-correct="true"> (C) Photodetector</label><br>
+  <label><input type="radio" name="q6" value="D"> (D) Galvanometer</label>
+</div>
+
+<div class="question">
+  <h3>7. Which of the following is NOT an assumption in verifying Malus’s Law?</h3>
+  <label><input type="radio" name="q7" value="A"> (A) Light is linearly polarized</label><br>
+  <label><input type="radio" name="q7" value="B"> (B) Angle between polarizer and analyzer is well-defined</label><br>
+  <label><input type="radio" name="q7" value="C" data-correct="true"> (C) Light is incoherent</label><br>
+  <label><input type="radio" name="q7" value="D"> (D) The medium is non-absorbing</label>
+</div>
+<div class="question">
+  <h3>8. Which property of light is used to measure specific rotation in optical activity experiments?</h3>
+  <label><input type="radio" name="q8" value="A"> (A) Intensity</label><br>
+  <label><input type="radio" name="q8" value="B"> (B) Wavelength</label><br>
+  <label><input type="radio" name="q8" value="C" data-correct="true"> (C) Plane of polarization</label><br>
+  <label><input type="radio" name="q8" value="D"> (D) Coherence</label>
+</div>
+
+<div class="question">
+  <h3>9. What is the unit of specific rotation?</h3>
+  <label><input type="radio" name="q9" value="A"> (A) degree/m</label><br>
+  <label><input type="radio" name="q9" value="B"> (B) rad/cm</label><br>
+  <label><input type="radio" name="q9" value="C" data-correct="true"> (C) degree·dm⁻¹·g⁻¹·cm³</label><br>
+  <label><input type="radio" name="q9" value="D"> (D) m⁻¹·kg⁻¹</label>
+</div>
+
+<div class="question">
+  <h3>10. Which solution is commonly used to demonstrate optical activity?</h3>
+  <label><input type="radio" name="q10" value="A"> (A) Sodium chloride</label><br>
+  <label><input type="radio" name="q10" value="B"> (B) Copper sulfate</label><br>
+  <label><input type="radio" name="q10" value="C" data-correct="true"> (C) Sugar (sucrose) solution</label><br>
+  <label><input type="radio" name="q10" value="D"> (D) Distilled water</label>
+</div>
+
+<div class="question">
+  <h3>11. Specific rotation depends on which of the following?</h3>
+  <label><input type="radio" name="q11" value="A"> (A) Temperature</label><br>
+  <label><input type="radio" name="q11" value="B"> (B) Wavelength of light</label><br>
+  <label><input type="radio" name="q11" value="C"> (C) Concentration of solution</label><br>
+  <label><input type="radio" name="q11" value="D" data-correct="true"> (D) All of the above</label>
+</div>
+
+<div class="question">
+  <h3>12. The rotation caused by optically active solution is:</h3>
+  <label><input type="radio" name="q12" value="A"> (A) Clockwise only</label><br>
+  <label><input type="radio" name="q12" value="B"> (B) Anti-clockwise only</label><br>
+  <label><input type="radio" name="q12" value="C" data-correct="true"> (C) Either clockwise or anti-clockwise</label><br>
+  <label><input type="radio" name="q12" value="D"> (D) Random</label>
+</div>
+
+<div class="question">
+  <h3>13. The device used to measure optical rotation is called:</h3>
+  <label><input type="radio" name="q13" value="A"> (A) Spectrometer</label><br>
+  <label><input type="radio" name="q13" value="B"> (B) Photodiode</label><br>
+  <label><input type="radio" name="q13" value="C" data-correct="true"> (C) Polarimeter</label><br>
+  <label><input type="radio" name="q13" value="D"> (D) Colorimeter</label>
+</div>
+<div class="question">
+  <h3>14. XRD stands for:</h3>
+  <label><input type="radio" name="q14" value="A"> (A) X-ray Density Resolution</label><br>
+  <label><input type="radio" name="q14" value="B"> (B) X-ray Distribution Recording</label><br>
+  <label><input type="radio" name="q14" value="C" data-correct="true"> (C) X-ray Diffraction</label><br>
+  <label><input type="radio" name="q14" value="D"> (D) X-ray Delay Resonance</label>
+</div>
+
+<div class="question">
+  <h3>15. Bragg’s Law is given by:</h3>
+  <label><input type="radio" name="q15" value="A"> (A) nλ = 2dθ</label><br>
+  <label><input type="radio" name="q15" value="B"> (B) nλ = d/2sinθ</label><br>
+  <label><input type="radio" name="q15" value="C"> (C) nλ = dcosθ</label><br>
+  <label><input type="radio" name="q15" value="D" data-correct="true"> (D) nλ = 2d·sinθ</label>
+</div>
+
+<div class="question">
+  <h3>16. In XRD, the diffraction peaks arise due to:</h3>
+  <label><input type="radio" name="q16" value="A"> (A) Interference of reflected waves</label><br>
+  <label><input type="radio" name="q16" value="B"> (B) Absorption of X-rays</label><br>
+  <label><input type="radio" name="q16" value="C"> (C) Reflection from the surface only</label><br>
+  <label><input type="radio" name="q16" value="D" data-correct="true"> (D) Constructive interference from lattice planes</label>
+</div>
+
+<div class="question">
+  <h3>17. What is the typical X-ray source used in powder XRD?</h3>
+  <label><input type="radio" name="q17" value="A"> (A) Tungsten</label><br>
+  <label><input type="radio" name="q17" value="B"> (B) Sodium</label><br>
+  <label><input type="radio" name="q17" value="C" data-correct="true"> (C) Copper (Cu Kα)</label><br>
+  <label><input type="radio" name="q17" value="D"> (D) Mercury</label>
+</div>
+
+<div class="question">
+  <h3>18. For cubic systems, the lattice parameter 'a' is related to interplanar distance 'd' by:</h3>
+  <label><input type="radio" name="q18" value="A"> (A) a = d/(h² + k² + l²)</label><br>
+  <label><input type="radio" name="q18" value="B"> (B) a² = d(h + k + l)</label><br>
+  <label><input type="radio" name="q18" value="C"> (C) a² = d²(h² + k² + l²)</label><br>
+  <label><input type="radio" name="q18" value="D" data-correct="true"> (D) d = a / √(h² + k² + l²)</label>
+</div>
+
+<div class="question">
+  <h3>19. In hexagonal crystals, the Miller indices are represented by:</h3>
+  <label><input type="radio" name="q19" value="A"> (A) (hkl)</label><br>
+  <label><input type="radio" name="q19" value="B"> (B) (hk.l)</label><br>
+  <label><input type="radio" name="q19" value="C" data-correct="true"> (C) (hkil)</label><br>
+  <label><input type="radio" name="q19" value="D"> (D) [hkl]</label>
+</div>
+
+<div class="question">
+  <h3>20. The XRD pattern of a single crystal shows:</h3>
+  <label><input type="radio" name="q20" value="A"> (A) A continuous spectrum</label><br>
+  <label><input type="radio" name="q20" value="B"> (B) A broad peak</label><br>
+  <label><input type="radio" name="q20" value="C"> (C) No diffraction</label><br>
+  <label><input type="radio" name="q20" value="D" data-correct="true"> (D) Discrete sharp peaks</label>
+</div>
+<div class="question">
+  <h3>21. What parameter is measured to determine the lattice constant using XRD?</h3>
+  <label><input type="radio" name="q21" value="A"> (A) Absorption coefficient</label><br>
+  <label><input type="radio" name="q21" value="B"> (B) Intensity of X-rays</label><br>
+  <label><input type="radio" name="q21" value="C" data-correct="true"> (C) Diffraction angle (2θ)</label><br>
+  <label><input type="radio" name="q21" value="D"> (D) Sample thickness</label>
+</div>
+
+<div class="question">
+  <h3>22. For a cubic crystal, the interplanar spacing 'd' for Miller indices (hkl) is:</h3>
+  <label><input type="radio" name="q22" value="A"> (A) d = √(h² + k² + l²) / a</label><br>
+  <label><input type="radio" name="q22" value="B" data-correct="true"> (B) d = a / √(h² + k² + l²)</label><br>
+  <label><input type="radio" name="q22" value="C"> (C) d = hkl / a²</label><br>
+  <label><input type="radio" name="q22" value="D"> (D) d = a² / (h + k + l)</label>
+</div>
+
+<div class="question">
+  <h3>23. How does a decrease in XRD peak position affect the calculated lattice constant?</h3>
+  <label><input type="radio" name="q23" value="A"> (A) No effect</label><br>
+  <label><input type="radio" name="q23" value="B" data-correct="true"> (B) Lattice constant increases</label><br>
+  <label><input type="radio" name="q23" value="C"> (C) Lattice constant decreases</label><br>
+  <label><input type="radio" name="q23" value="D"> (D) Lattice constant becomes zero</label>
+</div>
+
+<div class="question">
+  <h3>24. Which of the following is a source of systematic error in lattice constant measurement?</h3>
+  <label><input type="radio" name="q24" value="A"> (A) Counting time</label><br>
+  <label><input type="radio" name="q24" value="B"> (B) Voltage fluctuation</label><br>
+  <label><input type="radio" name="q24" value="C" data-correct="true"> (C) Zero error in goniometer</label><br>
+  <label><input type="radio" name="q24" value="D"> (D) Sample polishing</label>
+</div>
+
+<div class="question">
+  <h3>25. What is the dimension of lattice parameter in SI units?</h3>
+  <label><input type="radio" name="q25" value="A"> (A) m⁻¹</label><br>
+  <label><input type="radio" name="q25" value="B"> (B) rad</label><br>
+  <label><input type="radio" name="q25" value="C"> (C) kg·m²</label><br>
+  <label><input type="radio" name="q25" value="D" data-correct="true"> (D) meter</label>
+</div>
+
+<div class="question">
+  <h3>26. In cubic systems, what is the shape of the unit cell?</h3>
+  <label><input type="radio" name="q26" value="A"> (A) Hexagon</label><br>
+  <label><input type="radio" name="q26" value="B"> (B) Rectangle</label><br>
+  <label><input type="radio" name="q26" value="C" data-correct="true"> (C) Cube</label><br>
+  <label><input type="radio" name="q26" value="D"> (D) Rhombohedron</label>
+</div>
+<div class="question">
+  <h3>27. Which equation is used to determine crystallite size from XRD data?</h3>
+  <label><input type="radio" name="q27" value="A"> (A) Bragg’s Law</label><br>
+  <label><input type="radio" name="q27" value="B"> (B) Scherrer Equation</label><br>
+  <label><input type="radio" name="q27" value="C" data-correct="true"> (C) Scherrer’s formula: D = kλ / (βcosθ)</label><br>
+  <label><input type="radio" name="q27" value="D"> (D) Tauc relation</label>
+</div>
+
+<div class="question">
+  <h3>28. In the Scherrer formula, β refers to:</h3>
+  <label><input type="radio" name="q28" value="A"> (A) Bragg angle</label><br>
+  <label><input type="radio" name="q28" value="B" data-correct="true"> (B) Full Width at Half Maximum (FWHM)</label><br>
+  <label><input type="radio" name="q28" value="C"> (C) Peak intensity</label><br>
+  <label><input type="radio" name="q28" value="D"> (D) Lattice constant</label>
+</div>
+
+<div class="question">
+  <h3>29. Which parameter indicates microstrain in a crystal?</h3>
+  <label><input type="radio" name="q29" value="A"> (A) d-spacing</label><br>
+  <label><input type="radio" name="q29" value="B"> (B) Interatomic distance</label><br>
+  <label><input type="radio" name="q29" value="C" data-correct="true"> (C) Broadening of XRD peaks</label><br>
+  <label><input type="radio" name="q29" value="D"> (D) Intensity shift</label>
+</div>
+
+<div class="question">
+  <h3>30. Which of the following contributes to peak broadening in XRD?</h3>
+  <label><input type="radio" name="q30" value="A"> (A) Instrumental error</label><br>
+  <label><input type="radio" name="q30" value="B"> (B) Small crystallite size</label><br>
+  <label><input type="radio" name="q30" value="C"> (C) Lattice strain</label><br>
+  <label><input type="radio" name="q30" value="D" data-correct="true"> (D) All of the above</label>
+</div>
+
+<div class="question">
+  <h3>31. The Scherrer constant k typically lies between:</h3>
+  <label><input type="radio" name="q31" value="A"> (A) 0.001 – 0.01</label><br>
+  <label><input type="radio" name="q31" value="B"> (B) 0.1 – 0.5</label><br>
+  <label><input type="radio" name="q31" value="C" data-correct="true"> (C) 0.89 – 1.0</label><br>
+  <label><input type="radio" name="q31" value="D"> (D) 1.2 – 2.0</label>
+</div>
+
+<div class="question">
+  <h3>32. Crystallite size measured by XRD is:</h3>
+  <label><input type="radio" name="q32" value="A"> (A) Grain size</label><br>
+  <label><input type="radio" name="q32" value="B" data-correct="true"> (B) Coherently diffracting domain size</label><br>
+  <label><input type="radio" name="q32" value="C"> (C) Unit cell volume</label><br>
+  <label><input type="radio" name="q32" value="D"> (D) Interatomic spacing</label>
+</div>
+
+<div class="question">
+  <h3>33. Which method is used to separate strain and size effects in XRD peak broadening?</h3>
+  <label><input type="radio" name="q33" value="A"> (A) Fourier Transform</label><br>
+  <label><input type="radio" name="q33" value="B"> (B) Tauc method</label><br>
+  <label><input type="radio" name="q33" value="C" data-correct="true"> (C) Williamson-Hall plot</label><br>
+  <label><input type="radio" name="q33" value="D"> (D) Debye–Scherrer circle</label>
+</div>
+<div class="question">
+  <h3>35. What type of plot is used to find the bandgap from I–V characteristics?</h3>
+  <label><input type="radio" name="q35" value="A"> (A) V vs I</label><br>
+  <label><input type="radio" name="q35" value="B"> (B) log I vs V</label><br>
+  <label><input type="radio" name="q35" value="C" data-correct="true"> (C) ln I vs 1/T</label><br>
+  <label><input type="radio" name="q35" value="D"> (D) V vs R</label>
+</div>
+
+<div class="question">
+  <h3>36. What is the typical bandgap of silicon?</h3>
+  <label><input type="radio" name="q36" value="A"> (A) 0.4 eV</label><br>
+  <label><input type="radio" name="q36" value="B" data-correct="true"> (B) 1.1 eV</label><br>
+  <label><input type="radio" name="q36" value="C"> (C) 2.5 eV</label><br>
+  <label><input type="radio" name="q36" value="D"> (D) 3.2 eV</label>
+</div>
+
+<div class="question">
+  <h3>37. Bandgap energy is the energy required to:</h3>
+  <label><input type="radio" name="q37" value="A"> (A) Move an electron from the nucleus</label><br>
+  <label><input type="radio" name="q37" value="B" data-correct="true"> (B) Excite an electron from valence to conduction band</label><br>
+  <label><input type="radio" name="q37" value="C"> (C) Emit light</label><br>
+  <label><input type="radio" name="q37" value="D"> (D) Break a chemical bond</label>
+</div>
+
+<div class="question">
+  <h3>38. Which of the following affects the bandgap of a semiconductor?</h3>
+  <label><input type="radio" name="q38" value="A"> (A) Temperature</label><br>
+  <label><input type="radio" name="q38" value="B"> (B) Material</label><br>
+  <label><input type="radio" name="q38" value="C"> (C) Crystal defects</label><br>
+  <label><input type="radio" name="q38" value="D" data-correct="true"> (D) All of the above</label>
+</div>
+
+<div class="question">
+  <h3>39. Which diode is often used for experimental bandgap determination?</h3>
+  <label><input type="radio" name="q39" value="A"> (A) Tunnel diode</label><br>
+  <label><input type="radio" name="q39" value="B"> (B) Zener diode</label><br>
+  <label><input type="radio" name="q39" value="C" data-correct="true"> (C) PN junction diode</label><br>
+  <label><input type="radio" name="q39" value="D"> (D) Photodiode</label>
+</div>
+
+<div class="question">
+  <h3>40. What is the relation between slope of ln I vs 1/T and bandgap?</h3>
+  <label><input type="radio" name="q40" value="A"> (A) Eg = slope × k</label><br>
+  <label><input type="radio" name="q40" value="B" data-correct="true"> (B) Eg = −slope × k</label><br>
+  <label><input type="radio" name="q40" value="C"> (C) Eg = k / slope</label><br>
+  <label><input type="radio" name="q40" value="D"> (D) Eg = e / slope</label>
+</div>
+<div class="question">
+  <h3>41. In the air wedge method, the thickness of a thin sheet is determined by measuring:</h3>
+  <label><input type="radio" name="q41" value="A"> (A) Refractive index</label><br>
+  <label><input type="radio" name="q41" value="B"> (B) Curvature of the lens</label><br>
+  <label><input type="radio" name="q41" value="C" data-correct="true"> (C) Fringe width and length of wedge</label><br>
+  <label><input type="radio" name="q41" value="D"> (D) Radius of curvature</label>
+</div>
+
+<div class="question">
+  <h3>42. The air wedge is formed by:</h3>
+  <label><input type="radio" name="q42" value="A"> (A) Two convex lenses in contact</label><br>
+  <label><input type="radio" name="q42" value="B"> (B) A lens and flat glass plate</label><br>
+  <label><input type="radio" name="q42" value="C"> (C) Two glass plates with a thin spacer at one end</label><br>
+  <label><input type="radio" name="q42" value="D" data-correct="true"> (D) Two glass plates touching at one end and separated by the sheet at the other end</label>
+</div>
+
+<div class="question">
+  <h3>43. The shape of the interference fringes in an air wedge is:</h3>
+  <label><input type="radio" name="q43" value="A"> (A) Circular</label><br>
+  <label><input type="radio" name="q43" value="B" data-correct="true"> (B) Straight and parallel</label><br>
+  <label><input type="radio" name="q43" value="C"> (C) Elliptical</label><br>
+  <label><input type="radio" name="q43" value="D"> (D) Irregular</label>
+</div>
+
+<div class="question">
+  <h3>44. The thickness ‘t’ of the thin sheet is calculated using:</h3>
+  <label><input type="radio" name="q44" value="A"> (A) t = λ/2</label><br>
+  <label><input type="radio" name="q44" value="B" data-correct="true"> (B) t = (λL) / (2β)</label><br>
+  <label><input type="radio" name="q44" value="C"> (C) t = 2β / λL</label><br>
+  <label><input type="radio" name="q44" value="D"> (D) t = β / 2λ</label>
+</div>
+
+<div class="question">
+  <h3>45. The fringe width in an air wedge is given by:</h3>
+  <label><input type="radio" name="q45" value="A" data-correct="true"> (A) β = λ / (2θ)</label><br>
+  <label><input type="radio" name="q45" value="B"> (B) β = 2λ / θ</label><br>
+  <label><input type="radio" name="q45" value="C"> (C) β = θ / λ</label><br>
+  <label><input type="radio" name="q45" value="D"> (D) β = λθ / 2</label>
+</div>
+
+<div class="question">
+  <h3>46. In an air wedge experiment, if the wavelength of light used increases, the fringe width will:</h3>
+  <label><input type="radio" name="q46" value="A"> (A) Decrease</label><br>
+  <label><input type="radio" name="q46" value="B" data-correct="true"> (B) Increase</label><br>
+  <label><input type="radio" name="q46" value="C"> (C) Remain unchanged</label><br>
+  <label><input type="radio" name="q46" value="D"> (D) First increase then decrease</label>
+</div>
+
+<div class="question">
+  <h3>47. Which optical phenomenon is used in air wedge method?</h3>
+  <label><input type="radio" name="q47" value="A"> (A) Refraction</label><br>
+  <label><input type="radio" name="q47" value="B"> (B) Diffraction</label><br>
+  <label><input type="radio" name="q47" value="C" data-correct="true"> (C) Interference</label><br>
+  <label><input type="radio" name="q47" value="D"> (D) Dispersion</label>
+</div>
+<div class="question">
+  <h3>48. The spring constant (k) is defined as:</h3>
+  <label><input type="radio" name="q48" value="A"> (A) k = mg</label><br>
+  <label><input type="radio" name="q48" value="B"> (B) k = x / F</label><br>
+  <label><input type="radio" name="q48" value="C" data-correct="true"> (C) k = F / x</label><br>
+  <label><input type="radio" name="q48" value="D"> (D) k = 1 / (F × x)</label>
+</div>
+
+<div class="question">
+  <h3>49. In the static method, the spring constant is determined using the relation:</h3>
+  <label><input type="radio" name="q49" value="A"> (A) T = 2π√(m/k)</label><br>
+  <label><input type="radio" name="q49" value="B"> (B) F = kx</label><br>
+  <label><input type="radio" name="q49" value="C" data-correct="true"> (C) k = mg / x</label><br>
+  <label><input type="radio" name="q49" value="D"> (D) k = x / mg</label>
+</div>
+
+<div class="question">
+  <h3>50. In dynamic method, time period is measured for:</h3>
+  <label><input type="radio" name="q50" value="A"> (A) One oscillation</label><br>
+  <label><input type="radio" name="q50" value="B"> (B) Half oscillation</label><br>
+  <label><input type="radio" name="q50" value="C" data-correct="true"> (C) Several oscillations to improve accuracy</label><br>
+  <label><input type="radio" name="q50" value="D"> (D) Random oscillations</label>
+</div>
+
+<div class="question">
+  <h3>51. In the dynamic method, the formula for spring constant is:</h3>
+  <label><input type="radio" name="q51" value="A"> (A) k = T² / m</label><br>
+  <label><input type="radio" name="q51" value="B" data-correct="true"> (B) k = 4π²m / T²</label><br>
+  <label><input type="radio" name="q51" value="C"> (C) k = T / m</label><br>
+  <label><input type="radio" name="q51" value="D"> (D) k = m / T</label>
+</div>
+
+<div class="question">
+  <h3>52. Which graph is plotted in the dynamic method to find k?</h3>
+  <label><input type="radio" name="q52" value="A"> (A) T vs m</label><br>
+  <label><input type="radio" name="q52" value="B"> (B) T vs √m</label><br>
+  <label><input type="radio" name="q52" value="C" data-correct="true"> (C) T² vs m</label><br>
+  <label><input type="radio" name="q52" value="D"> (D) T vs 1/m</label>
+</div>
+
+<div class="question">
+  <h3>53. What should be the nature of the T² vs m graph?</h3>
+  <label><input type="radio" name="q53" value="A"> (A) Parabolic</label><br>
+  <label><input type="radio" name="q53" value="B" data-correct="true"> (B) Straight line through origin</label><br>
+  <label><input type="radio" name="q53" value="C"> (C) Circular</label><br>
+  <label><input type="radio" name="q53" value="D"> (D) Elliptical</label>
+</div>
+
+<div class="question">
+  <h3>54. What assumption is made regarding spring mass in dynamic method?</h3>
+  <label><input type="radio" name="q54" value="A" data-correct="true"> (A) It is negligible</label><br>
+  <label><input type="radio" name="q54" value="B"> (B) It is equal to suspended mass</label><br>
+  <label><input type="radio" name="q54" value="C"> (C) It is doubled</label><br>
+  <label><input type="radio" name="q54" value="D"> (D) It is temperature dependent</label>
+</div>
+<div class="question">
+  <h3>55. A strain gauge measures:</h3>
+  <label><input type="radio" name="q55" value="A"> (A) Temperature</label><br>
+  <label><input type="radio" name="q55" value="B"> (B) Pressure</label><br>
+  <label><input type="radio" name="q55" value="C"> (C) Voltage</label><br>
+  <label><input type="radio" name="q55" value="D" data-correct="true"> (D) Strain</label>
+</div>
+
+<div class="question">
+  <h3>56. What is strain in a material?</h3>
+  <label><input type="radio" name="q56" value="A" data-correct="true"> (A) Ratio of change in length to original length</label><br>
+  <label><input type="radio" name="q56" value="B"> (B) Ratio of force to area</label><br>
+  <label><input type="radio" name="q56" value="C"> (C) Work done per unit volume</label><br>
+  <label><input type="radio" name="q56" value="D"> (D) Deformation force</label>
+</div>
+
+<div class="question">
+  <h3>57. Young’s modulus is defined as:</h3>
+  <label><input type="radio" name="q57" value="A"> (A) Stress / Volume</label><br>
+  <label><input type="radio" name="q57" value="B" data-correct="true"> (B) Stress / Strain</label><br>
+  <label><input type="radio" name="q57" value="C"> (C) Force × Strain</label><br>
+  <label><input type="radio" name="q57" value="D"> (D) Stress × Area</label>
+</div>
+
+<div class="question">
+  <h3>58. In the strain gauge experiment, which bridge is used for precise voltage measurement?</h3>
+  <label><input type="radio" name="q58" value="A"> (A) Kelvin bridge</label><br>
+  <label><input type="radio" name="q58" value="B"> (B) Maxwell bridge</label><br>
+  <label><input type="radio" name="q58" value="C" data-correct="true"> (C) Wheatstone bridge</label><br>
+  <label><input type="radio" name="q58" value="D"> (D) Schering bridge</label>
+</div>
+
+<div class="question">
+  <h3>59. The gauge factor of a strain gauge relates:</h3>
+  <label><input type="radio" name="q59" value="A"> (A) Voltage and current</label><br>
+  <label><input type="radio" name="q59" value="B"> (B) Force and displacement</label><br>
+  <label><input type="radio" name="q59" value="C" data-correct="true"> (C) Change in resistance and strain</label><br>
+  <label><input type="radio" name="q59" value="D"> (D) Pressure and area</label>
+</div>
+
+<div class="question">
+  <h3>60. Which physical quantity is kept constant in strain gauge during calibration?</h3>
+  <label><input type="radio" name="q60" value="A"> (A) Voltage</label><br>
+  <label><input type="radio" name="q60" value="B"> (B) Resistance</label><br>
+  <label><input type="radio" name="q60" value="C"> (C) Temperature</label><br>
+  <label><input type="radio" name="q60" value="D" data-correct="true"> (D) Cross-sectional area</label>
+</div>
+<div class="question">
+  <h3>61. Tauc plot is used to determine:</h3>
+  <label><input type="radio" name="q61" value="A"> (A) Carrier mobility</label><br>
+  <label><input type="radio" name="q61" value="B"> (B) Refractive index</label><br>
+  <label><input type="radio" name="q61" value="C" data-correct="true"> (C) Optical band gap</label><br>
+  <label><input type="radio" name="q61" value="D"> (D) Thickness</label>
+</div>
+
+<div class="question">
+  <h3>62. The x-axis in a Tauc plot is:</h3>
+  <label><input type="radio" name="q62" value="A"> (A) Wavelength</label><br>
+  <label><input type="radio" name="q62" value="B" data-correct="true"> (B) Photon energy (hν)</label><br>
+  <label><input type="radio" name="q62" value="C"> (C) Absorbance</label><br>
+  <label><input type="radio" name="q62" value="D"> (D) Time</label>
+</div>
+
+<div class="question">
+  <h3>63. Which quantity is plotted on the y-axis of a Tauc plot?</h3>
+  <label><input type="radio" name="q63" value="A"> (A) α</label><br>
+  <label><input type="radio" name="q63" value="B"> (B) log(α)</label><br>
+  <label><input type="radio" name="q63" value="C"> (C) α/ν</label><br>
+  <label><input type="radio" name="q63" value="D" data-correct="true"> (D) (αhν)<sup>n</sup></label>
+</div>
+
+<div class="question">
+  <h3>64. What is the value of exponent <i>n</i> for a direct allowed transition?</h3>
+  <label><input type="radio" name="q64" value="A" data-correct="true"> (A) 2</label><br>
+  <label><input type="radio" name="q64" value="B"> (B) 0.5</label><br>
+  <label><input type="radio" name="q64" value="C"> (C) 1</label><br>
+  <label><input type="radio" name="q64" value="D"> (D) 1.5</label>
+</div>
+
+<div class="question">
+  <h3>65. For an indirect allowed transition, the Tauc exponent <i>n</i> is:</h3>
+  <label><input type="radio" name="q65" value="A"> (A) 1</label><br>
+  <label><input type="radio" name="q65" value="B" data-correct="true"> (B) 0.5</label><br>
+  <label><input type="radio" name="q65" value="C"> (C) 2</label><br>
+  <label><input type="radio" name="q65" value="D"> (D) 3</label>
+</div>
+
+<div class="question">
+  <h3>66. The absorption coefficient α is calculated from:</h3>
+  <label><input type="radio" name="q66" value="A"> (A) Reflectance</label><br>
+  <label><input type="radio" name="q66" value="B" data-correct="true"> (B) Absorbance and sample thickness</label><br>
+  <label><input type="radio" name="q66" value="C"> (C) Voltage and current</label><br>
+  <label><input type="radio" name="q66" value="D"> (D) Refractive index</label>
+</div>
+
+<div class="question">
+  <h3>67. What kind of band gap is estimated using Tauc plot?</h3>
+  <label><input type="radio" name="q67" value="A" data-correct="true"> (A) Optical band gap</label><br>
+  <label><input type="radio" name="q67" value="B"> (B) Electrical band gap</label><br>
+  <label><input type="radio" name="q67" value="C"> (C) Thermal gap</label><br>
+  <label><input type="radio" name="q67" value="D"> (D) Forbidden gap</label>
+</div>
+
+<div class="question">
+  <h3>68. The linear portion of Tauc plot is extrapolated to intersect the:</h3>
+  <label><input type="radio" name="q68" value="A"> (A) Y-axis</label><br>
+  <label><input type="radio" name="q68" value="B" data-correct="true"> (B) X-axis</label><br>
+  <label><input type="radio" name="q68" value="C"> (C) Origin</label><br>
+  <label><input type="radio" name="q68" value="D"> (D) Line of slope 1</label>
+</div>
+
+<div class="question">
+  <h3>69. The Tauc plot method assumes the material is:</h3>
+  <label><input type="radio" name="q69" value="A"> (A) Opaque</label><br>
+  <label><input type="radio" name="q69" value="B" data-correct="true"> (B) Amorphous or disordered semiconductor</label><br>
+  <label><input type="radio" name="q69" value="C"> (C) Metallic</label><br>
+  <label><input type="radio" name="q69" value="D"> (D) Transparent insulator</label>
+</div>
+
+<div class="question">
+  <h3>70. If the extrapolated line in the Tauc plot cuts at 2.2 eV, the bandgap is:</h3>
+  <label><input type="radio" name="q70" value="A"> (A) 1.1 eV</label><br>
+  <label><input type="radio" name="q70" value="B"> (B) 4.4 eV</label><br>
+  <label><input type="radio" name="q70" value="C"> (C) 0.55 eV</label><br>
+  <label><input type="radio" name="q70" value="D" data-correct="true"> (D) 2.2 eV</label>
+</div>
+<div class="question">
+  <h3>71. The output of a solar cell depends on:</h3>
+  <label><input type="radio" name="q71" value="A"> (A) Temperature only</label><br>
+  <label><input type="radio" name="q71" value="B"> (B) Wavelength of light</label><br>
+  <label><input type="radio" name="q71" value="C"> (C) Load resistance</label><br>
+  <label><input type="radio" name="q71" value="D" data-correct="true"> (D) All of the above</label>
+</div>
+
+<div class="question">
+  <h3>72. The efficiency of a solar cell is defined as the ratio of:</h3>
+  <label><input type="radio" name="q72" value="A"> (A) Output voltage to current</label><br>
+  <label><input type="radio" name="q72" value="B" data-correct="true"> (B) Output power to incident power</label><br>
+  <label><input type="radio" name="q72" value="C"> (C) Current to resistance</label><br>
+  <label><input type="radio" name="q72" value="D"> (D) Energy to mass</label>
+</div>
+
+<div class="question">
+  <h3>73. The fill factor is defined as:</h3>
+  <label><input type="radio" name="q73" value="A"> (A) V<sub>oc</sub> × I<sub>sc</sub> / Area</label><br>
+  <label><input type="radio" name="q73" value="B"> (B) P<sub>max</sub> / (V<sub>oc</sub> × I<sub>sc</sub>)</label><br>
+  <label><input type="radio" name="q73" value="C" data-correct="true"> (C) Fill factor = (V<sub>mp</sub> × I<sub>mp</sub>) / (V<sub>oc</sub> × I<sub>sc</sub>)</label><br>
+  <label><input type="radio" name="q73" value="D"> (D) V<sub>mp</sub> / V<sub>oc</sub></label>
+</div>
+
+<div class="question">
+  <h3>74. Which of the following represents open circuit voltage?</h3>
+  <label><input type="radio" name="q74" value="A"> (A) V<sub>mp</sub></label><br>
+  <label><input type="radio" name="q74" value="B"> (B) V<sub>min</sub></label><br>
+  <label><input type="radio" name="q74" value="C" data-correct="true"> (C) V<sub>oc</sub></label><br>
+  <label><input type="radio" name="q74" value="D"> (D) V<sub>avg</sub></label>
+</div>
+
+<div class="question">
+  <h3>75. I<sub>sc</sub> stands for:</h3>
+  <label><input type="radio" name="q75" value="A" data-correct="true"> (A) Short circuit current</label><br>
+  <label><input type="radio" name="q75" value="B"> (B) Open circuit current</label><br>
+  <label><input type="radio" name="q75" value="C"> (C) Maximum power current</label><br>
+  <label><input type="radio" name="q75" value="D"> (D) Voltage gain</label>
+</div>
+
+<div class="question">
+  <h3>76. Maximum power output of a solar cell is:</h3>
+  <label><input type="radio" name="q76" value="A"> (A) V<sub>oc</sub> × I<sub>sc</sub></label><br>
+  <label><input type="radio" name="q76" value="B" data-correct="true"> (B) V<sub>mp</sub> × I<sub>mp</sub></label><br>
+  <label><input type="radio" name="q76" value="C"> (C) 0.5 × V<sub>oc</sub> × I<sub>sc</sub></label><br>
+  <label><input type="radio" name="q76" value="D"> (D) V<sub>oc</sub> / I<sub>sc</sub></label>
+</div>
+
+<div class="question">
+  <h3>77. A typical fill factor value for a good silicon solar cell is approximately:</h3>
+  <label><input type="radio" name="q77" value="A"> (A) 0.25</label><br>
+  <label><input type="radio" name="q77" value="B"> (B) 0.45</label><br>
+  <label><input type="radio" name="q77" value="C" data-correct="true"> (C) 0.75</label><br>
+  <label><input type="radio" name="q77" value="D"> (D) 1.5</label>
+</div>
+
+<div class="question">
+  <h3>78. Which instrument is commonly used to record I–V characteristics of a solar cell?</h3>
+  <label><input type="radio" name="q78" value="A"> (A) Multimeter</label><br>
+  <label><input type="radio" name="q78" value="B" data-correct="true"> (B) Source meter or curve tracer</label><br>
+  <label><input type="radio" name="q78" value="C"> (C) Potentiometer</label><br>
+  <label><input type="radio" name="q78" value="D"> (D) Oscilloscope</label>
+</div>
+
+<div class="question">
+  <h3>79. Which environmental condition affects solar cell efficiency most?</h3>
+  <label><input type="radio" name="q79" value="A"> (A) Humidity</label><br>
+  <label><input type="radio" name="q79" value="B" data-correct="true"> (B) Temperature</label><br>
+  <label><input type="radio" name="q79" value="C"> (C) Altitude</label><br>
+  <label><input type="radio" name="q79" value="D"> (D) Wind speed</label>
+</div>
+
+<div class="question">
+  <h3>80. What is the ideal shape of the I–V curve for a solar cell?</h3>
+  <label><input type="radio" name="q80" value="A"> (A) Straight line</label><br>
+  <label><input type="radio" name="q80" value="B"> (B) Sinusoidal</label><br>
+  <label><input type="radio" name="q80" value="C"> (C) Circular arc</label><br>
+  <label><input type="radio" name="q80" value="D" data-correct="true"> (D) Rectangular-like curve with sharp drop</label>
+</div>
+<div class="question">
+  <h3>81. The least count of an instrument is defined as:</h3>
+  <label><input type="radio" name="q81" value="A"> (A) The smallest error possible</label><br>
+  <label><input type="radio" name="q81" value="B"> (B) The total range of the instrument</label><br>
+  <label><input type="radio" name="q81" value="C" data-correct="true"> (C) The smallest measurable value by the instrument</label><br>
+  <label><input type="radio" name="q81" value="D"> (D) The difference between actual and measured value</label>
+</div>
+
+<div class="question">
+  <h3>82. Which of the following helps reduce random errors in an experiment?</h3>
+  <label><input type="radio" name="q82" value="A"> (A) Avoiding measurements</label><br>
+  <label><input type="radio" name="q82" value="B"> (B) Using faulty instruments</label><br>
+  <label><input type="radio" name="q82" value="C" data-correct="true"> (C) Taking multiple readings and averaging</label><br>
+  <label><input type="radio" name="q82" value="D"> (D) Using old apparatus</label>
+</div>
+
+<div class="question">
+  <h3>83. The unit of least count of a stopwatch is usually:</h3>
+  <label><input type="radio" name="q83" value="A"> (A) Hours</label><br>
+  <label><input type="radio" name="q83" value="B"> (B) Minutes</label><br>
+  <label><input type="radio" name="q83" value="C"> (C) Seconds</label><br>
+  <label><input type="radio" name="q83" value="D" data-correct="true"> (D) 0.1 seconds or 0.01 seconds</label>
+</div>
+
+<div class="question">
+  <h3>84. Which of the following is a **systematic error**?</h3>
+  <label><input type="radio" name="q84" value="A"> (A) Fluctuating zero error</label><br>
+  <label><input type="radio" name="q84" value="B" data-correct="true"> (B) Zero error in instrument</label><br>
+  <label><input type="radio" name="q84" value="C"> (C) Human reaction time error</label><br>
+  <label><input type="radio" name="q84" value="D"> (D) Parallax error</label>
+</div>
+
+<div class="question">
+  <h3>85. Which statistical tool is used to measure spread in data?</h3>
+  <label><input type="radio" name="q85" value="A"> (A) Mean</label><br>
+  <label><input type="radio" name="q85" value="B"> (B) Median</label><br>
+  <label><input type="radio" name="q85" value="C" data-correct="true"> (C) Standard deviation</label><br>
+  <label><input type="radio" name="q85" value="D"> (D) Mode</label>
+</div>
+
+<div class="question">
+  <h3>86. How is absolute error calculated?</h3>
+  <label><input type="radio" name="q86" value="A"> (A) Mean of observations</label><br>
+  <label><input type="radio" name="q86" value="B" data-correct="true"> (B) |Measured value − True value|</label><br>
+  <label><input type="radio" name="q86" value="C"> (C) Percentage error</label><br>
+  <label><input type="radio" name="q86" value="D"> (D) Relative error × 100</label>
+</div>
+
+<div class="question">
+  <h3>87. Which method is best for determining accuracy in optical experiments?</h3>
+  <label><input type="radio" name="q87" value="A"> (A) Approximate alignment</label><br>
+  <label><input type="radio" name="q87" value="B"> (B) Looking from sides</label><br>
+  <label><input type="radio" name="q87" value="C" data-correct="true"> (C) Eliminating parallax error using eyepiece alignment</label><br>
+  <label><input type="radio" name="q87" value="D"> (D) Using colored filters</label>
+</div>
+
+<div class="question">
+  <h3>88. When performing Malus’s law experiment, the polarizer and analyzer should be:</h3>
+  <label><input type="radio" name="q88" value="A" data-correct="true"> (A) Precisely aligned and calibrated</label><br>
+  <label><input type="radio" name="q88" value="B"> (B) Randomly rotated</label><br>
+  <label><input type="radio" name="q88" value="C"> (C) Tilted by 30° always</label><br>
+  <label><input type="radio" name="q88" value="D"> (D) Rotated without observing light</label>
+</div>
+
+<div class="question">
+  <h3>89. While performing Tauc plot analysis, which precaution is necessary?</h3>
+  <label><input type="radio" name="q89" value="A"> (A) Use opaque sample</label><br>
+  <label><input type="radio" name="q89" value="B"> (B) Ignore absorption near band edge</label><br>
+  <label><input type="radio" name="q89" value="C" data-correct="true"> (C) Choose correct exponent depending on transition type</label><br>
+  <label><input type="radio" name="q89" value="D"> (D) Take absorbance in arbitrary units</label>
+</div>
+
+<div class="question">
+  <h3>90. To reduce error in XRD measurement:</h3>
+  <label><input type="radio" name="q90" value="A"> (A) Use random scan rate</label><br>
+  <label><input type="radio" name="q90" value="B"> (B) Use scratched samples</label><br>
+  <label><input type="radio" name="q90" value="C"> (C) Take one peak only</label><br>
+  <label><input type="radio" name="q90" value="D" data-correct="true"> (D) Use finely powdered homogeneous sample</label>
+</div>
+
+<div class="question">
+  <h3>91. While measuring I–V characteristics of a solar cell, avoid:</h3>
+  <label><input type="radio" name="q91" value="A" data-correct="true"> (A) Shadow falling on the cell</label><br>
+  <label><input type="radio" name="q91" value="B"> (B) Proper load connection</label><br>
+  <label><input type="radio" name="q91" value="C"> (C) Sunlight exposure</label><br>
+  <label><input type="radio" name="q91" value="D"> (D) Using multimeter</label>
+</div>
+
+<div class="question">
+  <h3>92. Least count of a vernier caliper commonly used in lab is:</h3>
+  <label><input type="radio" name="q92" value="A"> (A) 0.1 mm</label><br>
+  <label><input type="radio" name="q92" value="B"> (B) 0.05 cm</label><br>
+  <label><input type="radio" name="q92" value="C" data-correct="true"> (C) 0.01 cm</label><br>
+  <label><input type="radio" name="q92" value="D"> (D) 0.05 mm</label>
+</div>
+
+<div class="question">
+  <h3>93. What is the best way to reduce human reaction time error?</h3>
+  <label><input type="radio" name="q93" value="A"> (A) Close your eyes</label><br>
+  <label><input type="radio" name="q93" value="B" data-correct="true"> (B) Use automatic timing or repeat trials</label><br>
+  <label><input type="radio" name="q93" value="C"> (C) Ask a friend to record data</label><br>
+  <label><input type="radio" name="q93" value="D"> (D) Use random clocks</label>
+</div>
+
+<div class="question">
+  <h3>94. Which is **not** a source of experimental error?</h3>
+  <label><input type="radio" name="q94" value="A"> (A) Instrumental error</label><br>
+  <label><input type="radio" name="q94" value="B"> (B) Human error</label><br>
+  <label><input type="radio" name="q94" value="C"> (C) Environmental error</label><br>
+  <label><input type="radio" name="q94" value="D" data-correct="true"> (D) Perfect calibration</label>
+</div>
+
+<div class="question">
+  <h3>95. While measuring spring constant using dynamic method, the spring should:</h3>
+  <label><input type="radio" name="q95" value="A"> (A) Be stretched manually and held</label><br>
+  <label><input type="radio" name="q95" value="B"> (B) Be rigid and inelastic</label><br>
+  <label><input type="radio" name="q95" value="C" data-correct="true"> (C) Oscillate freely without damping</label><br>
+  <label><input type="radio" name="q95" value="D"> (D) Be greased for smooth motion</label>
+</div>
+
+<div class="question">
+  <h3>96. Which formula is used to calculate **standard deviation** of <i>n</i> values \( x_1, x_2, ..., x_n \)?</h3>
+  <label><input type="radio" name="q96" value="A" data-correct="true"> (A) \( \sigma = \sqrt{ \frac{1}{n} \sum (x_i - \bar{x})^2 } \)</label><br>
+  <label><input type="radio" name="q96" value="B"> (B) \( \sigma = \sum x_i / n \)</label><br>
+  <label><input type="radio" name="q96" value="C"> (C) \( \sigma = \bar{x} / n \)</label><br>
+  <label><input type="radio" name="q96" value="D"> (D) \( \sigma = n / \bar{x} \)</label>
+</div>
+
+<div class="question">
+  <h3>97. While performing optical activity experiment, which precaution is important?</h3>
+  <label><input type="radio" name="q97" value="A" data-correct="true"> (A) Remove air bubbles from solution</label><br>
+  <label><input type="radio" name="q97" value="B"> (B) Keep light source off</label><br>
+  <label><input type="radio" name="q97" value="C"> (C) Shake polarimeter frequently</label><br>
+  <label><input type="radio" name="q97" value="D"> (D) Use hot solution</label>
+</div>
+
+<div class="question">
+  <h3>98. Why is it important to keep the wedge angle small in air wedge experiments?</h3>
+  <label><input type="radio" name="q98" value="A"> (A) Increases contrast</label><br>
+  <label><input type="radio" name="q98" value="B" data-correct="true"> (B) Produces wider and well-separated fringes</label><br>
+  <label><input type="radio" name="q98" value="C"> (C) Avoids absorption</label><br>
+  <label><input type="radio" name="q98" value="D"> (D) Reduces reflection</label>
+</div>
+
+<div class="question">
+  <h3>99. In strain gauge experiments, which error may affect resistance measurement?</h3>
+  <label><input type="radio" name="q99" value="A"> (A) Voltage drift</label><br>
+  <label><input type="radio" name="q99" value="B" data-correct="true"> (B) Temperature variation</label><br>
+  <label><input type="radio" name="q99" value="C"> (C) Air bubbles</label><br>
+  <label><input type="radio" name="q99" value="D"> (D) Hysteresis</label>
+</div>
+
+<div class="question">
+  <h3>100. Parallax error can be minimized by:</h3>
+  <label><input type="radio" name="q100" value="A"> (A) Looking from left side</label><br>
+  <label><input type="radio" name="q100" value="B"> (B) Changing observer every time</label><br>
+  <label><input type="radio" name="q100" value="C"> (C) Holding the scale loosely</label><br>
+  <label><input type="radio" name="q100" value="D" data-correct="true"> (D) Looking perpendicular to the scale</label>
+</div>
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 100;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
