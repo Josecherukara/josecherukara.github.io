@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Material Science Practical Quiz</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+  
+<h2>Let's start with Kinematics</h2>
+<form id="quizForm">
+
+ <div class="notes">
+  <h2>Section 7.1: Definition of Angular Momentum</h2>
+
+  <h3>1. Angular Momentum of a Particle</h3>
+  <p>
+    The angular momentum \( \mathbf{L} \) of a particle about a point \( O \) is defined as the cross product of the particle’s position vector \( \mathbf{r} \) (from point \( O \) to the particle) and its linear momentum \( \mathbf{p} = m\mathbf{v} \):
+  </p>
+  <p>
+    \[
+    \mathbf{L} = \mathbf{r} \times \mathbf{p} = \mathbf{r} \times (m\mathbf{v})
+    \]
+  </p>
+  <ul>
+    <li>\( \mathbf{r} \): position vector</li>
+    <li>\( \mathbf{p} = m\mathbf{v} \): linear momentum</li>
+    <li>\( \mathbf{L} \): angular momentum vector</li>
+  </ul>
+
+  <h3>2. Units</h3>
+  <p>
+    Angular momentum has SI units of \( \mathrm{kg \cdot m^2/s} \).
+  </p>
+
+  <h3>3. Direction</h3>
+  <p>
+    The direction of \( \mathbf{L} \) follows the right-hand rule:  
+    Curl the fingers of your right hand from \( \mathbf{r} \) to \( \mathbf{v} \); the thumb points in the direction of \( \mathbf{L} \).
+  </p>
+
+  <h3>4. Magnitude and Geometric Interpretation</h3>
+  <p>
+    The magnitude of angular momentum is given by:
+  </p>
+  <p>
+    \[
+    L = |\mathbf{r}| \cdot |\mathbf{p}| \cdot \sin\theta = mvr\sin\theta
+    \]
+  </p>
+  <p>
+    where \( \theta \) is the angle between \( \mathbf{r} \) and \( \mathbf{v} \).
+    Angular momentum is maximum when \( \theta = 90^\circ \).
+  </p>
+
+  <h3>5. Special Case: Circular Motion</h3>
+  <p>
+    For a particle of mass \( m \) moving in a circle of radius \( r \) with angular velocity \( \omega \), the angular momentum is:
+  </p>
+  <p>
+    \[
+    L = mvr = mr^2\omega
+    \]
+  </p>
+<h3>6. Visualization</h3>
+  <p>
+    The figure below shows a particle in motion. The position vector \( \mathbf{r} \), velocity vector \( \mathbf{v} \), and angular momentum direction \( \mathbf{L} \) are shown. The local path of the particle is indicated as a curved trajectory.
+  </p>
+
+  <div style="text-align: center;">
+    <img src="angular_momentum_diagram.png" alt="Angular Momentum Diagram" width="450">
+    <p style="font-size: 0.9em;">Figure: Angular momentum \( \mathbf{L} \) is perpendicular to the plane formed by \( \mathbf{r} \) and \( \mathbf{v} \).</p>
+  </div>
+  <h3>7. Preview: Relationship to Torque</h3>
+  <p>
+    The time rate of change of angular momentum gives the torque:
+  </p>
+  <p>
+    \[
+    \boldsymbol{\tau} = \frac{d\mathbf{L}}{dt}
+    \]
+  </p>
+</div>
+<div class="notes">
+  <h3>Integral Form of Angular Momentum</h3>
+  <p>
+    For a continuous mass distribution, the total angular momentum about the origin is given by:
+  </p>
+  <p>
+    \[
+    \mathbf{L} = \iiint_V \mathbf{r} \times \rho(\mathbf{r}) \mathbf{v}(\mathbf{r}) \, dV
+    \]
+  </p>
+  <ul>
+    <li>\( \mathbf{r} \): position vector of the mass element</li>
+    <li>\( \rho(\mathbf{r}) \): mass density at location \( \mathbf{r} \)</li>
+    <li>\( \mathbf{v}(\mathbf{r}) \): velocity vector of the mass element</li>
+    <li>\( dV \): differential volume element</li>
+  </ul>
+  <p>
+    This form reduces to a summation for discrete particles:
+    \[
+    \mathbf{L} = \sum_{i} \mathbf{r}_i \times m_i \mathbf{v}_i
+    \]
+    which is useful in analyzing systems of particles.
+  </p>
+</div>
+<div class="notes">
+  <h3>From Volume Integral to Mass Integral</h3>
+  <p>
+    In a continuous mass distribution, each infinitesimal volume element \( dV \) contains a small amount of mass:
+  </p>
+  <p>
+    \[
+    dm = \rho(\mathbf{r}) \, dV
+    \]
+  </p>
+  <p>
+    Substituting into the volume integral form of angular momentum:
+    \[
+    \mathbf{L} = \iiint_V \mathbf{r} \times \rho(\mathbf{r}) \mathbf{v}(\mathbf{r}) \, dV
+    \quad \Rightarrow \quad
+    \mathbf{L} = \int \mathbf{r} \times \mathbf{v} \, dm
+    \]
+  </p>
+  <p>
+    This formulation is useful for integrating over arbitrary mass distributions, especially when the velocity and position vectors of mass elements are known.
+  </p>
+</div>
+<div class="notes">
+  <h3>Example: Angular Momentum of a Uniform Rotating Ring</h3>
+
+  <p>Consider a thin ring of mass \( M \) and radius \( R \), rotating in the XY-plane about its center with constant angular velocity \( \omega \).</p>
+
+  <p>
+    The position vector of a mass element at angle \( \theta \) is:
+    \[
+    \mathbf{r} = R \cos\theta\, \hat{\mathbf{i}} + R \sin\theta\, \hat{\mathbf{j}}
+    \]
+    The velocity of the mass element (tangential to the ring) is:
+    \[
+    \mathbf{v} = -R \omega \sin\theta\, \hat{\mathbf{i}} + R \omega \cos\theta\, \hat{\mathbf{j}}
+    \]
+  </p>
+
+  <p>
+    The angular momentum of a small element \( dm \) is:
+    \[
+    d\mathbf{L} = \mathbf{r} \times \mathbf{v} \, dm = R^2 \omega \, dm \, \hat{\mathbf{k}}
+    \]
+    Since this value is constant for all \( \theta \), the total angular momentum is:
+    \[
+    \mathbf{L} = \int d\mathbf{L} = R^2 \omega \int dm \, \hat{\mathbf{k}} = M R^2 \omega \, \hat{\mathbf{k}}
+    \]
+  </p>
+
+  <p>
+    This result matches \( \mathbf{L} = I \omega \) for a ring, where \( I = M R^2 \) is the moment of inertia.
+  </p>
+</div>
+
+<!-- ===================== QUESTION 1 ===================== -->
+<div class="question">
+  <h3>1. What is the vector definition of angular momentum for a particle?</h3>
+  <label><input type="radio" name="q1" value="A" data-correct="true"> (A) \( \mathbf{L} = \mathbf{r} \times \mathbf{p} \)</label><br>
+  <label><input type="radio" name="q1" value="B"> (B) \( \mathbf{L} = \mathbf{p} \times \mathbf{r} \)</label><br>
+  <label><input type="radio" name="q1" value="C"> (C) \( \mathbf{L} = \mathbf{v} \cdot \mathbf{r} \)</label><br>
+  <label><input type="radio" name="q1" value="D"> (D) \( \mathbf{L} = \mathbf{F} \times \mathbf{r} \)</label>
+</div>
+
+<div class="question">
+  <h3>2. Angular momentum is an example of which type of vector?</h3>
+  <label><input type="radio" name="q2" value="A"> (A) Polar vector</label><br>
+  <label><input type="radio" name="q2" value="B" data-correct="true"> (B) Axial vector</label><br>
+  <label><input type="radio" name="q2" value="C"> (C) Unit vector</label><br>
+  <label><input type="radio" name="q2" value="D"> (D) Scalar multiple</label>
+</div>
+
+<div class="question">
+  <h3>3. Which of the following expressions gives the magnitude of angular momentum?</h3>
+  <label><input type="radio" name="q3" value="A"> (A) \( L = mv \)</label><br>
+  <label><input type="radio" name="q3" value="B" data-correct="true"> (B) \( L = mvr\sin\theta \)</label><br>
+  <label><input type="radio" name="q3" value="C"> (C) \( L = mv^2r \)</label><br>
+  <label><input type="radio" name="q3" value="D"> (D) \( L = mr\cos\theta \)</label>
+</div>
+
+<div class="question">
+  <h3>4. What is the SI unit of angular momentum?</h3>
+  <label><input type="radio" name="q4" value="A"> (A) N·m</label><br>
+  <label><input type="radio" name="q4" value="B"> (B) kg·m/s</label><br>
+  <label><input type="radio" name="q4" value="C" data-correct="true"> (C) kg·m²/s</label><br>
+  <label><input type="radio" name="q4" value="D"> (D) J·s</label>
+</div>
+
+<div class="question">
+  <h3>5. If \( \theta = 90^\circ \) between \( \mathbf{r} \) and \( \mathbf{v} \), what is \( L \)?</h3>
+  <label><input type="radio" name="q5" value="A"> (A) 0</label><br>
+  <label><input type="radio" name="q5" value="B" data-correct="true"> (B) \( L = mvr \)</label><br>
+  <label><input type="radio" name="q5" value="C"> (C) \( L = mr\cos\theta \)</label><br>
+  <label><input type="radio" name="q5" value="D"> (D) \( L = mv/r \)</label>
+</div>
+
+<div class="question">
+  <h3>6. Angular momentum points:</h3>
+  <label><input type="radio" name="q6" value="A" data-correct="true"> (A) Perpendicular to the plane of motion</label><br>
+  <label><input type="radio" name="q6" value="B"> (B) Along the velocity</label><br>
+  <label><input type="radio" name="q6" value="C"> (C) Opposite to force</label><br>
+  <label><input type="radio" name="q6" value="D"> (D) In the plane of motion</label>
+</div>
+
+<div class="question">
+  <h3>7. For a particle in uniform circular motion, the angular momentum magnitude is:</h3>
+  <label><input type="radio" name="q7" value="A" data-correct="true"> (A) \( L = mr^2\omega \)</label><br>
+  <label><input type="radio" name="q7" value="B"> (B) \( L = m\omega \)</label><br>
+  <label><input type="radio" name="q7" value="C"> (C) \( L = \omega r^2 \)</label><br>
+  <label><input type="radio" name="q7" value="D"> (D) \( L = mv\omega \)</label>
+</div>
+
+<div class="question">
+  <h3>8. The angular momentum of a particle moving radially outward from a fixed origin is:</h3>
+  <label><input type="radio" name="q8" value="A" data-correct="true"> (A) Zero</label><br>
+  <label><input type="radio" name="q8" value="B"> (B) Maximum</label><br>
+  <label><input type="radio" name="q8" value="C"> (C) Constant</label><br>
+  <label><input type="radio" name="q8" value="D"> (D) \( mv^2r \)</label>
+</div>
+
+<div class="question">
+  <h3>9. Which operation defines angular momentum?</h3>
+  <label><input type="radio" name="q9" value="A"> (A) Dot product</label><br>
+  <label><input type="radio" name="q9" value="B" data-correct="true"> (B) Cross product</label><br>
+  <label><input type="radio" name="q9" value="C"> (C) Scalar multiplication</label><br>
+  <label><input type="radio" name="q9" value="D"> (D) Matrix product</label>
+</div>
+
+<div class="question">
+  <h3>10. The direction of angular momentum is determined by:</h3>
+  <label><input type="radio" name="q10" value="A" data-correct="true"> (A) Right-hand rule</label><br>
+  <label><input type="radio" name="q10" value="B"> (B) Left-hand rule</label><br>
+  <label><input type="radio" name="q10" value="C"> (C) Newton’s second law</label><br>
+  <label><input type="radio" name="q10" value="D"> (D) Torque vector</label>
+</div>
+<!-- ===================== QUESTION 11 ===================== -->
+<div class="question">
+  <h3>11. Which of the following best describes the torque–angular momentum relationship?</h3>
+  <label><input type="radio" name="q11" value="A" data-correct="true"> (A) \( \boldsymbol{\tau} = \frac{d\mathbf{L}}{dt} \)</label><br>
+  <label><input type="radio" name="q11" value="B"> (B) \( \mathbf{L} = \boldsymbol{\tau} \times \mathbf{v} \)</label><br>
+  <label><input type="radio" name="q11" value="C"> (C) \( \boldsymbol{\tau} = m\mathbf{r} \cdot \mathbf{a} \)</label><br>
+  <label><input type="radio" name="q11" value="D"> (D) \( \boldsymbol{\tau} = \mathbf{L} \times \mathbf{r} \)</label>
+</div>
+
+<!-- ===================== QUESTION 12 ===================== -->
+<div class="question">
+  <h3>12. The expression \( \mathbf{L} = \iiint_V \mathbf{r} \times \rho(\mathbf{r}) \mathbf{v}(\mathbf{r})\, dV \) applies to:</h3>
+  <label><input type="radio" name="q12" value="A"> (A) Point particles</label><br>
+  <label><input type="radio" name="q12" value="B" data-correct="true"> (B) Continuous mass distributions</label><br>
+  <label><input type="radio" name="q12" value="C"> (C) Electrostatic systems</label><br>
+  <label><input type="radio" name="q12" value="D"> (D) Systems with zero density</label>
+</div>
+
+<!-- ===================== QUESTION 13 ===================== -->
+<div class="question">
+  <h3>13. In the integral form \( \int \mathbf{r} \times \mathbf{v} \, dm \), what does \( dm \) represent?</h3>
+  <label><input type="radio" name="q13" value="A"> (A) Volume element</label><br>
+  <label><input type="radio" name="q13" value="B" data-correct="true"> (B) Infinitesimal mass element</label><br>
+  <label><input type="radio" name="q13" value="C"> (C) Linear momentum</label><br>
+  <label><input type="radio" name="q13" value="D"> (D) Torque</label>
+</div>
+
+<!-- ===================== QUESTION 14 ===================== -->
+<div class="question">
+  <h3>14. For a particle of mass \( m \), the linear momentum is:</h3>
+  <label><input type="radio" name="q14" value="A"> (A) \( \mathbf{F} \cdot \mathbf{t} \)</label><br>
+  <label><input type="radio" name="q14" value="B"> (B) \( \mathbf{a} \cdot \mathbf{r} \)</label><br>
+  <label><input type="radio" name="q14" value="C" data-correct="true"> (C) \( \mathbf{p} = m\mathbf{v} \)</label><br>
+  <label><input type="radio" name="q14" value="D"> (D) \( \mathbf{p} = \frac{d\mathbf{r}}{dt^2} \)</label>
+</div>
+
+<!-- ===================== QUESTION 15 ===================== -->
+<div class="question">
+  <h3>15. The direction of angular momentum is always:</h3>
+  <label><input type="radio" name="q15" value="A"> (A) Along the position vector</label><br>
+  <label><input type="radio" name="q15" value="B" data-correct="true"> (B) Perpendicular to both \( \mathbf{r} \) and \( \mathbf{v} \)</label><br>
+  <label><input type="radio" name="q15" value="C"> (C) Parallel to velocity</label><br>
+  <label><input type="radio" name="q15" value="D"> (D) Opposite to force</label>
+</div>
+
+<!-- ===================== QUESTION 16 ===================== -->
+<div class="question">
+  <h3>16. In the integral \( \mathbf{L} = \int \mathbf{r} \times \mathbf{v} \, dm \), \( \mathbf{v} \) represents:</h3>
+  <label><input type="radio" name="q16" value="A" data-correct="true"> (A) Velocity of each mass element</label><br>
+  <label><input type="radio" name="q16" value="B"> (B) Total system velocity</label><br>
+  <label><input type="radio" name="q16" value="C"> (C) Torque vector</label><br>
+  <label><input type="radio" name="q16" value="D"> (D) Gradient of momentum</label>
+</div>
+
+<!-- ===================== QUESTION 17 ===================== -->
+<div class="question">
+  <h3>17. What is the physical quantity \( \rho(\mathbf{r}) \) in the volume integral of angular momentum?</h3>
+  <label><input type="radio" name="q17" value="A"> (A) Charge density</label><br>
+  <label><input type="radio" name="q17" value="B" data-correct="true"> (B) Mass density</label><br>
+  <label><input type="radio" name="q17" value="C"> (C) Potential function</label><br>
+  <label><input type="radio" name="q17" value="D"> (D) Angular velocity</label>
+</div>
+
+<!-- ===================== QUESTION 18 ===================== -->
+<div class="question">
+  <h3>18. When is angular momentum maximized for given \( m, v, r \)?</h3>
+  <label><input type="radio" name="q18" value="A"> (A) \( \theta = 0^\circ \)</label><br>
+  <label><input type="radio" name="q18" value="B"> (B) \( \theta = 30^\circ \)</label><br>
+  <label><input type="radio" name="q18" value="C" data-correct="true"> (C) \( \theta = 90^\circ \)</label><br>
+  <label><input type="radio" name="q18" value="D"> (D) \( \theta = 180^\circ \)</label>
+</div>
+
+<!-- ===================== QUESTION 19 ===================== -->
+<div class="question">
+  <h3>19. Which of these is a correct scalar expression for a particle’s angular momentum magnitude?</h3>
+  <label><input type="radio" name="q19" value="A"> (A) \( L = mv^2 \)</label><br>
+  <label><input type="radio" name="q19" value="B" data-correct="true"> (B) \( L = mvr\sin\theta \)</label><br>
+  <label><input type="radio" name="q19" value="C"> (C) \( L = \frac{mv}{r} \)</label><br>
+  <label><input type="radio" name="q19" value="D"> (D) \( L = m\omega^2r^2 \)</label>
+</div>
+
+<!-- ===================== QUESTION 20 ===================== -->
+<div class="question">
+  <h3>20. Which of the following statements is true about internal forces and angular momentum?</h3>
+  <label><input type="radio" name="q20" value="A"> (A) Internal forces generate net torque</label><br>
+  <label><input type="radio" name="q20" value="B" data-correct="true"> (B) Internal forces cancel in total angular momentum</label><br>
+  <label><input type="radio" name="q20" value="C"> (C) Internal forces act radially only</label><br>
+  <label><input type="radio" name="q20" value="D"> (D) Internal forces depend on moment of inertia</label>
+</div>
+<h2>7.2 Conservation of Angular Momentum</h2>
+
+<h3>7.2.1 Torque</h3>
+<p>
+Suppose an extended rigid body is mounted on a fixed axis and is free to rotate. When a force <b><i>F</i></b> acts at a point with position vector <b><i>r</i></b> (from the axis), the torque <b><i>N</i></b> is defined as:
+</p>
+
+<p style="text-align: center;">
+  \( \mathbf{N} = \mathbf{r} \times \mathbf{F} \)
+</p>
+
+<p>
+Torque depends on the force, the position of application, and the choice of axis. However, when the <i>net torque</i> is zero, the torque is independent of the choice of origin.
+</p>
+
+<h3>Worked Example:</h3>
+<p>
+For a body acted on by multiple forces, if the net torque about point \( O \) is zero, then the torque about any other point \( O' \) is also zero, provided the net force is zero. This supports rotational equilibrium.
+</p>
+
+<h3>7.2.2 Torque and Angular Momentum</h3>
+<p>
+For a particle with angular momentum \( \mathbf{L} = \mathbf{r} \times \mathbf{p} \), we differentiate with respect to time:
+</p>
+
+<p style="text-align: center;">
+  \( \frac{d\mathbf{L}}{dt} = \frac{d}{dt}(\mathbf{r} \times \mathbf{p}) = \mathbf{v} \times \mathbf{p} + \mathbf{r} \times \frac{d\mathbf{p}}{dt} \)
+</p>
+
+<p>
+The first term vanishes because \( \mathbf{v} \times \mathbf{p} = m \mathbf{v} \times \mathbf{v} = 0 \). Hence:
+</p>
+
+<p style="text-align: center;">
+  \( \frac{d\mathbf{L}}{dt} = \mathbf{r} \times \mathbf{F} = \mathbf{N} \)
+</p>
+
+<p>
+So the rate of change of angular momentum is equal to the torque. If \( \mathbf{N} = 0 \), then \( \frac{d\mathbf{L}}{dt} = 0 \), and angular momentum is conserved.
+</p>
+
+<h3>7.2.3 System of Particles</h3>
+<p>
+For a system of \( N \) particles, each with angular momentum \( \mathbf{L}_i = \mathbf{r}_i \times \mathbf{p}_i \), the total angular momentum is:
+</p>
+
+<p style="text-align: center;">
+  \( \mathbf{L} = \sum_{i=1}^N \mathbf{r}_i \times \mathbf{p}_i \)
+</p>
+
+<p>
+From Newton’s third law, internal forces between particles are equal and opposite and directed along the line connecting the particles. Therefore, internal torques cancel out in pairs:
+</p>
+
+<p style="text-align: center;">
+  \( \sum_{i=1}^N \sum_{j \neq i} \mathbf{r}_i \times \mathbf{F}_{ij} = 0 \)
+</p>
+
+<p>
+Hence, the rate of change of total angular momentum equals the net external torque:
+</p>
+
+<p style="text-align: center;">
+  \( \frac{d\mathbf{L}}{dt} = \sum_{i=1}^N \mathbf{r}_i \times \mathbf{F}_i^{\text{(ext)}} = \mathbf{N}_{\text{ext}} \)
+</p>
+<div class="notes">
+  <h3>Derivation: \( \displaystyle \frac{d\mathbf{L}}{dt} = \sum_i \mathbf{r}_i \times \mathbf{F}_i^{\text{(ext)}} \)</h3>
+
+  <p><b>Step 1: Define total angular momentum</b></p>
+  <p>
+    For a system of \( N \) particles:
+    \[
+    \mathbf{L} = \sum_{i=1}^N \mathbf{r}_i \times \mathbf{p}_i = \sum_{i=1}^N \mathbf{r}_i \times m_i \mathbf{v}_i
+    \]
+  </p>
+
+  <p><b>Step 2: Differentiate with respect to time</b></p>
+  <p>
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_{i=1}^N \left( \frac{d\mathbf{r}_i}{dt} \times m_i \mathbf{v}_i + \mathbf{r}_i \times m_i \frac{d\mathbf{v}_i}{dt} \right)
+    \]
+    Since \( \frac{d\mathbf{r}_i}{dt} = \mathbf{v}_i \), and \( \mathbf{v}_i \times \mathbf{v}_i = 0 \), we get:
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_{i=1}^N \mathbf{r}_i \times m_i \mathbf{a}_i
+    \]
+  </p>
+
+  <p><b>Step 3: Apply Newton's Second Law</b></p>
+  <p>
+    \[
+    m_i \mathbf{a}_i = \mathbf{F}_i = \mathbf{F}_i^{\text{(ext)}} + \sum_{j \ne i} \mathbf{F}_{ij}
+    \]
+    Therefore,
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_{i=1}^N \mathbf{r}_i \times \left( \mathbf{F}_i^{\text{(ext)}} + \sum_{j \ne i} \mathbf{F}_{ij} \right)
+    \]
+  </p>
+
+  <p><b>Step 4: Split the summation</b></p>
+  <p>
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_{i=1}^N \mathbf{r}_i \times \mathbf{F}_i^{\text{(ext)}} + \sum_{i=1}^N \sum_{j \ne i} \mathbf{r}_i \times \mathbf{F}_{ij}
+    \]
+  </p>
+
+  <p><b>Step 5: Internal torques cancel (Contact me if you have any doubt)</b></p>
+  <p>
+    By Newton’s third law, \( \mathbf{F}_{ij} = -\mathbf{F}_{ji} \), and since the internal forces are collinear (along \( \mathbf{r}_j - \mathbf{r}_i \)), we have:
+    \[
+    (\mathbf{r}_i - \mathbf{r}_j) \times \mathbf{F}_{ij} = 0
+    \]
+    So all internal torques cancel pairwise:
+    \[
+    \sum_{i=1}^N \sum_{j \ne i} \mathbf{r}_i \times \mathbf{F}_{ij} = 0
+    \]
+  </p>
+
+  <p><b>Final result:</b></p>
+  <p>
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_{i=1}^N \mathbf{r}_i \times \mathbf{F}_i^{\text{(ext)}} = \mathbf{N}_{\text{ext}}
+    \]
+    This proves that the time derivative of the total angular momentum equals the total external torque acting on the system.
+  </p>
+</div>
+
+<h3>Law of Conservation of Angular Momentum</h3>
+<p>
+<b>If</b> \( \mathbf{N}_{\text{ext}} = 0 \), <b>then</b> \( \frac{d\mathbf{L}}{dt} = 0 \), implying:
+</p>
+
+<p style="text-align: center;">
+  \( \mathbf{L}_{\text{initial}} = \mathbf{L}_{\text{final}} \)
+</p>
+
+<p>
+This is the <b>conservation of angular momentum</b>: when no external torque acts, the total angular momentum of a system remains constant.
+</p>
+
+<h3>Examples:</h3>
+<ul>
+  <li>
+    A comet in orbit experiences a central force (along line joining comet and star), so torque is zero &rarr; angular momentum is conserved.
+  </li>
+  <li>
+    A child jumping onto a merry-go-round: total angular momentum before and after must be equal.
+  </li>
+  <li>
+    Earth-Moon system: Moon causes torque on Earth, slowing Earth’s spin while Moon’s orbital angular momentum increases — conserving the total angular momentum.
+  </li>
+</ul>
+<!-- ===================== QUESTION 21 ===================== -->
+<div class="question">
+  <h3>21. What is the relation between torque and angular momentum for a single particle?</h3>
+  <label><input type="radio" name="q21" value="A" data-correct="true"> (A) \( \frac{d\mathbf{L}}{dt} = \mathbf{r} \times \mathbf{F} \)</label><br>
+  <label><input type="radio" name="q21" value="B"> (B) \( \frac{d\mathbf{L}}{dt} = m \mathbf{a} \)</label><br>
+  <label><input type="radio" name="q21" value="C"> (C) \( \frac{d\mathbf{L}}{dt} = \mathbf{F} \times \mathbf{v} \)</label><br>
+  <label><input type="radio" name="q21" value="D"> (D) \( \frac{d\mathbf{L}}{dt} = \mathbf{L} \times \mathbf{r} \)</label>
+</div>
+
+<!-- ===================== QUESTION 22 ===================== -->
+<div class="question">
+  <h3>22. When is the angular momentum of a particle conserved?</h3>
+  <label><input type="radio" name="q22" value="A" data-correct="true"> (A) When the net torque is zero</label><br>
+  <label><input type="radio" name="q22" value="B"> (B) When the force is constant</label><br>
+  <label><input type="radio" name="q22" value="C"> (C) When the particle moves in a straight line</label><br>
+  <label><input type="radio" name="q22" value="D"> (D) When velocity is perpendicular to radius</label>
+</div>
+
+<!-- ===================== QUESTION 23 ===================== -->
+<div class="question">
+  <h3>23. Which force causes no torque about the origin?</h3>
+  <label><input type="radio" name="q23" value="A"> (A) Gravitational force</label><br>
+  <label><input type="radio" name="q23" value="B" data-correct="true"> (B) Central force directed along radius</label><br>
+  <label><input type="radio" name="q23" value="C"> (C) Frictional force</label><br>
+  <label><input type="radio" name="q23" value="D"> (D) Normal force</label>
+</div>
+
+<!-- ===================== QUESTION 24 ===================== -->
+<div class="question">
+  <h3>24. What happens to angular momentum in the absence of external torques?</h3>
+  <label><input type="radio" name="q24" value="A"> (A) It increases</label><br>
+  <label><input type="radio" name="q24" value="B"> (B) It decreases</label><br>
+  <label><input type="radio" name="q24" value="C" data-correct="true"> (C) It remains constant</label><br>
+  <label><input type="radio" name="q24" value="D"> (D) It oscillates</label>
+</div>
+
+<!-- ===================== QUESTION 25 ===================== -->
+<div class="question">
+  <h3>25. For a system of particles, the change in angular momentum is due to:</h3>
+  <label><input type="radio" name="q25" value="A"> (A) Internal forces</label><br>
+  <label><input type="radio" name="q25" value="B" data-correct="true"> (B) Net external torque</label><br>
+  <label><input type="radio" name="q25" value="C"> (C) Kinetic energy change</label><br>
+  <label><input type="radio" name="q25" value="D"> (D) Mass distribution</label>
+</div>
+
+<!-- ===================== QUESTION 26 ===================== -->
+<div class="question">
+  <h3>26. Which of the following expressions is correct for a system of particles?</h3>
+  <label><input type="radio" name="q26" value="A" data-correct="true"> (A) \( \frac{d\mathbf{L}}{dt} = \sum \mathbf{r}_i \times \mathbf{F}_i^{\text{(ext)}} \)</label><br>
+  <label><input type="radio" name="q26" value="B"> (B) \( \frac{d\mathbf{L}}{dt} = \sum \mathbf{F}_{ij} \)</label><br>
+  <label><input type="radio" name="q26" value="C"> (C) \( \frac{d\mathbf{L}}{dt} = \mathbf{F}_{\text{int}} \times \mathbf{r}_{\text{cm}} \)</label><br>
+  <label><input type="radio" name="q26" value="D"> (D) \( \frac{d\mathbf{L}}{dt} = 0 \) always</label>
+</div>
+
+<!-- ===================== QUESTION 27 ===================== -->
+<div class="question">
+  <h3>27. Which of the following does <em>not</em> affect torque?</h3>
+  <label><input type="radio" name="q27" value="A"> (A) Force magnitude</label><br>
+  <label><input type="radio" name="q27" value="B"> (B) Point of application</label><br>
+  <label><input type="radio" name="q27" value="C"> (C) Distance from axis</label><br>
+  <label><input type="radio" name="q27" value="D" data-correct="true"> (D) Mass of the body</label>
+</div>
+
+<!-- ===================== QUESTION 28 ===================== -->
+<div class="question">
+  <h3>28. Which physical principle justifies conservation of angular momentum?</h3>
+  <label><input type="radio" name="q28" value="A"> (A) First law of thermodynamics</label><br>
+  <label><input type="radio" name="q28" value="B"> (B) Newton’s first law</label><br>
+  <label><input type="radio" name="q28" value="C" data-correct="true"> (C) Newton’s third law and torque symmetry</label><br>
+  <label><input type="radio" name="q28" value="D"> (D) Gauss's law</label>
+</div>
+
+<!-- ===================== QUESTION 29 ===================== -->
+<div class="question">
+  <h3>29. A skater pulls in their arms while spinning. What happens to their angular speed?</h3>
+  <label><input type="radio" name="q29" value="A" data-correct="true"> (A) Increases</label><br>
+  <label><input type="radio" name="q29" value="B"> (B) Decreases</label><br>
+  <label><input type="radio" name="q29" value="C"> (C) Remains the same</label><br>
+  <label><input type="radio" name="q29" value="D"> (D) Depends on mass</label>
+</div>
+
+<!-- ===================== QUESTION 30 ===================== -->
+<div class="question">
+  <h3>30. Which of the following is conserved when torque is zero?</h3>
+  <label><input type="radio" name="q30" value="A"> (A) Linear momentum</label><br>
+  <label><input type="radio" name="q30" value="B" data-correct="true"> (B) Angular momentum</label><br>
+  <label><input type="radio" name="q30" value="C"> (C) Energy</label><br>
+  <label><input type="radio" name="q30" value="D"> (D) Inertia</label>
+</div>
+
+<!-- ===================== QUESTION 31 ===================== -->
+<div class="question">
+  <h3>31. The torque due to internal forces in a system:</h3>
+  <label><input type="radio" name="q31" value="A"> (A) Adds to external torque</label><br>
+  <label><input type="radio" name="q31" value="B" data-correct="true"> (B) Cancels pairwise</label><br>
+  <label><input type="radio" name="q31" value="C"> (C) Is always non-zero</label><br>
+  <label><input type="radio" name="q31" value="D"> (D) Rotates the system</label>
+</div>
+<!-- ===================== QUESTION 32 ===================== -->
+<div class="question">
+  <h3>32. The net external torque on a body is zero. What can you say about its angular momentum?</h3>
+  <label><input type="radio" name="q32" value="A"> (A) It becomes zero</label><br>
+  <label><input type="radio" name="q32" value="B" data-correct="true"> (B) It remains constant</label><br>
+  <label><input type="radio" name="q32" value="C"> (C) It increases linearly</label><br>
+  <label><input type="radio" name="q32" value="D"> (D) It oscillates</label>
+</div>
+
+<!-- ===================== QUESTION 33 ===================== -->
+<div class="question">
+  <h3>33. In which of the following cases is angular momentum conserved?</h3>
+  <label><input type="radio" name="q33" value="A"> (A) Spinning wheel under friction</label><br>
+  <label><input type="radio" name="q33" value="B" data-correct="true"> (B) Planet orbiting a star under central gravitational force</label><br>
+  <label><input type="radio" name="q33" value="C"> (C) Satellite with jet propulsion</label><br>
+  <label><input type="radio" name="q33" value="D"> (D) Wheel on inclined surface</label>
+</div>
+
+<!-- ===================== QUESTION 34 ===================== -->
+<div class="question">
+  <h3>34. What is the angular momentum of a particle moving directly toward the origin?</h3>
+  <label><input type="radio" name="q34" value="A"> (A) Maximum</label><br>
+  <label><input type="radio" name="q34" value="B" data-correct="true"> (B) Zero</label><br>
+  <label><input type="radio" name="q34" value="C"> (C) Depends on speed</label><br>
+  <label><input type="radio" name="q34" value="D"> (D) Proportional to force</label>
+</div>
+
+<!-- ===================== QUESTION 35 ===================== -->
+<div class="question">
+  <h3>35. What determines whether internal forces contribute to angular momentum change?</h3>
+  <label><input type="radio" name="q35" value="A"> (A) Magnitude of velocity</label><br>
+  <label><input type="radio" name="q35" value="B"> (B) Orientation of velocity vectors</label><br>
+  <label><input type="radio" name="q35" value="C" data-correct="true"> (C) Whether internal torques cancel</label><br>
+  <label><input type="radio" name="q35" value="D"> (D) Type of body</label>
+</div>
+
+<!-- ===================== QUESTION 36 ===================== -->
+<div class="question">
+  <h3>36. Which expression reflects Newton's third law in angular momentum analysis?</h3>
+  <label><input type="radio" name="q36" value="A"> (A) \( \mathbf{F}_{ij} = m \mathbf{a} \)</label><br>
+  <label><input type="radio" name="q36" value="B"> (B) \( \mathbf{F}_{ij} = \nabla \phi \)</label><br>
+  <label><input type="radio" name="q36" value="C" data-correct="true"> (C) \( \mathbf{F}_{ij} = -\mathbf{F}_{ji} \)</label><br>
+  <label><input type="radio" name="q36" value="D"> (D) \( \mathbf{r}_i \times \mathbf{F}_{ij} = \mathbf{L} \)</label>
+</div>
+
+<!-- ===================== QUESTION 37 ===================== -->
+<div class="question">
+  <h3>37. When can you safely ignore internal torques in a system of particles?</h3>
+  <label><input type="radio" name="q37" value="A"> (A) When there are only two particles</label><br>
+  <label><input type="radio" name="q37" value="B"> (B) When net torque is nonzero</label><br>
+  <label><input type="radio" name="q37" value="C" data-correct="true"> (C) When internal forces are equal, opposite, and collinear</label><br>
+  <label><input type="radio" name="q37" value="D"> (D) When particles move in circles</label>
+</div>
+
+<!-- ===================== QUESTION 38 ===================== -->
+<div class="question">
+  <h3>38. For a system of particles, which of the following is always true?</h3>
+  <label><input type="radio" name="q38" value="A"> (A) Total linear momentum is zero</label><br>
+  <label><input type="radio" name="q38" value="B"> (B) Internal forces affect net torque</label><br>
+  <label><input type="radio" name="q38" value="C"> (C) Center of mass is fixed</label><br>
+  <label><input type="radio" name="q38" value="D" data-correct="true"> (D) Net external torque determines \( \frac{d\mathbf{L}}{dt} \)</label>
+</div>
+
+<!-- ===================== QUESTION 39 ===================== -->
+<div class="question">
+  <h3>39. A gymnast pulls in her limbs while rotating in air. What is conserved?</h3>
+  <label><input type="radio" name="q39" value="A" data-correct="true"> (A) Angular momentum</label><br>
+  <label><input type="radio" name="q39" value="B"> (B) Angular velocity</label><br>
+  <label><input type="radio" name="q39" value="C"> (C) Kinetic energy</label><br>
+  <label><input type="radio" name="q39" value="D"> (D) Torque</label>
+</div>
+
+<!-- ===================== QUESTION 40 ===================== -->
+<div class="question">
+  <h3>40. If \( \frac{d\mathbf{L}}{dt} = \mathbf{N}_{\text{ext}} \), then in the absence of external torque:</h3>
+  <label><input type="radio" name="q40" value="A"> (A) \( \mathbf{L} \) is zero</label><br>
+  <label><input type="radio" name="q40" value="B" data-correct="true"> (B) \( \mathbf{L} \) is constant</label><br>
+  <label><input type="radio" name="q40" value="C"> (C) \( \mathbf{L} \) increases linearly</label><br>
+  <label><input type="radio" name="q40" value="D"> (D) \( \mathbf{L} \) points radially</label>
+</div>
+<div class="notes">
+  <h2>7.3 Angular Momentum of a System of Particles</h2>
+
+  <p><b>Total Angular Momentum:</b></p>
+  <p>
+    For a system of \( N \) particles, the angular momentum is:
+    \[
+    \mathbf{L} = \sum_{i=1}^N \mathbf{r}_i \times m_i \mathbf{v}_i
+    \]
+  </p>
+
+  <p><b>Internal Forces and Torques:</b></p>
+  <p>
+    Internal forces occur in equal and opposite pairs due to Newton's third law:
+    \[
+    \mathbf{F}_{ij} = -\mathbf{F}_{ji}
+    \]
+    Hence,
+    \[
+    \mathbf{r}_i \times \mathbf{F}_{ij} + \mathbf{r}_j \times \mathbf{F}_{ji}
+    = (\mathbf{r}_i - \mathbf{r}_j) \times \mathbf{F}_{ij}
+    \]
+    If \( \mathbf{F}_{ij} \) acts along the line joining \( i \) and \( j \), the torque cancels:
+    \[
+    (\mathbf{r}_i - \mathbf{r}_j) \times \mathbf{F}_{ij} = 0
+    \]
+    Therefore, internal torques sum to zero.
+  </p>
+
+  <p><b>Time Derivative of Angular Momentum:</b></p>
+  <p>
+    Using Newton's second law:
+    \[
+    m_i \ddot{\mathbf{r}}_i = \mathbf{F}_i^{\text{ext}} + \sum_{j \ne i} \mathbf{F}_{ij}
+    \]
+    Taking cross product with \( \mathbf{r}_i \), summing over all particles:
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_i \mathbf{r}_i \times \mathbf{F}_i^{\text{ext}} + \sum_i \sum_{j \ne i} \mathbf{r}_i \times \mathbf{F}_{ij}
+    \]
+    The second term vanishes, so:
+    \[
+    \frac{d\mathbf{L}}{dt} = \sum_i \mathbf{r}_i \times \mathbf{F}_i^{\text{ext}} = \boldsymbol{\tau}_{\text{ext}}
+    \]
+  </p>
+
+  <p><b>Conservation of Angular Momentum:</b></p>
+  <p>
+    If \( \boldsymbol{\tau}_{\text{ext}} = 0 \), then
+    \[
+    \frac{d\mathbf{L}}{dt} = 0 \quad \Rightarrow \quad \mathbf{L} = \text{constant}
+    \]
+  </p>
+
+  <h3>7.3.1 Angular Momentum Relative to Center of Mass</h3>
+
+  <p>
+    Let \( \mathbf{r}_i = \mathbf{r}_c + \mathbf{r}_i' \), where:
+    <ul>
+      <li>\( \mathbf{r}_c \): position of center of mass</li>
+      <li>\( \mathbf{r}_i' \): position of particle relative to CM</li>
+    </ul>
+  </p>
+
+  <p>
+    Then total angular momentum becomes:
+    \[
+    \mathbf{L} = \sum_i m_i (\mathbf{r}_c + \mathbf{r}_i') \times (\mathbf{v}_c + \mathbf{v}_i')
+    \]
+    Expanding and using \( \sum m_i \mathbf{r}_i' = 0 \):
+    \[
+    \mathbf{L} = M \mathbf{r}_c \times \mathbf{v}_c + \sum_i m_i \mathbf{r}_i' \times \mathbf{v}_i'
+    \]
+    Therefore,
+    \[
+    \mathbf{L} = \mathbf{L}_{\text{CM}} + \mathbf{L}'
+    \]
+    where:
+    <ul>
+      <li>\( \mathbf{L}_{\text{CM}} = M \mathbf{r}_c \times \mathbf{v}_c \) — angular momentum of CM</li>
+      <li>\( \mathbf{L}' = \sum m_i \mathbf{r}_i' \times \mathbf{v}_i' \) — angular momentum relative to CM</li>
+    </ul>
+  </p>
+</div>
+<!-- ===================== QUESTION 41 ===================== -->
+<div class="question">
+  <h3>41. The total angular momentum of a system of particles is defined as:</h3>
+  <label><input type="radio" name="q41" value="A" data-correct="true"> (A) \( \mathbf{L} = \sum_i \mathbf{r}_i \times m_i \mathbf{v}_i \)</label><br>
+  <label><input type="radio" name="q41" value="B"> (B) \( \mathbf{L} = \sum_i m_i \mathbf{r}_i \cdot \mathbf{v}_i \)</label><br>
+  <label><input type="radio" name="q41" value="C"> (C) \( \mathbf{L} = \int \mathbf{v} \times \mathbf{F} \, dt \)</label><br>
+  <label><input type="radio" name="q41" value="D"> (D) \( \mathbf{L} = m\mathbf{r} \times \mathbf{a} \)</label>
+</div>
+
+<!-- ===================== QUESTION 42 ===================== -->
+<div class="question">
+  <h3>42. What causes the change in angular momentum of a system of particles?</h3>
+  <label><input type="radio" name="q42" value="A"> (A) Internal forces</label><br>
+  <label><input type="radio" name="q42" value="B" data-correct="true"> (B) Net external torque</label><br>
+  <label><input type="radio" name="q42" value="C"> (C) Kinetic energy of the system</label><br>
+  <label><input type="radio" name="q42" value="D"> (D) Internal torques</label>
+</div>
+
+<!-- ===================== QUESTION 43 ===================== -->
+<div class="question">
+  <h3>43. If the net external torque on a system is zero, then:</h3>
+  <label><input type="radio" name="q43" value="A" data-correct="true"> (A) Total angular momentum is conserved</label><br>
+  <label><input type="radio" name="q43" value="B"> (B) Total momentum is zero</label><br>
+  <label><input type="radio" name="q43" value="C"> (C) All particles stop rotating</label><br>
+  <label><input type="radio" name="q43" value="D"> (D) Moment of inertia is conserved</label>
+</div>
+
+<!-- ===================== QUESTION 44 ===================== -->
+<div class="question">
+  <h3>44. The internal torques in a system cancel if:</h3>
+  <label><input type="radio" name="q44" value="A"> (A) The system is static</label><br>
+  <label><input type="radio" name="q44" value="B" data-correct="true"> (B) Internal forces are equal, opposite, and collinear</label><br>
+  <label><input type="radio" name="q44" value="C"> (C) All particles have same mass</label><br>
+  <label><input type="radio" name="q44" value="D"> (D) Net force is zero</label>
+</div>
+
+<!-- ===================== QUESTION 45 ===================== -->
+<div class="question">
+  <h3>45. The equation for the time derivative of angular momentum is:</h3>
+  <label><input type="radio" name="q45" value="A"> (A) \( \frac{d\mathbf{L}}{dt} = \sum \mathbf{F}_i \)</label><br>
+  <label><input type="radio" name="q45" value="B" data-correct="true"> (B) \( \frac{d\mathbf{L}}{dt} = \sum \mathbf{r}_i \times \mathbf{F}_i^{\text{ext}} \)</label><br>
+  <label><input type="radio" name="q45" value="C"> (C) \( \frac{d\mathbf{L}}{dt} = \sum m_i \ddot{\mathbf{r}}_i \)</label><br>
+  <label><input type="radio" name="q45" value="D"> (D) \( \frac{d\mathbf{L}}{dt} = \mathbf{F}_{\text{int}} \)</label>
+</div>
+
+<!-- ===================== QUESTION 46 ===================== -->
+<div class="question">
+  <h3>46. Which of the following statements is true for angular momentum about the CM?</h3>
+  <label><input type="radio" name="q46" value="A"> (A) It equals the total angular momentum</label><br>
+  <label><input type="radio" name="q46" value="B"> (B) It includes torque due to internal forces</label><br>
+  <label><input type="radio" name="q46" value="C" data-correct="true"> (C) It is the angular momentum in the CM frame</label><br>
+  <label><input type="radio" name="q46" value="D"> (D) It is always zero</label>
+</div>
+
+<!-- ===================== QUESTION 47 ===================== -->
+<div class="question">
+  <h3>47. The total angular momentum of a system can be split as:</h3>
+  <label><input type="radio" name="q47" value="A"> (A) \( \mathbf{L} = \mathbf{L}_{\text{spin}} + \mathbf{L}_{\text{torque}} \)</label><br>
+  <label><input type="radio" name="q47" value="B" data-correct="true"> (B) \( \mathbf{L} = M \mathbf{r}_c \times \mathbf{v}_c + \sum m_i \mathbf{r}_i' \times \mathbf{v}_i' \)</label><br>
+  <label><input type="radio" name="q47" value="C"> (C) \( \mathbf{L} = I \omega \)</label><br>
+  <label><input type="radio" name="q47" value="D"> (D) \( \mathbf{L} = \mathbf{p} \times \mathbf{r} \)</label>
+</div>
+
+<!-- ===================== QUESTION 48 ===================== -->
+<div class="question">
+  <h3>48. What does \( \mathbf{L}' = \sum m_i \mathbf{r}_i' \times \mathbf{v}_i' \) represent?</h3>
+  <label><input type="radio" name="q48" value="A" data-correct="true"> (A) Angular momentum about center of mass</label><br>
+  <label><input type="radio" name="q48" value="B"> (B) Torque due to internal forces</label><br>
+  <label><input type="radio" name="q48" value="C"> (C) Linear momentum of subsystem</label><br>
+  <label><input type="radio" name="q48" value="D"> (D) Moment of inertia</label>
+</div>
+
+<!-- ===================== QUESTION 49 ===================== -->
+<div class="question">
+  <h3>49. If the center of mass moves in a straight line, the angular momentum about the CM:</h3>
+  <label><input type="radio" name="q49" value="A"> (A) Increases</label><br>
+  <label><input type="radio" name="q49" value="B"> (B) Decreases</label><br>
+  <label><input type="radio" name="q49" value="C" data-correct="true"> (C) May still change depending on internal motion</label><br>
+  <label><input type="radio" name="q49" value="D"> (D) Remains zero</label>
+</div>
+
+<!-- ===================== QUESTION 50 ===================== -->
+<div class="question">
+  <h3>50. The term \( M \mathbf{r}_c \times \mathbf{v}_c \) in the total angular momentum represents:</h3>
+  <label><input type="radio" name="q50" value="A"> (A) Torque of the system</label><br>
+  <label><input type="radio" name="q50" value="B"> (B) Rotational kinetic energy</label><br>
+  <label><input type="radio" name="q50" value="C" data-correct="true"> (C) Angular momentum of the center of mass motion</label><br>
+  <label><input type="radio" name="q50" value="D"> (D) Zero in all cases</label>
+</div>
+<!-- ===================== QUESTION 51 ===================== -->
+<div class="question">
+  <h3>51. In the expression \( \mathbf{r}_i = \mathbf{r}_c + \mathbf{r}_i' \), what does \( \mathbf{r}_i' \) represent?</h3>
+  <label><input type="radio" name="q51" value="A" data-correct="true"> (A) Position vector of particle \( i \) relative to the center of mass</label><br>
+  <label><input type="radio" name="q51" value="B"> (B) Velocity of particle \( i \)</label><br>
+  <label><input type="radio" name="q51" value="C"> (C) External force on particle \( i \)</label><br>
+  <label><input type="radio" name="q51" value="D"> (D) Torque about the origin</label>
+</div>
+
+<!-- ===================== QUESTION 52 ===================== -->
+<div class="question">
+  <h3>52. What is the physical significance of \( \mathbf{L}' \) in the decomposition \( \mathbf{L} = \mathbf{L}_{\text{CM}} + \mathbf{L}' \)?</h3>
+  <label><input type="radio" name="q52" value="A"> (A) Rotational inertia about the lab frame</label><br>
+  <label><input type="radio" name="q52" value="B"> (B) Torque about the center of mass</label><br>
+  <label><input type="radio" name="q52" value="C" data-correct="true"> (C) Angular momentum relative to the CM frame</label><br>
+  <label><input type="radio" name="q52" value="D"> (D) Moment arm of internal forces</label>
+</div>
+
+<!-- ===================== QUESTION 53 ===================== -->
+<div class="question">
+  <h3>53. Which of the following is <em>not</em> generally conserved for a system of particles?</h3>
+  <label><input type="radio" name="q53" value="A"> (A) Total energy</label><br>
+  <label><input type="radio" name="q53" value="B"> (B) Total linear momentum</label><br>
+  <label><input type="radio" name="q53" value="C" data-correct="true"> (C) Angular momentum about an arbitrary point under external torque</label><br>
+  <label><input type="radio" name="q53" value="D"> (D) Momentum of center of mass</label>
+</div>
+
+<!-- ===================== QUESTION 54 ===================== -->
+<div class="question">
+  <h3>54. If the angular momentum of a system changes, it must be due to:</h3>
+  <label><input type="radio" name="q54" value="A"> (A) Change in mass</label><br>
+  <label><input type="radio" name="q54" value="B" data-correct="true"> (B) External torque</label><br>
+  <label><input type="radio" name="q54" value="C"> (C) Internal torque</label><br>
+  <label><input type="radio" name="q54" value="D"> (D) Moment of inertia change</label>
+</div>
+
+<!-- ===================== QUESTION 55 ===================== -->
+<div class="question">
+  <h3>55. Which vector always lies in the plane defined by \( \mathbf{r}_i \) and \( \mathbf{v}_i \)?</h3>
+  <label><input type="radio" name="q55" value="A"> (A) \( \mathbf{L}_i \)</label><br>
+  <label><input type="radio" name="q55" value="B"> (B) \( \mathbf{a}_i \)</label><br>
+  <label><input type="radio" name="q55" value="C"> (C) \( \mathbf{F}_i \)</label><br>
+  <label><input type="radio" name="q55" value="D" data-correct="true"> (D) \( \mathbf{v}_i \)</label>
+</div>
+
+<!-- ===================== QUESTION 56 ===================== -->
+<div class="question">
+  <h3>56. Angular momentum is a conserved quantity when:</h3>
+  <label><input type="radio" name="q56" value="A" data-correct="true"> (A) No external torque acts on the system</label><br>
+  <label><input type="radio" name="q56" value="B"> (B) All internal forces vanish</label><br>
+  <label><input type="radio" name="q56" value="C"> (C) The system is at rest</label><br>
+  <label><input type="radio" name="q56" value="D"> (D) Center of mass is fixed</label>
+</div>
+
+<!-- ===================== QUESTION 57 ===================== -->
+<div class="question">
+  <h3>57. What determines the angular momentum contribution from each particle?</h3>
+  <label><input type="radio" name="q57" value="A" data-correct="true"> (A) Cross product of position and momentum vectors</label><br>
+  <label><input type="radio" name="q57" value="B"> (B) Dot product of velocity and acceleration</label><br>
+  <label><input type="radio" name="q57" value="C"> (C) Distance from origin only</label><br>
+  <label><input type="radio" name="q57" value="D"> (D) Only the mass of the particle</label>
+</div>
+
+<!-- ===================== QUESTION 58 ===================== -->
+<div class="question">
+  <h3>58. The term \( \sum m_i \mathbf{r}_i' \times \mathbf{v}_i' \) vanishes when:</h3>
+  <label><input type="radio" name="q58" value="A"> (A) Particles are at rest in CM frame</label><br>
+  <label><input type="radio" name="q58" value="B"> (B) All motion is radial</label><br>
+  <label><input type="radio" name="q58" value="C" data-correct="true"> (C) There is no rotation about CM</label><br>
+  <label><input type="radio" name="q58" value="D"> (D) CM moves in a circle</label>
+</div>
+
+<!-- ===================== QUESTION 59 ===================== -->
+<div class="question">
+  <h3>59. Which choice gives total angular momentum about the origin?</h3>
+  <label><input type="radio" name="q59" value="A"> (A) \( M \mathbf{r}_c \cdot \mathbf{v}_c \)</label><br>
+  <label><input type="radio" name="q59" value="B" data-correct="true"> (B) \( M \mathbf{r}_c \times \mathbf{v}_c + \sum m_i \mathbf{r}_i' \times \mathbf{v}_i' \)</label><br>
+  <label><input type="radio" name="q59" value="C"> (C) \( \sum m_i \mathbf{v}_i \times \mathbf{a}_i \)</label><br>
+  <label><input type="radio" name="q59" value="D"> (D) \( \sum m_i \mathbf{r}_i \cdot \mathbf{v}_i \)</label>
+</div>
+
+<!-- ===================== QUESTION 60 ===================== -->
+<div class="question">
+  <h3>60. Which statement is true about internal forces in angular momentum calculations?</h3>
+  <label><input type="radio" name="q60" value="A"> (A) They cause net torque in the system</label><br>
+  <label><input type="radio" name="q60" value="B"> (B) They always cancel the external torque</label><br>
+  <label><input type="radio" name="q60" value="C" data-correct="true"> (C) They cancel pairwise under Newton’s third law</label><br>
+  <label><input type="radio" name="q60" value="D"> (D) They add angular momentum uniformly</label>
+</div>
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 60;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
