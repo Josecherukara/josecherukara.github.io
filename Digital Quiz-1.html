@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Quiz-1</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+  
+<h2>Let's start with Kinematics</h2>
+<form id="quizForm">
+
+  <!-- ==================== QUESTION TEMPLATE ==================== -->
+<div class="question">
+  <h3>1. Which of the following is a basic logic gate?</h3>
+  <label><input type="radio" name="q1" value="A"> (A) NAND</label><br>
+  <label><input type="radio" name="q1" value="B" data-correct="true"> (B) AND</label><br>
+  <label><input type="radio" name="q1" value="C"> (C) XOR</label><br>
+  <label><input type="radio" name="q1" value="D"> (D) XNOR</label>
+</div>
+
+<div class="question">
+  <h3>2. What is the output of a NOT gate if the input is 1?</h3>
+  <label><input type="radio" name="q2" value="A"> (A) 1</label><br>
+  <label><input type="radio" name="q2" value="B" data-correct="true"> (B) 0</label><br>
+  <label><input type="radio" name="q2" value="C"> (C) Undefined</label><br>
+  <label><input type="radio" name="q2" value="D"> (D) Depends on voltage</label>
+</div>
+
+<div class="question">
+  <h3>3. The symbol below represents which gate? <br><img src="R2175566-03.webp" alt="AND gate symbol"></h3>
+  <label><input type="radio" name="q3" value="A" data-correct="true"> (A) AND</label><br>
+  <label><input type="radio" name="q3" value="B"> (B) OR</label><br>
+  <label><input type="radio" name="q3" value="C"> (C) NOT</label><br>
+  <label><input type="radio" name="q3" value="D"> (D) NAND</label>
+</div>
+
+<div class="question">
+  <h3>4. Which logic gate outputs 1 only if both inputs are 1?</h3>
+  <label><input type="radio" name="q4" value="A"> (A) OR</label><br>
+  <label><input type="radio" name="q4" value="B"> (B) NOT</label><br>
+  <label><input type="radio" name="q4" value="C" data-correct="true"> (C) AND</label><br>
+  <label><input type="radio" name="q4" value="D"> (D) XOR</label>
+</div>
+
+<div class="question">
+  <h3>5. What is the output of an OR gate for inputs A = 1 and B = 0?</h3>
+  <label><input type="radio" name="q5" value="A"> (A) 0</label><br>
+  <label><input type="radio" name="q5" value="B" data-correct="true"> (B) 1</label><br>
+  <label><input type="radio" name="q5" value="C"> (C) 2</label><br>
+  <label><input type="radio" name="q5" value="D"> (D) Undefined</label>
+</div>
+
+<div class="question">
+  <h3>6. Which logic gate is also called an inverter?</h3>
+  <label><input type="radio" name="q6" value="A"> (A) OR</label><br>
+  <label><input type="radio" name="q6" value="B" data-correct="true"> (B) NOT</label><br>
+  <label><input type="radio" name="q6" value="C"> (C) AND</label><br>
+  <label><input type="radio" name="q6" value="D"> (D) XOR</label>
+</div>
+
+<div class="question">
+  <h3>7. Which of the following is the correct truth table for an AND gate?</h3>
+  <label><input type="radio" name="q7" value="A"> (A) 0, 1, 1, 1</label><br>
+  <label><input type="radio" name="q7" value="B" data-correct="true"> (B) 0, 0, 0, 1</label><br>
+  <label><input type="radio" name="q7" value="C"> (C) 1, 1, 1, 0</label><br>
+  <label><input type="radio" name="q7" value="D"> (D) 0, 1, 0, 1</label>
+</div>
+
+<div class="question">
+  <h3>8. The Boolean expression for a 2-input OR gate is:</h3>
+  <label><input type="radio" name="q8" value="A"> (A) A ⋅ B</label><br>
+  <label><input type="radio" name="q8" value="B"> (B) Ā</label><br>
+  <label><input type="radio" name="q8" value="C" data-correct="true"> (C) A + B</label><br>
+  <label><input type="radio" name="q8" value="D"> (D) A ⊕ B</label>
+</div>
+
+<div class="question">
+  <h3>9. If the output of a NOT gate is 1, what was the input?</h3>
+  <label><input type="radio" name="q9" value="A" data-correct="true"> (A) 0</label><br>
+  <label><input type="radio" name="q9" value="B"> (B) 1</label><br>
+  <label><input type="radio" name="q9" value="C"> (C) Cannot be determined</label><br>
+  <label><input type="radio" name="q9" value="D"> (D) Depends on the gate used</label>
+</div>
+
+<div class="question">
+  <h3>10. Which of the following gates has only **one input**?</h3>
+  <label><input type="radio" name="q10" value="A"> (A) OR</label><br>
+  <label><input type="radio" name="q10" value="B"> (B) AND</label><br>
+  <label><input type="radio" name="q10" value="C" data-correct="true"> (C) NOT</label><br>
+  <label><input type="radio" name="q10" value="D"> (D) NAND</label>
+</div>
+<div class="question">
+  <h3>11. Which of the following is a universal gate?</h3>
+  <label><input type="radio" name="q11" value="A"> (A) XOR</label><br>
+  <label><input type="radio" name="q11" value="B"> (B) XNOR</label><br>
+  <label><input type="radio" name="q11" value="C" data-correct="true"> (C) NAND</label><br>
+  <label><input type="radio" name="q11" value="D"> (D) NOT</label>
+</div>
+
+<div class="question">
+  <h3>12. Which logic gate produces output 0 only when all inputs are 1?</h3>
+  <label><input type="radio" name="q12" value="A"> (A) AND</label><br>
+  <label><input type="radio" name="q12" value="B"> (B) OR</label><br>
+  <label><input type="radio" name="q12" value="C" data-correct="true"> (C) NAND</label><br>
+  <label><input type="radio" name="q12" value="D"> (D) XOR</label>
+</div>
+
+<div class="question">
+  <h3>13. Which gate gives output 1 only when inputs are different?</h3>
+  <label><input type="radio" name="q13" value="A"> (A) AND</label><br>
+  <label><input type="radio" name="q13" value="B" data-correct="true"> (B) XOR</label><br>
+  <label><input type="radio" name="q13" value="C"> (C) OR</label><br>
+  <label><input type="radio" name="q13" value="D"> (D) NOR</label>
+</div>
+
+<div class="question">
+  <h3>14. The Boolean expression for a NAND gate is:</h3>
+  <label><input type="radio" name="q14" value="A"> (A) A + B</label><br>
+  <label><input type="radio" name="q14" value="B" data-correct="true"> (B) &not;(A ⋅ B)</label><br>
+  <label><input type="radio" name="q14" value="C"> (C) &not;A + &not;B</label><br>
+  <label><input type="radio" name="q14" value="D"> (D) A ⊕ B</label>
+</div>
+
+<div class="question">
+  <h3>15. Which logic gate gives output 1 only when both inputs are 0?</h3>
+  <label><input type="radio" name="q15" value="A"> (A) XOR</label><br>
+  <label><input type="radio" name="q15" value="B"> (B) NAND</label><br>
+  <label><input type="radio" name="q15" value="C"> (C" data-correct="true"> (C) NOR</label><br>
+  <label><input type="radio" name="q15" value="D"> (D) OR</label>
+</div>
+
+<div class="question">
+  <h3>16. What is the output of an XOR gate with inputs A = 1, B = 1?</h3>
+  <label><input type="radio" name="q16" value="A"> (A) 1</label><br>
+  <label><input type="radio" name="q16" value="B" data-correct="true"> (B) 0</label><br>
+  <label><input type="radio" name="q16" value="C"> (C) A</label><br>
+  <label><input type="radio" name="q16" value="D"> (D) Undefined</label>
+</div>
+
+<div class="question">
+  <h3>17. Which gate has the Boolean expression: &not;(A + B)?</h3>
+  <label><input type="radio" name="q17" value="A"> (A) NAND</label><br>
+  <label><input type="radio" name="q17" value="B" data-correct="true"> (B) NOR</label><br>
+  <label><input type="radio" name="q17" value="C"> (C) XNOR</label><br>
+  <label><input type="radio" name="q17" value="D"> (D) XOR</label>
+</div>
+
+<div class="question">
+  <h3>18. Which logic gate gives output 1 only when both inputs are the same?</h3>
+  <label><input type="radio" name="q18" value="A"> (A) XOR</label><br>
+  <label><input type="radio" name="q18" value="B"> (B) NOR</label><br>
+  <label><input type="radio" name="q18" value="C" data-correct="true"> (C) XNOR</label><br>
+  <label><input type="radio" name="q18" value="D"> (D) OR</label>
+</div>
+
+<div class="question">
+  <h3>19. The symbol ⊕ stands for:</h3>
+  <label><input type="radio" name="q19" value="A" data-correct="true"> (A) XOR</label><br>
+  <label><input type="radio" name="q19" value="B"> (B) AND</label><br>
+  <label><input type="radio" name="q19" value="C"> (C) OR</label><br>
+  <label><input type="radio" name="q19" value="D"> (D) NAND</label>
+</div>
+
+<div class="question">
+  <h3>20. Which of the following statements is TRUE?</h3>
+  <label><input type="radio" name="q20" value="A"> (A) XOR = NOT(AND)</label><br>
+  <label><input type="radio" name="q20" value="B"> (B) XNOR gives 1 when inputs differ</label><br>
+  <label><input type="radio" name="q20" value="C" data-correct="true"> (C) NAND and NOR are sufficient to construct all other gates</label><br>
+  <label><input type="radio" name="q20" value="D"> (D) NOR gate always gives 1</label>
+</div>
+
+<h2>
+  In this section you will encounter things that are not familiar to you. But it's OK. Do it any way
+</h2>
+<div class="question">
+  <h3>21. The identity A + 0 = A is an example of:</h3>
+  <label><input type="radio" name="q21" value="A" data-correct="true"> (A) Identity Law</label><br>
+  <label><input type="radio" name="q21" value="B"> (B) Null Law</label><br>
+  <label><input type="radio" name="q21" value="C"> (C) Complement Law</label><br>
+  <label><input type="radio" name="q21" value="D"> (D) Inverse Law</label>
+</div>
+
+<div class="question">
+  <h3>22. What is the result of A + A?</h3>
+  <label><input type="radio" name="q22" value="A"> (A) 0</label><br>
+  <label><input type="radio" name="q22" value="B"> (B) 2A</label><br>
+  <label><input type="radio" name="q22" value="C" data-correct="true"> (C) A</label><br>
+  <label><input type="radio" name="q22" value="D"> (D) 1</label>
+</div>
+
+<div class="question">
+  <h3>23. Which of the following represents the complement law?</h3>
+  <label><input type="radio" name="q23" value="A"> (A) A + A = A</label><br>
+  <label><input type="radio" name="q23" value="B"> (B) A · A = A</label><br>
+  <label><input type="radio" name="q23" value="C" data-correct="true"> (C) A · A′ = 0</label><br>
+  <label><input type="radio" name="q23" value="D"> (D) A + 0 = A</label>
+</div>
+
+<div class="question">
+  <h3>24. Dual of the Boolean expression A + 1 = 1 is:</h3>
+  <label><input type="radio" name="q24" value="A"> (A) A + 0 = A</label><br>
+  <label><input type="radio" name="q24" value="B" data-correct="true"> (B) A · 0 = 0</label><br>
+  <label><input type="radio" name="q24" value="C"> (C) A · 1 = A</label><br>
+  <label><input type="radio" name="q24" value="D"> (D) A + A′ = 1</label>
+</div>
+
+<div class="question">
+  <h3>25. According to De Morgan’s first theorem:<br> \( (A \cdot B)' = \)</h3>
+  <label><input type="radio" name="q25" value="A"> (A) A′ · B′</label><br>
+  <label><input type="radio" name="q25" value="B" data-correct="true"> (B) A′ + B′</label><br>
+  <label><input type="radio" name="q25" value="C"> (C) A + B</label><br>
+  <label><input type="radio" name="q25" value="D"> (D) A · B′</label>
+</div>
+
+<div class="question">
+  <h3>26. The expression (A + B)' equals:</h3>
+  <label><input type="radio" name="q26" value="A" data-correct="true"> (A) A′ · B′</label><br>
+  <label><input type="radio" name="q26" value="B"> (B) A′ + B′</label><br>
+  <label><input type="radio" name="q26" value="C"> (C) A · B</label><br>
+  <label><input type="radio" name="q26" value="D"> (D) A + B′</label>
+</div>
+
+<div class="question">
+  <h3>27. Which operation is distributive over AND in Boolean algebra?</h3>
+  <label><input type="radio" name="q27" value="A"> (A) NOT</label><br>
+  <label><input type="radio" name="q27" value="B" data-correct="true"> (B) OR</label><br>
+  <label><input type="radio" name="q27" value="C"> (C) NAND</label><br>
+  <label><input type="radio" name="q27" value="D"> (D) XOR</label>
+</div>
+
+<div class="question">
+  <h3>28. Which of the following simplifies to A?</h3>
+  <label><input type="radio" name="q28" value="A" data-correct="true"> (A) A + A · B</label><br>
+  <label><input type="radio" name="q28" value="B"> (B) A · B + B</label><br>
+  <label><input type="radio" name="q28" value="C"> (C) A + B′</label><br>
+  <label><input type="radio" name="q28" value="D"> (D) A · A′ + B</label>
+</div>
+
+<div class="question">
+  <h3>29. The consensus theorem is:</h3>
+  <label><input type="radio" name="q29" value="A" data-correct="true"> (A) AB + A′C + BC = AB + A′C</label><br>
+  <label><input type="radio" name="q29" value="B"> (B) A + AB = A</label><br>
+  <label><input type="radio" name="q29" value="C"> (C) A + A′ = 1</label><br>
+  <label><input type="radio" name="q29" value="D"> (D) AB + A′B = A + B</label>
+</div>
+
+<div class="question">
+  <h3>30. Duality theorem states:</h3>
+  <label><input type="radio" name="q30" value="A" data-correct="true"> (A) Replace · with + and 0 with 1</label><br>
+  <label><input type="radio" name="q30" value="B"> (B) Replace · with ·</label><br>
+  <label><input type="radio" name="q30" value="C"> (C) Replace variables with complements</label><br>
+  <label><input type="radio" name="q30" value="D"> (D) Replace A with A′</label>
+</div>
+
+<div class="question">
+  <h3>31. What is the dual of A · 1 = A?</h3>
+  <label><input type="radio" name="q31" value="A"> (A) A + 1 = 1</label><br>
+  <label><input type="radio" name="q31" value="B" data-correct="true"> (B) A + 0 = A</label><br>
+  <label><input type="radio" name="q31" value="C"> (C) A · 0 = 0</label><br>
+  <label><input type="radio" name="q31" value="D"> (D) A + A = A</label>
+</div>
+
+<div class="question">
+  <h3>32. Which law is used to simplify A + AB = A?</h3>
+  <label><input type="radio" name="q32" value="A" data-correct="true"> (A) Absorption Law</label><br>
+  <label><input type="radio" name="q32" value="B"> (B) Distributive Law</label><br>
+  <label><input type="radio" name="q32" value="C"> (C) Idempotent Law</label><br>
+  <label><input type="radio" name="q32" value="D"> (D) Complement Law</label>
+</div>
+
+<div class="question">
+  <h3>33. Which of the following identities is correct?</h3>
+  <label><input type="radio" name="q33" value="A" data-correct="true"> (A) A + A′ = 1</label><br>
+  <label><input type="radio" name="q33" value="B"> (B) A · A′ = 1</label><br>
+  <label><input type="radio" name="q33" value="C"> (C) A + A = 0</label><br>
+  <label><input type="radio" name="q33" value="D"> (D) A · A = 0</label>
+</div>
+
+<div class="question">
+  <h3>34. In Boolean algebra, the expression A · (B + C) is equal to:</h3>
+  <label><input type="radio" name="q34" value="A" data-correct="true"> (A) AB + AC</label><br>
+  <label><input type="radio" name="q34" value="B"> (B) AB + C</label><br>
+  <label><input type="radio" name="q34" value="C"> (C) A + BC</label><br>
+  <label><input type="radio" name="q34" value="D"> (D) A + B + C</label>
+</div>
+
+<div class="question">
+  <h3>35. The circuit with one AND gate and one NOT gate connected to its output is equivalent to:</h3>
+  <label><input type="radio" name="q35" value="A"> (A) AND gate</label><br>
+  <label><input type="radio" name="q35" value="B" data-correct="true"> (B) NAND gate</label><br>
+  <label><input type="radio" name="q35" value="C"> (C) OR gate</label><br>
+  <label><input type="radio" name="q35" value="D"> (D) NOR gate</label>
+</div>
+
+<div class="question">
+  <h3>36. The simplified form of A + AB′ is:</h3>
+  <label><input type="radio" name="q36" value="A"> (A) A + B′</label><br>
+  <label><input type="radio" name="q36" value="B" data-correct="true"> (B) A</label><br>
+  <label><input type="radio" name="q36" value="C"> (C) B′</label><br>
+  <label><input type="radio" name="q36" value="D"> (D) AB′</label>
+</div>
+
+<div class="question">
+  <h3>37. What is the result of simplifying A + A′B?</h3>
+  <label><input type="radio" name="q37" value="A"> (A) AB</label><br>
+  <label><input type="radio" name="q37" value="B"> (B) B</label><br>
+  <label><input type="radio" name="q37" value="C" data-correct="true"> (C) A + B</label><br>
+  <label><input type="radio" name="q37" value="D"> (D) A′</label>
+</div>
+
+<div class="question">
+  <h3>38. The dual of A · B + A′ · B = B is:</h3>
+  <label><input type="radio" name="q38" value="A" data-correct="true"> (A) (A + B) · (A′ + B) = B</label><br>
+  <label><input type="radio" name="q38" value="B"> (B) A + B = 1</label><br>
+  <label><input type="radio" name="q38" value="C"> (C) A · B = A</label><br>
+  <label><input type="radio" name="q38" value="D"> (D) (A + A′) · B = A</label>
+</div>
+
+<div class="question">
+  <h3>39. The operation in Boolean algebra which is **commutative**, **associative**, and **distributive** is:</h3>
+  <label><input type="radio" name="q39" value="A" data-correct="true"> (A) AND and OR</label><br>
+  <label><input type="radio" name="q39" value="B"> (B) NOT only</label><br>
+  <label><input type="radio" name="q39" value="C"> (C) XOR only</label><br>
+  <label><input type="radio" name="q39" value="D"> (D) None</label>
+</div>
+
+<div class="question">
+  <h3>40. Which law is used in: A · A + A · B = A?</h3>
+  <label><input type="radio" name="q40" value="A"> (A) De Morgan’s law</label><br>
+  <label><input type="radio" name="q40" value="B" data-correct="true"> (B) Absorption law</label><br>
+  <label><input type="radio" name="q40" value="C"> (C) Distributive law</label><br>
+  <label><input type="radio" name="q40" value="D"> (D) Involution law</label>
+</div>
+
+
+<div class="question">
+  <h3>41. A Boolean expression in SOP form is a sum of:</h3>
+  <label><input type="radio" name="q41" value="A"> (A) Constants</label><br>
+  <label><input type="radio" name="q41" value="B"> (B) Variables</label><br>
+  <label><input type="radio" name="q41" value="C" data-correct="true"> (C) Products of literals</label><br>
+  <label><input type="radio" name="q41" value="D"> (D) Maxterms</label>
+</div>
+
+<div class="question">
+  <h3>42. The expression A·B + A′·C is in:</h3>
+  <label><input type="radio" name="q42" value="A"> (A) POS form</label><br>
+  <label><input type="radio" name="q42" value="B" data-correct="true"> (B) SOP form</label><br>
+  <label><input type="radio" name="q42" value="C"> (C) Canonical POS</label><br>
+  <label><input type="radio" name="q42" value="D"> (D) None of the above</label>
+</div>
+
+<div class="question">
+  <h3>43. Which of the following is a minterm?</h3>
+  <label><input type="radio" name="q43" value="A"> (A) A + B</label><br>
+  <label><input type="radio" name="q43" value="B" data-correct="true"> (B) A·B′</label><br>
+  <label><input type="radio" name="q43" value="C"> (C) A + B′</label><br>
+  <label><input type="radio" name="q43" value="D"> (D) A·(B + C)</label>
+</div>
+
+<div class="question">
+  <h3>44. A maxterm is defined as:</h3>
+  <label><input type="radio" name="q44" value="A" data-correct="true"> (A) A sum term containing all variables</label><br>
+  <label><input type="radio" name="q44" value="B"> (B) A product term with only complements</label><br>
+  <label><input type="radio" name="q44" value="C"> (C) A term containing constants</label><br>
+  <label><input type="radio" name="q44" value="D"> (D) A product of all literals</label>
+</div>
+
+<div class="question">
+  <h3>45. The number of minterms in 3 variables is:</h3>
+  <label><input type="radio" name="q45" value="A"> (A) 4</label><br>
+  <label><input type="radio" name="q45" value="B" data-correct="true"> (B) 8</label><br>
+  <label><input type="radio" name="q45" value="C"> (C) 6</label><br>
+  <label><input type="radio" name="q45" value="D"> (D) 3</label>
+</div>
+
+<div class="question">
+  <h3>46. Minterm m<sub>5</sub> for 3 variables A, B, C corresponds to:</h3>
+  <label><input type="radio" name="q46" value="A"> (A) A′B′C′</label><br>
+  <label><input type="radio" name="q46" value="B" data-correct="true"> (B) A·B′·C</label><br>
+  <label><input type="radio" name="q46" value="C"> (C) A′·B·C</label><br>
+  <label><input type="radio" name="q46" value="D"> (D) A′·B′·C</label>
+</div>
+
+<div class="question">
+  <h3>47. Canonical SOP expression includes:</h3>
+  <label><input type="radio" name="q47" value="A"> (A) Only constants</label><br>
+  <label><input type="radio" name="q47" value="B"> (B) Only one variable per term</label><br>
+  <label><input type="radio" name="q47" value="C" data-correct="true"> (C) All variables in each product term</label><br>
+  <label><input type="radio" name="q47" value="D"> (D) Variables and constants mixed</label>
+</div>
+
+<div class="question">
+  <h3>48. SOP expression for a truth table where output is 1 at minterms 1, 3, 5 is:</h3>
+  <label><input type="radio" name="q48" value="A" data-correct="true"> (A) Σm(1, 3, 5)</label><br>
+  <label><input type="radio" name="q48" value="B"> (B) ΠM(1, 3, 5)</label><br>
+  <label><input type="radio" name="q48" value="C"> (C) m(1 + 3 + 5)</label><br>
+  <label><input type="radio" name="q48" value="D"> (D) ΣM(1, 3, 5)</label>
+</div>
+
+<div class="question">
+  <h3>49. Product of sums (POS) form is:</h3>
+  <label><input type="radio" name="q49" value="A"> (A) Sum of products of literals</label><br>
+  <label><input type="radio" name="q49" value="B" data-correct="true"> (B) Product of sum terms</label><br>
+  <label><input type="radio" name="q49" value="C"> (C) Inverse of SOP</label><br>
+  <label><input type="radio" name="q49" value="D"> (D) A constant output</label>
+</div>
+
+<div class="question">
+  <h3>50. Canonical POS includes:</h3>
+  <label><input type="radio" name="q50" value="A"> (A) Only complemented variables</label><br>
+  <label><input type="radio" name="q50" value="B"> (B) All products</label><br>
+  <label><input type="radio" name="q50" value="C" data-correct="true"> (C) All variables in each sum term</label><br>
+  <label><input type="radio" name="q50" value="D"> (D) All constants in product</label>
+</div>
+
+<div class="question">
+  <h3>51. Maxterm M<sub>2</sub> for 3 variables A, B, C is:</h3>
+  <label><input type="radio" name="q51" value="A"> (A) A + B + C</label><br>
+  <label><input type="radio" name="q51" value="B" data-correct="true"> (B) A + B′ + C′</label><br>
+  <label><input type="radio" name="q51" value="C"> (C) A′ + B′ + C′</label><br>
+  <label><input type="radio" name="q51" value="D"> (D) A′ + B + C</label>
+</div>
+
+<div class="question">
+  <h3>52. SOP is generally preferred for:</h3>
+  <label><input type="radio" name="q52" value="A"> (A) Compactness</label><br>
+  <label><input type="radio" name="q52" value="B"> (B) POS simplification</label><br>
+  <label><input type="radio" name="q52" value="C" data-correct="true"> (C) Digital implementation using AND-OR logic</label><br>
+  <label><input type="radio" name="q52" value="D"> (D) Negative logic</label>
+</div>
+
+<div class="question">
+  <h3>53. POS is suitable for implementation using:</h3>
+  <label><input type="radio" name="q53" value="A" data-correct="true"> (A) OR-AND logic</label><br>
+  <label><input type="radio" name="q53" value="B"> (B) NOR gates only</label><br>
+  <label><input type="radio" name="q53" value="C"> (C) NAND-NOR logic</label><br>
+  <label><input type="radio" name="q53" value="D"> (D) NOT-AND logic</label>
+</div>
+
+<div class="question">
+  <h3>54. The total number of possible minterms for n variables is:</h3>
+  <label><input type="radio" name="q54" value="A"> (A) n</label><br>
+  <label><input type="radio" name="q54" value="B" data-correct="true"> (B) 2<sup>n</sup></label><br>
+  <label><input type="radio" name="q54" value="C"> (C) 2n</label><br>
+  <label><input type="radio" name="q54" value="D"> (D) n!</label>
+</div>
+
+<div class="question">
+  <h3>55. The SOP form is derived from:</h3>
+  <label><input type="radio" name="q55" value="A"> (A) Input variables only</label><br>
+  <label><input type="radio" name="q55" value="B"> (B) Constants</label><br>
+  <label><input type="radio" name="q55" value="C" data-correct="true"> (C) Rows with output = 1 in the truth table</label><br>
+  <label><input type="radio" name="q55" value="D"> (D) Rows with output = 0</label>
+</div>
+
+<div class="question">
+  <h3>56. POS form is derived from:</h3>
+  <label><input type="radio" name="q56" value="A" data-correct="true"> (A) Rows with output = 0 in the truth table</label><br>
+  <label><input type="radio" name="q56" value="B"> (B) Rows with output = 1</label><br>
+  <label><input type="radio" name="q56" value="C"> (C) All rows</label><br>
+  <label><input type="radio" name="q56" value="D"> (D) Variable A only</label>
+</div>
+
+<div class="question">
+  <h3>57. Which expression is the canonical SOP of A + B?</h3>
+  <label><input type="radio" name="q57" value="A"> (A) A + B</label><br>
+  <label><input type="radio" name="q57" value="B"> (B) AB + A′B′</label><br>
+  <label><input type="radio" name="q57" value="C" data-correct="true"> (C) AB′ + A′B + AB</label><br>
+  <label><input type="radio" name="q57" value="D"> (D) A′B′ + AB</label>
+</div>
+
+<div class="question">
+  <h3>58. Which of the following is NOT a valid minterm for 2 variables?</h3>
+  <label><input type="radio" name="q58" value="A"> (A) A·B</label><br>
+  <label><input type="radio" name="q58" value="B"> (B) A·B′</label><br>
+  <label><input type="radio" name="q58" value="C" data-correct="true"> (C) A + B</label><br>
+  <label><input type="radio" name="q58" value="D"> (D) A′·B</label>
+</div>
+
+<div class="question">
+  <h3>59. Minterms are associated with:</h3>
+  <label><input type="radio" name="q59" value="A"> (A) Output = 0</label><br>
+  <label><input type="radio" name="q59" value="B" data-correct="true"> (B) Output = 1</label><br>
+  <label><input type="radio" name="q59" value="C"> (C) No output</label><br>
+  <label><input type="radio" name="q59" value="D"> (D) Complemented output</label>
+</div>
+
+<div class="question">
+  <h3>60. Maxterms are associated with:</h3>
+  <label><input type="radio" name="q60" value="A"> (A) Output = 1</label><br>
+  <label><input type="radio" name="q60" value="B" data-correct="true"> (B) Output = 0</label><br>
+  <label><input type="radio" name="q60" value="C"> (C) Both 1 and 0</label><br>
+  <label><input type="radio" name="q60" value="D"> (D) Undefined outputs</label>
+</div>
+<div class="question">
+  <h3>61. What defines a standard SOP expression?</h3>
+  <label><input type="radio" name="q61" value="A"> (A) OR of all literals</label><br>
+  <label><input type="radio" name="q61" value="B" data-correct="true"> (B) Sum of minterms with all variables in each term</label><br>
+  <label><input type="radio" name="q61" value="C"> (C) Product of constants</label><br>
+  <label><input type="radio" name="q61" value="D"> (D) Expression with no complements</label>
+</div>
+
+<div class="question">
+  <h3>62. Which is a valid standard SOP term for three variables A, B, C?</h3>
+  <label><input type="radio" name="q62" value="A"> (A) A + B′</label><br>
+  <label><input type="radio" name="q62" value="B" data-correct="true"> (B) A′·B·C</label><br>
+  <label><input type="radio" name="q62" value="C"> (C) A·B</label><br>
+  <label><input type="radio" name="q62" value="D"> (D) A·B + C</label>
+</div>
+
+<div class="question">
+  <h3>63. Standard POS expression consists of:</h3>
+  <label><input type="radio" name="q63" value="A"> (A) Products of maxterms with some variables</label><br>
+  <label><input type="radio" name="q63" value="B"> (B) Products of ORed constants</label><br>
+  <label><input type="radio" name="q63" value="C" data-correct="true"> (C) Product of sum terms with all variables in each sum</label><br>
+  <label><input type="radio" name="q63" value="D"> (D) Sum of individual maxterms</label>
+</div>
+
+<div class="question">
+  <h3>64. Which of the following is a standard POS term in variables A, B?</h3>
+  <label><input type="radio" name="q64" value="A"> (A) A</label><br>
+  <label><input type="radio" name="q64" value="B"> (B) A·B</label><br>
+  <label><input type="radio" name="q64" value="C" data-correct="true"> (C) (A + B′)</label><br>
+  <label><input type="radio" name="q64" value="D"> (D) A′ + B′ + AB</label>
+</div>
+
+<div class="question">
+  <h3>65. Which expression is a **non-standard** SOP?</h3>
+  <label><input type="radio" name="q65" value="A"> (A) A′·B·C</label><br>
+  <label><input type="radio" name="q65" value="B"> (B) A·B·C</label><br>
+  <label><input type="radio" name="q65" value="C"> (C) A′·B′·C′</label><br>
+  <label><input type="radio" name="q65" value="D" data-correct="true"> (D) A·B</label>
+</div>
+
+<div class="question">
+  <h3>66. How many variables are in standard SOP term A′·B·C?</h3>
+  <label><input type="radio" name="q66" value="A"> (A) 2</label><br>
+  <label><input type="radio" name="q66" value="B" data-correct="true"> (B) 3</label><br>
+  <label><input type="radio" name="q66" value="C"> (C) 1</label><br>
+  <label><input type="radio" name="q66" value="D"> (D) 4</label>
+</div>
+
+<div class="question">
+  <h3>67. Which operation is used to convert standard SOP to standard POS?</h3>
+  <label><input type="radio" name="q67" value="A"> (A) ANDing minterms</label><br>
+  <label><input type="radio" name="q67" value="B" data-correct="true"> (B) Taking complement twice and applying De Morgan’s theorem</label><br>
+  <label><input type="radio" name="q67" value="C"> (C) Rewriting all maxterms as sums</label><br>
+  <label><input type="radio" name="q67" value="D"> (D) Multiplying the literals</label>
+</div>
+
+<div class="question">
+  <h3>68. The expression A + B′ can be converted to standard POS by:</h3>
+  <label><input type="radio" name="q68" value="A"> (A) Multiplying with 1</label><br>
+  <label><input type="radio" name="q68" value="B"> (B) Taking product with a third variable</label><br>
+  <label><input type="radio" name="q68" value="C" data-correct="true"> (C) Introducing the missing variable in both complemented and uncomplemented form</label><br>
+  <label><input type="radio" name="q68" value="D"> (D) Taking NOT of the expression</label>
+</div>
+
+<div class="question">
+  <h3>69. What is the standard POS form of A + B?</h3>
+  <label><input type="radio" name="q69" value="A" data-correct="true"> (A) (A + B + C)(A + B + C′)</label><br>
+  <label><input type="radio" name="q69" value="B"> (B) A + B′</label><br>
+  <label><input type="radio" name="q69" value="C"> (C) (A + B)</label><br>
+  <label><input type="radio" name="q69" value="D"> (D) (A′ + B′)</label>
+</div>
+
+<div class="question">
+  <h3>70. In standard SOP, the term A′B′C represents:</h3>
+  <label><input type="radio" name="q70" value="A" data-correct="true"> (A) Minterm m<sub>0</sub></label><br>
+  <label><input type="radio" name="q70" value="B"> (B) Maxterm M<sub>0</sub></label><br>
+  <label><input type="radio" name="q70" value="C"> (C) Minterm m<sub>7</sub></label><br>
+  <label><input type="radio" name="q70" value="D"> (D) Maxterm M<sub>7</sub></label>
+</div>
+
+<div class="question">
+  <h3>71. In standard POS, the term (A + B + C′) represents:</h3>
+  <label><input type="radio" name="q71" value="A" data-correct="true"> (A) Maxterm M<sub>3</sub></label><br>
+  <label><input type="radio" name="q71" value="B"> (B) Minterm m<sub>3</sub></label><br>
+  <label><input type="radio" name="q71" value="C"> (C) Minterm m<sub>4</sub></label><br>
+  <label><input type="radio" name="q71" value="D"> (D) Maxterm M<sub>5</sub></label>
+</div>
+
+<div class="question">
+  <h3>72. Which of the following is TRUE about standard SOP and POS forms?</h3>
+  <label><input type="radio" name="q72" value="A"> (A) SOP uses sum of maxterms</label><br>
+  <label><input type="radio" name="q72" value="B"> (B) POS uses sum of minterms</label><br>
+  <label><input type="radio" name="q72" value="C" data-correct="true"> (C) SOP = sum of minterms, POS = product of maxterms</label><br>
+  <label><input type="radio" name="q72" value="D"> (D) Both use product of sums</label>
+</div>
+
+<div class="question">
+  <h3>73. Which expression corresponds to Σm(1,2,5)?</h3>
+  <label><input type="radio" name="q73" value="A"> (A) Product of M<sub>1</sub>, M<sub>2</sub>, M<sub>5</sub></label><br>
+  <label><input type="radio" name="q73" value="B" data-correct="true"> (B) Sum of minterms m<sub>1</sub>, m<sub>2</sub>, m<sub>5</sub></label><br>
+  <label><input type="radio" name="q73" value="C"> (C) Product of minterms</label><br>
+  <label><input type="radio" name="q73" value="D"> (D) Sum of maxterms</label>
+</div>
+
+<div class="question">
+  <h3>74. Which form is easier to convert into a circuit using only AND and OR gates?</h3>
+  <label><input type="radio" name="q74" value="A"> (A) POS</label><br>
+  <label><input type="radio" name="q74" value="B" data-correct="true"> (B) SOP</label><br>
+  <label><input type="radio" name="q74" value="C"> (C) Mixed form</label><br>
+  <label><input type="radio" name="q74" value="D"> (D) NAND form</label>
+</div>
+
+<div class="question">
+  <h3>75. A standard POS expression must have:</h3>
+  <label><input type="radio" name="q75" value="A"> (A) At least 3 terms</label><br>
+  <label><input type="radio" name="q75" value="B" data-correct="true"> (B) All variables in every sum term</label><br>
+  <label><input type="radio" name="q75" value="C"> (C) No complement</label><br>
+  <label><input type="radio" name="q75" value="D"> (D) Only A and B</label>
+</div>
+
+<div class="question">
+  <h3>76. Which conversion requires applying De Morgan’s laws twice?</h3>
+  <label><input type="radio" name="q76" value="A"> (A) SOP to SOP</label><br>
+  <label><input type="radio" name="q76" value="B"> (B) POS to POS</label><br>
+  <label><input type="radio" name="q76" value="C" data-correct="true"> (C) SOP to POS or vice versa</label><br>
+  <label><input type="radio" name="q76" value="D"> (D) NOT to XOR</label>
+</div>
+
+<div class="question">
+  <h3>77. Which is the **standard POS** of the expression A + B?</h3>
+  <label><input type="radio" name="q77" value="A"> (A) (A)(B)</label><br>
+  <label><input type="radio" name="q77" value="B"> (B) (A + B)</label><br>
+  <label><input type="radio" name="q77" value="C" data-correct="true"> (C) (A + B + C)(A + B + C′)</label><br>
+  <label><input type="radio" name="q77" value="D"> (D) A·B</label>
+</div>
+
+<div class="question">
+  <h3>78. What is the minterm equivalent of A′·B·C?</h3>
+  <label><input type="radio" name="q78" value="A"> (A) m<sub>3</sub></label><br>
+  <label><input type="radio" name="q78" value="B" data-correct="true"> (B) m<sub>4</sub></label><br>
+  <label><input type="radio" name="q78" value="C"> (C) m<sub>5</sub></label><br>
+  <label><input type="radio" name="q78" value="D"> (D) m<sub>6</sub></label>
+</div>
+
+<div class="question">
+  <h3>79. Conversion between SOP and POS affects:</h3>
+  <label><input type="radio" name="q79" value="A"> (A) Logic levels</label><br>
+  <label><input type="radio" name="q79" value="B" data-correct="true"> (B) Implementation using gates</label><br>
+  <label><input type="radio" name="q79" value="C"> (C) Voltage</label><br>
+  <label><input type="radio" name="q79" value="D"> (D) Current through output</label>
+</div>
+
+<div class="question">
+  <h3>80. Which symbol indicates canonical POS form?</h3>
+  <label><input type="radio" name="q80" value="A"> (A) Σm(...)</label><br>
+  <label><input type="radio" name="q80" value="B" data-correct="true"> (B) ΠM(...)</label><br>
+  <label><input type="radio" name="q80" value="C"> (C) m(...)</label><br>
+  <label><input type="radio" name="q80" value="D"> (D) M(...)</label>
+</div>
+<div class="question">
+  <h3>81. What is a Karnaugh Map used for?</h3>
+  <label><input type="radio" name="q81" value="A"> (A) Measuring voltage</label><br>
+  <label><input type="radio" name="q81" value="B"> (B) Drawing circuit diagrams</label><br>
+  <label><input type="radio" name="q81" value="C" data-correct="true"> (C) Simplifying Boolean expressions</label><br>
+  <label><input type="radio" name="q81" value="D"> (D) Storing binary data</label>
+</div>
+
+<div class="question">
+  <h3>82. How many cells are there in a 3-variable K-map?</h3>
+  <label><input type="radio" name="q82" value="A"> (A) 6</label><br>
+  <label><input type="radio" name="q82" value="B"> (B) 12</label><br>
+  <label><input type="radio" name="q82" value="C" data-correct="true"> (C) 8</label><br>
+  <label><input type="radio" name="q82" value="D"> (D) 4</label>
+</div>
+
+<div class="question">
+  <h3>83. What is the number of cells in a 4-variable K-map?</h3>
+  <label><input type="radio" name="q83" value="A"> (A) 12</label><br>
+  <label><input type="radio" name="q83" value="B"> (B) 8</label><br>
+  <label><input type="radio" name="q83" value="C"> (C) 10</label><br>
+  <label><input type="radio" name="q83" value="D" data-correct="true"> (D) 16</label>
+</div>
+
+<div class="question">
+  <h3>84. Which of the following is not a valid group in a K-map?</h3>
+  <label><input type="radio" name="q84" value="A"> (A) Group of 4 adjacent 1s</label><br>
+  <label><input type="radio" name="q84" value="B"> (B) Group of 8 adjacent 1s</label><br>
+  <label><input type="radio" name="q84" value="C"> (C) Group of 3 adjacent 1s</label><br>
+  <label><input type="radio" name="q84" value="D" data-correct="true"> (D) Group of 3 ones</label>
+</div>
+
+<div class="question">
+  <h3>85. The number of variables represented by a 2×4 K-map is:</h3>
+  <label><input type="radio" name="q85" value="A"> (A) 2</label><br>
+  <label><input type="radio" name="q85" value="B"> (B) 3</label><br>
+  <label><input type="radio" name="q85" value="C" data-correct="true"> (C) 4</label><br>
+  <label><input type="radio" name="q85" value="D"> (D) 5</label>
+</div>
+
+<div class="question">
+  <h3>86. What is the Gray code sequence for 2 bits?</h3>
+  <label><input type="radio" name="q86" value="A" data-correct="true"> (A) 00, 01, 11, 10</label><br>
+  <label><input type="radio" name="q86" value="B"> (B) 00, 11, 01, 10</label><br>
+  <label><input type="radio" name="q86" value="C"> (C) 00, 01, 10, 11</label><br>
+  <label><input type="radio" name="q86" value="D"> (D) 01, 00, 11, 10</label>
+</div>
+
+<div class="question">
+  <h3>87. In K-map grouping, adjacent cells differ by:</h3>
+  <label><input type="radio" name="q87" value="A" data-correct="true"> (A) Only one variable</label><br>
+  <label><input type="radio" name="q87" value="B"> (B) Two variables</label><br>
+  <label><input type="radio" name="q87" value="C"> (C) All variables</label><br>
+  <label><input type="radio" name="q87" value="D"> (D) No variables</label>
+</div>
+
+<div class="question">
+  <h3>88. What is the simplified form of a group of 4 ones in a 2-variable K-map?</h3>
+  <label><input type="radio" name="q88" value="A"> (A) A + B</label><br>
+  <label><input type="radio" name="q88" value="B" data-correct="true"> (B) 1</label><br>
+  <label><input type="radio" name="q88" value="C"> (C) A·B</label><br>
+  <label><input type="radio" name="q88" value="D"> (D) 0</label>
+</div>
+
+<div class="question">
+  <h3>89. What is the largest group possible in a 3-variable K-map?</h3>
+  <label><input type="radio" name="q89" value="A"> (A) 2</label><br>
+  <label><input type="radio" name="q89" value="B"> (B) 4</label><br>
+  <label><input type="radio" name="q89" value="C" data-correct="true"> (C) 8</label><br>
+  <label><input type="radio" name="q89" value="D"> (D) 16</label>
+</div>
+
+<div class="question">
+  <h3>90. A group of 2 adjacent cells eliminates how many variables?</h3>
+  <label><input type="radio" name="q90" value="A"> (A) 1</label><br>
+  <label><input type="radio" name="q90" value="B" data-correct="true"> (B) 1</label><br>
+  <label><input type="radio" name="q90" value="C"> (C) 2</label><br>
+  <label><input type="radio" name="q90" value="D"> (D) None</label>
+</div>
+
+<div class="question">
+  <h3>91. A group of 4 adjacent cells eliminates:</h3>
+  <label><input type="radio" name="q91" value="A"> (A) 1 variable</label><br>
+  <label><input type="radio" name="q91" value="B" data-correct="true"> (B) 2 variables</label><br>
+  <label><input type="radio" name="q91" value="C"> (C) 3 variables</label><br>
+  <label><input type="radio" name="q91" value="D"> (D) All variables</label>
+</div>
+
+<div class="question">
+  <h3>92. Which of the following gives the most simplified result?</h3>
+  <label><input type="radio" name="q92" value="A"> (A) Multiple groups of 2</label><br>
+  <label><input type="radio" name="q92" value="B"> (B) No grouping</label><br>
+  <label><input type="radio" name="q92" value="C" data-correct="true"> (C) Larger groups like 4 or 8</label><br>
+  <label><input type="radio" name="q92" value="D"> (D) Overlapping groups only</label>
+</div>
+
+<div class="question">
+  <h3>93. Overlapping groups in a K-map:</h3>
+  <label><input type="radio" name="q93" value="A"> (A) Are not allowed</label><br>
+  <label><input type="radio" name="q93" value="B" data-correct="true"> (B) Help in further simplification</label><br>
+  <label><input type="radio" name="q93" value="C"> (C) Increase complexity</label><br>
+  <label><input type="radio" name="q93" value="D"> (D) Are used only for 2-variable maps</label>
+</div>
+
+<div class="question">
+  <h3>94. The expression for minterms m1, m2, m3 in K-map SOP is:</h3>
+  <label><input type="radio" name="q94" value="A"> (A) ΠM(1,2,3)</label><br>
+  <label><input type="radio" name="q94" value="B" data-correct="true"> (B) Σm(1,2,3)</label><br>
+  <label><input type="radio" name="q94" value="C"> (C) m1·m2·m3</label><br>
+  <label><input type="radio" name="q94" value="D"> (D) m1 + m2 + m3</label>
+</div>
+
+<div class="question">
+  <h3>95. How many 1s must be grouped in a K-map?</h3>
+  <label><input type="radio" name="q95" value="A"> (A) Any number</label><br>
+  <label><input type="radio" name="q95" value="B" data-correct="true"> (B) Power of 2 (1,2,4,8,...)</label><br>
+  <label><input type="radio" name="q95" value="C"> (C) Only pairs</label><br>
+  <label><input type="radio" name="q95" value="D"> (D) Multiples of 3</label>
+</div>
+
+<div class="question">
+  <h3>96. What is the simplified form of a group of 8 adjacent 1s in a 3-variable K-map?</h3>
+  <label><input type="radio" name="q96" value="A" data-correct="true"> (A) 1</label><br>
+  <label><input type="radio" name="q96" value="B"> (B) A</label><br>
+  <label><input type="radio" name="q96" value="C"> (C) A + B</label><br>
+  <label><input type="radio" name="q96" value="D"> (D) 0</label>
+</div>
+
+<div class="question">
+  <h3>97. How many variables are eliminated in a group of 8 cells?</h3>
+  <label><input type="radio" name="q97" value="A"> (A) 1</label><br>
+  <label><input type="radio" name="q97" value="B"> (B) 2</label><br>
+  <label><input type="radio" name="q97" value="C" data-correct="true"> (C) 3</label><br>
+  <label><input type="radio" name="q97" value="D"> (D) None</label>
+</div>
+
+<div class="question">
+  <h3>98. What is the value of angular displacement for 1 revolution?</h3>
+  <label><input type="radio" name="q98" value="A"> (A) 90°</label><br>
+  <label><input type="radio" name="q98" value="B"> (B) π rad</label><br>
+  <label><input type="radio" name="q98" value="C"> (C) π/2 rad</label><br>
+  <label><input type="radio" name="q98" value="D" data-correct="true"> (D) 2π rad</label>
+</div>
+
+<div class="question">
+  <h3>99. A 4-variable K-map groups 8 adjacent 1s. What is the simplified result?</h3>
+  <label><input type="radio" name="q99" value="A"> (A) A′·B</label><br>
+  <label><input type="radio" name="q99" value="B"> (B) A</label><br>
+  <label><input type="radio" name="q99" value="C" data-correct="true"> (C) Expression with 1 remaining variable</label><br>
+  <label><input type="radio" name="q99" value="D"> (D) 0</label>
+</div>
+
+<div class="question">
+  <h3>100. Wrapping around edges in a K-map is:</h3>
+  <label><input type="radio" name="q100" value="A"> (A) Not allowed</label><br>
+  <label><input type="radio" name="q100" value="B" data-correct="true"> (B) Allowed for grouping adjacent cells</label><br>
+  <label><input type="radio" name="q100" value="C"> (C) Only allowed in 2-variable K-map</label><br>
+  <label><input type="radio" name="q100" value="D"> (D) A type of Gray coding</label>
+</div>
+<div class="question">
+
+<h2>
+    These are a bit tough with a weightage of 5
+</h2>
+  <h3>101. Analyze the following circuit and determine the output expression:</h3>
+  <pre>
+        A ----┐
+              AND ----┐
+        B ----┘       |
+                      OR ---- Y
+        C ------------┘
+  </pre>
+  <label><input type="radio" name="q101" value="A"> (A) A·B + C</label><br>
+  <label><input type="radio" name="q101" value="B" data-correct="true"> (B) (A·B) + C</label><br>
+  <label><input type="radio" name="q101" value="C"> (C) A + (B·C)</label><br>
+  <label><input type="radio" name="q101" value="D"> (D) (A + B)·C</label>
+</div>
+
+<div class="question">
+  <h3>102. What is the minimal SOP expression for the function with minterms m(1,3,7) in 3 variables?</h3>
+  <label><input type="radio" name="q102" value="A"> (A) A′B′C + A′BC + ABC</label><br>
+  <label><input type="radio" name="q102" value="B"> (B) A′C + AB′C</label><br>
+  <label><input type="radio" name="q102" value="C" data-correct="true"> (C) A′C + AC</label><br>
+  <label><input type="radio" name="q102" value="D"> (D) A′B′ + BC</label>
+</div>
+
+<div class="question">
+  <h3>103. Given the following 3-variable K-map, what is the simplified expression?</h3>
+  <pre>
+      AB\C | 0 | 1
+      -------------
+       00  | 1 | 1
+       01  | 1 | 0
+       11  | 0 | 1
+       10  | 1 | 0
+  </pre>
+  <label><input type="radio" name="q103" value="A"> (A) A′ + C′</label><br>
+  <label><input type="radio" name="q103" value="B" data-correct="true"> (B) A′ + B′C′</label><br>
+  <label><input type="radio" name="q103" value="C"> (C) A + B + C</label><br>
+  <label><input type="radio" name="q103" value="D"> (D) B′ + C</label>
+</div>
+
+<div class="question">
+  <h3>104. The Boolean equation Y = (A + B)(A′ + C) simplifies to:</h3>
+  <label><input type="radio" name="q104" value="A"> (A) AB + AC</label><br>
+  <label><input type="radio" name="q104" value="B"> (B) A + BC</label><br>
+  <label><input type="radio" name="q104" value="C"> (C) A′B + AC</label><br>
+  <label><input type="radio" name="q104" value="D" data-correct="true"> (D) AB + A′C</label>
+</div>
+
+<div class="question">
+  <h3>105. Examine the circuit below. What is the output?</h3>
+  <pre>
+        A ----┐
+              NAND ----┐
+        B ----┘        |
+                       AND ---- Y
+        C -------------┘
+  </pre>
+  <label><input type="radio" name="q105" value="A"> (A) A·B·C</label><br>
+  <label><input type="radio" name="q105" value="B"> (B) (A·B)′ · C</label><br>
+  <label><input type="radio" name="q105" value="C"> (C) A + B + C</label><br>
+  <label><input type="radio" name="q105" value="D" data-correct="true"> (D) (A NAND B) · C</label>
+</div>
+<div class="question">
+  <h3>106. Simplify the expression: (A + B)(A + B′)</h3>
+  <label><input type="radio" name="q106" value="A"> (A) A</label><br>
+  <label><input type="radio" name="q106" value="B"> (B) B</label><br>
+  <label><input type="radio" name="q106" value="C" data-correct="true"> (C) A</label><br>
+  <label><input type="radio" name="q106" value="D"> (D) A + B</label>
+</div>
+
+<div class="question">
+  <h3>107. Identify the correct expression for the circuit below:</h3>
+  <pre>
+         A -----┐
+               OR -----┐
+         B′----┘       |
+                       AND ---- Y
+         C′------------┘
+  </pre>
+  <label><input type="radio" name="q107" value="A"> (A) A′ + B + C</label><br>
+  <label><input type="radio" name="q107" value="B" data-correct="true"> (B) (A + B′) · C′</label><br>
+  <label><input type="radio" name="q107" value="C"> (C) (A′ + B′) · C</label><br>
+  <label><input type="radio" name="q107" value="D"> (D) A′ + (B′ · C′)</label>
+</div>
+
+<div class="question">
+  <h3>108. From the truth table, which expression represents the output Y?</h3>
+  <pre>
+      A B C | Y
+      -------------
+      0 0 0 | 0
+      0 0 1 | 1
+      0 1 0 | 0
+      0 1 1 | 1
+      1 0 0 | 0
+      1 0 1 | 1
+      1 1 0 | 0
+      1 1 1 | 1
+  </pre>
+  <label><input type="radio" name="q108" value="A"> (A) A′B′C + A′BC + AB′C + ABC</label><br>
+  <label><input type="radio" name="q108" value="B" data-correct="true"> (B) C</label><br>
+  <label><input type="radio" name="q108" value="C"> (C) A + C</label><br>
+  <label><input type="radio" name="q108" value="D"> (D) B + C</label>
+</div>
+
+<div class="question">
+  <h3>109. What is the POS form of the function F = Σm(1, 3, 5, 7) for 3 variables?</h3>
+  <label><input type="radio" name="q109" value="A"> (A) (A + B + C)(A + B + C′)(A + B′ + C)</label><br>
+  <label><input type="radio" name="q109" value="B"> (B) (A + B + C)(A + B′ + C)(A′ + B + C)</label><br>
+  <label><input type="radio" name="q109" value="C" data-correct="true"> (C) (A + B + C)(A + B′ + C)(A′ + B + C)(A′ + B′ + C)</label><br>
+  <label><input type="radio" name="q109" value="D"> (D) (A′ + B′ + C′)</label>
+</div>
+
+<div class="question">
+  <h3>110. Which expression correctly represents the logic in this circuit?</h3>
+  <pre>
+        A ----┐
+              NOR ----┐
+        B ----┘       |
+                      AND ---- Y
+        C′------------┘
+  </pre>
+  <label><input type="radio" name="q110" value="A"> (A) (A + B)′ · C</label><br>
+  <label><input type="radio" name="q110" value="B"> (B) A′B′C</label><br>
+  <label><input type="radio" name="q110" value="C"> (C) A + B + C′</label><br>
+  <label><input type="radio" name="q110" value="D" data-correct="true"> (D) (A + B)′ · C′</label>
+</div>
+<div class="question">
+  <h3>111. What is the simplified expression for F = A·(B + A′)?</h3>
+  <label><input type="radio" name="q111" value="A" data-correct="true"> (A) A·B</label><br>
+  <label><input type="radio" name="q111" value="B"> (B) A + B</label><br>
+  <label><input type="radio" name="q111" value="C"> (C) B</label><br>
+  <label><input type="radio" name="q111" value="D"> (D) A + A′</label>
+</div>
+
+<div class="question">
+  <h3>112. What will be the output Y of the circuit?</h3>
+  <pre>
+        A ----┐
+              XOR ----┐
+        B ----┘       |
+                      AND ---- Y
+        C ------------┘
+  </pre>
+  <label><input type="radio" name="q112" value="A"> (A) A·B·C</label><br>
+  <label><input type="radio" name="q112" value="B"> (B) (A ⊕ B) + C</label><br>
+  <label><input type="radio" name="q112" value="C" data-correct="true"> (C) (A ⊕ B)·C</label><br>
+  <label><input type="radio" name="q112" value="D"> (D) A′·B′ + C′</label>
+</div>
+
+<div class="question">
+  <h3>113. Determine the number of prime implicants in the following K-map:</h3>
+  <pre>
+       AB\CD | 00 | 01 | 11 | 10
+      --------------------------
+        00   |  1 |  1 |  0 |  0
+        01   |  0 |  1 |  1 |  0
+        11   |  1 |  0 |  1 |  1
+        10   |  0 |  0 |  1 |  1
+  </pre>
+  <label><input type="radio" name="q113" value="A"> (A) 4</label><br>
+  <label><input type="radio" name="q113" value="B" data-correct="true"> (B) 6</label><br>
+  <label><input type="radio" name="q113" value="C"> (C) 8</label><br>
+  <label><input type="radio" name="q113" value="D"> (D) 5</label>
+</div>
+
+<div class="question">
+  <h3>114. Which logic gate has the output logic high only when the number of inputs high is odd?</h3>
+  <label><input type="radio" name="q114" value="A"> (A) XNOR</label><br>
+  <label><input type="radio" name="q114" value="B" data-correct="true"> (B) XOR</label><br>
+  <label><input type="radio" name="q114" value="C"> (C) NOR</label><br>
+  <label><input type="radio" name="q114" value="D"> (D) NAND</label>
+</div>
+
+<div class="question">
+  <h3>115. Simplify the Boolean expression: A·B + A·B′</h3>
+  <label><input type="radio" name="q115" value="A"> (A) A′</label><br>
+  <label><input type="radio" name="q115" value="B"> (B) B</label><br>
+  <label><input type="radio" name="q115" value="C" data-correct="true"> (C) A</label><br>
+  <label><input type="radio" name="q115" value="D"> (D) 1</label>
+</div>
+<div class="question">
+  <h3>116. What is the simplified result of applying De Morgan’s Theorem to: (A + B)′?</h3>
+  <label><input type="radio" name="q116" value="A"> (A) A + B′</label><br>
+  <label><input type="radio" name="q116" value="B" data-correct="true"> (B) A′ · B′</label><br>
+  <label><input type="radio" name="q116" value="C"> (C) A′ + B′</label><br>
+  <label><input type="radio" name="q116" value="D"> (D) A · B</label>
+</div>
+
+<div class="question">
+  <h3>117. Analyze the logic of the following circuit and choose the correct output expression:</h3>
+  <pre>
+         A ----┐
+               AND ----┐
+        B′ ----┘       |
+                       NAND ---- Y
+        C -------------┘
+  </pre>
+  <label><input type="radio" name="q117" value="A"> (A) ((A · B′) · C)′</label><br>
+  <label><input type="radio" name="q117" value="B"> (B) A · B · C′</label><br>
+  <label><input type="radio" name="q117" value="C" data-correct="true"> (C) (A · B′ · C)′</label><br>
+  <label><input type="radio" name="q117" value="D"> (D) A′ · B′ · C′</label>
+</div>
+
+<div class="question">
+  <h3>118. For the function F(A, B, C) = ΠM(0, 1, 3, 5), what is the equivalent SOP expression?</h3>
+  <label><input type="radio" name="q118" value="A"> (A) A′B′ + A′C + B′C′</label><br>
+  <label><input type="radio" name="q118" value="B"> (B) ABC + AB′C + A′B′C′</label><br>
+  <label><input type="radio" name="q118" value="C"> (C) A′B′C′ + A′BC′ + AB′C</label><br>
+  <label><input type="radio" name="q118" value="D" data-correct="true"> (D) A′B′C + A′BC′ + AB′C′ + ABC</label>
+</div>
+
+<div class="question">
+  <h3>119. Examine the circuit and determine the output expression Y:</h3>
+  <pre>
+        A ----┐
+              OR ----┐
+        B ----┘       |
+                      XNOR ---- Y
+        C ------------┘
+  </pre>
+  <label><input type="radio" name="q119" value="A"> (A) (A + B) ⊕ C</label><br>
+  <label><input type="radio" name="q119" value="B" data-correct="true"> (B) ((A + B) ⊕ C)′</label><br>
+  <label><input type="radio" name="q119" value="C"> (C) A · B · C</label><br>
+  <label><input type="radio" name="q119" value="D"> (D) A + (B · C)</label>
+</div>
+
+<div class="question">
+  <h3>120. Which is the correct minimal POS form of the function F = 0 at minterms 0, 1, 2 in 2 variables?</h3>
+  <label><input type="radio" name="q120" value="A"> (A) (A + B)(A + B′)(A′ + B)</label><br>
+  <label><input type="radio" name="q120" value="B"> (B) (A′ + B′)(A + B′)(A′ + B)</label><br>
+  <label><input type="radio" name="q120" value="C" data-correct="true"> (C) (A + B)(A + B′)(A′ + B′)</label><br>
+  <label><input type="radio" name="q120" value="D"> (D) (A + B′)(A′ + B)(A′ + B′)</label>
+</div>
+<div class="question">
+  <h3>121. What is the result of the logic operation: ((A + B)′ + C)′ ?</h3>
+  <label><input type="radio" name="q121" value="A"> (A) A′B′ + C</label><br>
+  <label><input type="radio" name="q121" value="B"> (B) (A·B) + C</label><br>
+  <label><input type="radio" name="q121" value="C" data-correct="true"> (C) A·B·C′</label><br>
+  <label><input type="radio" name="q121" value="D"> (D) A + B + C</label>
+</div>
+
+<div class="question">
+  <h3>122. Which of the following circuits implements the function F = A·B + A·C?</h3>
+  <pre>
+        A ----┬---- AND ----┐
+              |            |
+        B ----┘            OR ---- F
+                           |
+        C ---- AND --------┘
+              |
+        A ----┘
+  </pre>
+  <label><input type="radio" name="q122" value="A"> (A) NAND + NOR circuit</label><br>
+  <label><input type="radio" name="q122" value="B" data-correct="true"> (B) Two ANDs and one OR gate</label><br>
+  <label><input type="radio" name="q122" value="C"> (C) XOR and NAND combination</label><br>
+  <label><input type="radio" name="q122" value="D"> (D) NOR + NOT + AND gates</label>
+</div>
+
+<div class="question">
+  <h3>123. From the truth table below, what is the minimal SOP expression?</h3>
+  <pre>
+     A B C | F
+    ---------------
+     0 0 1 | 1
+     0 1 1 | 1
+     1 0 0 | 1
+     1 1 0 | 1
+  </pre>
+  <label><input type="radio" name="q123" value="A" data-correct="true"> (A) A′B′C + A′BC + AB′C′ + ABC′</label><br>
+  <label><input type="radio" name="q123" value="B"> (B) A + C</label><br>
+  <label><input type="radio" name="q123" value="C"> (C) A′C + A</label><br>
+  <label><input type="radio" name="q123" value="D"> (D) B + C</label>
+</div>
+
+<div class="question">
+  <h3>124. Which expression is equivalent to the function: F = (A·B′)′?</h3>
+  <label><input type="radio" name="q124" value="A" data-correct="true"> (A) A′ + B</label><br>
+  <label><input type="radio" name="q124" value="B"> (B) A + B′</label><br>
+  <label><input type="radio" name="q124" value="C"> (C) A + B</label><br>
+  <label><input type="radio" name="q124" value="D"> (D) A′B′</label>
+</div>
+
+<div class="question">
+  <h3>125. How many essential prime implicants are present in the following K-map?</h3>
+  <pre>
+       AB\CD | 00 | 01 | 11 | 10
+      --------------------------
+         00  |  1 |  1 |  0 |  1
+         01  |  1 |  0 |  1 |  1
+         11  |  0 |  1 |  1 |  0
+         10  |  1 |  1 |  0 |  0
+  </pre>
+  <label><input type="radio" name="q125" value="A"> (A) 2</label><br>
+  <label><input type="radio" name="q125" value="B"> (B) 5</label><br>
+  <label><input type="radio" name="q125" value="C"> (C) 4</label><br>
+  <label><input type="radio" name="q125" value="D" data-correct="true"> (D) 6</label>
+</div>
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (i<101&opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+          else if(i>100&opt.checked && opt.getAttribute("data-correct") === "true") 
+          {
+            score+=5;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 125;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      //TEXTALERTSCORE="scoreText:"+ `${score} / ${totalQuestions}`
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+      
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent! Your Score is " + scoreText))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
