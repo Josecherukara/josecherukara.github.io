@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Quiz-2</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+  </form>
+<h2>Let's Begin, Here is the notes</h2>
+<form id="quizForm">
+
+  <h2>📘 Half Adder - Notes</h2>
+
+<h3>🔹 Definition</h3>
+<p>
+  A <strong>Half Adder</strong> is a basic combinational logic circuit that performs the addition of two binary digits. 
+  It has two inputs — A and B — and produces two outputs:
+  <strong>Sum (S)</strong> and <strong>Carry (C)</strong>.
+</p>
+
+<h3>🔹 Binary Addition Process</h3>
+<p>The rules for binary addition of single bits are:</p>
+<ul>
+  <li>\( 0 + 0 = 0 \) (Sum = 0, Carry = 0)</li>
+  <li>\( 0 + 1 = 1 \) (Sum = 1, Carry = 0)</li>
+  <li>\( 1 + 0 = 1 \) (Sum = 1, Carry = 0)</li>
+  <li>\( 1 + 1 = 10 \) (Sum = 0, Carry = 1)</li>
+</ul>
+
+<h3>🔹 Truth Table</h3>
+<table border="1" cellpadding="5">
+  <tr><th>A</th><th>B</th><th>Sum (S)</th><th>Carry (C)</th><th>Justification</th></tr>
+  <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0 + 0 = 0</td></tr>
+  <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0 + 1 = 1</td></tr>
+  <tr><td>1</td><td>0</td><td>1</td><td>0</td><td>1 + 0 = 1</td></tr>
+  <tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1 + 1 = 10</td></tr>
+</table>
+
+<h3>🔹 Sum and Carry Expressions (SOP)</h3>
+<p><strong>From the truth table:</strong></p>
+<ul>
+  <li>Sum = 1 when (A=0, B=1) and (A=1, B=0):</li>
+  <div>\[ S = A'B + AB' \]</div>
+
+  <li>Carry = 1 only when (A=1, B=1):</li>
+  <div>\[ C = AB \]</div>
+</ul>
+
+<p><strong>Hence:</strong></p>
+<ul>
+  <li>\( S = A \oplus B \)</li>
+  <li>\( C = A \cdot B \)</li>
+</ul>
+
+<h3>🔹 Half Adder Implementation Using XOR and AND</h3>
+<p>This is the basic and most common implementation using standard logic gates:</p>
+<img src="img1.png" alt="Half Adder using XOR and AND gates" width="400">
+
+<h3>🔹 Half Adder Implementation Using NAND Gates Only</h3>
+<p>Using only NAND gates, we can derive the same logic:</p>
+<img src="img2.png" alt="Half Adder using NAND gates only" width="500">
+
+<h3>🔹 Half Adder Implementation Using NOR Gates Only</h3>
+<p>Similarly, the Half Adder can be built using only NOR gates:</p>
+<img src="img3.png" alt="Half Adder using NOR gates only" width="500">
+<h3>🧠 Multiple Choice Questions – Half Adder</h3>
+
+<!-- Q1 -->
+<div class="question">
+  <p><strong>Q1.</strong> What are the two outputs of a Half Adder?</p>
+  <label><input type="radio" name="q1" value="a" data-correct="true"> Sum and Carry</label><br>
+  <label><input type="radio" name="q1" value="b"> Carry and Borrow</label><br>
+  <label><input type="radio" name="q1" value="c"> Sum and Difference</label><br>
+  <label><input type="radio" name="q1" value="d"> Only Sum</label>
+</div>
+
+<!-- Q2 -->
+<!-- Revised Q2 -->
+<div class="question">
+  <p><strong>Q2.</strong> What is the symbolic Boolean expression for the Sum output of a Half Adder?</p>
+  <label><input type="radio" name="q2" value="a"> \( A \cdot B \)</label><br>
+  <label><input type="radio" name="q2" value="b"> \( A + B \)</label><br>
+  <label><input type="radio" name="q2" value="c"> \( AB' + A'B \)</label><br>
+  <label><input type="radio" name="q2" value="d" data-correct="true"> \( A \oplus B \)</label>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+  <p><strong>Q3.</strong> What is the Carry output when A = 1 and B = 1?</p>
+  <label><input type="radio" name="q3" value="a"> 0</label><br>
+  <label><input type="radio" name="q3" value="b" data-correct="true"> 1</label><br>
+  <label><input type="radio" name="q3" value="c"> A</label><br>
+  <label><input type="radio" name="q3" value="d"> B</label>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+  <p><strong>Q4.</strong> The Half Adder circuit cannot:</p>
+  <label><input type="radio" name="q4" value="a" data-correct="true"> Add carry from previous stages</label><br>
+  <label><input type="radio" name="q4" value="b"> Add two bits</label><br>
+  <label><input type="radio" name="q4" value="c"> Produce a carry</label><br>
+  <label><input type="radio" name="q4" value="d"> Compute XOR</label>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+  <p><strong>Q5.</strong> Which gate alone can be used to implement a Half Adder?</p>
+  <label><input type="radio" name="q5" value="a"> OR</label><br>
+  <label><input type="radio" name="q5" value="b"> XOR</label><br>
+  <label><input type="radio" name="q5" value="c"> AND</label><br>
+  <label><input type="radio" name="q5" value="d" data-correct="true"> NAND</label>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+  <p><strong>Q6.</strong> What is the Carry expression in SOP form?</p>
+  <label><input type="radio" name="q6" value="a"> \( A + B \)</label><br>
+  <label><input type="radio" name="q6" value="b" data-correct="true"> \( A \cdot B \)</label><br>
+  <label><input type="radio" name="q6" value="c"> \( A'B + AB' \)</label><br>
+  <label><input type="radio" name="q6" value="d"> \( A \oplus B \)</label>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+  <p><strong>Q7.</strong> If A = 0 and B = 1, what is the Sum output?</p>
+  <label><input type="radio" name="q7" value="a"> 0</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> 1</label><br>
+  <label><input type="radio" name="q7" value="c"> Undefined</label><br>
+  <label><input type="radio" name="q7" value="d"> Can't say</label>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+  <p><strong>Q8.</strong> The gate used for generating the Carry output is:</p>
+  <label><input type="radio" name="q8" value="a"> OR</label><br>
+  <label><input type="radio" name="q8" value="b"> NOT</label><br>
+  <label><input type="radio" name="q8" value="c" data-correct="true"> AND</label><br>
+  <label><input type="radio" name="q8" value="d"> XOR</label>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+  <p><strong>Q9.</strong> Which combination correctly represents a Half Adder using basic gates?</p>
+  <label><input type="radio" name="q9" value="a" data-correct="true"> XOR and AND</label><br>
+  <label><input type="radio" name="q9" value="b"> OR and AND</label><br>
+  <label><input type="radio" name="q9" value="c"> XOR and OR</label><br>
+  <label><input type="radio" name="q9" value="d"> NAND and NOR</label>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+  <p><strong>Q10.</strong> What is the Sum output when both A and B are 1?</p>
+  <label><input type="radio" name="q10" value="a"> 1</label><br>
+  <label><input type="radio" name="q10" value="b" data-correct="true"> 0</label><br>
+  <label><input type="radio" name="q10" value="c"> A</label><br>
+  <label><input type="radio" name="q10" value="d"> B</label>
+</div>
+
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (i<11&opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 10;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      //TEXTALERTSCORE="scoreText:"+ `${score} / ${totalQuestions}`
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+      
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent! Your Score is " + scoreText))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
