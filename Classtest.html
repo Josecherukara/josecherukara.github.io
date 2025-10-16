@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Welcome to C++ Programming – Animated Intro + Task</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --text:#c9d1d9; --accent:#58a6ff; --ok:#3fb950; --muted:#8b949e;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:32px;
+  }
+  .wrap{max-width:960px; width:100%}
+  h1{
+    margin:0 0 10px; font-size:clamp(24px,4vw,40px); color:var(--accent);
+    animation: popin 700ms ease both;
+  }
+  .subtitle{color:var(--muted); margin-bottom:18px}
+  pre, .card{
+    background:var(--card); border-left:4px solid var(--accent);
+    padding:18px 20px; border-radius:12px; line-height:1.55;
+    box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  }
+  pre{
+    overflow:auto; font-size:clamp(12px,2.1vw,16px); white-space:pre; margin:16px 0 10px;
+    opacity:0; animation: fadeIn 1000ms 300ms ease forwards;
+  }
+  .explanation{
+    border-left-color:var(--ok); margin-top:12px; opacity:0;
+    animation: slideUp 800ms 1400ms ease forwards;
+  }
+  .grid{
+    display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;
+  }
+  .task{border-left-color:#e3b341}
+  .task h2{margin:0 0 8px; font-size:clamp(18px,2.7vw,22px); color:#e3b341}
+  .task ul{padding-left:20px; margin:6px 0}
+  .muted{color:var(--muted)}
+  textarea{
+    width:100%; min-height:220px; resize:vertical; padding:12px 14px; border-radius:10px;
+    border:1px solid #30363d; background:#0b1220; color:var(--text); font-size:14px;
+    line-height:1.4; outline:none;
+  }
+  .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+  button{
+    padding:10px 14px; border-radius:10px; border:1px solid #30363d; cursor:pointer;
+    background:#111827; color:var(--text); transition:.2s transform ease, .2s background ease;
+  }
+  button:hover{transform:translateY(-1px); background:#0f172a}
+  .hint{font-size:13px; color:var(--muted); margin-top:6px}
+  code{color:#d2a8ff}
+  @keyframes popin{from{opacity:0; transform:translateY(10px) scale(.98)} to{opacity:1; transform:none}}
+  @keyframes fadeIn{from{opacity:0} to{opacity:1}}
+  @keyframes slideUp{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💻 Welcome to C++ Programming!</h1>
+  <div class="subtitle">Let’s read a tiny C++ program and then you’ll write your first one.</div>
+
+  <!-- Teaching code block -->
+  <pre id="code">
+#include &lt;iostream&gt;         // 1️⃣ Header for input/output (std::cout, std::cin)
+using namespace std;        // 2️⃣ So we can write cout instead of std::cout
+
+int main() {                // 3️⃣ Program execution starts here
+    // 4️⃣ This is a single-line comment — ignored by the compiler
+    cout &lt;&lt; "Welcome to C++!" &lt;&lt; endl;  // 5️⃣ Print a line of text
+    return 0;               // 6️⃣ Exit with “success” status
+}
+  </pre>
+
+  <div class="card explanation" id="explain">
+    <!-- JS will cycle explanations here -->
+  </div>
+
+  <!-- Task for students -->
+  <div class="grid">
+    <div class="card task">
+      <h2>🧩 Task: Write Your First C++ Program</h2>
+      <p>Create a C++ program that **displays three lines**, each on a new line:</p>
+      <ul>
+        <li>Your <b>Name</b></li>
+        <li>Your <b>Class</b></li>
+        <li>Your <b>College</b></li>
+      </ul>
+      <p class="muted">Sample output (format):</p>
+      <pre style="margin:8px 0 0; border-left-color:#444">
+Name: Ada Lovelace
+Class: B.Sc. CS, Semester 1
+College: The Cochin College
+      </pre>
+      <p class="hint">Tip: Use <code>cout &lt;&lt; "text" &lt;&lt; endl;</code> three times. Include at least one meaningful comment.</p>
+    </div>
+
+    <!-- Answer / comment box -->
+    <div class="card" style="border-left-color:#8b5cf6">
+      <h2 style="margin:0 0 8px; color:#8b5cf6">✍️ Your Answer (paste/type your C++ code)</h2>
+      <textarea id="answerBox">// Write your solution here.
+// Requirements:
+//  - Print your Name, Class, and College on separate lines.
+//  - Use cout and endl (or '\n').
+//  - Include at least one meaningful comment explaining a line.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // TODO: Replace the placeholders below with your actual details
+    cout &lt;&lt; "Name: Your Name" &lt;&lt; endl;
+    cout &lt;&lt; "Class: Your Class" &lt;&lt; endl;
+    cout &lt;&lt; "College: Your College" &lt;&lt; endl;
+    return 0;
+}
+      </textarea>
+      <div class="row">
+        <button id="copyBtn">Copy Answer</button>
+        <button id="downloadBtn">Download as answer.cpp</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+      <div class="hint" id="statusHint">You can copy or download your code and submit it as instructed.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* --- Animated explanations for the teaching code --- */
+const explanations = [
+  "🟢 <b>Comments</b> (<code>//</code>) are notes for humans, ignored by the compiler.",
+  "🟢 <b>#include &lt;iostream&gt;</b> brings input/output objects like <code>std::cout</code> into your program.",
+  "🟢 <b>int main()</b> is the entry point — your program starts running here.",
+  "🟢 <b>cout &lt;&lt;</b> sends text to the screen. Add <code>&lt;&lt; endl</code> (or <code>\\n</code>) for a new line.",
+  "🟢 <b>return 0;</b> means the program finished successfully."
+];
+
+let idx = 0;
+const box = document.getElementById("explain");
+function showExplanation() {
+  if (idx < explanations.length) {
+    box.innerHTML = explanations[idx];
+    box.style.animation = "none"; void box.offsetWidth; // restart animation
+    box.style.animation = "slideUp 600ms ease forwards";
+    idx++;
+    setTimeout(showExplanation, 2800);
+  } else {
+    box.innerHTML = "<b>🎉 Great job!</b> You now understand your first C++ program.";
+  }
+}
+setTimeout(showExplanation, 800);
+
+/* --- Answer box utilities --- */
+const answer = document.getElementById('answerBox');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const clearBtn = document.getElementById('clearBtn');
+const status = document.getElementById('statusHint');
+
+copyBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(answer.value);
+    status.textContent = "✅ Copied to clipboard.";
+  } catch {
+    status.textContent = "⚠️ Copy failed. Select and press Ctrl/Cmd+C.";
+  }
+});
+
+downloadBtn.addEventListener('click', () => {
+  const blob = new Blob([answer.value], {type: "text/plain"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = "answer.cpp";
+  document.body.appendChild(a); a.click();
+  URL.revokeObjectURL(url); a.remove();
+  status.textContent = "💾 Downloaded as answer.cpp";
+});
+
+clearBtn.addEventListener('click', () => {
+  answer.value = "";
+  status.textContent = "🧹 Cleared. You can type again.";
+});
+</script>
+</body>
+</html>
