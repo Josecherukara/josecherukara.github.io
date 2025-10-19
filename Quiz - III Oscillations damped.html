@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+<form id="quizForm">
+
+ <div class="notes">
+
+  <h2>Oscillations</h2>
+
+
+<!-- ===================== QUESTION 1 ===================== -->
+ <div class="notes">
+
+  <h2>The Damped Harmonic Oscillator</h2>
+  <p>
+    In a real-world spring or pendulum system, there is always some friction or resistance that
+    removes energy from the system. This resistance is called <b>damping</b>.
+  </p>
+
+  <h3>1. Equation of Motion</h3>
+  <p>
+    Consider a mass \( m \) attached to a spring with constant \( k \) and a damping force
+    proportional to velocity \( \dot{x} \):
+    \[
+      F_d = -c\dot{x}
+    \]
+    where \( c \) is the damping coefficient.
+  </p>
+  <p>
+    The total force acting on the mass is:
+    \[
+      F = -kx - c\dot{x}
+    \]
+    Applying Newton’s second law:
+    \[
+      m\ddot{x} = -kx - c\dot{x}
+      \quad \Rightarrow \quad
+      m\ddot{x} + c\dot{x} + kx = 0
+    \]
+  </p>
+  <p>
+    This is the <b>damped harmonic oscillator equation</b>.
+  </p>
+
+  <h3>2. Standard Form</h3>
+  <p>
+    Dividing through by \( m \):
+    \[
+      \ddot{x} + \frac{c}{m}\dot{x} + \frac{k}{m}x = 0
+    \]
+    Let:
+    \[
+      2\beta = \frac{c}{m}, \quad \omega_0^2 = \frac{k}{m}
+    \]
+    Then the equation becomes:
+    \[
+      \boxed{\ddot{x} + 2\beta\dot{x} + \omega_0^2 x = 0}
+    \]
+    where:
+    <ul>
+      <li>\( \omega_0 \) — natural (undamped) angular frequency</li>
+      <li>\( \beta \) — damping constant (\( \beta = c/2m \))</li>
+    </ul>
+  </p>
+
+  <h3>3. Nature of the Motion</h3>
+  <p>
+    The characteristic equation is:
+    \[
+      r^2 + 2\beta r + \omega_0^2 = 0
+      \quad \Rightarrow \quad
+      r = -\beta \pm \sqrt{\beta^2 - \omega_0^2}
+    \]
+    The behavior of the system depends on the relative size of \( \beta \) and \( \omega_0 \).
+  </p>
+
+  <h3>Case 1: Underdamped Motion (\( \beta < \omega_0 \))</h3>
+  <p>
+    Roots are complex:
+    \[
+      r = -\beta \pm i\omega_d
+      \quad \text{where} \quad
+      \omega_d = \sqrt{\omega_0^2 - \beta^2}
+    \]
+    The solution is oscillatory:
+    \[
+      x(t) = A e^{-\beta t}\cos(\omega_d t + \phi)
+    \]
+  </p>
+  <ul>
+    <li>The amplitude decays exponentially with time.</li>
+    <li>The motion is sinusoidal, with reduced frequency \( \omega_d \).</li>
+    <li>Energy decreases as \( E \propto e^{-2\beta t} \).</li>
+  </ul>
+  <p><b>Example:</b> A pendulum oscillating slowly in air.</p>
+
+  <h3>Case 2: Critically Damped Motion (\( \beta = \omega_0 \))</h3>
+  <p>
+    Roots are real and equal:
+    \[
+      r_1 = r_2 = -\beta
+    \]
+    The general solution is:
+    \[
+      x(t) = (A + Bt)e^{-\beta t}
+    \]
+  </p>
+  <ul>
+    <li>No oscillations — the system returns to equilibrium without overshooting.</li>
+    <li>This is the fastest possible return to equilibrium.</li>
+    <li>Used in car shock absorbers and door closers.</li>
+  </ul>
+
+  <h3>Case 3: Overdamped Motion (\( \beta > \omega_0 \))</h3>
+  <p>
+    Roots are real and distinct:
+    \[
+      r_{1,2} = -\beta \pm \sqrt{\beta^2 - \omega_0^2}
+    \]
+    The solution is:
+    \[
+      x(t) = A e^{r_1 t} + B e^{r_2 t}
+    \]
+  </p>
+  <ul>
+    <li>No oscillations — both exponential terms decay.</li>
+    <li>The system returns to equilibrium slowly compared to critical damping.</li>
+  </ul>
+
+  <h3>4. Energy in Damped Oscillations</h3>
+  <p>
+    The total mechanical energy decreases exponentially with time:
+    \[
+      E(t) = E_0 e^{-2\beta t}
+    \]
+    where \( E_0 \) is the initial energy.
+  </p>
+
+  <h3>5. Comparison Summary</h3>
+  <table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+      <th>Nature of Motion</th>
+      <th>Equation of Motion</th>
+    </tr>
+    <tr>
+      <td>Underdamped</td>
+      <td>\( \beta < \omega_0 \)</td>
+      <td>Oscillatory with decaying amplitude</td>
+      <td>\( x = A e^{-\beta t}\cos(\omega_d t + \phi) \)</td>
+    </tr>
+    <tr>
+      <td>Critically Damped</td>
+      <td>\( \beta = \omega_0 \)</td>
+      <td>Non-oscillatory, fastest return</td>
+      <td>\( x = (A + Bt)e^{-\beta t} \)</td>
+    </tr>
+    <tr>
+      <td>Overdamped</td>
+      <td>\( \beta > \omega_0 \)</td>
+      <td>Non-oscillatory, slow return</td>
+      <td>\( x = A e^{r_1 t} + B e^{r_2 t} \)</td>
+    </tr>
+  </table>
+
+  <h3>6. Graphical Behavior</h3>
+  <ul>
+    <li><b>Underdamped:</b> Oscillations with gradually decreasing amplitude.</li>
+    <li><b>Critically Damped:</b> Smooth exponential decay, no oscillation.</li>
+    <li><b>Overdamped:</b> Even slower exponential decay, no oscillation.</li>
+  </ul>
+
+</div>
+
+
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+<!-- ================= DAMPED HARMONIC OSCILLATOR MCQs ================= -->
+
+<!-- ====== QUESTION 1 ====== -->
+<!-- ====== QUESTION 1 ====== -->
+<div class="question">
+  <p><strong>Q1.</strong> The general equation of a damped harmonic oscillator is:</p>
+  <label><input type="radio" name="q1" value="a" data-correct="true"> \( m\ddot{x} + c\dot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="b"> \( m\ddot{x} + k\dot{x} + cx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="c"> \( m\dot{x} + c\ddot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="d"> \( \ddot{x} + kx = 0 \)</label>
+</div>
+
+<!-- ====== QUESTION 2 ====== -->
+<div class="question">
+  <p><strong>Q2.</strong> The damping force is proportional to:</p>
+  <label><input type="radio" name="q2" value="a"> Displacement</label><br>
+  <label><input type="radio" name="q2" value="b" data-correct="true"> Velocity</label><br>
+  <label><input type="radio" name="q2" value="c"> Acceleration</label><br>
+  <label><input type="radio" name="q2" value="d"> Time</label>
+</div>
+
+<!-- ====== QUESTION 3 ====== -->
+<div class="question">
+  <p><strong>Q3.</strong> In the standard form \( \ddot{x} + 2\beta\dot{x} + \omega_0^2 x = 0 \), the term \( 2\beta \) represents:</p>
+  <label><input type="radio" name="q3" value="a" data-correct="true"> Damping constant per unit mass</label><br>
+  <label><input type="radio" name="q3" value="b"> Natural frequency</label><br>
+  <label><input type="radio" name="q3" value="c"> Energy of the system</label><br>
+  <label><input type="radio" name="q3" value="d"> Mass of the oscillator</label>
+</div>
+
+<!-- ====== QUESTION 4 ====== -->
+<div class="question">
+  <p><strong>Q4.</strong> The solution to the damped oscillator equation depends on:</p>
+  <label><input type="radio" name="q4" value="a" data-correct="true"> Ratio of \( \beta \) to \( \omega_0 \)</label><br>
+  <label><input type="radio" name="q4" value="b"> Mass and displacement only</label><br>
+  <label><input type="radio" name="q4" value="c"> Velocity only</label><br>
+  <label><input type="radio" name="q4" value="d"> External frequency</label>
+</div>
+
+<!-- ====== QUESTION 5 ====== -->
+<div class="question">
+  <p><strong>Q5.</strong> The characteristic equation of the damped harmonic oscillator is:</p>
+  <label><input type="radio" name="q5" value="a" data-correct="true"> \( r^2 + 2\beta r + \omega_0^2 = 0 \)</label><br>
+  <label><input type="radio" name="q5" value="b"> \( r^2 - 2\beta r + \omega_0^2 = 0 \)</label><br>
+  <label><input type="radio" name="q5" value="c"> \( r^2 + \omega_0^2 = 0 \)</label><br>
+  <label><input type="radio" name="q5" value="d"> \( r + \omega_0 = 0 \)</label>
+</div>
+
+<!-- ====== QUESTION 6 ====== -->
+<div class="question">
+  <p><strong>Q6.</strong> For underdamped motion, the condition is:</p>
+  <label><input type="radio" name="q6" value="a"> \( \beta > \omega_0 \)</label><br>
+  <label><input type="radio" name="q6" value="b"> \( \beta = \omega_0 \)</label><br>
+  <label><input type="radio" name="q6" value="c" data-correct="true"> \( \beta < \omega_0 \)</label><br>
+  <label><input type="radio" name="q6" value="d"> \( \beta = 0 \)</label>
+</div>
+
+<!-- ====== QUESTION 7 ====== -->
+<div class="question">
+  <p><strong>Q7.</strong> For critical damping, the system returns to equilibrium:</p>
+  <label><input type="radio" name="q7" value="a"> After oscillating once</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> Without oscillation, in minimum time</label><br>
+  <label><input type="radio" name="q7" value="c"> Very slowly</label><br>
+  <label><input type="radio" name="q7" value="d"> Never</label>
+</div>
+
+<!-- ====== QUESTION 8 ====== -->
+<div class="question">
+  <p><strong>Q8.</strong> The motion is non-oscillatory when:</p>
+  <label><input type="radio" name="q8" value="a"> \( \beta < \omega_0 \)</label><br>
+  <label><input type="radio" name="q8" value="b"> \( \beta = \omega_0 \)</label><br>
+  <label><input type="radio" name="q8" value="c" data-correct="true"> \( \beta > \omega_0 \)</label><br>
+  <label><input type="radio" name="q8" value="d"> None</label>
+</div>
+
+<!-- ====== QUESTION 9 ====== -->
+<div class="question">
+  <p><strong>Q9.</strong> For underdamped motion, the displacement is given by:</p>
+  <label><input type="radio" name="q9" value="a" data-correct="true"> \( x = A e^{-\beta t}\cos(\omega_d t + \phi) \)</label><br>
+  <label><input type="radio" name="q9" value="b"> \( x = A e^{\beta t}\cos(\omega_d t) \)</label><br>
+  <label><input type="radio" name="q9" value="c"> \( x = A\cos(\omega_d t) \)</label><br>
+  <label><input type="radio" name="q9" value="d"> \( x = A e^{-\beta t} \)</label>
+</div>
+
+<!-- ====== QUESTION 10 ====== -->
+<div class="question">
+  <p><strong>Q10.</strong> The damped angular frequency \( \omega_d \) is related to \( \omega_0 \) and \( \beta \) as:</p>
+  <label><input type="radio" name="q10" value="a"> \( \omega_d = \sqrt{\omega_0^2 + \beta^2} \)</label><br>
+  <label><input type="radio" name="q10" value="b"> \( \omega_d = \omega_0 + \beta \)</label><br>
+  <label><input type="radio" name="q10" value="c" data-correct="true"> \( \omega_d = \sqrt{\omega_0^2 - \beta^2} \)</label><br>
+  <label><input type="radio" name="q10" value="d"> \( \omega_d = \omega_0 - \beta \)</label>
+</div>
+
+<!-- ====== QUESTION 11 ====== -->
+<div class="question">
+  <p><strong>Q11.</strong> In an underdamped oscillator, the amplitude decreases:</p>
+  <label><input type="radio" name="q11" value="a"> Linearly with time</label><br>
+  <label><input type="radio" name="q11" value="b" data-correct="true"> Exponentially with time</label><br>
+  <label><input type="radio" name="q11" value="c"> Sinusoidally</label><br>
+  <label><input type="radio" name="q11" value="d"> Remains constant</label>
+</div>
+
+<!-- ====== QUESTION 12 ====== -->
+<div class="question">
+  <p><strong>Q12.</strong> The energy of a damped oscillator decays as:</p>
+  <label><input type="radio" name="q12" value="a" data-correct="true"> \( E = E_0 e^{-2\beta t} \)</label><br>
+  <label><input type="radio" name="q12" value="b"> \( E = E_0 e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q12" value="c"> \( E = E_0 e^{-t/\beta} \)</label><br>
+  <label><input type="radio" name="q12" value="d"> \( E = E_0 e^{\beta t} \)</label>
+</div>
+
+<!-- ====== QUESTION 13 ====== -->
+<div class="question">
+  <p><strong>Q13.</strong> In a critically damped system, the displacement is given by:</p>
+  <label><input type="radio" name="q13" value="a"> \( x = A e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q13" value="b" data-correct="true"> \( x = (A + Bt)e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q13" value="c"> \( x = A e^{\beta t} \)</label><br>
+  <label><input type="radio" name="q13" value="d"> \( x = A\cos(\omega_d t) \)</label>
+</div>
+
+<!-- ====== QUESTION 14 ====== -->
+<div class="question">
+  <p><strong>Q14.</strong> Which of the following systems should be critically damped?</p>
+  <label><input type="radio" name="q14" value="a"> Clock pendulum</label><br>
+  <label><input type="radio" name="q14" value="b" data-correct="true"> Car shock absorber</label><br>
+  <label><input type="radio" name="q14" value="c"> Musical tuning fork</label><br>
+  <label><input type="radio" name="q14" value="d"> Simple pendulum in air</label>
+</div>
+
+<!-- ====== QUESTION 15 ====== -->
+<div class="question">
+  <p><strong>Q15.</strong> For an overdamped system, the solution is:</p>
+  <label><input type="radio" name="q15" value="a" data-correct="true"> \( x = A e^{r_1 t} + B e^{r_2 t} \)</label><br>
+  <label><input type="radio" name="q15" value="b"> \( x = A e^{-\beta t}\cos(\omega_d t) \)</label><br>
+  <label><input type="radio" name="q15" value="c"> \( x = (A + Bt)e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q15" value="d"> \( x = A e^{\beta t} \)</label>
+</div>
+
+<!-- ====== QUESTION 16 ====== -->
+<div class="question">
+  <p><strong>Q16.</strong> In an overdamped oscillator, the system:</p>
+  <label><input type="radio" name="q16" value="a"> Oscillates about equilibrium</label><br>
+  <label><input type="radio" name="q16" value="b" data-correct="true"> Returns to equilibrium slowly without oscillation</label><br>
+  <label><input type="radio" name="q16" value="c"> Never reaches equilibrium</label><br>
+  <label><input type="radio" name="q16" value="d"> Moves away from equilibrium</label>
+</div>
+
+<!-- ====== QUESTION 17 ====== -->
+<div class="question">
+  <p><strong>Q17.</strong> The critical damping coefficient \( c_c \) is given by:</p>
+  <label><input type="radio" name="q17" value="a" data-correct="true"> \( c_c = 2\sqrt{km} \)</label><br>
+  <label><input type="radio" name="q17" value="b"> \( c_c = \sqrt{km} \)</label><br>
+  <label><input type="radio" name="q17" value="c"> \( c_c = k/m \)</label><br>
+  <label><input type="radio" name="q17" value="d"> \( c_c = 2m/k \)</label>
+</div>
+
+<!-- ====== QUESTION 18 ====== -->
+<div class="question">
+  <p><strong>Q18.</strong> The time taken for the amplitude to drop to \( 1/e \) of its original value is:</p>
+  <label><input type="radio" name="q18" value="a" data-correct="true"> \( t = 1/\beta \)</label><br>
+  <label><input type="radio" name="q18" value="b"> \( t = 2/\beta \)</label><br>
+  <label><input type="radio" name="q18" value="c"> \( t = 1/(2\beta) \)</label><br>
+  <label><input type="radio" name="q18" value="d"> \( t = \beta \)</label>
+</div>
+
+<!-- ====== QUESTION 19 ====== -->
+<div class="question">
+  <p><strong>Q19.</strong> The quality factor \( Q \) of a lightly damped oscillator is:</p>
+  <label><input type="radio" name="q19" value="a" data-correct="true"> \( Q = \frac{\omega_0}{2\beta} \)</label><br>
+  <label><input type="radio" name="q19" value="b"> \( Q = \frac{2\beta}{\omega_0} \)</label><br>
+  <label><input type="radio" name="q19" value="c"> \( Q = \omega_0 \beta \)</label><br>
+  <label><input type="radio" name="q19" value="d"> \( Q = \frac{1}{2\beta\omega_0} \)</label>
+</div>
+
+<!-- ====== QUESTION 20 ====== -->
+<div class="question">
+  <p><strong>Q20.</strong> A larger quality factor \( Q \) indicates:</p>
+  <label><input type="radio" name="q20" value="a"> Heavy damping</label><br>
+  <label><input type="radio" name="q20" value="b" data-correct="true"> Small energy loss per cycle</label><br>
+  <label><input type="radio" name="q20" value="c"> Low amplitude</label><br>
+  <label><input type="radio" name="q20" value="d"> Large frequency deviation</label>
+</div>
+
+<!-- ====== QUESTION 21 ====== -->
+<div class="question">
+  <p><strong>Q21.</strong> The logarithmic decrement \( \delta \) is related to damping constant \( \beta \) as:</p>
+  <label><input type="radio" name="q21" value="a" data-correct="true"> \( \delta = 2\pi\beta / \omega_d \)</label><br>
+  <label><input type="radio" name="q21" value="b"> \( \delta = \beta / 2\pi \)</label><br>
+  <label><input type="radio" name="q21" value="c"> \( \delta = 2\beta / \omega_0 \)</label><br>
+  <label><input type="radio" name="q21" value="d"> \( \delta = \omega_d / \beta \)</label>
+</div>
+
+<!-- ====== QUESTION 22 ====== -->
+<div class="question">
+  <p><strong>Q22.</strong> When damping is very small, the frequency of oscillation is approximately:</p>
+  <label><input type="radio" name="q22" value="a"> \( \omega_0 \)</label><br>
+  <label><input type="radio" name="q22" value="b" data-correct="true"> \( \omega_d = \sqrt{\omega_0^2 - \beta^2} \approx \omega_0 \)</label><br>
+  <label><input type="radio" name="q22" value="c"> \( \omega_d = \omega_0 - \beta \)</label><br>
+  <label><input type="radio" name="q22" value="d"> \( \omega_d = 2\pi\omega_0 \)</label>
+</div>
+
+<!-- ====== QUESTION 23 ====== -->
+<div class="question">
+  <p><strong>Q23.</strong> The energy lost per cycle is proportional to:</p>
+  <label><input type="radio" name="q23" value="a" data-correct="true"> \( 1/Q \)</label><br>
+  <label><input type="radio" name="q23" value="b"> \( Q \)</label><br>
+  <label><input type="radio" name="q23" value="c"> \( \beta \)</label><br>
+  <label><input type="radio" name="q23" value="d"> \( \omega_0 \)</label>
+</div>
+
+<!-- ====== QUESTION 24 ====== -->
+<div class="question">
+  <p><strong>Q24.</strong> A lightly damped oscillator is one in which:</p>
+  <label><input type="radio" name="q24" value="a" data-correct="true"> \( \beta \ll \omega_0 \)</label><br>
+  <label><input type="radio" name="q24" value="b"> \( \beta \approx \omega_0 \)</label><br>
+  <label><input type="radio" name="q24" value="c"> \( \beta \gg \omega_0 \)</label><br>
+  <label><input type="radio" name="q24" value="d"> \( \beta = 0 \)</label>
+</div>
+
+<!-- ====== QUESTION 25 ====== -->
+<div class="question">
+  <p><strong>Q25.</strong> If damping is increased beyond the critical value, the system becomes:</p>
+  <label><input type="radio" name="q25" value="a"> Underdamped</label><br>
+  <label><input type="radio" name="q25" value="b" data-correct="true"> Overdamped</label><br>
+  <label><input type="radio" name="q25" value="c"> Critically damped</label><br>
+  <label><input type="radio" name="q25" value="d"> Simple harmonic</label>
+</div>
+
+<!-- ====== QUESTION 26 ====== -->
+<div class="question">
+  <p><strong>Q26.</strong> In an underdamped system, the number of oscillations before coming to rest depends on:</p>
+  <label><input type="radio" name="q26" value="a" data-correct="true"> The ratio \( \omega_0 / \beta \)</label><br>
+  <label><input type="radio" name="q26" value="b"> The value of \( \omega_0 \) only</label><br>
+  <label><input type="radio" name="q26" value="c"> The mass only</label><br>
+  <label><input type="radio" name="q26" value="d"> None</label>
+</div>
+
+<!-- ====== QUESTION 27 ====== -->
+<div class="question">
+  <p><strong>Q27.</strong> Which of the following correctly expresses the total energy of a damped oscillator?</p>
+  <label><input type="radio" name="q27" value="a" data-correct="true"> \( E = \frac{1}{2} k A^2 e^{-2\beta t} \)</label><br>
+  <label><input type="radio" name="q27" value="b"> \( E = \frac{1}{2} k A^2 e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q27" value="c"> \( E = \frac{1}{2} m \omega_0^2 A^2 e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q27" value="d"> \( E = \frac{1}{2} k A e^{-2\beta t} \)</label>
+</div>
+
+<!-- ====== QUESTION 28 ====== -->
+<div class="question">
+  <p><strong>Q28.</strong> The damping coefficient has SI units of:</p>
+  <label><input type="radio" name="q28" value="a" data-correct="true"> N·s/m</label><br>
+  <label><input type="radio" name="q28" value="b"> N/m</label><br>
+  <label><input type="radio" name="q28" value="c"> s/m</label><br>
+  <label><input type="radio" name="q28" value="d"> N·m/s</label>
+</div>
+
+<!-- ====== QUESTION 29 ====== -->
+<div class="question">
+  <p><strong>Q29.</strong> If the damping coefficient is doubled, the amplitude decay rate:</p>
+  <label><input type="radio" name="q29" value="a"> Halves</label><br>
+  <label><input type="radio" name="q29" value="b" data-correct="true"> Doubles</label><br>
+  <label><input type="radio" name="q29" value="c"> Remains unchanged</label><br>
+  <label><input type="radio" name="q29" value="d"> Becomes zero</label>
+</div>
+
+<!-- ====== QUESTION 30 ====== -->
+<div class="question">
+  <p><strong>Q30.</strong> When the damping is removed completely, the motion becomes:</p>
+  <label><input type="radio" name="q30" value="a"> Overdamped</label><br>
+  <label><input type="radio" name="q30" value="b" data-correct="true"> Undamped simple harmonic motion</label><br>
+  <label><input type="radio" name="q30" value="c"> Critically damped</label><br>
+  <label><input type="radio" name="q30" value="d"> Random</label>
+</div>
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 30; // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>

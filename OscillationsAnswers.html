@@ -1,0 +1,203 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+    <body>
+<!-- ========== ANSWERS PAGE: SPRINGS & PENDULUM (SHM) ========== -->
+<div class="answers">
+
+  <!-- Q1 -->
+  <div class="answer">
+    <h3>Answer to Question 1</h3>
+    <p><b>Correct Option:</b> (A)</p>
+    <p><b>Goal:</b> Derive the ODE for a mass \(m\) on an ideal spring of constant \(k\).</p>
+    <ol>
+      <li>Hooke’s law: spring force \(F_s = -kx\) (restoring, opposite displacement).</li>
+      <li>Newton’s second law: \(m\ddot{x} = \sum F = -kx\).</li>
+      <li>Rearrange: \(m\ddot{x} + kx = 0\).</li>
+    </ol>
+    <p><b>Result:</b> \( \boxed{m\ddot{x} + kx = 0} \).</p>
+  </div>
+
+  <!-- Q2 -->
+  <div class="answer">
+    <h3>Answer to Question 2</h3>
+    <p><b>Correct Option:</b> (D) — Both (A) and (C)</p>
+    <p><b>Goal:</b> Solve \( \ddot{x} + \omega^2 x = 0 \).</p>
+    <ol>
+      <li>Characteristic equation: \(r^2 + \omega^2 = 0 \Rightarrow r = \pm i\omega\).</li>
+      <li>General solution (real form): \(x(t) = A\cos(\omega t) + B\sin(\omega t)\).</li>
+      <li>Phase form (equivalent): \(x(t) = C\cos(\omega t + \phi)\).</li>
+    </ol>
+    <p><b>Result:</b> \( \boxed{x(t) = A\cos(\omega t)+B\sin(\omega t) \equiv C\cos(\omega t+\phi)} \).</p>
+  </div>
+
+  <!-- Q3 -->
+  <div class="answer">
+    <h3>Answer to Question 3</h3>
+    <p><b>Correct Option:</b> (A)</p>
+    <p>Comparing \( \ddot{x} + \omega^2 x = 0 \) with \( \ddot{x} + (k/m)x = 0 \) gives \( \omega^2 = k/m \Rightarrow \boxed{\omega=\sqrt{k/m}} \).</p>
+  </div>
+
+  <!-- Q4 -->
+  <div class="answer">
+    <h3>Answer to Question 4</h3>
+    <p><b>Correct Option:</b> (C)</p>
+    <p><b>Goal:</b> Show total mechanical energy is conserved in ideal SHM.</p>
+    <ol>
+      <li>Kinetic energy: \( T = \tfrac{1}{2}m\dot{x}^2 \).</li>
+      <li>Potential (spring): \( V = \tfrac{1}{2}kx^2 \).</li>
+      <li>Total: \( E = T + V = \tfrac{1}{2}m\dot{x}^2 + \tfrac{1}{2}kx^2 \) (constant since no nonconservative forces).</li>
+    </ol>
+    <p><b>Result:</b> \( \boxed{E = \text{constant}} \).</p>
+  </div>
+
+  <!-- Q5 -->
+  <div class="answer">
+    <h3>Answer to Question 5</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>If displaced to \(x_0\) and released from rest: use \(x(t)=A\cos(\omega t+\phi)\), with \(x(0)=x_0\Rightarrow A\cos\phi=x_0\), and \(\dot{x}(0)=0\Rightarrow -A\omega\sin\phi=0\Rightarrow \sin\phi=0\Rightarrow \phi=0\). Thus \(A=x_0\). Hence \( \boxed{A = x_0} \).</p>
+  </div>
+
+  <!-- Q6 -->
+  <div class="answer">
+    <h3>Answer to Question 6</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>At maximum extension \(x=A\) the speed is zero, so \(E=V=\tfrac{1}{2}kA^2\). Thus \( \boxed{\frac{1}{2}kA^2} \).</p>
+  </div>
+
+  <!-- Q7 -->
+  <div class="answer">
+    <h3>Answer to Question 7</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p><b>Goal:</b> Linearize pendulum equation for small angles.</p>
+    <ol>
+      <li>Exact equation (about the lowest point): \( \ddot{\theta} + \frac{g}{\ell}\sin\theta = 0 \).</li>
+      <li>Small-angle approximation: \(\sin\theta \approx \theta\).</li>
+      <li>Linearized ODE: \( \boxed{\ddot{\theta} + \frac{g}{\ell}\theta = 0} \).</li>
+    </ol>
+  </div>
+
+  <!-- Q8 -->
+  <div class="answer">
+    <h3>Answer to Question 8</h3>
+    <p><b>Correct Option:</b> (C)</p>
+    <p>From Q7, the linearized pendulum satisfies SHM: \( \ddot{\theta} + \omega_0^2 \theta = 0 \) with \( \omega_0=\sqrt{g/\ell} \Rightarrow \boxed{\text{simple harmonic motion}} \).</p>
+  </div>
+
+  <!-- Q9 -->
+  <div class="answer">
+    <h3>Answer to Question 9</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>For small angles: \( \omega_0 = \sqrt{g/\ell} \Rightarrow f = \omega_0/(2\pi) = \boxed{\frac{1}{2\pi}\sqrt{\frac{g}{\ell}}} \).</p>
+  </div>
+
+  <!-- Q10 -->
+  <div class="answer">
+    <h3>Answer to Question 10</h3>
+    <p><b>Correct Option:</b> (D) — Both (B) and (C)</p>
+    <p>In SHM: \(x(t)=A\cos(\omega t+\phi)\), \(v(t)=-A\omega\sin(\omega t+\phi)\), \(a(t)=-\omega^2 x\).</p>
+    <ul>
+      <li>At equilibrium \(x=0\): \(|v|=A\omega\) (maximum), and \(a=0\).</li>
+    </ul>
+    <p><b>Therefore:</b> velocity is maximum when displacement is zero and acceleration is zero.</p>
+  </div>
+
+  <!-- Q11 -->
+  <div class="answer">
+    <h3>Answer to Question 11</h3>
+    <p><b>Correct Option:</b> (C)</p>
+    <p>Total mechanical energy in ideal SHM equals its value at turning points: \(E=\tfrac{1}{2}kA^2\). Hence \( \boxed{\tfrac{1}{2}kA^2} \).</p>
+  </div>
+
+  <!-- Q12 -->
+  <div class="answer">
+    <h3>Answer to Question 12</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>For \( \omega=\sqrt{k/m} \), the period is \( \boxed{T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{m}{k}}} \).</p>
+  </div>
+
+  <!-- Q13 -->
+  <div class="answer">
+    <h3>Answer to Question 13</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>Restoring torque about the pivot: \( \tau = -mg\ell\sin\theta \) (negative because it opposes displacement). Thus \( \boxed{\tau = -mg\ell\sin\theta} \).</p>
+  </div>
+
+  <!-- Q14 -->
+  <div class="answer">
+    <h3>Answer to Question 14</h3>
+    <p><b>Correct Option:</b> (A)</p>
+    <p>From \( x(t)=A\cos(\omega t+\phi) \Rightarrow v(t)=-A\omega\sin(\omega t+\phi) \). Hence \( v_{\max} = \boxed{A\omega} \).</p>
+  </div>
+
+  <!-- Q15 -->
+  <div class="answer">
+    <h3>Answer to Question 15</h3>
+    <p><b>Correct Option:</b> (A)</p>
+    <p>Damped mass–spring (viscous damping \(c\dot{x}\)) obeys \( \boxed{m\ddot{x} + c\dot{x} + kx = 0} \).</p>
+  </div>
+
+  <!-- Q16 -->
+  <div class="answer">
+    <h3>Answer to Question 16</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>The coefficient \(c\) multiplies \(\dot{x}\) and represents a resistive force \(F_d=-c\dot{x}\) that dissipates energy (e.g., as heat). Hence it controls the <i>rate</i> of energy loss.</p>
+  </div>
+
+  <!-- Q17 -->
+  <div class="answer">
+    <h3>Answer to Question 17</h3>
+    <p><b>Correct Option:</b> (C)</p>
+    <p>For \( m\ddot{x}+c\dot{x}+kx=0 \), write \( \ddot{x}+2\beta\dot{x}+\omega_0^2 x=0 \) with \( \beta=\tfrac{c}{2m} \), \( \omega_0=\sqrt{k/m} \).</p>
+    <ul>
+      <li><b>Underdamped:</b> \( \beta<\omega_0 \) → oscillatory: \( x=A e^{-\beta t}\cos(\omega_d t+\phi) \), \( \omega_d = \sqrt{\omega_0^2-\beta^2} \).</li>
+      <li><b>Critically damped:</b> \( \beta=\omega_0 \) → fastest return without oscillation.</li>
+      <li><b>Overdamped:</b> \( \beta>\omega_0 \) → non-oscillatory, slow return.</li>
+    </ul>
+    <p>“Small damping” \(\Rightarrow \beta<\omega_0\) → <b>underdamped oscillation</b>.</p>
+  </div>
+
+  <!-- Q18 -->
+  <div class="answer">
+    <h3>Answer to Question 18</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>Forced oscillator \( m\ddot{x}+c\dot{x}+kx = F_0\cos(\Omega t) \): steady-state amplitude
+      \[
+        A(\Omega) = \frac{F_0/m}{\sqrt{(\omega_0^2-\Omega^2)^2 + (2\beta \Omega)^2}}
+      \]
+      is maximized near resonance \( \Omega \approx \omega_0 \) (exact peak slightly below \( \omega_0 \) if \(c\neq 0\)).</p>
+  </div>
+
+  <!-- Q19 -->
+  <div class="answer">
+    <h3>Answer to Question 19</h3>
+    <p><b>Correct Option:</b> (B)</p>
+    <p>The power dissipated by viscous damping is \(P = F_d \dot{x} = (-c\dot{x})\dot{x} = -c\dot{x}^2 \le 0\) (removes energy). Thus the term \(c\dot{x}\) causes energy loss.</p>
+  </div>
+
+  <!-- Q20 -->
+  <div class="answer">
+    <h3>Answer to Question 20</h3>
+    <p><b>Correct Option:</b> (C)</p>
+    <p>For \( \ddot{x}+2\beta\dot{x}+\omega_0^2 x=0 \), the motion is oscillatory iff roots are complex:
+      \( \beta < \omega_0 \Rightarrow \omega_d=\sqrt{\omega_0^2-\beta^2} \in \mathbb{R} \).
+      Hence underdamped, oscillatory solution occurs when \( \boxed{\beta<\omega_0} \).
+    </p>
+  </div>
+
+</div>
+<!-- ========== END ANSWERS PAGE ========== -->
+</body>
+</html>

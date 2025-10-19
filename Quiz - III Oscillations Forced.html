@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Oscillations-2</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+<form id="quizForm">
+
+<div class="notes">
+
+  <h2>Forced Harmonic Oscillator — Obtaining the Solution</h2>
+
+  <p>
+    A <b>forced harmonic oscillator</b> is a system that oscillates under the influence of both
+    a restoring force and an external periodic driving force.
+    Typical examples include an electric circuit driven by an AC source,
+    or a pendulum driven by a periodic torque.
+  </p>
+
+  <h3>1. Equation of Motion</h3>
+  <p>
+    Consider a mass \( m \) attached to a spring of stiffness \( k \), 
+    subjected to a damping force proportional to velocity, and driven
+    by an external periodic force \( F_0 \cos(\Omega t) \).
+  </p>
+
+  <p>
+    The net force is given by:
+    \[
+      F_{\text{net}} = -kx - c\dot{x} + F_0 \cos(\Omega t)
+    \]
+    Applying Newton’s second law:
+    \[
+      m\ddot{x} + c\dot{x} + kx = F_0 \cos(\Omega t)
+    \]
+  </p>
+
+  <p>
+    Dividing through by \( m \):
+    \[
+      \ddot{x} + 2\beta\dot{x} + \omega_0^2 x = f_0 \cos(\Omega t)
+    \]
+    where:
+    \[
+      \omega_0 = \sqrt{\frac{k}{m}}, \quad 2\beta = \frac{c}{m}, \quad f_0 = \frac{F_0}{m}
+    \]
+  </p>
+
+  <h3>2. General Solution</h3>
+  <p>
+    The total solution of this differential equation consists of two parts:
+    \[
+      x(t) = x_h(t) + x_p(t)
+    \]
+    where:
+    <ul>
+      <li>\( x_h(t) \): solution of the homogeneous (transient) equation</li>
+      <li>\( x_p(t) \): particular (steady-state) solution due to the driving force</li>
+    </ul>
+  </p>
+
+  <h3>3. Homogeneous Solution (Transient Part)</h3>
+  <p>
+    The homogeneous equation is:
+    \[
+      \ddot{x} + 2\beta\dot{x} + \omega_0^2 x = 0
+    \]
+    which is the same as the <b>damped oscillator</b> equation.
+  </p>
+
+  <p>
+    Its solution depends on the damping condition:
+    \[
+      x_h(t) = A e^{-\beta t} \cos(\omega_d t + \phi)
+    \]
+    where \( \omega_d = \sqrt{\omega_0^2 - \beta^2} \).
+  </p>
+
+  <p>
+    This term decays with time due to the exponential factor \( e^{-\beta t} \)
+    and eventually vanishes, leaving only the <b>steady-state solution</b>.
+  </p>
+
+  <h3>4. Particular Solution (Steady-State Response)</h3>
+  <p>
+    To find the steady-state response, assume a trial solution of the form:
+    \[
+      x_p(t) = X \cos(\Omega t - \delta)
+    \]
+    where:
+    <ul>
+      <li>\( X \): amplitude of forced oscillation</li>
+      <li>\( \delta \): phase difference between the driving force and displacement</li>
+    </ul>
+  </p>
+
+  <p>Substitute this trial solution into the equation of motion:</p>
+  <p>
+    \[
+      -\Omega^2 X \cos(\Omega t - \delta)
+      + 2\beta\Omega X \sin(\Omega t - \delta)
+      + \omega_0^2 X \cos(\Omega t - \delta)
+      = f_0 \cos(\Omega t)
+    \]
+  </p>
+
+  <p>
+    Using trigonometric identities and comparing coefficients of \( \cos(\Omega t) \)
+    and \( \sin(\Omega t) \), we obtain two equations:
+    \[
+      X(\omega_0^2 - \Omega^2) = f_0 \cos\delta
+      \quad \text{and} \quad
+      2\beta\Omega X = f_0 \sin\delta
+    \]
+  </p>
+
+  <h3>5. Amplitude of Steady-State Oscillation</h3>
+  <p>
+    Squaring and adding the two equations:
+    \[
+      X^2 \big[ (\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2 \big] = f_0^2
+    \]
+    Hence,
+    \[
+      \boxed{X = \frac{f_0}{\sqrt{(\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2}}}
+    \]
+  </p>
+
+  <p>
+    This shows that \( X \) depends on both the driving frequency \( \Omega \)
+    and the damping constant \( \beta \).
+  </p>
+
+  <h3>6. Phase Difference</h3>
+  <p>
+    The phase lag \( \delta \) is obtained from:
+    \[
+      \tan\delta = \frac{2\beta\Omega}{\omega_0^2 - \Omega^2}
+    \]
+  </p>
+  <ul>
+    <li>For \( \Omega \ll \omega_0 \): \( \delta \approx 0 \) → displacement in phase with force.</li>
+    <li>For \( \Omega = \omega_0 \): \( \delta = \pi/2 \).</li>
+    <li>For \( \Omega \gg \omega_0 \): \( \delta \approx \pi \) → displacement out of phase with force.</li>
+  </ul>
+
+  <h3>7. Resonance</h3>
+  <p>
+    The amplitude \( X \) reaches a maximum when the denominator is minimum,
+    i.e. when:
+    \[
+      \frac{dX}{d\Omega} = 0
+    \]
+    This occurs approximately at:
+    \[
+      \boxed{\Omega_r = \sqrt{\omega_0^2 - 2\beta^2}}
+    \]
+    known as the <b>resonance frequency</b>.
+  </p>
+
+  <p>
+    For weak damping (\( \beta \ll \omega_0 \)), \( \Omega_r \approx \omega_0 \).
+  </p>
+
+  <h3>8. Velocity and Energy of Forced Oscillator</h3>
+  <p>
+    The velocity of oscillation is:
+    \[
+      v(t) = -\Omega X \sin(\Omega t - \delta)
+    \]
+    and the average power absorbed from the driving force is:
+    \[
+      \langle P \rangle = \frac{1}{2} F_0 \Omega X \sin\delta
+      = \frac{F_0^2}{2m} \frac{2\beta\Omega^2}
+        {(\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2}
+    \]
+  </p>
+
+  <p>
+    The power absorbed is maximum when \( \Omega = \omega_0 \),
+    that is, at <b>resonance</b>.
+  </p>
+
+  <h3>9. Summary Table</h3>
+  <table border="1" cellspacing="0" cellpadding="6">
+    <tr>
+      <th>Quantity</th>
+      <th>Expression</th>
+    </tr>
+    <tr>
+      <td>Equation of motion</td>
+      <td>\( \ddot{x} + 2\beta\dot{x} + \omega_0^2 x = f_0 \cos(\Omega t) \)</td>
+    </tr>
+    <tr>
+      <td>Steady-state amplitude</td>
+      <td>\( X = \dfrac{f_0}{\sqrt{(\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2}} \)</td>
+    </tr>
+    <tr>
+      <td>Phase lag</td>
+      <td>\( \tan\delta = \dfrac{2\beta\Omega}{\omega_0^2 - \Omega^2} \)</td>
+    </tr>
+    <tr>
+      <td>Resonance frequency</td>
+      <td>\( \Omega_r = \sqrt{\omega_0^2 - 2\beta^2} \)</td>
+    </tr>
+    <tr>
+      <td>Average power absorbed</td>
+      <td>\( \langle P \rangle = \dfrac{F_0^2}{2m} \dfrac{2\beta\Omega^2}
+      {(\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2} \)</td>
+    </tr>
+  </table>
+
+  <h3>10. Physical Interpretation</h3>
+  <ul>
+    <li>At low frequencies, the mass follows the driving force almost exactly.</li>
+    <li>Near resonance, the system absorbs maximum energy.</li>
+    <li>At high frequencies, inertia dominates and displacement is nearly opposite in phase.</li>
+    <li>Damping reduces both the peak amplitude and sharpness of resonance.</li>
+  </ul>
+
+
+<!-- ================= FORCED HARMONIC OSCILLATOR — 30 MCQs ================= -->
+
+<!-- ====== QUESTION 1 ====== -->
+<h2>Few questions like question 5 is out of Syllabus.</h2>
+<div class="question">
+  <p><strong>Q1.</strong> The differential equation of a forced damped harmonic oscillator is:</p>
+  <label><input type="radio" name="q1" value="a" data-correct="true"> \( m\ddot{x} + c\dot{x} + kx = F_0 \cos(\Omega t) \)</label><br>
+  <label><input type="radio" name="q1" value="b"> \( m\ddot{x} + kx = F_0 \cos(\Omega t) \)</label><br>
+  <label><input type="radio" name="q1" value="c"> \( m\dot{x} + c\dot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="d"> \( \ddot{x} + kx = F_0 \)</label>
+</div>
+
+<!-- ====== QUESTION 2 ====== -->
+<div class="question">
+  <p><strong>Q2.</strong> In the equation \( \ddot{x} + 2\beta\dot{x} + \omega_0^2 x = f_0 \cos(\Omega t) \), the term \( 2\beta \) represents:</p>
+  <label><input type="radio" name="q2" value="a" data-correct="true"> Damping coefficient per unit mass</label><br>
+  <label><input type="radio" name="q2" value="b"> Natural frequency</label><br>
+  <label><input type="radio" name="q2" value="c"> Driving frequency</label><br>
+  <label><input type="radio" name="q2" value="d"> Amplitude constant</label>
+</div>
+
+<!-- ====== QUESTION 3 ====== -->
+<div class="question">
+  <p><strong>Q3.</strong> The particular (steady-state) solution of a forced oscillator is of the form:</p>
+  <label><input type="radio" name="q3" value="a" data-correct="true"> \( x_p = X \cos(\Omega t - \delta) \)</label><br>
+  <label><input type="radio" name="q3" value="b"> \( x_p = X e^{-\beta t} \)</label><br>
+  <label><input type="radio" name="q3" value="c"> \( x_p = A\cos(\omega_0 t) + B\sin(\omega_0 t) \)</label><br>
+  <label><input type="radio" name="q3" value="d"> \( x_p = f_0 \cos(\Omega t) \)</label>
+</div>
+
+<!-- ====== QUESTION 4 ====== -->
+<div class="question">
+  <p><strong>Q4.</strong> The amplitude of steady-state oscillation is given by:</p>
+  <label><input type="radio" name="q4" value="a" data-correct="true"> \( X = \dfrac{f_0}{\sqrt{(\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2}} \)</label><br>
+  <label><input type="radio" name="q4" value="b"> \( X = f_0 (\omega_0^2 - \Omega^2) \)</label><br>
+  <label><input type="radio" name="q4" value="c"> \( X = f_0 \cos(\Omega t) \)</label><br>
+  <label><input type="radio" name="q4" value="d"> \( X = \dfrac{f_0}{(\omega_0^2 - \Omega^2)} \)</label>
+</div>
+
+<!-- ====== QUESTION 5 ====== -->
+<div class="question">
+  <p><strong>Q5.</strong> The phase lag \( \delta \) between displacement and force is given by:</p>
+  <label><input type="radio" name="q5" value="a" data-correct="true"> \( \tan\delta = \dfrac{2\beta\Omega}{\omega_0^2 - \Omega^2} \)</label><br>
+  <label><input type="radio" name="q5" value="b"> \( \tan\delta = \dfrac{\omega_0^2 - \Omega^2}{2\beta\Omega} \)</label><br>
+  <label><input type="radio" name="q5" value="c"> \( \tan\delta = \dfrac{\beta}{\Omega} \)</label><br>
+  <label><input type="radio" name="q5" value="d"> \( \tan\delta = \dfrac{\Omega}{\omega_0} \)</label>
+</div>
+
+<!-- ====== QUESTION 6 ====== -->
+<div class="question">
+  <p><strong>Q6.</strong> At resonance, the driving frequency \( \Omega \) is approximately equal to:</p>
+  <label><input type="radio" name="q6" value="a" data-correct="true"> \( \sqrt{\omega_0^2 - 2\beta^2} \)</label><br>
+  <label><input type="radio" name="q6" value="b"> \( \omega_0 + \beta \)</label><br>
+  <label><input type="radio" name="q6" value="c"> \( \omega_0 - \beta \)</label><br>
+  <label><input type="radio" name="q6" value="d"> \( 2\omega_0 \)</label>
+</div>
+
+<!-- ====== QUESTION 7 ====== -->
+<div class="question">
+  <p><strong>Q7.</strong> When \( \Omega = \omega_0 \), the phase difference between force and displacement is:</p>
+  <label><input type="radio" name="q7" value="a"> \( 0 \)</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> \( \pi/2 \)</label><br>
+  <label><input type="radio" name="q7" value="c"> \( \pi \)</label><br>
+  <label><input type="radio" name="q7" value="d"> \( 3\pi/2 \)</label>
+</div>
+
+<!-- ====== QUESTION 8 ====== -->
+<div class="question">
+  <p><strong>Q8.</strong> The transient part of the forced oscillator solution:</p>
+  <label><input type="radio" name="q8" value="a"> Grows exponentially</label><br>
+  <label><input type="radio" name="q8" value="b" data-correct="true"> Decays exponentially</label><br>
+  <label><input type="radio" name="q8" value="c"> Is constant</label><br>
+  <label><input type="radio" name="q8" value="d"> Oscillates indefinitely</label>
+</div>
+
+<!-- ====== QUESTION 9 ====== -->
+<div class="question">
+  <p><strong>Q9.</strong> The steady-state part corresponds to:</p>
+  <label><input type="radio" name="q9" value="a"> Natural oscillation</label><br>
+  <label><input type="radio" name="q9" value="b" data-correct="true"> Forced oscillation with frequency \( \Omega \)</label><br>
+  <label><input type="radio" name="q9" value="c"> Random motion</label><br>
+  <label><input type="radio" name="q9" value="d"> Decaying oscillation</label>
+</div>
+
+<!-- ====== QUESTION 10 ====== -->
+<div class="question">
+  <p><strong>Q10.</strong> The average power absorbed by the oscillator is:</p>
+  <label><input type="radio" name="q10" value="a" data-correct="true"> \( \langle P \rangle = \dfrac{F_0^2}{2m} \dfrac{2\beta\Omega^2}{(\omega_0^2 - \Omega^2)^2 + (2\beta\Omega)^2} \)</label><br>
+  <label><input type="radio" name="q10" value="b"> \( \langle P \rangle = F_0\Omega \)</label><br>
+  <label><input type="radio" name="q10" value="c"> \( \langle P \rangle = \dfrac{F_0^2}{m} \beta \)</label><br>
+  <label><input type="radio" name="q10" value="d"> Zero</label>
+</div>
+
+<!-- ====== QUESTION 11 ====== -->
+<div class="question">
+  <p><strong>Q11.</strong> Resonance in a mechanical system occurs when:</p>
+  <label><input type="radio" name="q11" value="a" data-correct="true"> The natural frequency equals the driving frequency</label><br>
+  <label><input type="radio" name="q11" value="b"> The damping is infinite</label><br>
+  <label><input type="radio" name="q11" value="c"> The amplitude becomes zero</label><br>
+  <label><input type="radio" name="q11" value="d"> There is no external force</label>
+</div>
+
+<!-- ====== QUESTION 12 ====== -->
+<div class="question">
+  <p><strong>Q12.</strong> A bridge collapses when soldiers march in step because:</p>
+  <label><input type="radio" name="q12" value="a"> The bridge has low damping</label><br>
+  <label><input type="radio" name="q12" value="b" data-correct="true"> The soldiers’ marching frequency matches the bridge’s natural frequency</label><br>
+  <label><input type="radio" name="q12" value="c"> The bridge is overloaded</label><br>
+  <label><input type="radio" name="q12" value="d"> Wind adds to weight</label>
+</div>
+
+<!-- ====== QUESTION 13 ====== -->
+<div class="question">
+  <p><strong>Q13.</strong> Which quantity determines how sharply resonance occurs?</p>
+  <label><input type="radio" name="q13" value="a" data-correct="true"> Quality factor \( Q \)</label><br>
+  <label><input type="radio" name="q13" value="b"> Amplitude</label><br>
+  <label><input type="radio" name="q13" value="c"> Driving force</label><br>
+  <label><input type="radio" name="q13" value="d"> Phase angle</label>
+</div>
+
+<!-- ====== QUESTION 14 ====== -->
+<div class="question">
+  <p><strong>Q14.</strong> The quality factor is defined as:</p>
+  <label><input type="radio" name="q14" value="a" data-correct="true"> \( Q = \dfrac{\omega_0}{2\beta} \)</label><br>
+  <label><input type="radio" name="q14" value="b"> \( Q = \dfrac{2\beta}{\omega_0} \)</label><br>
+  <label><input type="radio" name="q14" value="c"> \( Q = \omega_0 + \beta \)</label><br>
+  <label><input type="radio" name="q14" value="d"> \( Q = \dfrac{1}{\omega_0\beta} \)</label>
+</div>
+
+<!-- ====== QUESTION 15 ====== -->
+<div class="question">
+  <p><strong>Q15.</strong> A high quality factor indicates:</p>
+  <label><input type="radio" name="q15" value="a"> Large damping</label><br>
+  <label><input type="radio" name="q15" value="b" data-correct="true"> Sharp resonance and small energy loss</label><br>
+  <label><input type="radio" name="q15" value="c"> Broad resonance</label><br>
+  <label><input type="radio" name="q15" value="d"> Constant amplitude</label>
+</div>
+
+<!-- ====== QUESTION 16 ====== -->
+<div class="question">
+  <p><strong>Q16.</strong> When wind causes oscillations in tall buildings, the phenomenon is known as:</p>
+  <label><input type="radio" name="q16" value="a" data-correct="true"> Aerodynamic resonance</label><br>
+  <label><input type="radio" name="q16" value="b"> Seismic damping</label><br>
+  <label><input type="radio" name="q16" value="c"> Natural resonance</label><br>
+  <label><input type="radio" name="q16" value="d"> Gravitational vibration</label>
+</div>
+
+<!-- ====== QUESTION 17 ====== -->
+<div class="question">
+  <p><strong>Q17.</strong> Earthquakes are dangerous for tall buildings when:</p>
+  <label><input type="radio" name="q17" value="a" data-correct="true"> Ground frequency ≈ building’s natural frequency</label><br>
+  <label><input type="radio" name="q17" value="b"> Building height is small</label><br>
+  <label><input type="radio" name="q17" value="c"> The building has heavy damping</label><br>
+  <label><input type="radio" name="q17" value="d"> The ground motion is irregular</label>
+</div>
+
+<!-- ====== QUESTION 18 ====== -->
+<div class="question">
+  <p><strong>Q18.</strong> In resonance, which physical quantity reaches a maximum?</p>
+  <label><input type="radio" name="q18" value="a" data-correct="true"> Amplitude</label><br>
+  <label><input type="radio" name="q18" value="b"> Frequency</label><br>
+  <label><input type="radio" name="q18" value="c"> Damping</label><br>
+  <label><input type="radio" name="q18" value="d"> Phase</label>
+</div>
+
+<!-- ====== QUESTION 19 ====== -->
+<div class="question">
+  <p><strong>Q19.</strong> In a forced oscillator, when \( \Omega \gg \omega_0 \), the displacement is:</p>
+  <label><input type="radio" name="q19" value="a"> In phase with the driving force</label><br>
+  <label><input type="radio" name="q19" value="b" data-correct="true"> Out of phase (180° lag)</label><br>
+  <label><input type="radio" name="q19" value="c"> 90° ahead</label><br>
+  <label><input type="radio" name="q19" value="d"> Random</label>
+</div>
+
+<!-- ====== QUESTION 20 ====== -->
+<div class="question">
+  <p><strong>Q20.</strong> The bridge collapse in Tacoma Narrows (1940) was due to:</p>
+  <label><input type="radio" name="q20" value="a" data-correct="true"> Aerodynamic resonance between wind frequency and bridge’s natural frequency</label><br>
+  <label><input type="radio" name="q20" value="b"> Earthquake</label><br>
+  <label><input type="radio" name="q20" value="c"> Fatigue of cables</label><br>
+  <label><input type="radio" name="q20" value="d"> Excess load</label>
+</div>
+
+<!-- ====== QUESTION 21 ====== -->
+<div class="question">
+  <p><strong>Q21.</strong> The amplitude–frequency curve of a forced oscillator becomes broader when:</p>
+  <label><input type="radio" name="q21" value="a" data-correct="true"> Damping increases</label><br>
+  <label><input type="radio" name="q21" value="b"> Damping decreases</label><br>
+  <label><input type="radio" name="q21" value="c"> Driving force increases</label><br>
+  <label><input type="radio" name="q21" value="d"> Mass increases</label>
+</div>
+
+<!-- ====== QUESTION 22 ====== -->
+<div class="question">
+  <p><strong>Q22.</strong> At low driving frequencies, the displacement and the force are:</p>
+  <label><input type="radio" name="q22" value="a" data-correct="true"> In phase</label><br>
+  <label><input type="radio" name="q22" value="b"> Out of phase</label><br>
+  <label><input type="radio" name="q22" value="c"> 90° apart</label><br>
+  <label><input type="radio" name="q22" value="d"> Randomly related</label>
+</div>
+
+<!-- ====== QUESTION 23 ====== -->
+<div class="question">
+  <p><strong>Q23.</strong> In the absence of damping, the amplitude at resonance is:</p>
+  <label><input type="radio" name="q23" value="a"> Finite</label><br>
+  <label><input type="radio" name="q23" value="b" data-correct="true"> Infinite</label><br>
+  <label><input type="radio" name="q23" value="c"> Zero</label><br>
+  <label><input type="radio" name="q23" value="d"> Constant</label>
+</div>
+
+<!-- ====== QUESTION 24 ====== -->
+<div class="question">
+  <p><strong>Q24.</strong> Increasing damping causes the resonance peak to:</p>
+  <label><input type="radio" name="q24" value="a" data-correct="true"> Broaden and lower</label><br>
+  <label><input type="radio" name="q24" value="b"> Sharpen and rise</label><br>
+  <label><input type="radio" name="q24" value="c"> Shift upward</label><br>
+  <label><input type="radio" name="q24" value="d"> Stay same</label>
+</div>
+
+<!-- ====== QUESTION 25 ====== -->
+<div class="question">
+  <p><strong>Q25.</strong> The phase angle \( \delta \) changes from 0 to \( \pi \) as:</p>
+  <label><input type="radio" name="q25" value="a" data-correct="true"> Frequency increases from 0 to ∞</label><br>
+  <label><input type="radio" name="q25" value="b"> Damping decreases</label><br>
+  <label><input type="radio" name="q25" value="c"> Force amplitude increases</label><br>
+  <label><input type="radio" name="q25" value="d"> Time increases</label>
+</div>
+
+<!-- ====== QUESTION 26 ====== -->
+<div class="question">
+  <p><strong>Q26.</strong> For small damping, the resonance frequency \( \Omega_r \) is approximately:</p>
+  <label><input type="radio" name="q26" value="a" data-correct="true"> \( \Omega_r \approx \omega_0 \)</label><br>
+  <label><input type="radio" name="q26" value="b"> \( \Omega_r = \beta \)</label><br>
+  <label><input type="radio" name="q26" value="c"> \( \Omega_r = 2\omega_0 \)</label><br>
+  <label><input type="radio" name="q26" value="d"> \( \Omega_r = \omega_0 / 2 \)</label>
+</div>
+
+<!-- ====== QUESTION 27 ====== -->
+<div class="question">
+  <p><strong>Q27.</strong> The oscillations produced by an alternating voltage across a resistor, inductor and capacitor are:</p>
+  <label><input type="radio" name="q27" value="a"> Natural oscillations</label><br>
+  <label><input type="radio" name="q27" value="b" data-correct="true"> Forced oscillations</label><br>
+  <label><input type="radio" name="q27" value="c"> Free oscillations</label><br>
+  <label><input type="radio" name="q27" value="d"> Aperiodic</label>
+</div>
+
+<!-- ====== QUESTION 28 ====== -->
+<div class="question">
+  <p><strong>Q28.</strong> The amplitude of vibration of a building during an earthquake depends mainly on:</p>
+  <label><input type="radio" name="q28" value="a" data-correct="true"> The match between ground frequency and building’s natural frequency</label><br>
+  <label><input type="radio" name="q28" value="b"> The height alone</label><br>
+  <label><input type="radio" name="q28" value="c"> The building’s mass</label><br>
+  <label><input type="radio" name="q28" value="d"> Material strength only</label>
+</div>
+
+<!-- ====== QUESTION 29 ====== -->
+<div class="question">
+  <p><strong>Q29.</strong> A lightly damped oscillator driven at resonance absorbs:</p>
+  <label><input type="radio" name="q29" value="a" data-correct="true"> Maximum power</label><br>
+  <label><input type="radio" name="q29" value="b"> Minimum power</label><br>
+  <label><input type="radio" name="q29" value="c"> No power</label><br>
+  <label><input type="radio" name="q29" value="d"> Constant power</label>
+</div>
+
+<!-- ====== QUESTION 30 ====== -->
+<div class="question">
+  <p><strong>Q30.</strong> The main reason soldiers break step while crossing bridges is to:</p>
+  <label><input type="radio" name="q30" value="a" data-correct="true"> Avoid resonance with bridge’s natural frequency</label><br>
+  <label><input type="radio" name="q30" value="b"> Reduce noise</label><br>
+  <label><input type="radio" name="q30" value="c"> Maintain rhythm</label><br>
+  <label><input type="radio" name="q30" value="d"> Improve uniformity</label>
+</div>
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (i<31&opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 30;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      //TEXTALERTSCORE="scoreText:"+ `${score} / ${totalQuestions}`
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+      
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent! Your Score is " + scoreText))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>

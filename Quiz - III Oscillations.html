@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+<form id="quizForm">
+
+ <!-- ====== QUESTION 1 ====== -->
+<div class="question">
+  <p><strong>Q1.</strong> What is the differential equation of motion for a mass \( m \) attached to an ideal spring with spring constant \( k \)?</p>
+  <label><input type="radio" name="q1" value="a" data-correct="true"> \( m\ddot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="b"> \( m\dot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="c"> \( k\ddot{x} + mx = 0 \)</label><br>
+  <label><input type="radio" name="q1" value="d"> \( \ddot{x} + mkx = 0 \)</label>
+</div>
+
+<!-- ====== QUESTION 2 ====== -->
+<div class="question">
+  <p><strong>Q2.</strong> The general solution to \( \ddot{x} + \omega^2 x = 0 \) is:</p>
+  <label><input type="radio" name="q2" value="a"> \( x(t) = A \cos(\omega t + \phi) \)</label><br>
+  <label><input type="radio" name="q2" value="b"> \( x(t) = A \exp(-\omega t) \)</label><br>
+  <label><input type="radio" name="q2" value="c"> \( x(t) = A \cos(\omega t) + B \sin(\omega t) \)</label><br>
+  <label><input type="radio" name="q2" value="d" data-correct="true"> Both A and C</label>
+</div>
+
+<!-- ====== QUESTION 3 ====== -->
+<div class="question">
+  <p><strong>Q3.</strong> For a mass-spring system, the natural angular frequency is:</p>
+  <label><input type="radio" name="q3" value="a" data-correct="true"> \( \omega = \sqrt{\frac{k}{m}} \)</label><br>
+  <label><input type="radio" name="q3" value="b"> \( \omega = \frac{k}{m} \)</label><br>
+  <label><input type="radio" name="q3" value="c"> \( \omega = \frac{m}{k} \)</label><br>
+  <label><input type="radio" name="q3" value="d"> \( \omega = \sqrt{\frac{m}{k}} \)</label>
+</div>
+
+<!-- ====== QUESTION 4 ====== -->
+<div class="question">
+  <p><strong>Q4.</strong> Which quantity remains conserved in the ideal mass-spring system?</p>
+  <label><input type="radio" name="q4" value="a"> Kinetic energy</label><br>
+  <label><input type="radio" name="q4" value="b"> Potential energy</label><br>
+  <label><input type="radio" name="q4" value="c" data-correct="true"> Total mechanical energy</label><br>
+  <label><input type="radio" name="q4" value="d"> Linear momentum</label>
+</div>
+
+<!-- ====== QUESTION 5 ====== -->
+<div class="question">
+  <p><strong>Q5.</strong> If the mass is displaced by \( x_0 \) and released, what is the amplitude of oscillation?</p>
+  <label><input type="radio" name="q5" value="a"> \( 0 \)</label><br>
+  <label><input type="radio" name="q5" value="b" data-correct="true"> \( x_0 \)</label><br>
+  <label><input type="radio" name="q5" value="c"> \( 2x_0 \)</label><br>
+  <label><input type="radio" name="q5" value="d"> \( \sqrt{x_0} \)</label>
+</div>
+
+<!-- ====== QUESTION 6 ====== -->
+<div class="question">
+  <p><strong>Q6.</strong> The energy stored in a spring at maximum extension \( A \) is:</p>
+  <label><input type="radio" name="q6" value="a"> \( \frac{1}{2} m A^2 \)</label><br>
+  <label><input type="radio" name="q6" value="b" data-correct="true"> \( \frac{1}{2} k A^2 \)</label><br>
+  <label><input type="radio" name="q6" value="c"> \( k A \)</label><br>
+  <label><input type="radio" name="q6" value="d"> \( mA \)</label>
+</div>
+
+<!-- ====== QUESTION 7 ====== -->
+<div class="question">
+  <p><strong>Q7.</strong> For a simple pendulum of length \( l \), the linearized equation of motion is:</p>
+  <label><input type="radio" name="q7" value="a"> \( \ddot{\theta} + \frac{g}{l} \sin(\theta) = 0 \)</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> \( \ddot{\theta} + \frac{g}{l} \theta = 0 \)</label><br>
+  <label><input type="radio" name="q7" value="c"> \( \ddot{x} + \frac{k}{m} x = 0 \)</label><br>
+  <label><input type="radio" name="q7" value="d"> \( \dot{\theta} = \theta \)</label>
+</div>
+
+<!-- ====== QUESTION 8 ====== -->
+<div class="question">
+  <p><strong>Q8.</strong> For small angles, the simple pendulum exhibits:</p>
+  <label><input type="radio" name="q8" value="a"> Damped oscillations</label><br>
+  <label><input type="radio" name="q8" value="b"> Chaotic motion</label><br>
+  <label><input type="radio" name="q8" value="c" data-correct="true"> Simple harmonic motion</label><br>
+  <label><input type="radio" name="q8" value="d"> Constant angular velocity</label>
+</div>
+
+<!-- ====== QUESTION 9 ====== -->
+<div class="question">
+  <p><strong>Q9.</strong> The frequency of oscillation of a simple pendulum (small angle) is:</p>
+  <label><input type="radio" name="q9" value="a"> \( \frac{1}{2\pi} \sqrt{\frac{k}{m}} \)</label><br>
+  <label><input type="radio" name="q9" value="b" data-correct="true"> \( \frac{1}{2\pi} \sqrt{\frac{g}{l}} \)</label><br>
+  <label><input type="radio" name="q9" value="c"> \( \sqrt{g l} \)</label><br>
+  <label><input type="radio" name="q9" value="d"> \( \frac{1}{2\pi} \sqrt{gl} \)</label>
+</div>
+
+<!-- ====== QUESTION 10 ====== -->
+<div class="question">
+  <p><strong>Q10.</strong> In SHM, the velocity is maximum when:</p>
+  <label><input type="radio" name="q10" value="a"> Displacement is maximum</label><br>
+  <label><input type="radio" name="q10" value="b"> Displacement is zero</label><br>
+  <label><input type="radio" name="q10" value="c"> Acceleration is zero</label><br>
+  <label><input type="radio" name="q10" value="d" data-correct="true"> Both B and C</label>
+</div>
+
+<!-- ====== QUESTION 11 ====== -->
+<div class="question">
+  <p><strong>Q11.</strong> What is the total mechanical energy of a mass-spring system in SHM with amplitude \( A \)?</p>
+  <label><input type="radio" name="q11" value="a"> \( \frac{1}{2} k x^2 \)</label><br>
+  <label><input type="radio" name="q11" value="b"> \( \frac{1}{2} m v^2 \)</label><br>
+  <label><input type="radio" name="q11" value="c" data-correct="true"> \( \frac{1}{2} k A^2 \)</label><br>
+  <label><input type="radio" name="q11" value="d"> \( \frac{1}{2} k A \)</label>
+</div>
+
+<!-- ====== QUESTION 12 ====== -->
+<div class="question">
+  <p><strong>Q12.</strong> A block of mass \( m \) is attached to a spring and oscillates with angular frequency \( \omega \). What is the period?</p>
+  <label><input type="radio" name="q12" value="a"> \( 2\pi \omega \)</label><br>
+  <label><input type="radio" name="q12" value="b" data-correct="true"> \( 2\pi \sqrt{m/k} \)</label><br>
+  <label><input type="radio" name="q12" value="c"> \( \omega/2\pi \)</label><br>
+  <label><input type="radio" name="q12" value="d"> \( 2\pi \sqrt{k/m} \)</label>
+</div>
+
+<!-- ====== QUESTION 13 ====== -->
+<div class="question">
+  <p><strong>Q13.</strong> For a pendulum released from rest at angle \( \theta_0 \), the restoring torque is:</p>
+  <label><input type="radio" name="q13" value="a"> \( mg\cos(\theta) \)</label><br>
+  <label><input type="radio" name="q13" value="b" data-correct="true"> \( -mg\ell\sin(\theta) \)</label><br>
+  <label><input type="radio" name="q13" value="c"> \( mg\ell\cos(\theta) \)</label><br>
+  <label><input type="radio" name="q13" value="d"> \( -mg\theta \)</label>
+</div>
+
+<!-- ====== QUESTION 14 ====== -->
+<div class="question">
+  <p><strong>Q14.</strong> If \( x(t) = A \cos(\omega t + \phi) \), then the maximum velocity is:</p>
+  <label><input type="radio" name="q14" value="a" data-correct="true"> \( A\omega \)</label><br>
+  <label><input type="radio" name="q14" value="b"> \( A/\omega \)</label><br>
+  <label><input type="radio" name="q14" value="c"> \( \omega^2 A \)</label><br>
+  <label><input type="radio" name="q14" value="d"> \( \omega/A \)</label>
+</div>
+
+<!-- ====== QUESTION 15 ====== -->
+<div class="question">
+  <p><strong>Q15.</strong> A damped spring system is governed by:</p>
+  <label><input type="radio" name="q15" value="a" data-correct="true"> \( m\ddot{x} + c\dot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q15" value="b"> \( m\ddot{x} + kx = 0 \)</label><br>
+  <label><input type="radio" name="q15" value="c"> \( m\ddot{x} + k\dot{x} + cx = 0 \)</label><br>
+  <label><input type="radio" name="q15" value="d"> \( m\ddot{x} + cx = 0 \)</label>
+</div>
+
+<!-- ====== QUESTION 16 ====== -->
+<div class="question">
+  <p><strong>Q16.</strong> In damped motion, what does the damping coefficient \( c \) represent?</p>
+  <label><input type="radio" name="q16" value="a"> Restoring force</label><br>
+  <label><input type="radio" name="q16" value="b" data-correct="true"> Energy dissipation rate</label><br>
+  <label><input type="radio" name="q16" value="c"> Spring constant</label><br>
+  <label><input type="radio" name="q16" value="d"> Mass of system</label>
+</div>
+
+<!-- ====== QUESTION 17 ====== -->
+<div class="question">
+  <p><strong>Q17.</strong> What type of solution is expected when damping is small?</p>
+  <label><input type="radio" name="q17" value="a"> Exponentially growing</label><br>
+  <label><input type="radio" name="q17" value="b"> Critically damped</label><br>
+  <label><input type="radio" name="q17" value="c" data-correct="true"> Underdamped oscillation</label><br>
+  <label><input type="radio" name="q17" value="d"> No motion</label>
+</div>
+
+<!-- ====== QUESTION 18 ====== -->
+<div class="question">
+  <p><strong>Q18.</strong> In forced oscillation, the steady-state amplitude is maximum when:</p>
+  <label><input type="radio" name="q18" value="a"> Driving frequency is zero</label><br>
+  <label><input type="radio" name="q18" value="b" data-correct="true"> Driving frequency matches natural frequency</label><br>
+  <label><input type="radio" name="q18" value="c"> Damping is large</label><br>
+  <label><input type="radio" name="q18" value="d"> Spring is relaxed</label>
+</div>
+
+<!-- ====== QUESTION 19 ====== -->
+<div class="question">
+  <p><strong>Q19.</strong> Which term in the damped oscillator equation causes energy loss?</p>
+  <label><input type="radio" name="q19" value="a"> \( m\ddot{x} \)</label><br>
+  <label><input type="radio" name="q19" value="b" data-correct="true"> \( c\dot{x} \)</label><br>
+  <label><input type="radio" name="q19" value="c"> \( kx \)</label><br>
+  <label><input type="radio" name="q19" value="d"> \( \ddot{x} \)</label>
+</div>
+
+<!-- ====== QUESTION 20 ====== -->
+<div class="question">
+  <p><strong>Q20.</strong> The solution to \( \ddot{x} + 2\beta \dot{x} + \omega^2 x = 0 \) is oscillatory when:</p>
+  <label><input type="radio" name="q20" value="a"> \( \beta > \omega \)</label><br>
+  <label><input type="radio" name="q20" value="b"> \( \beta = \omega \)</label><br>
+  <label><input type="radio" name="q20" value="c" data-correct="true"> \( \beta < \omega \)</label><br>
+  <label><input type="radio" name="q20" value="d"> All of the above</label>
+</div>
+
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 20;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>

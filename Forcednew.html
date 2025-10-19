@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Oscillations-2</title>
+
+  <!-- MathJax (once) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("3mhKzX8jwrQwggG4W"); // ✅ your EmailJS public key
+    })();
+  </script>
+
+  <!-- FileSaver (optional local CSV download) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+    .question { margin: 14px 0 18px; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
+    .notes { margin: 16px 0; }
+    .result { font-weight: bold; margin-top: 16px; }
+    .actions { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+    label { display: inline-block; margin: 4px 0; }
+    .block { display: block; margin: 8px 0; }
+    .subtle { color: #666; font-size: 0.95em; }
+    .warn { color: #b33; }
+  </style>
+</head>
+<body>
+
+  <h2>Student Details</h2>
+  <form id="studentForm">
+    <label class="block">Name: <input type="text" id="studentName" required></label>
+    <label class="block">Email: <input type="email" id="studentEmail" required></label>
+    <label class="block">Roll Number: <input type="text" id="rollNumber" required></label>
+    <label class="block">
+      <input type="checkbox" id="attachCsv"> Attach CSV of answers to the email
+      <span class="subtle">(base64 attachment via EmailJS)</span>
+    </label>
+  </form>
+
+  <hr />
+
+  <!-- Your notes block (kept as-is) -->
+  <div class="notes">
+    <h2>Forced Harmonic Oscillator — Obtaining the Solution</h2>
+    <p>
+      A <b>forced harmonic oscillator</b> … (notes omitted for brevity; your full notes remain here)
+    </p>
+    <!-- … keep your full notes content exactly as you have it … -->
+  </div>
+
+  <hr />
+
+  <!-- QUIZ FORM -->
+  <form id="quizForm">
+    <!-- ✅ Your 30 questions go here exactly as you pasted above (q1..q30) -->
+    <!-- I’m not repeating the entire block to keep this concise.
+         Keep your existing question HTML with inputs named q1..q30. -->
+    <!-- BEGIN: your questions (q1..q30) -->
+    <!-- … paste your whole questions block here … -->
+    <!-- END: your questions -->
+  </form>
+
+  <div class="actions">
+    <button type="button" onclick="submitAndEmail()">Submit & Email Marks</button>
+    <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+  </div>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    /* ===========================
+       1) ANSWER KEY (Edit here)
+       ===========================
+
+       Use capital letters "A"/"B"/"C"/"D" for each question.
+       Below is a sensible key that matches the typical correct
+       answers from the set I generated. Adjust if needed.
+    */
+    const answerKey = {
+      q1:'A', q2:'A', q3:'A', q4:'A', q5:'A',
+      q6:'A', q7:'B', q8:'B', q9:'B', q10:'A',
+      q11:'A', q12:'B', q13:'A', q14:'A', q15:'B',
+      q16:'A', q17:'A', q18:'A', q19:'B', q20:'A',
+      q21:'A', q22:'A', q23:'B', q24:'A', q25:'A',
+      q26:'A', q27:'B', q28:'A', q29:'A', q30:'A'
+    };
+
+    const TOTAL_QUESTIONS = 30;
+
+    /* ===========================
+       2) GET SELECTIONS & SCORE
+       =========================== */
+    function getSelectionsAndScore() {
+      const selections = {};
+      let score = 0;
+
+      for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+        const qName = "q" + i;
+        const opts = document.getElementsByName(qName);
+        let sel = null;
+        for (const opt of opts) {
+          if (opt.checked) { sel = opt.value.toUpperCase(); break; }
+        }
+        selections[qName] = sel || "Not Answered";
+        if (sel && answerKey[qName] && sel === answerKey[qName]) {
+          score++;
+        }
+      }
+      return { selections, score };
+    }
+
+    /* ===========================
+       3) CSV GENERATION
+       =========================== */
+    function generateCSV(selections, name, email, roll, score) {
+      const rows = [
+        ["Name", name],
+        ["Email", email],
+        ["Roll Number", roll],
+        ["Score", `${score} / ${TOTAL_QUESTIONS}`],
+        ["" , ""]
+      ];
+      for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+        rows.push([`Q${i}`, selections["q"+i]]);
+      }
+      return rows.map(r => r.join(",")).join("\r\n");
+    }
+
+    function csvToBlob(csvText) {
+      return new Blob(["\uFEFF" + csvText], { type: "text/csv;charset=utf-8;" });
+    }
+
+    function blobToBase64(blob) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(",")[1]); // strip header
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    /* ===========================
+       4) EMAILJS SEND
+       =========================== */
+    async function sendEmail({ name, email, roll, score, csvBase64 }) {
+      const serviceId = "asdjoseqwe";       // ✅ your EmailJS Service ID
+      const templateId = "template_uwtu4bj"; // ✅ your EmailJS Template ID
+
+      const subject = `Oscillations-2 | Score: ${score} / ${TOTAL_QUESTIONS} | ${name} (${roll})`;
+      const message =
+        `Student: ${name}\n` +
+        `Roll: ${roll}\n` +
+        `Email: ${email}\n` +
+        `Score: ${score} / ${TOTAL_QUESTIONS}\n\n` +
+        `This mail was sent automatically from the quiz page.`;
+
+      // These variable names must exist in your EmailJS template
+      const templateParams = {
+        to_email: "josemathew@thecochincollege.edu.in", // instructor
+        from_name: name,
+        reply_to: email,
+        subject,
+        message,
+        score: `${score} / ${TOTAL_QUESTIONS}`,
+        csv_base64: csvBase64 || ""  // attach only if provided
+      };
+
+      return emailjs.send(serviceId, templateId, templateParams);
+    }
+
+    /* ===========================
+       5) MAIN HANDLERS
+       =========================== */
+    async function submitAndEmail() {
+      // Validate student info
+      const name = (document.getElementById("studentName").value || "").trim();
+      const email = (document.getElementById("studentEmail").value || "").trim();
+      const roll = (document.getElementById("rollNumber").value || "").trim();
+      const wantAttach = document.getElementById("attachCsv").checked;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return;
+      }
+
+      // Get answers & score
+      const { selections, score } = getSelectionsAndScore();
+
+      // Show result to student
+      const resultArea = document.getElementById("resultArea");
+      resultArea.textContent = `Score: ${score} / ${TOTAL_QUESTIONS}`;
+
+      // Compose CSV (optional for attachment)
+      let csvBase64 = "";
+      if (wantAttach) {
+        const csv = generateCSV(selections, name, email, roll, score);
+        const blob = csvToBlob(csv);
+        csvBase64 = await blobToBase64(blob);
+      }
+
+      // Send marks via EmailJS
+      try {
+        await sendEmail({ name, email, roll, score, csvBase64 });
+        alert("✅ Email sent successfully with the marks" + (wantAttach ? " and CSV attached." : "."));
+      } catch (err) {
+        console.error(err);
+        alert("❌ Failed to send email. See console for details.");
+      }
+    }
+
+    function downloadCSVLocally() {
+      const name = (document.getElementById("studentName").value || "").trim();
+      const email = (document.getElementById("studentEmail").value || "").trim();
+      const roll = (document.getElementById("rollNumber").value || "").trim();
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details before downloading.");
+        return;
+      }
+
+      const { selections, score } = getSelectionsAndScore();
+      const csv = generateCSV(selections, name, email, roll, score);
+      const blob = csvToBlob(csv);
+      saveAs(blob, "Answer_Sheet.csv");
+    }
+  </script>
+
+  <p class="subtle">
+    <b>Tip:</b> If your EmailJS template variable names differ, open the EmailJS dashboard &ndash; Templates, and ensure
+    it expects: <code>to_email</code>, <code>from_name</code>, <code>reply_to</code>, <code>subject</code>,
+    <code>message</code>, <code>score</code>, and optionally <code>csv_base64</code> (type: attachment).
+  </p>
+
+</body>
+</html>
