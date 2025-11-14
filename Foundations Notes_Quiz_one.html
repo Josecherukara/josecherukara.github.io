@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+<form id="quizForm">
+
+ <div class="notes">
+
+  <h2>Oscillations</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work, Kinetic Energy and Work–Energy Theorem</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #f9fafc;
+    }
+    h1, h2, h3 {
+      color: #123256;
+    }
+    .notes {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+    }
+    .box {
+      border-left: 4px solid #3366cc;
+      background: #f3f7ff;
+      padding: 10px 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .example {
+      border-left: 4px solid #0a8f3c;
+      background: #f2fff6;
+      padding: 10px 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .summary {
+      border-left: 4px solid #ff9800;
+      background: #fff8e1;
+      padding: 10px 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    ul {
+      margin-top: 5px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+
+<body>
+<div class="notes">
+
+  <h1>Work, Kinetic Energy and the Work–Energy Theorem</h1>
+
+  <p>
+    In this chapter we study three closely related ideas:
+  </p>
+  <ul>
+    <li><b>Work</b> – when a force acts and produces displacement.</li>
+    <li><b>Kinetic energy</b> – energy of motion.</li>
+    <li><b>Work–Energy Theorem</b> – work done = change in kinetic energy.</li>
+  </ul>
+
+  <!-- 1. WORK -->
+  <h2>1. Work</h2>
+
+  <p>
+    In physics, a force does <b>work</b> only if it causes a body to move.
+  </p>
+
+  <div class="box">
+    <p><b>Basic idea:</b></p>
+    <ul>
+      <li>If you push an object and it <b>moves</b> → work is done.</li>
+      <li>If you push hard but it <b>does not move</b> → no work is done (in the physics sense).</li>
+    </ul>
+  </div>
+
+  <h3>1.1 Work by a constant force in the direction of motion</h3>
+
+  <p>
+    Suppose a constant force \( F \) acts on a body, and it moves in a straight line
+    a distance \( s \) in the <b>same direction</b> as the force. Then the work done is:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      W = F\,s
+    \]
+  </p>
+
+  <p>
+    Units:  
+    <b>Force</b> in newton (N), <b>distance</b> in metre (m), so  
+    <b>work</b> is in joule (J): \( 1\ \text{J} = 1\ \text{N}\cdot\text{m} \).
+  </p>
+
+  <div class="example">
+    <b>Example:</b>  
+    You push a box with a force of \( 20\ \text{N} \) and it moves \( 3\ \text{m} \)
+    in the direction of the push.
+    \[
+      W = F s = 20 \times 3 = 60\ \text{J}
+    \]
+  </div>
+
+  <h3>1.2 Work when the force is at an angle</h3>
+
+  <p>
+    Often the force is not exactly along the direction of motion. Let:
+  </p>
+  <ul>
+    <li>\( F \) = magnitude of the force,</li>
+    <li>\( s \) = displacement,</li>
+    <li>\( \theta \) = angle between the force and displacement.</li>
+  </ul>
+
+  <p>
+    Only the component of force <b>along</b> the displacement does work.
+    The work done is:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      W = F\,s \cos\theta
+    \]
+  </p>
+
+  <div class="example">
+    <b>Example:</b>  
+    A suitcase is pulled by a handle making an angle of \( 30^\circ \) above the horizontal.
+    The force is \( F = 50\ \text{N} \), and the suitcase moves \( s = 10\ \text{m} \) horizontally.
+    Work done:
+    \[
+      W = F s \cos\theta = 50 \times 10 \times \cos 30^\circ
+      = 500 \times \frac{\sqrt{3}}{2} \approx 433\ \text{J}.
+    \]
+  </div>
+
+  <h3>1.3 Work done by a varying force</h3>
+
+  <p>
+    If the force changes from point to point, we consider a very small
+    displacement \( d\mathbf{s} \). For that small step:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      dW = \mathbf{F} \cdot d\mathbf{s}
+    \]
+  </p>
+
+  <p>
+    The total work from point 1 to point 2 is found by adding (integrating)
+    these small contributions:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      W_{1 \to 2} = \int_{1}^{2} \mathbf{F} \cdot d\mathbf{s}
+    \]
+  </p>
+
+  <p>
+    For one-dimensional motion along the \( x \)-axis:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      W_{1 \to 2} = \int_{x_1}^{x_2} F_x(x)\, dx
+    \]
+  </p>
+
+  <!-- 2. KINETIC ENERGY -->
+  <h2>2. Kinetic Energy</h2>
+
+  <p>
+    A moving body has <b>kinetic energy</b>. For a particle of mass \( m \)
+    moving with speed \( v \), the kinetic energy is:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      T = \frac{1}{2} m v^2
+    \]
+  </p>
+
+  <ul>
+    <li>If speed becomes zero, kinetic energy is zero.</li>
+    <li>If speed doubles, kinetic energy becomes four times
+        (because \( v^2 \) term).</li>
+  </ul>
+
+  <div class="example">
+    <b>Example:</b>  
+    A \( 2\ \text{kg} \) mass moves with speed \( 3\ \text{m/s} \).
+    \[
+      T = \frac{1}{2} m v^2 = \frac{1}{2} \times 2 \times 3^2 = 9\ \text{J}.
+    \]
+  </div>
+
+  <!-- 3. WORK–ENERGY THEOREM -->
+  <h2>3. Work–Energy Theorem (Derivation in Simple Steps)</h2>
+
+  <p>
+    We now show that:
+  </p>
+
+  <p class="box" style="text-align:center;">
+    <b>Work done on a particle = Change in its kinetic energy.</b><br>
+    \[
+      W_{1 \to 2} = T_2 - T_1
+    \]
+  </p>
+
+  <h3>3.1 Starting from Newton’s second law</h3>
+
+  <p>
+    Newton’s second law for motion in a straight line:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      F = m a
+    \]
+  </p>
+
+  <p>
+    Acceleration \( a \) can be written using the chain rule:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      a = \frac{dv}{dt} = \frac{dv}{dx} \frac{dx}{dt} = v \frac{dv}{dx}
+    \]
+  </p>
+
+  <p>
+    Substitute this into Newton’s law:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      F = m v \frac{dv}{dx}
+    \]
+  </p>
+
+  <h3>3.2 Multiply both sides by \( dx \)</h3>
+
+  <p>
+    Multiply the above equation by \( dx \):
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      F\,dx = m v\, dv
+    \]
+  </p>
+
+  <ul>
+    <li>Left side \( F\,dx \) is the small work done: \( dW \).</li>
+    <li>Right side \( m v\,dv \) is a small change in something related to speed.</li>
+  </ul>
+
+  <p>
+    So we can write:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      dW = m v\, dv
+    \]
+  </p>
+
+  <h3>3.3 Recognising kinetic energy</h3>
+
+  <p>
+    Note that:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      d\left(\frac{1}{2} m v^2\right) = m v\, dv
+    \]
+  </p>
+
+  <p>
+    Thus:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      dW = d\left(\frac{1}{2} m v^2\right) = dT
+    \]
+  </p>
+
+  <p>
+    Integrate between state 1 (speed \( v_1 \)) and state 2 (speed \( v_2 \)):
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      \int_{1}^{2} dW = \int_{1}^{2} dT
+      \quad \Rightarrow \quad
+      W_{1 \to 2} = T_2 - T_1
+    \]
+  </p>
+
+  <div class="box">
+    <b>Work–Energy Theorem:</b><br>
+    The net work done by all forces on a particle equals the change
+    in its kinetic energy.
+  </div>
+
+  <div class="example">
+    <b>Example:</b>  
+    A \( 1\ \text{kg} \) block speeds up from \( 2\ \text{m/s} \) to \( 4\ \text{m/s} \) on a smooth surface.
+    The net work done:
+    \[
+      T_1 = \frac{1}{2} \times 1 \times 2^2 = 2\ \text{J}, \quad
+      T_2 = \frac{1}{2} \times 1 \times 4^2 = 8\ \text{J}.
+    \]
+    \[
+      W = T_2 - T_1 = 8 - 2 = 6\ \text{J}.
+    \]
+  </div>
+
+  <!-- 4. CONSERVATIVE FORCES & POTENTIAL ENERGY -->
+  <h2>4. Conservative Forces and Potential Energy</h2>
+
+  <p>
+    A force is called <b>conservative</b> if the work done by it depends only on the
+    starting and ending points, and not on the path taken.
+  </p>
+
+  <ul>
+    <li>Gravitational force is conservative.</li>
+    <li>Spring force is conservative.</li>
+    <li>Friction is <b>not</b> conservative (work depends on path).</li>
+  </ul>
+
+  <p>
+    For a conservative force, we can define a <b>potential energy</b> \( V \) such that:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      \mathbf{F} = -\nabla V
+    \]
+  </p>
+
+  <h3>4.1 Gravitational potential energy (near Earth)</h3>
+
+  <p>
+    If an object of mass \( m \) is at height \( h \) above the ground:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      V = m g h
+    \]
+  </p>
+
+  <p>
+    When the object falls, \( h \) decreases, so \( V \) decreases and \( T \) increases.
+  </p>
+
+  <h3>4.2 Spring potential energy</h3>
+
+  <p>
+    For a spring of constant \( k \), extended or compressed by \( x \):
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      V = \frac{1}{2} k x^2
+    \]
+  </p>
+
+  <!-- 5. CONSERVATION OF MECHANICAL ENERGY -->
+  <h2>5. Conservation of Mechanical Energy</h2>
+
+  <p>
+    For conservative forces:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      W_{1 \to 2} = - (V_2 - V_1) = -\Delta V
+    \]
+  </p>
+
+  <p>
+    Combine with work–energy theorem:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      T_2 - T_1 = - (V_2 - V_1)
+    \]
+  </p>
+
+  <p>
+    Rearranging:
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      T_1 + V_1 = T_2 + V_2 = \text{constant}
+    \]
+  </p>
+
+  <div class="box">
+    <b>Conservation of Mechanical Energy:</b><br>
+    When only conservative forces act,
+    the sum of kinetic energy and potential energy remains constant.
+  </div>
+
+  <div class="example">
+    <b>Example: Ball dropped from rest</b><br>
+    At height \( h \), just before release:
+    \[
+      T_1 = 0, \quad V_1 = mgh.
+    \]
+    Just before hitting the ground:
+    \[
+      V_2 \approx 0, \quad T_2 = \frac{1}{2} m v^2.
+    \]
+    Energy conservation:
+    \[
+      mgh = \frac{1}{2} m v^2 \quad\Rightarrow\quad v = \sqrt{2 g h}.
+    \]
+  </div>
+
+  <!-- 6. POWER -->
+  <h2>6. Power</h2>
+
+  <p>
+    Power is the <b>rate at which work is done</b>.
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      P = \frac{dW}{dt}
+    \]
+  </p>
+
+  <p>
+    Using \( dW = \mathbf{F} \cdot d\mathbf{s} \) and \( \mathbf{v} = \dfrac{d\mathbf{s}}{dt} \):
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      P = \mathbf{F} \cdot \mathbf{v}
+    \]
+  </p>
+
+  <p>
+    Units of power: watt (W) where \( 1\ \text{W} = 1\ \text{J/s} \).
+  </p>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <h3>7. Summary</h3>
+    <ul>
+      <li>Work: \( W = F s \cos\theta \).</li>
+      <li>Kinetic energy: \( T = \frac{1}{2} m v^2 \).</li>
+      <li>Work–Energy Theorem: \( W_{1\to 2} = T_2 - T_1 \).</li>
+      <li>Conservative forces → potential energy \( V \).</li>
+      <li>Mechanical energy conserved: \( T + V = \text{constant} \) (if only conservative forces act).</li>
+      <li>Power: \( P = \dfrac{dW}{dt} = \mathbf{F} \cdot \mathbf{v} \).</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+<!-- ================= DAMPED HARMONIC OSCILLATOR MCQs ================= -->
+
+<!-- ====== QUESTION 1 ====== -->
+<!-- ====== QUESTION 1 ====== -->
+<div class="question">
+  <p><strong>Q1.</strong> Work done by a force is defined as:</p>
+  <label><input type="radio" name="q1" value="a"> \( W = F s \)</label><br>
+  <label><input type="radio" name="q1" value="b" data-correct="true"> \( W = \int \mathbf{F} \cdot d\mathbf{s} \)</label><br>
+  <label><input type="radio" name="q1" value="c"> \( W = \mathbf{F} \times \mathbf{s} \)</label><br>
+  <label><input type="radio" name="q1" value="d"> \( W = \mathbf{F} \cdot \mathbf{v} \)</label>
+</div>
+
+<div class="question">
+  <p><strong>Q2.</strong> The kinetic energy of a particle is:</p>
+  <label><input type="radio" name="q2" value="a"> \( T = mv \)</label><br>
+  <label><input type="radio" name="q2" value="b"> \( T = mv^2 \)</label><br>
+  <label><input type="radio" name="q2" value="c" data-correct="true"> \( T = \frac{1}{2} m v^2 \)</label><br>
+  <label><input type="radio" name="q2" value="d"> \( T = \frac{1}{3} m v^3 \)</label>
+</div>
+
+<div class="question">
+  <p><strong>Q3.</strong> The Work–Energy Theorem states that:</p>
+  <label><input type="radio" name="q3" value="a" data-correct="true"> Change in kinetic energy equals the work done</label><br>
+  <label><input type="radio" name="q3" value="b"> Work equals change in potential energy</label><br>
+  <label><input type="radio" name="q3" value="c"> Energy is always conserved</label><br>
+  <label><input type="radio" name="q3" value="d"> Force is proportional to displacement</label>
+</div>
+
+<div class="question">
+  <p><strong>Q4.</strong> For a force \( \mathbf{F} \) acting over displacement \( d\mathbf{s} \), the infinitesimal work is:</p>
+  <label><input type="radio" name="q4" value="a"> \( dW = F \, ds \)</label><br>
+  <label><input type="radio" name="q4" value="b" data-correct="true"> \( dW = \mathbf{F} \cdot d\mathbf{s} \)</label><br>
+  <label><input type="radio" name="q4" value="c"> \( dW = \mathbf{F} \times d\mathbf{s} \)</label><br>
+  <label><input type="radio" name="q4" value="d"> \( dW = F/v \)</label>
+</div>
+
+<div class="question">
+  <p><strong>Q5.</strong> The dimension of work is:</p>
+  <label><input type="radio" name="q5" value="a"> \( ML^2T^{-1} \)</label><br>
+  <label><input type="radio" name="q5" value="b"> \( MLT^{-2} \)</label><br>
+  <label><input type="radio" name="q5" value="c" data-correct="true"> \( ML^2T^{-2} \)</label><br>
+  <label><input type="radio" name="q5" value="d"> \( M^0L^2T^{-2} \)</label>
+</div>
+
+<div class="question">
+  <p><strong>Q6.</strong> The line integral for work depends on:</p>
+  <label><input type="radio" name="q6" value="a"> Only initial point</label><br>
+  <label><input type="radio" name="q6" value="b"> Only final point</label><br>
+  <label><input type="radio" name="q6" value="c" data-correct="true"> The path taken (in general)</label><br>
+  <label><input type="radio" name="q6" value="d"> Neither initial nor final point</label>
+</div>
+
+<div class="question">
+  <p><strong>Q7.</strong> A conservative force satisfies:</p>
+  <label><input type="radio" name="q7" value="a"> \( \nabla \times \mathbf{F} \neq 0 \)</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> \( \mathbf{F} = - \nabla V \)</label><br>
+  <label><input type="radio" name="q7" value="c"> \( \mathbf{F} = \nabla T \)</label><br>
+  <label><input type="radio" name="q7" value="d"> Work done depends on path</label>
+</div>
+
+<div class="question">
+  <p><strong>Q8.</strong> Potential energy decreases when:</p>
+  <label><input type="radio" name="q8" value="a"> Work is done <i>on</i> the system</label><br>
+  <label><input type="radio" name="q8" value="b" data-correct="true"> Work is done by conservative forces</label><br>
+  <label><input type="radio" name="q8" value="c"> Kinetic energy remains constant</label><br>
+  <label><input type="radio" name="q8" value="d"> Force is perpendicular to displacement</label>
+</div>
+
+<div class="question">
+  <p><strong>Q9.</strong> For a particle moving under variable force \( F(x) \), the work is:</p>
+  <label><input type="radio" name="q9" value="a"> \( F x \)</label><br>
+  <label><input type="radio" name="q9" value="b" data-correct="true"> \( \int F(x) \, dx \)</label><br>
+  <label><input type="radio" name="q9" value="c"> \( m a x \)</label><br>
+  <label><input type="radio" name="q9" value="d"> \( \int x \, dF \)</label>
+</div>
+
+<div class="question">
+  <p><strong>Q10.</strong> Power is defined as:</p>
+  <label><input type="radio" name="q10" value="a"> \( F/s \)</label><br>
+  <label><input type="radio" name="q10" value="b"> \( W/t \)</label><br>
+  <label><input type="radio" name="q10" value="c" data-correct="true"> \( \mathbf{F} \cdot \mathbf{v} \)</label><br>
+  <label><input type="radio" name="q10" value="d"> \( mv \)</label>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Work, Energy & Power – Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+h2 {
+  color: #1a4a7a;
+  border-left: 5px solid #1a4a7a;
+  padding-left: 10px;
+}
+h3 {
+  color: #003366;
+}
+.note-box {
+  background: #f1f8ff;
+  padding: 15px;
+  border-left: 5px solid #1a4a7a;
+  margin-bottom: 20px;
+}
+code {
+  background: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+</style>
+</head>
+
+<notes>
+
+<h2>Work and Energy with Varying Forces</h2>
+
+<div class="note-box">
+<p>
+In real physical systems, forces are not always constant.  
+They may depend on position, velocity, or time.  
+To understand motion under such forces, we study work and energy more generally.
+</p>
+</div>
+
+<h3>1. Work Done by a Variable Force</h3>
+
+<p>
+For a constant force,
+\[
+W = F s
+\]
+But when the force depends on position, \(F(x)\), the work done over a small displacement \(dx\) is:
+\[
+dW = F(x)\, dx
+\]
+Hence total work from \(x_1\) to \(x_2\) is:
+\[
+\boxed{W = \int_{x_1}^{x_2} F(x)\, dx}
+\]
+</p>
+
+<h3>Example: Spring Force</h3>
+<p>
+A spring obeys Hooke’s law:
+\[
+F(x) = -kx
+\]
+Work done in stretching it from \(0\) to \(x\):
+\[
+W = \int_0^{x} (-kx)\, dx = -\frac{1}{2}kx^2
+\]
+The negative sign means the spring resists stretching.
+</p>
+
+<h3>2. Graphical Interpretation of Work</h3>
+
+<p>
+If a force varies with displacement, we plot \(F\) vs \(x\).  
+The work done is simply the <b>area under the curve</b>.
+</p>
+
+<h3>3. Work in Multiple Dimensions</h3>
+
+<p>
+When motion occurs in 2D or 3D, work is defined using the dot product:
+\[
+dW = \vec{F} \cdot d\vec{r}
+\]
+Total work:
+\[
+W = \int \vec{F} \cdot d\vec{r}
+\]
+Only the component of force along the motion performs work.
+</p>
+
+<h2>Kinetic Energy & the Work–Energy Theorem</h2>
+
+<h3>4. Kinetic Energy</h3>
+<p>
+Kinetic energy is always:
+\[
+T = \frac{1}{2}mv^2
+\]
+This formula is universal—valid for any motion.
+</p>
+
+<h3>5. Work–Energy Theorem</h3>
+<p>
+The net work done by all forces equals the change in kinetic energy:
+\[
+\boxed{W = T_2 - T_1}
+\]
+This remains true for:
+<ul>
+  <li>variable forces</li>
+  <li>velocity-dependent forces</li>
+  <li>time-dependent forces</li>
+</ul>
+</p>
+
+<h2>Potential Energy & Conservative Forces</h2>
+
+<h3>6. Conservative Forces</h3>
+
+<p>
+A force is conservative if:
+<ul>
+  <li>Work done is path independent</li>
+  <li>Work done around a closed loop is zero</li>
+</ul>
+For such forces:
+\[
+\vec{F} = -\nabla V
+\]
+and
+\[
+W_{1\to 2} = V_1 - V_2
+\]
+</p>
+
+<h3>7. Examples</h3>
+
+<p>
+<b>Gravitational potential energy:</b>
+\[
+V = mgh
+\]
+<b>Spring potential energy:</b>
+\[
+V = \frac{1}{2}kx^2
+\]
+</p>
+
+<h3>8. Conservation of Mechanical Energy</h3>
+
+<p>
+If only conservative forces act:
+\[
+T + V = \text{constant}
+\]
+This means total mechanical energy does not change.
+</p>
+
+<h2>Power</h2>
+
+<h3>9. Definition of Power</h3>
+
+<p>
+Power is the rate at which work is done:
+\[
+P = \frac{dW}{dt}
+\]
+Using \(dW = \vec{F}\cdot d\vec{r}\):
+\[
+P = \vec{F} \cdot \vec{v}
+\]
+If force and velocity are along the same line:
+\[
+P = Fv
+\]
+</p>
+
+<h3>10. Average vs Instantaneous Power</h3>
+
+<p>
+<b>Instantaneous power:</b>
+\[
+P = \vec{F} \cdot \vec{v}
+\]
+<b>Average power:</b>
+\[
+P_{\text{avg}} = \frac{W}{t}
+\]
+</p>
+
+<h3>11. Power in Daily Examples</h3>
+
+<ul>
+  <li>Car engines delivering power while accelerating</li>
+  <li>Pumps lifting water: \(P = mgh/t\)</li>
+  <li>Person climbing stairs: \(P = mgv\)</li>
+</ul>
+
+<h3>12. Power Delivered by Gravity</h3>
+\[
+P = mgv
+\]
+
+<h3>13. Power Delivered by a Spring</h3>
+\[
+P = Fv = (-kx)v
+\]
+Usually negative → spring removes energy.
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+  <li>\( W = \int F(x)\, dx \)</li>
+  <li>\( W = \int \vec{F}\cdot d\vec{r} \)</li>
+  <li>\( T = \frac{1}{2}mv^2 \)</li>
+  <li>\( W = \Delta T \) (always)</li>
+  <li>\( \vec{F} = -\nabla V \)</li>
+  <li>\( T + V = \text{constant} \)</li>
+  <li>\( P = \vec{F}\cdot \vec{v} \)</li>
+</ul>
+</notes>
+<!-- ===================== MCQ 1 ===================== -->
+<div class="question">
+  <p><strong>Q1.</strong> The work done by a variable force \(F(x)\) from \(x_1\) to \(x_2\) is:</p>
+  <label><input type="radio" name="q1" value="a"> \( F(x_2 - x_1) \)</label><br>
+  <label><input type="radio" name="q1" value="b" data-correct="true"> \( \displaystyle W = \int_{x_1}^{x_2} F(x)\, dx \)</label><br>
+  <label><input type="radio" name="q1" value="c"> \( \displaystyle W = F(x_1 + x_2) \)</label><br>
+  <label><input type="radio" name="q1" value="d"> \( W = 0 \)</label>
+</div>
+
+<!-- ===================== MCQ 2 ===================== -->
+<div class="question">
+  <p><strong>Q2.</strong> For a spring with force \(F = -kx\), the work required to stretch it from 0 to \(x\) is:</p>
+  <label><input type="radio" name="q2" value="a"> \( -kx \)</label><br>
+  <label><input type="radio" name="q2" value="b"> \( -kx^2 \)</label><br>
+  <label><input type="radio" name="q2" value="c" data-correct="true"> \( -\frac{1}{2}kx^2 \)</label><br>
+  <label><input type="radio" name="q2" value="d"> \( \frac{1}{2}kx \)</label>
+</div>
+
+<!-- ===================== MCQ 3 ===================== -->
+<div class="question">
+  <p><strong>Q3.</strong> Work done by a force in 3 dimensions is:</p>
+  <label><input type="radio" name="q3" value="a"> \( F\, dr \)</label><br>
+  <label><input type="radio" name="q3" value="b" data-correct="true"> \( dW = \vec{F}\cdot d\vec{r} \)</label><br>
+  <label><input type="radio" name="q3" value="c"> \( dW = Fv \)</label><br>
+  <label><input type="radio" name="q3" value="d"> \( dW = m a \)</label>
+</div>
+
+<!-- ===================== MCQ 4 ===================== -->
+<div class="question">
+  <p><strong>Q4.</strong> The kinetic energy of a particle is:</p>
+  <label><input type="radio" name="q4" value="a"> \( mv^2 \)</label><br>
+  <label><input type="radio" name="q4" value="b" data-correct="true"> \( \frac{1}{2}mv^2 \)</label><br>
+  <label><input type="radio" name="q4" value="c"> \( p^2 \)</label><br>
+  <label><input type="radio" name="q4" value="d"> \( \frac{1}{2}kx^2 \)</label>
+</div>
+
+<!-- ===================== MCQ 5 ===================== -->
+<div class="question">
+  <p><strong>Q5.</strong> The work–energy theorem states:</p>
+  <label><input type="radio" name="q5" value="a" data-correct="true"> Net work = change in kinetic energy</label><br>
+  <label><input type="radio" name="q5" value="b"> Net work = change in potential energy</label><br>
+  <label><input type="radio" name="q5" value="c"> Work = force × time</label><br>
+  <label><input type="radio" name="q5" value="d"> Net work is always zero</label>
+</div>
+
+<!-- ===================== MCQ 6 ===================== -->
+<div class="question">
+  <p><strong>Q6.</strong> A force is conservative if:</p>
+  <label><input type="radio" name="q6" value="a"> It always increases energy</label><br>
+  <label><input type="radio" name="q6" value="b"> It acts only vertically</label><br>
+  <label><input type="radio" name="q6" value="c" data-correct="true"> Work done is path independent</label><br>
+  <label><input type="radio" name="q6" value="d"> Work done is always zero</label>
+</div>
+
+<!-- ===================== MCQ 7 ===================== -->
+<div class="question">
+  <p><strong>Q7.</strong> For a conservative force, the relation between force and potential energy is:</p>
+  <label><input type="radio" name="q7" value="a"> \( \vec{F} = \nabla V \)</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> \( \vec{F} = -\nabla V \)</label><br>
+  <label><input type="radio" name="q7" value="c"> \( F = V^2 \)</label><br>
+  <label><input type="radio" name="q7" value="d"> \( F = V/t \)</label>
+</div>
+
+<!-- ===================== MCQ 8 ===================== -->
+<div class="question">
+  <p><strong>Q8.</strong> Which of the following is a conservative force?</p>
+  <label><input type="radio" name="q8" value="a"> Friction</label><br>
+  <label><input type="radio" name="q8" value="b"> Air resistance</label><br>
+  <label><input type="radio" name="q8" value="c" data-correct="true"> Spring force</label><br>
+  <label><input type="radio" name="q8" value="d"> Viscous drag</label>
+</div>
+
+<!-- ===================== MCQ 9 ===================== -->
+<div class="question">
+  <p><strong>Q9.</strong> For gravitational potential energy near Earth’s surface:</p>
+  <label><input type="radio" name="q9" value="a"> \( V = kx^2 \)</label><br>
+  <label><input type="radio" name="q9" value="b"> \( V = \frac{1}{2}mv^2 \)</label><br>
+  <label><input type="radio" name="q9" value="c" data-correct="true"> \( V = mgh \)</label><br>
+  <label><input type="radio" name="q9" value="d"> \( V = mg/h \)</label>
+</div>
+
+<!-- ===================== MCQ 10 ===================== -->
+<div class="question">
+  <p><strong>Q10.</strong> Total mechanical energy is conserved when:</p>
+  <label><input type="radio" name="q10" value="a"> Only non-conservative forces act</label><br>
+  <label><input type="radio" name="q10" value="b" data-correct="true"> Only conservative forces act</label><br>
+  <label><input type="radio" name="q10" value="c"> Kinetic energy is zero</label><br>
+  <label><input type="radio" name="q10" value="d"> Velocity is constant</label>
+</div>
+
+<!-- ===================== MCQ 11 ===================== -->
+<div class="question">
+  <p><strong>Q11.</strong> Power is defined as:</p>
+  <label><input type="radio" name="q11" value="a"> Work × time</label><br>
+  <label><input type="radio" name="q11" value="b" data-correct="true"> \( P = \frac{dW}{dt} \)</label><br>
+  <label><input type="radio" name="q11" value="c"> \( P = Wt^2 \)</label><br>
+  <label><input type="radio" name="q11" value="d"> \( P = \frac{1}{W} \)</label>
+</div>
+
+<!-- ===================== MCQ 12 ===================== -->
+<div class="question">
+  <p><strong>Q12.</strong> Instantaneous power delivered by a force is:</p>
+  <label><input type="radio" name="q12" value="a"> \( P = F/a \)</label><br>
+  <label><input type="radio" name="q12" value="b"> \( P = Ft \)</label><br>
+  <label><input type="radio" name="q12" value="c" data-correct="true"> \( P = \vec{F}\cdot\vec{v} \)</label><br>
+  <label><input type="radio" name="q12" value="d"> \( P = mv \)</label>
+</div>
+
+<!-- ===================== MCQ 13 ===================== -->
+<div class="question">
+  <p><strong>Q13.</strong> Average power is defined as:</p>
+  <label><input type="radio" name="q13" value="a"> \( P_{\text{avg}} = Ft \)</label><br>
+  <label><input type="radio" name="q13" value="b"> \( P_{\text{avg}} = F/v \)</label><br>
+  <label><input type="radio" name="q13" value="c" data-correct="true"> \( P_{\text{avg}} = W/t \)</label><br>
+  <label><input type="radio" name="q13" value="d"> \( P_{\text{avg}} = Wv \)</label>
+</div>
+
+<!-- ===================== MCQ 14 ===================== -->
+<div class="question">
+  <p><strong>Q14.</strong> If a car engine delivers constant power, its acceleration will:</p>
+  <label><input type="radio" name="q14" value="a"> Stay constant</label><br>
+  <label><input type="radio" name="q14" value="b"> Increase with time</label><br>
+  <label><input type="radio" name="q14" value="c" data-correct="true"> Decrease with time</label><br>
+  <label><input type="radio" name="q14" value="d"> Become zero</label>
+</div>
+
+<!-- ===================== MCQ 15 ===================== -->
+<div class="question">
+  <p><strong>Q15.</strong> Work done by friction is always:</p>
+  <label><input type="radio" name="q15" value="a"> Positive</label><br>
+  <label><input type="radio" name="q15" value="b"> Zero</label><br>
+  <label><input type="radio" name="q15" value="c" data-correct="true"> Negative</label><br>
+  <label><input type="radio" name="q15" value="d"> Infinite</label>
+</div>
+
+<!-- ===================== MCQ 16 ===================== -->
+<div class="question">
+  <p><strong>Q16.</strong> The area under a Force–displacement graph represents:</p>
+  <label><input type="radio" name="q16" value="a"> Momentum</label><br>
+  <label><input type="radio" name="q16" value="b"> Velocity</label><br>
+  <label><input type="radio" name="q16" value="c" data-correct="true"> Work done</label><br>
+  <label><input type="radio" name="q16" value="d"> Force per unit area</label>
+</div>
+
+<!-- ===================== MCQ 17 ===================== -->
+<div class="question">
+  <p><strong>Q17.</strong> Which of the following forces can store potential energy?</p>
+  <label><input type="radio" name="q17" value="a"> Friction</label><br>
+  <label><input type="radio" name="q17" value="b"> Viscous drag</label><br>
+  <label><input type="radio" name="q17" value="c" data-correct="true"> Spring force</label><br>
+  <label><input type="radio" name="q17" value="d"> Normal reaction</label>
+</div>
+
+<!-- ===================== MCQ 18 ===================== -->
+<div class="question">
+  <p><strong>Q18.</strong> If \( \vec{F} \perp \vec{v} \), then power is:</p>
+  <label><input type="radio" name="q18" value="a"> Maximum</label><br>
+  <label><input type="radio" name="q18" value="b"> Infinite</label><br>
+  <label><input type="radio" name="q18" value="c" data-correct="true"> Zero</label><br>
+  <label><input type="radio" name="q18" value="d"> Negative</label>
+</div>
+
+<!-- ===================== MCQ 19 ===================== -->
+<div class="question">
+  <p><strong>Q19.</strong> Work done is zero when:</p>
+  <label><input type="radio" name="q19" value="a"> Force is constant</label><br>
+  <label><input type="radio" name="q19" value="b" data-correct="true"> Displacement is zero</label><br>
+  <label><input type="radio" name="q19" value="c"> Mass is zero</label><br>
+  <label><input type="radio" name="q19" value="d"> Speed is constant</label>
+</div>
+
+<!-- ===================== MCQ 20 ===================== -->
+<div class="question">
+  <p><strong>Q20.</strong> If a force does positive work on an object, its kinetic energy:</p>
+  <label><input type="radio" name="q20" value="a"> Always decreases</label><br>
+  <label><input type="radio" name="q20" value="b"> Remains the same</label><br>
+  <label><input type="radio" name="q20" value="c" data-correct="true"> Increases</label><br>
+  <label><input type="radio" name="q20" value="d"> Must become zero</label>
+</div>
+<div class="notes">
+  <h2>Gravitational Potential Energy (GPE)</h2>
+
+  <p>
+    When you lift an object against gravity, you do work on it. This work gets
+    stored as <strong>gravitational potential energy</strong>. The energy is stored because the
+    object is now at a higher position in the gravitational field.
+  </p>
+
+  <h3>1. Definition</h3>
+  <p>
+    Gravitational potential energy is the energy a body possesses due to its height
+    above a reference level (usually the ground).  
+    <br>The formula is:
+  </p>
+
+  <p style="text-align:center;">
+    \( U_g = mgh \)
+  </p>
+
+  <ul>
+    <li><strong>m</strong> = mass of body</li>
+    <li><strong>g</strong> = acceleration due to gravity</li>
+    <li><strong>h</strong> = height above reference point</li>
+  </ul>
+
+  <h3>2. Derivation From Work Done Against Gravity</h3>
+  <p>
+    The gravitational force on a body is:
+  </p>
+
+  <p style="text-align:center;">
+    \( F = mg \)
+  </p>
+
+  <p>
+    To lift the object slowly (no acceleration), we must apply an upward force of
+    equal magnitude: \( F_{\text{applied}} = mg \).
+  </p>
+
+  <p>
+    Work done in raising the object through a small height \(dh\) is:
+  </p>
+
+  <p style="text-align:center;">
+    \( dW = F_{\text{applied}} \, dh = mg \, dh \)
+  </p>
+
+  <p>
+    Total work done from height 0 to height \(h\) is:
+  </p>
+
+  <p style="text-align:center;">
+    \( W = \int_0^h mg \, dh = mgh \)
+  </p>
+
+  <p>
+    This work is stored as gravitational potential energy:
+    <br>
+    \( \boxed{U_g = mgh} \)
+  </p>
+
+  <h3>3. Important Points</h3>
+  <ul>
+    <li>GPE depends only on height, not on the path taken.</li>
+    <li>GPE increases when the body goes higher.</li>
+    <li>The reference point (where \(U_g = 0\)) can be chosen freely.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Elastic Potential Energy (EPE)</h2>
+
+  <p>
+    Elastic potential energy is the energy stored in a spring (or any elastic
+    object) when it is stretched or compressed.
+  </p>
+
+  <h3>1. Hooke’s Law</h3>
+  <p>
+    For a spring obeying Hooke’s law:
+  </p>
+
+  <p style="text-align:center;">
+    \( F = -kx \)
+  </p>
+
+  <ul>
+    <li>\(k\) = spring constant (“stiffness”)</li>
+    <li>\(x\) = stretch or compression from natural length</li>
+    <li>Negative sign means spring pulls opposite to deformation</li>
+  </ul>
+
+  <h3>2. Work Done in Stretching/Compressing a Spring</h3>
+  <p>
+    Work done on the spring is stored as elastic potential energy.
+    <br>
+    The work done in stretching the spring from 0 to \(x\) is:
+  </p>
+
+  <p style="text-align:center;">
+    \( W = \int_0^x kx' \, dx' = \frac{1}{2}kx^2 \)
+  </p>
+
+  <p>
+    So the elastic potential energy is:
+  </p>
+
+  <p style="text-align:center; font-size: 1.2em;">
+    \( \boxed{U_e = \frac{1}{2}kx^2} \)
+  </p>
+
+  <h3>3. Physical Meaning</h3>
+  <ul>
+    <li>The spring stores energy when stretched or compressed.</li>
+    <li>If released, this stored energy becomes kinetic energy.</li>
+    <li>Stiffer springs (large \(k\)) store more energy for the same stretch.</li>
+  </ul>
+
+  <h3>4. Graphical Interpretation</h3>
+  <p>
+    The force on a spring increases linearly with extension (Hooke's law).
+    <br>
+    The work done (area under the \(F\)-\(x\) curve) is the area of a triangle.
+  </p>
+
+  <p style="text-align:center;">
+    Work \( = \frac{1}{2} \times \text{base} \times \text{height} 
+    = \frac{1}{2}x \cdot kx = \frac{1}{2}kx^2 \)
+  </p>
+
+  <hr>
+
+  <h2>Comparison Table</h2>
+
+  <table border="1" cellspacing="0" cellpadding="6">
+    <tr>
+      <th>Quantity</th>
+      <th>Gravitational PE</th>
+      <th>Elastic PE</th>
+    </tr>
+    <tr>
+      <td>Formula</td>
+      <td>\( mgh \)</td>
+      <td>\( \frac{1}{2}kx^2 \)</td>
+    </tr>
+    <tr>
+      <td>Depends on</td>
+      <td>Height \(h\)</td>
+      <td>Stretch/compression \(x\)</td>
+    </tr>
+    <tr>
+      <td>Conservative?</td>
+      <td>Yes</td>
+      <td>Yes (Hookean spring)</td>
+    </tr>
+    <tr>
+      <td>Zero reference</td>
+      <td>Height chosen as 0</td>
+      <td>Natural (unstretched) length</td>
+    </tr>
+  </table>
+
+</div>
+<!-- ==================== MCQ 1 ==================== -->
+<div class="question">
+  <h3>1. Gravitational potential energy of a body of mass m at height h is:</h3>
+  <label><input type="radio" name="q1" value="A"> (A) \( \frac{1}{2} mgh \)</label><br>
+  <label><input type="radio" name="q1" value="B" data-correct="true"> (B) \( mgh \)</label><br>
+  <label><input type="radio" name="q1" value="C"> (C) \( mg/h \)</label><br>
+  <label><input type="radio" name="q1" value="D"> (D) \( mh/g \)</label>
+</div>
+
+<!-- ==================== MCQ 2 ==================== -->
+<div class="question">
+  <h3>2. The work done in lifting a body slowly through a height h is equal to:</h3>
+  <label><input type="radio" name="q2" value="A"> (A) Zero</label><br>
+  <label><input type="radio" name="q2" value="B"> (B) \( \frac{1}{2} mgh \)</label><br>
+  <label><input type="radio" name="q2" value="C" data-correct="true"> (C) \( mgh \)</label><br>
+  <label><input type="radio" name="q2" value="D"> (D) \( \frac{mg}{h} \)</label>
+</div>
+
+<!-- ==================== MCQ 3 ==================== -->
+<div class="question">
+  <h3>3. The reference level for gravitational potential energy can be:</h3>
+  <label><input type="radio" name="q3" value="A" data-correct="true"> (A) Chosen arbitrarily</label><br>
+  <label><input type="radio" name="q3" value="B"> (B) Only the Earth's surface</label><br>
+  <label><input type="radio" name="q3" value="C"> (C) Only sea level</label><br>
+  <label><input type="radio" name="q3" value="D"> (D) Only ground level</label>
+</div>
+
+<!-- ==================== MCQ 4 ==================== -->
+<div class="question">
+  <h3>4. The force exerted by a spring obeying Hooke’s law is:</h3>
+  <label><input type="radio" name="q4" value="A"> (A) \( F = kx \)</label><br>
+  <label><input type="radio" name="q4" value="B" data-correct="true"> (B) \( F = -kx \)</label><br>
+  <label><input type="radio" name="q4" value="C"> (C) \( F = k/x \)</label><br>
+  <label><input type="radio" name="q4" value="D"> (D) \( F = -k/x \)</label>
+</div>
+
+<!-- ==================== MCQ 5 ==================== -->
+<div class="question">
+  <h3>5. Elastic potential energy stored in a spring stretched by x is:</h3>
+  <label><input type="radio" name="q5" value="A"> (A) \( kx^2 \)</label><br>
+  <label><input type="radio" name="q5" value="B" data-correct="true"> (B) \( \frac{1}{2}kx^2 \)</label><br>
+  <label><input type="radio" name="q5" value="C"> (C) \( \frac{k}{2x} \)</label><br>
+  <label><input type="radio" name="q5" value="D"> (D) \( \frac{x}{2k} \)</label>
+</div>
+
+<!-- ==================== MCQ 6 ==================== -->
+<div class="question">
+  <h3>6. The work done to compress a spring from 0 to x is equal to:</h3>
+  <label><input type="radio" name="q6" value="A"> (A) Area of a rectangle</label><br>
+  <label><input type="radio" name="q6" value="B"> (B) \( kx \)</label><br>
+  <label><input type="radio" name="q6" value="C" data-correct="true"> (C) Area of a triangle under F–x graph</label><br>
+  <label><input type="radio" name="q6" value="D"> (D) \( \frac{1}{x} \)</label>
+</div>
+
+<!-- ==================== MCQ 7 ==================== -->
+<div class="question">
+  <h3>7. A stiffer spring (larger k) stores:</h3>
+  <label><input type="radio" name="q7" value="A"> (A) Less energy for same stretch</label><br>
+  <label><input type="radio" name="q7" value="B" data-correct="true"> (B) More energy for same stretch</label><br>
+  <label><input type="radio" name="q7" value="C"> (C) Same energy</label><br>
+  <label><input type="radio" name="q7" value="D"> (D) Zero energy</label>
+</div>
+
+<!-- ==================== MCQ 8 ==================== -->
+<div class="question">
+  <h3>8. Which of the following is a conservative force?</h3>
+  <label><input type="radio" name="q8" value="A" data-correct="true"> (A) Gravitational force</label><br>
+  <label><input type="radio" name="q8" value="B"> (B) Friction</label><br>
+  <label><input type="radio" name="q8" value="C"> (C) Air drag</label><br>
+  <label><input type="radio" name="q8" value="D"> (D) Viscous force</label>
+</div>
+
+<!-- ==================== MCQ 9 ==================== -->
+<div class="question">
+  <h3>9. A spring compressed by 2x has energy:</h3>
+  <label><input type="radio" name="q9" value="A"> (A) Twice that at x</label><br>
+  <label><input type="radio" name="q9" value="B" data-correct="true"> (B) Four times that at x</label><br>
+  <label><input type="radio" name="q9" value="C"> (C) Half that at x</label><br>
+  <label><input type="radio" name="q9" value="D"> (D) Ten times that at x</label>
+</div>
+
+<!-- ==================== MCQ 10 ==================== -->
+<div class="question">
+  <h3>10. Which graph represents a spring obeying Hooke’s law?</h3>
+  <label><input type="radio" name="q10" value="A"> (A) F vs x is curved</label><br>
+  <label><input type="radio" name="q10" value="B" data-correct="true"> (B) F vs x is a straight line</label><br>
+  <label><input type="radio" name="q10" value="C"> (C) F remains constant</label><br>
+  <label><input type="radio" name="q10" value="D"> (D) F decreases with x</label>
+</div>
+
+<!-- ==================== MCQ 11 ==================== -->
+<div class="question">
+  <h3>11. GPE increases when:</h3>
+  <label><input type="radio" name="q11" value="A" data-correct="true"> (A) Height increases</label><br>
+  <label><input type="radio" name="q11" value="B"> (B) Mass decreases</label><br>
+  <label><input type="radio" name="q11" value="C"> (C) g decreases</label><br>
+  <label><input type="radio" name="q11" value="D"> (D) Object moves horizontally</label>
+</div>
+
+<!-- ==================== MCQ 12 ==================== -->
+<div class="question">
+  <h3>12. Elastic potential energy becomes zero when:</h3>
+  <label><input type="radio" name="q12" value="A"> (A) Spring is stretched</label><br>
+  <label><input type="radio" name="q12" value="B"> (B) Spring is compressed</label><br>
+  <label><input type="radio" name="q12" value="C" data-correct="true"> (C) Spring is at natural length</label><br>
+  <label><input type="radio" name="q12" value="D"> (D) Temperature increases</label>
+</div>
+
+<!-- ==================== MCQ 13 ==================== -->
+<div class="question">
+  <h3>13. The SI unit of elastic potential energy is:</h3>
+  <label><input type="radio" name="q13" value="A"> (A) newton</label><br>
+  <label><input type="radio" name="q13" value="B" data-correct="true"> (B) joule</label><br>
+  <label><input type="radio" name="q13" value="C"> (C) pascal</label><br>
+  <label><input type="radio" name="q13" value="D"> (D) watt</label>
+</div>
+
+<!-- ==================== MCQ 14 ==================== -->
+<div class="question">
+  <h3>14. If a spring constant is doubled, the energy stored for same stretch becomes:</h3>
+  <label><input type="radio" name="q14" value="A"> (A) Half</label><br>
+  <label><input type="radio" name="q14" value="B"> (B) Same</label><br>
+  <label><input type="radio" name="q14" value="C" data-correct="true"> (C) Double</label><br>
+  <label><input type="radio" name="q14" value="D"> (D) Four times</label>
+</div>
+
+<!-- ==================== MCQ 15 ==================== -->
+<div class="question">
+  <h3>15. A body of mass 2 kg is lifted by 5 m. GPE gained is:</h3>
+  <label><input type="radio" name="q15" value="A"> (A) 10 J</label><br>
+  <label><input type="radio" name="q15" value="B"> (B) 20 J</label><br>
+  <label><input type="radio" name="q15" value="C"> (C) 50 J</label><br>
+  <label><input type="radio" name="q15" value="D" data-correct="true"> (D) 98 J (using g = 9.8 m/s²)</label>
+</div>
+
+<!-- ==================== MCQ 16 ==================== -->
+<div class="question">
+  <h3>16. The potential energy curve of a spring is:</h3>
+  <label><input type="radio" name="q16" value="A"> (A) Linear curve</label><br>
+  <label><input type="radio" name="q16" value="B" data-correct="true"> (B) Parabolic curve</label><br>
+  <label><input type="radio" name="q16" value="C"> (C) Constant line</label><br>
+  <label><input type="radio" name="q16" value="D"> (D) Circular arc</label>
+</div>
+
+<!-- ==================== MCQ 17 ==================== -->
+<div class="question">
+  <h3>17. The slope of the spring PE curve gives:</h3>
+  <label><input type="radio" name="q17" value="A" data-correct="true"> (A) Spring force</label><br>
+  <label><input type="radio" name="q17" value="B"> (B) Work done</label><br>
+  <label><input type="radio" name="q17" value="C"> (C) Acceleration</label><br>
+  <label><input type="radio" name="q17" value="D"> (D) Velocity</label>
+</div>
+
+<!-- ==================== MCQ 18 ==================== -->
+<div class="question">
+  <h3>18. The energy stored in a stretched spring depends on:</h3>
+  <label><input type="radio" name="q18" value="A"> (A) Mass only</label><br>
+  <label><input type="radio" name="q18" value="B"> (B) Height</label><br>
+  <label><input type="radio" name="q18" value="C" data-correct="true"> (C) Spring constant and extension</label><br>
+  <label><input type="radio" name="q18" value="D"> (D) Velocity</label>
+</div>
+
+<!-- ==================== MCQ 19 ==================== -->
+<div class="question">
+  <h3>19. If GPE of a body doubles, which of the following must be true?</h3>
+  <label><input type="radio" name="q19" value="A"> (A) Mass is halved</label><br>
+  <label><input type="radio" name="q19" value="B" data-correct="true"> (B) Height is doubled (if m constant)</label><br>
+  <label><input type="radio" name="q19" value="C"> (C) g becomes half</label><br>
+  <label><input type="radio" name="q19" value="D"> (D) Work becomes zero</label>
+</div>
+
+<!-- ==================== MCQ 20 ==================== -->
+<div class="question">
+  <h3>20. Doubling both spring constant (k) and stretch (x) increases EPE by:</h3>
+  <label><input type="radio" name="q20" value="A"> (A) 2 times</label><br>
+  <label><input type="radio" name="q20" value="B"> (B) 4 times</label><br>
+  <label><input type="radio" name="q20" value="C"> (C) 6 times</label><br>
+  <label><input type="radio" name="q20" value="D" data-correct="true"> (D) 8 times</label>
+</div>
+<div class="notes">
+
+<h2>Conservative and Nonconservative Forces, Force–Potential Energy Relation, and Energy Diagrams</h2>
+
+<p>
+In mechanics, forces can be divided into two major categories:
+<strong>Conservative</strong> and <strong>Nonconservative</strong> forces.  
+Understanding these is essential to study energy conservation.
+</p>
+
+<hr>
+
+<h2>1. Conservative Forces</h2>
+
+<p>
+A force is said to be <strong>conservative</strong> if the work it does on a particle 
+moving between two points does <strong>not depend on the path taken</strong>, 
+but only on the initial and final positions.
+</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+  <li>Gravitational force</li>
+  <li>Spring (Hooke's law) force</li>
+  <li>Electrostatic force</li>
+</ul>
+
+<h3>1.1 Defining properties of conservative forces</h3>
+
+<ul>
+  <li><strong>Path independence:</strong>
+    <br>The work done from point A to B is the same for all paths.
+  </li>
+  <li><strong>Zero net work in a closed loop:</strong>
+    <br>
+    \[
+    W_{\text{closed loop}} = 0
+    \]
+  </li>
+  <li><strong>Associated with potential energy:</strong>
+    <br>
+    Conservative forces allow us to define a potential energy function \( V(x) \).
+  </li>
+</ul>
+
+<h3>1.2 Work done by a conservative force</h3>
+
+<p>
+If a conservative force \( \vec{F} \) is acting along a path,
+the work done is:
+</p>
+
+<p style="text-align:center;">
+\[
+W = \int_{A}^{B} \vec{F} \cdot d\vec{r}
+\]
+</p>
+
+<p>
+For a conservative force, this integral depends only on the end points A and B.
+</p>
+
+<hr>
+
+<h2>2. Nonconservative Forces</h2>
+
+<p>
+A force is <strong>nonconservative</strong> if the work done depends on the path 
+taken and cannot be expressed as the difference of a potential energy.
+</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+  <li>Friction</li>
+  <li>Air resistance (drag)</li>
+  <li>Viscous forces</li>
+</ul>
+
+<h3>2.1 Properties</h3>
+<ul>
+  <li>Work depends on the path taken</li>
+  <li>Work done in a closed loop is NOT zero:
+    <br>
+    \[
+    W_{\text{closed loop}} \ne 0
+    \]
+  </li>
+  <li>No potential energy function can be associated with them</li>
+  <li>They dissipate mechanical energy (usually as heat)</li>
+</ul>
+
+<hr>
+
+<h2>3. Force and Potential Energy</h2>
+
+<p>
+For conservative forces, there is a direct relationship between 
+the force \(F(x)\) and the potential energy \(V(x)\).
+</p>
+
+<h3>3.1 One-Dimensional Case</h3>
+
+<p>
+For motion along x-axis:
+</p>
+
+<p style="text-align:center;">
+\[
+F(x) = -\frac{dV}{dx}
+\]
+</p>
+
+<p>
+This tells us:
+<ul>
+  <li>Force is the <strong>negative slope</strong> of the potential energy curve.</li>
+  <li>If \( V(x) \) increases with x, the force is negative (points left).</li>
+  <li>If \( V(x) \) decreases with x, the force is positive (points right).</li>
+</ul>
+</p>
+
+<h3>3.2 Derivation of \( F = -dV/dx \)</h3>
+
+<p>
+Work done by a conservative force:
+</p>
+
+<p style="text-align:center;">
+\[
+W = -\Delta V = -(V_B - V_A)
+\]
+</p>
+
+<p>
+For a very small displacement \( dx \):
+</p>
+
+<p style="text-align:center;">
+\[
+dW = F dx
+\]
+</p>
+
+But also:
+
+<p style="text-align:center;">
+\[
+dW = -dV
+\]
+</p>
+
+Equating the two:
+
+<p style="text-align:center; font-size: 1.2em;">
+\[
+F dx = -dV
+\quad\Rightarrow\quad
+F = -\frac{dV}{dx}
+\]
+</p>
+
+<p><strong>This is the fundamental connection between force and potential energy.</strong></p>
+
+<hr>
+
+<h2>4. Energy Diagrams</h2>
+
+<p>
+Energy diagrams plot <strong>potential energy \(V(x)\) vs position \(x\)</strong>.
+They help us visualize:
+</p>
+
+<ul>
+  <li>Stable and unstable equilibrium points</li>
+  <li>Turning points of motion</li>
+  <li>Bound and unbound motion</li>
+  <li>Allowed regions of motion</li>
+</ul>
+
+<h3>4.1 Features of an Energy Diagram</h3>
+
+<h4>(a) Turning Points</h4>
+<p>
+Points where total energy \(E\) equals potential energy \(V(x)\):
+</p>
+
+<p style="text-align:center;">
+\[
+E = V(x)
+\]
+</p>
+
+<p>
+At these points, kinetic energy becomes zero, and the particle reverses direction.
+</p>
+
+<h4>(b) Allowed and Forbidden Regions</h4>
+
+<p>
+Motion is allowed where:
+</p>
+
+<p style="text-align:center;">
+\[
+E > V(x)
+\]
+</p>
+
+<p>
+Motion is forbidden (classically) where:
+</p>
+
+<p style="text-align:center;">
+\[
+E < V(x)
+\Rightarrow T < 0 \; \text{(impossible)}
+\]
+</p>
+
+<h4>(c) Equilibrium Points</h4>
+
+<p>
+Equilibrium occurs when:
+</p>
+
+<p style="text-align:center;">
+\[
+F = -\frac{dV}{dx} = 0
+\]
+</p>
+
+Meaning:
+
+<p>
+\[
+\frac{dV}{dx} = 0
+\]
+</p>
+
+<ul>
+  <li><strong>Stable equilibrium</strong>: \(V(x)\) has a minimum</li>
+  <li><strong>Unstable equilibrium</strong>: \(V(x)\) has a maximum</li>
+  <li><strong>Neutral equilibrium</strong>: \(V(x)\) is flat</li>
+</ul>
+
+<hr>
+
+<h3>4.2 ASCII Diagram Examples</h3>
+
+<p><strong>Stable Equilibrium (Potential Minimum):</strong></p>
+
+<pre>
+   V(x)
+    |            *
+    |          *   *
+    |        *       *
+    |------*----x0----*---------
+    |
+    +---------------------------- x
+         Stable Equilibrium
+</pre>
+
+<p>The particle tends to return to \(x_0\) if slightly displaced.</p>
+
+<p><strong>Unstable Equilibrium (Potential Maximum):</strong></p>
+
+<pre>
+   V(x)
+    |        *------*
+    |      *          *
+    |    *              *
+    |---x0-------------------------
+    |
+    +---------------------------- x
+       Unstable Equilibrium
+</pre>
+
+<p>The particle moves away from \(x_0\) if slightly displaced.</p>
+
+<hr>
+
+<h2>5. Mechanical Energy in Conservative Systems</h2>
+
+<p>
+If only conservative forces act:
+</p>
+
+<p style="text-align:center;">
+\[
+E = T + V = \text{constant}
+\]
+</p>
+
+<p>This is the principle of conservation of mechanical energy.</p>
+
+<hr>
+
+<h2>6. Mechanical Energy in Nonconservative Systems</h2>
+
+<p>
+If nonconservative forces (like friction) act:
+</p>
+
+<p style="text-align:center;">
+\[
+W_{\text{nc}} = \Delta E = \Delta (T + V)
+\]
+</p>
+
+<p>The total mechanical energy decreases because some energy is 
+dissipated as heat or other forms.</p>
+
+<hr>
+
+</div>
+
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+
+      if (!name || !email || !roll) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name], ["Email", email], ["Roll Number", roll], ["", ""]];
+      const totalQuestions = 10; // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
