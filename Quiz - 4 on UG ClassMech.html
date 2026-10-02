@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+      <label>Exam Title: <input type="text" value="Class Mech UG Quiz 4"  id="examtitle" readonly></label><br><br>
+  
+<h2>Let's start with Module 4</h2>
+<form id="quizForm">
+
+<!-- ==================== QUESTION 1 ==================== -->
+<div class="question">
+  <p><strong>Q1.</strong> According to Galilean relativity, the laws of mechanics are the same in:</p>
+  <label><input type="radio" name="q1" value="a"> All accelerating frames</label><br>
+  <label><input type="radio" name="q1" value="b" data-correct="true"> All inertial frames</label><br>
+  <label><input type="radio" name="q1" value="c"> Only a frame at absolute rest</label><br>
+  <label><input type="radio" name="q1" value="d"> Only rotating frames</label>
+</div>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<div class="question">
+  <p><strong>Q2.</strong> An inertial frame of reference is one in which:</p>
+  <label><input type="radio" name="q2" value="a"> Every object is at rest</label><br>
+  <label><input type="radio" name="q2" value="b"> Gravity is absent</label><br>
+  <label><input type="radio" name="q2" value="c" data-correct="true"> Newton's first law is valid</label><br>
+  <label><input type="radio" name="q2" value="d"> Time does not pass</label>
+</div>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<div class="question">
+  <p><strong>Q3.</strong> Suppose frame \(S'\) moves with constant velocity \(v\) along the positive \(x\)-direction relative to \(S\). The Galilean transformation for position is:</p>
+  <label><input type="radio" name="q3" value="a"> \(x'=x+vt\)</label><br>
+  <label><input type="radio" name="q3" value="b" data-correct="true"> \(x'=x-vt\)</label><br>
+  <label><input type="radio" name="q3" value="c"> \(x'=vt-x^2\)</label><br>
+  <label><input type="radio" name="q3" value="d"> \(x'=x/vt\)</label>
+</div>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<div class="question">
+  <p><strong>Q4.</strong> According to the Galilean transformation:</p>
+  <label><input type="radio" name="q4" value="a"> \(t'=t-vx/c^2\)</label><br>
+  <label><input type="radio" name="q4" value="b"> \(t'=\gamma t\)</label><br>
+  <label><input type="radio" name="q4" value="c" data-correct="true"> \(t'=t\)</label><br>
+  <label><input type="radio" name="q4" value="d"> \(t'=t/\gamma\)</label>
+</div>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<div class="question">
+  <p><strong>Q5.</strong> Under Galilean velocity transformation, if \(u_x\) is the velocity in \(S\), then the velocity measured in \(S'\) is:</p>
+  <label><input type="radio" name="q5" value="a"> \(u'_x=u_x+v\)</label><br>
+  <label><input type="radio" name="q5" value="b" data-correct="true"> \(u'_x=u_x-v\)</label><br>
+  <label><input type="radio" name="q5" value="c"> \(u'_x=u_xv\)</label><br>
+  <label><input type="radio" name="q5" value="d"> \(u'_x=u_x/v\)</label>
+</div>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<div class="question">
+  <p><strong>Q6.</strong> A train moves at \(20\,\text{m/s}\). A person inside the train throws a ball forward at \(5\,\text{m/s}\) relative to the train. According to Galilean relativity, the ball's speed relative to the ground is:</p>
+  <label><input type="radio" name="q6" value="a"> \(5\,\text{m/s}\)</label><br>
+  <label><input type="radio" name="q6" value="b"> \(15\,\text{m/s}\)</label><br>
+  <label><input type="radio" name="q6" value="c" data-correct="true"> \(25\,\text{m/s}\)</label><br>
+  <label><input type="radio" name="q6" value="d"> \(100\,\text{m/s}\)</label>
+</div>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<div class="question">
+  <p><strong>Q7.</strong> A major difficulty in applying Galilean transformations to electromagnetism is that:</p>
+  <label><input type="radio" name="q7" value="a"> Newton's laws become invalid at low speeds</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> Maxwell's equations are not invariant under Galilean transformations</label><br>
+  <label><input type="radio" name="q7" value="c"> Electric charges disappear</label><br>
+  <label><input type="radio" name="q7" value="d"> Magnetic fields cannot exist</label>
+</div>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<div class="question">
+  <p><strong>Q8.</strong> Maxwell's theory predicts that electromagnetic waves in vacuum travel with speed:</p>
+  <label><input type="radio" name="q8" value="a"> Depending on the speed of the source</label><br>
+  <label><input type="radio" name="q8" value="b"> Depending on the observer's speed</label><br>
+  <label><input type="radio" name="q8" value="c" data-correct="true"> \(c=1/\sqrt{\mu_0\epsilon_0}\)</label><br>
+  <label><input type="radio" name="q8" value="d"> Zero in vacuum</label>
+</div>
+
+<!-- ==================== QUESTION 9 ==================== -->
+<div class="question">
+  <p><strong>Q9.</strong> The Michelson-Morley experiment was designed to detect:</p>
+  <label><input type="radio" name="q9" value="a"> Gravitational waves</label><br>
+  <label><input type="radio" name="q9" value="b"> Electrons</label><br>
+  <label><input type="radio" name="q9" value="c" data-correct="true"> The motion of Earth through the hypothetical luminiferous ether</label><br>
+  <label><input type="radio" name="q9" value="d"> Nuclear radiation</label>
+</div>
+
+<!-- ==================== QUESTION 10 ==================== -->
+<div class="question">
+  <p><strong>Q10.</strong> The Michelson-Morley experiment used a device known as:</p>
+  <label><input type="radio" name="q10" value="a"> Spectrometer</label><br>
+  <label><input type="radio" name="q10" value="b"> Cyclotron</label><br>
+  <label><input type="radio" name="q10" value="c" data-correct="true"> Interferometer</label><br>
+  <label><input type="radio" name="q10" value="d"> Calorimeter</label>
+</div>
+
+<!-- ==================== QUESTION 11 ==================== -->
+<div class="question">
+  <p><strong>Q11.</strong> The main result of the Michelson-Morley experiment was:</p>
+  <label><input type="radio" name="q11" value="a"> A large ether wind was detected</label><br>
+  <label><input type="radio" name="q11" value="b" data-correct="true"> No expected ether-wind effect was detected</label><br>
+  <label><input type="radio" name="q11" value="c"> The speed of light was found to be zero</label><br>
+  <label><input type="radio" name="q11" value="d"> Newton's law of gravitation was disproved</label>
+</div>
+
+<!-- ==================== QUESTION 12 ==================== -->
+<div class="question">
+  <p><strong>Q12.</strong> Einstein's first postulate of special relativity states that:</p>
+  <label><input type="radio" name="q12" value="a"> There exists an absolute frame of rest</label><br>
+  <label><input type="radio" name="q12" value="b" data-correct="true"> The laws of physics have the same form in all inertial frames</label><br>
+  <label><input type="radio" name="q12" value="c"> Only the laws of mechanics are invariant</label><br>
+  <label><input type="radio" name="q12" value="d"> Time is absolute</label>
+</div>
+
+<!-- ==================== QUESTION 13 ==================== -->
+<div class="question">
+  <p><strong>Q13.</strong> Einstein's second postulate states that the speed of light in vacuum:</p>
+  <label><input type="radio" name="q13" value="a"> Depends on the speed of the source</label><br>
+  <label><input type="radio" name="q13" value="b"> Depends on the observer</label><br>
+  <label><input type="radio" name="q13" value="c" data-correct="true"> Has the same value \(c\) for all inertial observers</label><br>
+  <label><input type="radio" name="q13" value="d"> Is infinite</label>
+</div>
+
+<!-- ==================== QUESTION 14 ==================== -->
+<div class="question">
+  <p><strong>Q14.</strong> The Lorentz factor is defined as:</p>
+  <label><input type="radio" name="q14" value="a"> \(\gamma=\sqrt{1-v^2/c^2}\)</label><br>
+  <label><input type="radio" name="q14" value="b" data-correct="true"> \(\displaystyle \gamma=\frac{1}{\sqrt{1-v^2/c^2}}\)</label><br>
+  <label><input type="radio" name="q14" value="c"> \(\gamma=1-v/c\)</label><br>
+  <label><input type="radio" name="q14" value="d"> \(\gamma=c/v\)</label>
+</div>
+
+<!-- ==================== QUESTION 15 ==================== -->
+<div class="question">
+  <p><strong>Q15.</strong> The Lorentz transformation for \(x\), when \(S'\) moves with speed \(v\) along the \(x\)-axis, is:</p>
+  <label><input type="radio" name="q15" value="a"> \(x'=x-vt\)</label><br>
+  <label><input type="radio" name="q15" value="b" data-correct="true"> \(x'=\gamma(x-vt)\)</label><br>
+  <label><input type="radio" name="q15" value="c"> \(x'=\gamma(x+vt)\)</label><br>
+  <label><input type="radio" name="q15" value="d"> \(x'=x/\gamma\)</label>
+</div>
+
+<!-- ==================== QUESTION 16 ==================== -->
+<div class="question">
+  <p><strong>Q16.</strong> The Lorentz transformation of time is:</p>
+  <label><input type="radio" name="q16" value="a"> \(t'=t\)</label><br>
+  <label><input type="radio" name="q16" value="b"> \(t'=\gamma(t-vx)\)</label><br>
+  <label><input type="radio" name="q16" value="c" data-correct="true"> \(\displaystyle t'=\gamma\left(t-\frac{vx}{c^2}\right)\)</label><br>
+  <label><input type="radio" name="q16" value="d"> \(t'=t-v/c\)</label>
+</div>
+
+<!-- ==================== QUESTION 17 ==================== -->
+<div class="question">
+  <p><strong>Q17.</strong> When \(v\ll c\), the Lorentz transformation approximately reduces to:</p>
+  <label><input type="radio" name="q17" value="a"> Newton's law of gravitation</label><br>
+  <label><input type="radio" name="q17" value="b" data-correct="true"> Galilean transformation</label><br>
+  <label><input type="radio" name="q17" value="c"> Maxwell's equations</label><br>
+  <label><input type="radio" name="q17" value="d"> Kepler's transformation</label>
+</div>
+
+<!-- ==================== QUESTION 18 ==================== -->
+<div class="question">
+  <p><strong>Q18.</strong> The relativistic velocity transformation for motion along the \(x\)-direction is:</p>
+  <label><input type="radio" name="q18" value="a"> \(u'_x=u_x-v\)</label><br>
+  <label><input type="radio" name="q18" value="b" data-correct="true"> \(\displaystyle u'_x=\frac{u_x-v}{1-u_xv/c^2}\)</label><br>
+  <label><input type="radio" name="q18" value="c"> \(u'_x=u_x+v\)</label><br>
+  <label><input type="radio" name="q18" value="d"> \(u'_x=u_xv/c\)</label>
+</div>
+
+<!-- ==================== QUESTION 19 ==================== -->
+<div class="question">
+  <p><strong>Q19.</strong> A spaceship moves at \(0.6c\) relative to Earth and emits light forward. The speed of this light measured on Earth is:</p>
+  <label><input type="radio" name="q19" value="a"> \(0.4c\)</label><br>
+  <label><input type="radio" name="q19" value="b"> \(0.6c\)</label><br>
+  <label><input type="radio" name="q19" value="c" data-correct="true"> \(c\)</label><br>
+  <label><input type="radio" name="q19" value="d"> \(1.6c\)</label>
+</div>
+
+<!-- ==================== QUESTION 20 ==================== -->
+<div class="question">
+  <p><strong>Q20.</strong> Two spaceships approach each other. One moves at \(0.6c\) and the other at \(0.6c\) relative to Earth in opposite directions. The speed of one measured from the other is:</p>
+  <label><input type="radio" name="q20" value="a"> \(1.2c\)</label><br>
+  <label><input type="radio" name="q20" value="b"> \(0.6c\)</label><br>
+  <label><input type="radio" name="q20" value="c" data-correct="true"> \(\displaystyle \frac{1.2c}{1+0.36}\approx0.882c\)</label><br>
+  <label><input type="radio" name="q20" value="d"> \(0.36c\)</label>
+</div>
+
+<!-- ==================== QUESTION 21 ==================== -->
+<div class="question">
+  <p><strong>Q21.</strong> The proper length of an object is its length measured:</p>
+  <label><input type="radio" name="q21" value="a"> When the object moves at speed \(c\)</label><br>
+  <label><input type="radio" name="q21" value="b" data-correct="true"> In the frame in which the object is at rest</label><br>
+  <label><input type="radio" name="q21" value="c"> Only from Earth</label><br>
+  <label><input type="radio" name="q21" value="d"> By an accelerating observer</label>
+</div>
+
+<!-- ==================== QUESTION 22 ==================== -->
+<div class="question">
+  <p><strong>Q22.</strong> The formula for relativistic length contraction is:</p>
+  <label><input type="radio" name="q22" value="a"> \(L=\gamma L_0\)</label><br>
+  <label><input type="radio" name="q22" value="b" data-correct="true"> \(\displaystyle L=\frac{L_0}{\gamma}=L_0\sqrt{1-v^2/c^2}\)</label><br>
+  <label><input type="radio" name="q22" value="c"> \(L=L_0(1+v/c)\)</label><br>
+  <label><input type="radio" name="q22" value="d"> \(L=L_0\)</label>
+</div>
+
+<!-- ==================== QUESTION 23 ==================== -->
+<div class="question">
+  <p><strong>Q23.</strong> A spaceship has a proper length of \(100\,\text{m}\). If it moves with \(\gamma=2\), its length measured from Earth is:</p>
+  <label><input type="radio" name="q23" value="a"> \(200\,\text{m}\)</label><br>
+  <label><input type="radio" name="q23" value="b" data-correct="true"> \(50\,\text{m}\)</label><br>
+  <label><input type="radio" name="q23" value="c"> \(100\,\text{m}\)</label><br>
+  <label><input type="radio" name="q23" value="d"> \(25\,\text{m}\)</label>
+</div>
+
+<!-- ==================== QUESTION 24 ==================== -->
+<div class="question">
+  <p><strong>Q24.</strong> Length contraction occurs:</p>
+  <label><input type="radio" name="q24" value="a"> In all directions equally</label><br>
+  <label><input type="radio" name="q24" value="b" data-correct="true"> Only along the direction of relative motion</label><br>
+  <label><input type="radio" name="q24" value="c"> Only perpendicular to motion</label><br>
+  <label><input type="radio" name="q24" value="d"> Only for light</label>
+</div>
+
+<!-- ==================== QUESTION 25 ==================== -->
+<div class="question">
+  <p><strong>Q25.</strong> The proper time between two events is measured by a clock:</p>
+  <label><input type="radio" name="q25" value="a"> Moving at speed \(c\)</label><br>
+  <label><input type="radio" name="q25" value="b" data-correct="true"> For which the two events occur at the same spatial position</label><br>
+  <label><input type="radio" name="q25" value="c"> At an arbitrary distance from both events</label><br>
+  <label><input type="radio" name="q25" value="d"> Only on Earth</label>
+</div>
+
+<!-- ==================== QUESTION 26 ==================== -->
+<div class="question">
+  <p><strong>Q26.</strong> The time-dilation relation is:</p>
+  <label><input type="radio" name="q26" value="a"> \(\Delta t=\Delta\tau/\gamma\)</label><br>
+  <label><input type="radio" name="q26" value="b" data-correct="true"> \(\Delta t=\gamma\Delta\tau\)</label><br>
+  <label><input type="radio" name="q26" value="c"> \(\Delta t=\Delta\tau\sqrt{1-v/c}\)</label><br>
+  <label><input type="radio" name="q26" value="d"> \(\Delta t=\Delta\tau\)</label>
+</div>
+
+<!-- ==================== QUESTION 27 ==================== -->
+<div class="question">
+  <p><strong>Q27.</strong> A moving clock is observed from an inertial frame in which it is moving. Compared with clocks at rest in that frame, the moving clock appears to:</p>
+  <label><input type="radio" name="q27" value="a"> Run faster</label><br>
+  <label><input type="radio" name="q27" value="b" data-correct="true"> Run slower</label><br>
+  <label><input type="radio" name="q27" value="c"> Stop completely at every speed</label><br>
+  <label><input type="radio" name="q27" value="d"> Run at twice the rate</label>
+</div>
+
+<!-- ==================== QUESTION 28 ==================== -->
+<div class="question">
+  <p><strong>Q28.</strong> If the proper time interval is \(5\,\mu s\) and \(\gamma=2\), the time interval measured in a frame where the clock is moving is:</p>
+  <label><input type="radio" name="q28" value="a"> \(2.5\,\mu s\)</label><br>
+  <label><input type="radio" name="q28" value="b"> \(5\,\mu s\)</label><br>
+  <label><input type="radio" name="q28" value="c" data-correct="true"> \(10\,\mu s\)</label><br>
+  <label><input type="radio" name="q28" value="d"> \(20\,\mu s\)</label>
+</div>
+
+<!-- ==================== QUESTION 29 ==================== -->
+<div class="question">
+  <p><strong>Q29.</strong> In special relativity, two events that are simultaneous in one inertial frame:</p>
+  <label><input type="radio" name="q29" value="a"> Must be simultaneous in every inertial frame</label><br>
+  <label><input type="radio" name="q29" value="b" data-correct="true"> Need not be simultaneous in another inertial frame</label><br>
+  <label><input type="radio" name="q29" value="c"> Must occur at the same position</label><br>
+  <label><input type="radio" name="q29" value="d"> Cannot be observed</label>
+</div>
+
+<!-- ==================== QUESTION 30 ==================== -->
+<div class="question">
+  <p><strong>Q30.</strong> Relativity of simultaneity follows directly from the Lorentz transformation of:</p>
+  <label><input type="radio" name="q30" value="a"> Mass only</label><br>
+  <label><input type="radio" name="q30" value="b"> Energy only</label><br>
+  <label><input type="radio" name="q30" value="c" data-correct="true"> Time</label><br>
+  <label><input type="radio" name="q30" value="d"> Electric charge</label>
+</div>
+
+<!-- ==================== QUESTION 31 ==================== -->
+<div class="question">
+  <p><strong>Q31.</strong> The modern relativistic expression for the momentum of a particle of invariant mass \(m\) is:</p>
+  <label><input type="radio" name="q31" value="a"> \(p=mv\)</label><br>
+  <label><input type="radio" name="q31" value="b" data-correct="true"> \(p=\gamma mv\)</label><br>
+  <label><input type="radio" name="q31" value="c"> \(p=mc^2\)</label><br>
+  <label><input type="radio" name="q31" value="d"> \(p=m/v\)</label>
+</div>
+
+<!-- ==================== QUESTION 32 ==================== -->
+<div class="question">
+  <p><strong>Q32.</strong> The rest energy of a particle of invariant mass \(m\) is:</p>
+  <label><input type="radio" name="q32" value="a"> \(E_0=mc\)</label><br>
+  <label><input type="radio" name="q32" value="b" data-correct="true"> \(E_0=mc^2\)</label><br>
+  <label><input type="radio" name="q32" value="c"> \(E_0=mv^2\)</label><br>
+  <label><input type="radio" name="q32" value="d"> \(E_0=m/c^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 33 ==================== -->
+<div class="question">
+  <p><strong>Q33.</strong> The total relativistic energy of a particle is:</p>
+  <label><input type="radio" name="q33" value="a"> \(E=mv^2\)</label><br>
+  <label><input type="radio" name="q33" value="b"> \(E=mc^2\)</label><br>
+  <label><input type="radio" name="q33" value="c" data-correct="true"> \(E=\gamma mc^2\)</label><br>
+  <label><input type="radio" name="q33" value="d"> \(E=\gamma mv\)</label>
+</div>
+
+<!-- ==================== QUESTION 34 ==================== -->
+<div class="question">
+  <p><strong>Q34.</strong> The relativistic kinetic energy of a particle is:</p>
+  <label><input type="radio" name="q34" value="a"> \(K=\gamma mc^2\)</label><br>
+  <label><input type="radio" name="q34" value="b" data-correct="true"> \(K=(\gamma-1)mc^2\)</label><br>
+  <label><input type="radio" name="q34" value="c"> \(K=mc^2/\gamma\)</label><br>
+  <label><input type="radio" name="q34" value="d"> \(K=(1-\gamma)mc^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 35 ==================== -->
+<div class="question">
+  <p><strong>Q35.</strong> The relativistic energy-momentum relation is:</p>
+  <label><input type="radio" name="q35" value="a"> \(E=pc\)</label><br>
+  <label><input type="radio" name="q35" value="b" data-correct="true"> \(E^2=p^2c^2+m^2c^4\)</label><br>
+  <label><input type="radio" name="q35" value="c"> \(E^2=p^2+m^2\)</label><br>
+  <label><input type="radio" name="q35" value="d"> \(E=p^2/2m\)</label>
+</div>
+
+<!-- ==================== QUESTION 36 ==================== -->
+<div class="question">
+  <p><strong>Q36.</strong> If a particle has zero invariant mass, the energy-momentum relation becomes:</p>
+  <label><input type="radio" name="q36" value="a"> \(E=mc^2\)</label><br>
+  <label><input type="radio" name="q36" value="b" data-correct="true"> \(E=pc\)</label><br>
+  <label><input type="radio" name="q36" value="c"> \(E=p/c\)</label><br>
+  <label><input type="radio" name="q36" value="d"> \(E=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 37 ==================== -->
+<div class="question">
+  <p><strong>Q37.</strong> Nuclear binding energy is related to the mass defect \(\Delta m\) by:</p>
+  <label><input type="radio" name="q37" value="a"> \(B=\Delta m/c^2\)</label><br>
+  <label><input type="radio" name="q37" value="b"> \(B=\Delta mc\)</label><br>
+  <label><input type="radio" name="q37" value="c" data-correct="true"> \(B=\Delta mc^2\)</label><br>
+  <label><input type="radio" name="q37" value="d"> \(B=\Delta mv\)</label>
+</div>
+
+<!-- ==================== QUESTION 38 ==================== -->
+<div class="question">
+  <p><strong>Q38.</strong> If a nuclear reaction has a mass defect of \(1\,u\), the corresponding energy is approximately:</p>
+  <label><input type="radio" name="q38" value="a"> \(9.31\,\text{MeV}\)</label><br>
+  <label><input type="radio" name="q38" value="b"> \(93.1\,\text{MeV}\)</label><br>
+  <label><input type="radio" name="q38" value="c" data-correct="true"> \(931.5\,\text{MeV}\)</label><br>
+  <label><input type="radio" name="q38" value="d"> \(9315\,\text{MeV}\)</label>
+</div>
+
+<!-- ==================== QUESTION 39 ==================== -->
+<div class="question">
+  <p><strong>Q39.</strong> Nuclear fission is the process in which:</p>
+  <label><input type="radio" name="q39" value="a"> Two light nuclei combine</label><br>
+  <label><input type="radio" name="q39" value="b" data-correct="true"> A heavy nucleus splits into lighter nuclei</label><br>
+  <label><input type="radio" name="q39" value="c"> An electron combines with a positron only</label><br>
+  <label><input type="radio" name="q39" value="d"> A photon loses all its energy without interaction</label>
+</div>
+
+<!-- ==================== QUESTION 40 ==================== -->
+<div class="question">
+  <p><strong>Q40.</strong> Nuclear fusion is the process in which:</p>
+  <label><input type="radio" name="q40" value="a"> A heavy nucleus splits into smaller nuclei</label><br>
+  <label><input type="radio" name="q40" value="b" data-correct="true"> Light nuclei combine to form a heavier nucleus</label><br>
+  <label><input type="radio" name="q40" value="c"> Matter is completely destroyed</label><br>
+  <label><input type="radio" name="q40" value="d"> An electron becomes a photon</label>
+</div>
+
+<!-- ==================== QUESTION 41 ==================== -->
+<div class="question">
+  <p><strong>Q41.</strong> The primary source of the Sun's energy is:</p>
+  <label><input type="radio" name="q41" value="a"> Nuclear fission</label><br>
+  <label><input type="radio" name="q41" value="b" data-correct="true"> Nuclear fusion</label><br>
+  <label><input type="radio" name="q41" value="c"> Chemical combustion</label><br>
+  <label><input type="radio" name="q41" value="d"> Gravitational repulsion</label>
+</div>
+
+<!-- ==================== QUESTION 42 ==================== -->
+<div class="question">
+  <p><strong>Q42.</strong> Pair production can produce an electron and a positron from:</p>
+  <label><input type="radio" name="q42" value="a"> A low-energy sound wave</label><br>
+  <label><input type="radio" name="q42" value="b" data-correct="true"> A sufficiently energetic photon in the presence of a nucleus or other body that can take recoil</label><br>
+  <label><input type="radio" name="q42" value="c"> A stationary electron alone</label><br>
+  <label><input type="radio" name="q42" value="d"> A magnetic field with no energy input</label>
+</div>
+
+<!-- ==================== QUESTION 43 ==================== -->
+<div class="question">
+  <p><strong>Q43.</strong> Since the rest energy of an electron is approximately \(0.511\,\text{MeV}\), the threshold photon energy for electron-positron pair production near a heavy nucleus is approximately:</p>
+  <label><input type="radio" name="q43" value="a"> \(0.511\,\text{MeV}\)</label><br>
+  <label><input type="radio" name="q43" value="b" data-correct="true"> \(1.022\,\text{MeV}\)</label><br>
+  <label><input type="radio" name="q43" value="c"> \(2.044\,\text{MeV}\)</label><br>
+  <label><input type="radio" name="q43" value="d"> \(0.255\,\text{MeV}\)</label>
+</div>
+
+<!-- ==================== QUESTION 44 ==================== -->
+<div class="question">
+  <p><strong>Q44.</strong> The principle of equivalence states, locally, that the effects of a uniform gravitational field are indistinguishable from those of:</p>
+  <label><input type="radio" name="q44" value="a"> Uniform velocity</label><br>
+  <label><input type="radio" name="q44" value="b" data-correct="true"> Appropriate uniform acceleration</label><br>
+  <label><input type="radio" name="q44" value="c"> Circular motion only</label><br>
+  <label><input type="radio" name="q44" value="d"> Zero mass</label>
+</div>
+
+<!-- ==================== QUESTION 45 ==================== -->
+<div class="question">
+  <p><strong>Q45.</strong> A person inside a closed elevator in free fall would locally experience:</p>
+  <label><input type="radio" name="q45" value="a"> Twice the normal weight</label><br>
+  <label><input type="radio" name="q45" value="b" data-correct="true"> Apparent weightlessness</label><br>
+  <label><input type="radio" name="q45" value="c"> Infinite weight</label><br>
+  <label><input type="radio" name="q45" value="d"> No inertia</label>
+</div>
+
+<!-- ==================== QUESTION 46 ==================== -->
+<div class="question">
+  <p><strong>Q46.</strong> According to general relativity, a light ray passing near a massive body:</p>
+  <label><input type="radio" name="q46" value="a"> Must continue along an exactly straight Euclidean line</label><br>
+  <label><input type="radio" name="q46" value="b" data-correct="true"> Is deflected by the gravitational field</label><br>
+  <label><input type="radio" name="q46" value="c"> Comes to rest</label><br>
+  <label><input type="radio" name="q46" value="d"> Becomes a massive particle</label>
+</div>
+
+<!-- ==================== QUESTION 47 ==================== -->
+<div class="question">
+  <p><strong>Q47.</strong> The bending of starlight near the Sun was famously tested during:</p>
+  <label><input type="radio" name="q47" value="a"> A lunar eclipse</label><br>
+  <label><input type="radio" name="q47" value="b" data-correct="true"> A total solar eclipse</label><br>
+  <label><input type="radio" name="q47" value="c"> A meteor shower</label><br>
+  <label><input type="radio" name="q47" value="d"> A planetary transit only</label>
+</div>
+
+<!-- ==================== QUESTION 48 ==================== -->
+<div class="question">
+  <p><strong>Q48.</strong> The approximate deflection angle predicted by general relativity for light grazing the surface of the Sun is:</p>
+  <label><input type="radio" name="q48" value="a"> \(0.175''\)</label><br>
+  <label><input type="radio" name="q48" value="b"> \(0.875''\)</label><br>
+  <label><input type="radio" name="q48" value="c" data-correct="true"> \(1.75''\)</label><br>
+  <label><input type="radio" name="q48" value="d"> \(17.5''\)</label>
+</div>
+
+<!-- ==================== QUESTION 49 ==================== -->
+<div class="question">
+  <p><strong>Q49.</strong> The general relativistic deflection angle for light passing a spherical mass \(M\) with impact parameter \(b\) in the weak-field limit is:</p>
+  <label><input type="radio" name="q49" value="a"> \(\displaystyle \frac{GM}{bc^2}\)</label><br>
+  <label><input type="radio" name="q49" value="b"> \(\displaystyle \frac{2GM}{bc^2}\)</label><br>
+  <label><input type="radio" name="q49" value="c" data-correct="true"> \(\displaystyle \frac{4GM}{bc^2}\)</label><br>
+  <label><input type="radio" name="q49" value="d"> \(\displaystyle \frac{GMb}{c^2}\)</label>
+</div>
+
+<!-- ==================== QUESTION 50 ==================== -->
+<div class="question">
+  <p><strong>Q50.</strong> Which statement correctly describes the progression from Galilean relativity to special and general relativity?</p>
+  <label><input type="radio" name="q50" value="a"> Special relativity applies only to gravity</label><br>
+  <label><input type="radio" name="q50" value="b"> General relativity restores absolute space and absolute time</label><br>
+  <label><input type="radio" name="q50" value="c" data-correct="true"> Galilean relativity is the low-speed approximation, special relativity describes inertial frames consistently with invariant \(c\), and general relativity extends relativity to gravitation</label><br>
+  <label><input type="radio" name="q50" value="d"> The three theories make identical predictions at all speeds and gravitational fields</label>
+</div>
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+      const Qtitle = document.getElementById("examtitle").value;
+
+
+      if (!name || !email || !roll||!Qtitle) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name],  ["", ""],["Email", email],  ["", ""],["Roll Number", roll],  ["", ""],["Exam Title", Qtitle],["", ""]];
+      const totalQuestions = 50;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const stitle = document.getElementById("examtitle").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText} Title: ${stitle}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>

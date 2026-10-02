@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+      <label>Exam Title: <input type="text" value="Class Mech UG Quiz 1"  id="examtitle" readonly></label><br><br>
+    
+<h2>Let's start with Module 2</h2>
+<form id="quizForm">
+
+
+<div class="question">
+  <p><strong>Q1.</strong> In a two-body system with masses \(m_1\) and \(m_2\), the relative position vector is usually defined as:</p>
+  <label><input type="radio" name="q1" value="a"> \(\vec r=\vec r_1+\vec r_2\)</label><br>
+  <label><input type="radio" name="q1" value="b" data-correct="true"> \(\vec r=\vec r_1-\vec r_2\) (or equivalently the opposite convention)</label><br>
+  <label><input type="radio" name="q1" value="c"> \(\vec r=m_1\vec r_1+m_2\vec r_2\)</label><br>
+  <label><input type="radio" name="q1" value="d"> \(\vec r=\vec r_1\cdot\vec r_2\)</label>
+</div>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<div class="question">
+  <p><strong>Q2.</strong> The centre-of-mass position vector of two particles is:</p>
+  <label><input type="radio" name="q2" value="a"> \(\displaystyle \frac{\vec r_1+\vec r_2}{2}\)</label><br>
+  <label><input type="radio" name="q2" value="b" data-correct="true"> \(\displaystyle \vec R=\frac{m_1\vec r_1+m_2\vec r_2}{m_1+m_2}\)</label><br>
+  <label><input type="radio" name="q2" value="c"> \(\displaystyle \vec R=m_1\vec r_1+m_2\vec r_2\)</label><br>
+  <label><input type="radio" name="q2" value="d"> \(\displaystyle \vec R=\vec r_1-\vec r_2\)</label>
+</div>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<div class="question">
+  <p><strong>Q3.</strong> The reduced mass of a two-body system is:</p>
+  <label><input type="radio" name="q3" value="a"> \(m_1+m_2\)</label><br>
+  <label><input type="radio" name="q3" value="b"> \(m_1-m_2\)</label><br>
+  <label><input type="radio" name="q3" value="c" data-correct="true"> \(\displaystyle \mu=\frac{m_1m_2}{m_1+m_2}\)</label><br>
+  <label><input type="radio" name="q3" value="d"> \(\displaystyle \mu=\frac{m_1+m_2}{m_1m_2}\)</label>
+</div>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<div class="question">
+  <p><strong>Q4.</strong> Two particles have masses \(2\,\text{kg}\) and \(3\,\text{kg}\). Their reduced mass is:</p>
+  <label><input type="radio" name="q4" value="a"> \(5\,\text{kg}\)</label><br>
+  <label><input type="radio" name="q4" value="b"> \(2.5\,\text{kg}\)</label><br>
+  <label><input type="radio" name="q4" value="c" data-correct="true"> \(1.2\,\text{kg}\)</label><br>
+  <label><input type="radio" name="q4" value="d"> \(6\,\text{kg}\)</label>
+</div>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<div class="question">
+  <p><strong>Q5.</strong> If \(m_1=m_2=m\), the reduced mass is:</p>
+  <label><input type="radio" name="q5" value="a"> \(m\)</label><br>
+  <label><input type="radio" name="q5" value="b"> \(2m\)</label><br>
+  <label><input type="radio" name="q5" value="c" data-correct="true"> \(m/2\)</label><br>
+  <label><input type="radio" name="q5" value="d"> \(m/4\)</label>
+</div>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<div class="question">
+  <p><strong>Q6.</strong> If \(m_1 \gg m_2\), the reduced mass is approximately:</p>
+  <label><input type="radio" name="q6" value="a"> \(m_1\)</label><br>
+  <label><input type="radio" name="q6" value="b" data-correct="true"> \(m_2\)</label><br>
+  <label><input type="radio" name="q6" value="c"> \(m_1+m_2\)</label><br>
+  <label><input type="radio" name="q6" value="d"> Zero</label>
+</div>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<div class="question">
+  <p><strong>Q7.</strong> The two-body central force problem can be reduced to:</p>
+  <label><input type="radio" name="q7" value="a"> Two independent three-body problems</label><br>
+  <label><input type="radio" name="q7" value="b" data-correct="true"> Centre-of-mass motion and an equivalent one-body problem of reduced mass \(\mu\)</label><br>
+  <label><input type="radio" name="q7" value="c"> A system with zero mass</label><br>
+  <label><input type="radio" name="q7" value="d"> A harmonic oscillator in every case</label>
+</div>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<div class="question">
+  <p><strong>Q8.</strong> In the absence of an external force, the centre of mass of an isolated two-body system:</p>
+  <label><input type="radio" name="q8" value="a"> Must remain at rest</label><br>
+  <label><input type="radio" name="q8" value="b"> Moves in a circle</label><br>
+  <label><input type="radio" name="q8" value="c" data-correct="true"> Moves with constant velocity</label><br>
+  <label><input type="radio" name="q8" value="d"> Accelerates toward the heavier body</label>
+</div>
+
+<!-- ==================== QUESTION 9 ==================== -->
+<div class="question">
+  <p><strong>Q9.</strong> A central force is a force which:</p>
+  <label><input type="radio" name="q9" value="a"> Is always constant</label><br>
+  <label><input type="radio" name="q9" value="b" data-correct="true"> Acts along the line joining the particle and the force centre</label><br>
+  <label><input type="radio" name="q9" value="c"> Is always perpendicular to the position vector</label><br>
+  <label><input type="radio" name="q9" value="d"> Acts only in circular motion</label>
+</div>
+
+<!-- ==================== QUESTION 10 ==================== -->
+<div class="question">
+  <p><strong>Q10.</strong> A central force can be written in the form:</p>
+  <label><input type="radio" name="q10" value="a"> \(\vec F=F(r)\hat{\theta}\)</label><br>
+  <label><input type="radio" name="q10" value="b" data-correct="true"> \(\vec F=F(r)\hat r\)</label><br>
+  <label><input type="radio" name="q10" value="c"> \(\vec F=F(t)\hat{\theta}\)</label><br>
+  <label><input type="radio" name="q10" value="d"> \(\vec F=F(r)\hat z\)</label>
+</div>
+
+<!-- ==================== QUESTION 11 ==================== -->
+<div class="question">
+  <p><strong>Q11.</strong> The torque about the force centre due to a central force is:</p>
+  <label><input type="radio" name="q11" value="a"> Maximum</label><br>
+  <label><input type="radio" name="q11" value="b"> \(rF\)</label><br>
+  <label><input type="radio" name="q11" value="c" data-correct="true"> Zero</label><br>
+  <label><input type="radio" name="q11" value="d"> \(rF/2\)</label>
+</div>
+
+<!-- ==================== QUESTION 12 ==================== -->
+<div class="question">
+  <p><strong>Q12.</strong> Since the torque due to a central force is zero, which quantity is conserved?</p>
+  <label><input type="radio" name="q12" value="a"> Linear momentum</label><br>
+  <label><input type="radio" name="q12" value="b"> Radial velocity</label><br>
+  <label><input type="radio" name="q12" value="c" data-correct="true"> Angular momentum</label><br>
+  <label><input type="radio" name="q12" value="d"> Acceleration</label>
+</div>
+
+<!-- ==================== QUESTION 13 ==================== -->
+<div class="question">
+  <p><strong>Q13.</strong> Conservation of angular momentum in central force motion implies that the motion:</p>
+  <label><input type="radio" name="q13" value="a"> Must be along a straight line</label><br>
+  <label><input type="radio" name="q13" value="b" data-correct="true"> Takes place in a plane</label><br>
+  <label><input type="radio" name="q13" value="c"> Must be circular</label><br>
+  <label><input type="radio" name="q13" value="d"> Must be three-dimensional</label>
+</div>
+
+<!-- ==================== QUESTION 14 ==================== -->
+<div class="question">
+  <p><strong>Q14.</strong> The angular momentum of the equivalent particle in plane polar coordinates is:</p>
+  <label><input type="radio" name="q14" value="a"> \(L=\mu r\dot r\)</label><br>
+  <label><input type="radio" name="q14" value="b" data-correct="true"> \(L=\mu r^2\dot\theta\)</label><br>
+  <label><input type="radio" name="q14" value="c"> \(L=\mu\dot\theta/r^2\)</label><br>
+  <label><input type="radio" name="q14" value="d"> \(L=\mu r^2\ddot\theta\)</label>
+</div>
+
+<!-- ==================== QUESTION 15 ==================== -->
+<div class="question">
+  <p><strong>Q15.</strong> The areal velocity of a particle moving under a central force is:</p>
+  <label><input type="radio" name="q15" value="a"> \(r\dot\theta\)</label><br>
+  <label><input type="radio" name="q15" value="b" data-correct="true"> \(\displaystyle \frac{dA}{dt}=\frac12r^2\dot\theta\)</label><br>
+  <label><input type="radio" name="q15" value="c"> \(r^2\ddot\theta\)</label><br>
+  <label><input type="radio" name="q15" value="d"> \(\dot r\dot\theta\)</label>
+</div>
+
+<!-- ==================== QUESTION 16 ==================== -->
+<div class="question">
+  <p><strong>Q16.</strong> Using \(L=\mu r^2\dot\theta\), the areal velocity is:</p>
+  <label><input type="radio" name="q16" value="a"> \(L/\mu\)</label><br>
+  <label><input type="radio" name="q16" value="b"> \(2L/\mu\)</label><br>
+  <label><input type="radio" name="q16" value="c" data-correct="true"> \(L/(2\mu)\)</label><br>
+  <label><input type="radio" name="q16" value="d"> \(\mu/(2L)\)</label>
+</div>
+
+<!-- ==================== QUESTION 17 ==================== -->
+<div class="question">
+  <p><strong>Q17.</strong> The constancy of areal velocity under a central force is the basis of:</p>
+  <label><input type="radio" name="q17" value="a"> Kepler's first law</label><br>
+  <label><input type="radio" name="q17" value="b" data-correct="true"> Kepler's second law</label><br>
+  <label><input type="radio" name="q17" value="c"> Kepler's third law</label><br>
+  <label><input type="radio" name="q17" value="d"> Newton's third law</label>
+</div>
+
+<!-- ==================== QUESTION 18 ==================== -->
+<div class="question">
+  <p><strong>Q18.</strong> The radial equation of motion under a central force is:</p>
+  <label><input type="radio" name="q18" value="a"> \(\mu(\ddot r+r\dot\theta^2)=F(r)\)</label><br>
+  <label><input type="radio" name="q18" value="b" data-correct="true"> \(\mu(\ddot r-r\dot\theta^2)=F(r)\)</label><br>
+  <label><input type="radio" name="q18" value="c"> \(\mu r\ddot\theta=F(r)\)</label><br>
+  <label><input type="radio" name="q18" value="d"> \(\mu\ddot r=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 19 ==================== -->
+<div class="question">
+  <p><strong>Q19.</strong> The transverse equation for central force motion is:</p>
+  <label><input type="radio" name="q19" value="a"> \(r\ddot\theta-\dot r\dot\theta=0\)</label><br>
+  <label><input type="radio" name="q19" value="b" data-correct="true"> \(r\ddot\theta+2\dot r\dot\theta=0\)</label><br>
+  <label><input type="radio" name="q19" value="c"> \(\ddot\theta+r\dot\theta=0\)</label><br>
+  <label><input type="radio" name="q19" value="d"> \(r\ddot\theta=F(r)\)</label>
+</div>
+
+<!-- ==================== QUESTION 20 ==================== -->
+<div class="question">
+  <p><strong>Q20.</strong> The effective potential for central force motion is:</p>
+  <label><input type="radio" name="q20" value="a"> \(V_{\text{eff}}=V(r)-\frac{L^2}{2\mu r^2}\)</label><br>
+  <label><input type="radio" name="q20" value="b" data-correct="true"> \(V_{\text{eff}}=V(r)+\frac{L^2}{2\mu r^2}\)</label><br>
+  <label><input type="radio" name="q20" value="c"> \(V_{\text{eff}}=V(r)+Lr\)</label><br>
+  <label><input type="radio" name="q20" value="d"> \(V_{\text{eff}}=V(r)+\frac12\mu r^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 21 ==================== -->
+<div class="question">
+  <p><strong>Q21.</strong> The term \(\frac{L^2}{2\mu r^2}\) in the effective potential is called:</p>
+  <label><input type="radio" name="q21" value="a"> Gravitational potential</label><br>
+  <label><input type="radio" name="q21" value="b"> Elastic potential</label><br>
+  <label><input type="radio" name="q21" value="c" data-correct="true"> Centrifugal potential term</label><br>
+  <label><input type="radio" name="q21" value="d"> Rest energy</label>
+</div>
+
+<!-- ==================== QUESTION 22 ==================== -->
+<div class="question">
+  <p><strong>Q22.</strong> The total energy of the equivalent one-body central force problem can be written as:</p>
+  <label><input type="radio" name="q22" value="a"> \(E=\frac12\mu\dot r^2-V_{\text{eff}}\)</label><br>
+  <label><input type="radio" name="q22" value="b" data-correct="true"> \(E=\frac12\mu\dot r^2+V_{\text{eff}}(r)\)</label><br>
+  <label><input type="radio" name="q22" value="c"> \(E=\mu\dot r+V\)</label><br>
+  <label><input type="radio" name="q22" value="d"> \(E=Lr+V\)</label>
+</div>
+
+<!-- ==================== QUESTION 23 ==================== -->
+<div class="question">
+  <p><strong>Q23.</strong> In deriving the differential equation of an orbit, it is convenient to introduce:</p>
+  <label><input type="radio" name="q23" value="a"> \(u=r^2\)</label><br>
+  <label><input type="radio" name="q23" value="b" data-correct="true"> \(u=1/r\)</label><br>
+  <label><input type="radio" name="q23" value="c"> \(u=\dot r\)</label><br>
+  <label><input type="radio" name="q23" value="d"> \(u=r\theta\)</label>
+</div>
+
+<!-- ==================== QUESTION 24 ==================== -->
+<div class="question">
+  <p><strong>Q24.</strong> Binet's orbit equation for a central force is:</p>
+  <label><input type="radio" name="q24" value="a"> \(\displaystyle \frac{d^2u}{d\theta^2}-u=-\frac{\mu}{L^2u^2}F(1/u)\)</label><br>
+  <label><input type="radio" name="q24" value="b" data-correct="true"> \(\displaystyle \frac{d^2u}{d\theta^2}+u=-\frac{\mu}{L^2u^2}F(1/u)\)</label><br>
+  <label><input type="radio" name="q24" value="c"> \(\displaystyle \frac{du}{d\theta}+u=F(r)\)</label><br>
+  <label><input type="radio" name="q24" value="d"> \(\displaystyle \frac{d^2u}{dt^2}+u=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 25 ==================== -->
+<div class="question">
+  <p><strong>Q25.</strong> For an attractive inverse-square force, \(F(r)=-k/r^2\), Binet's equation becomes:</p>
+  <label><input type="radio" name="q25" value="a"> \(\displaystyle u''+u=-\frac{\mu k}{L^2}\)</label><br>
+  <label><input type="radio" name="q25" value="b" data-correct="true"> \(\displaystyle u''+u=\frac{\mu k}{L^2}\)</label><br>
+  <label><input type="radio" name="q25" value="c"> \(u''-u=0\)</label><br>
+  <label><input type="radio" name="q25" value="d"> \(u''+u=kr^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 26 ==================== -->
+<div class="question">
+  <p><strong>Q26.</strong> The orbit under an attractive inverse-square force can be written as:</p>
+  <label><input type="radio" name="q26" value="a"> \(r=a\theta\)</label><br>
+  <label><input type="radio" name="q26" value="b" data-correct="true"> \(\displaystyle r=\frac{p}{1+e\cos\theta}\)</label><br>
+  <label><input type="radio" name="q26" value="c"> \(r=p(1+e\theta)\)</label><br>
+  <label><input type="radio" name="q26" value="d"> \(r=pe^\theta\)</label>
+</div>
+
+<!-- ==================== QUESTION 27 ==================== -->
+<div class="question">
+  <p><strong>Q27.</strong> In the orbit equation \(r=p/(1+e\cos\theta)\), \(e\) represents:</p>
+  <label><input type="radio" name="q27" value="a"> Energy</label><br>
+  <label><input type="radio" name="q27" value="b"> Angular momentum</label><br>
+  <label><input type="radio" name="q27" value="c" data-correct="true"> Eccentricity</label><br>
+  <label><input type="radio" name="q27" value="d"> Areal velocity</label>
+</div>
+
+<!-- ==================== QUESTION 28 ==================== -->
+<div class="question">
+  <p><strong>Q28.</strong> An inverse-square orbit with \(e=0\) is:</p>
+  <label><input type="radio" name="q28" value="a" data-correct="true"> A circle</label><br>
+  <label><input type="radio" name="q28" value="b"> An ellipse</label><br>
+  <label><input type="radio" name="q28" value="c"> A parabola</label><br>
+  <label><input type="radio" name="q28" value="d"> A hyperbola</label>
+</div>
+
+<!-- ==================== QUESTION 29 ==================== -->
+<div class="question">
+  <p><strong>Q29.</strong> An orbit with \(0&lt;e&lt;1\) is:</p>
+  <label><input type="radio" name="q29" value="a"> Circle only</label><br>
+  <label><input type="radio" name="q29" value="b" data-correct="true"> Ellipse</label><br>
+  <label><input type="radio" name="q29" value="c"> Parabola</label><br>
+  <label><input type="radio" name="q29" value="d"> Hyperbola</label>
+</div>
+
+<!-- ==================== QUESTION 30 ==================== -->
+<div class="question">
+  <p><strong>Q30.</strong> An orbit with \(e=1\) is:</p>
+  <label><input type="radio" name="q30" value="a"> Circle</label><br>
+  <label><input type="radio" name="q30" value="b"> Ellipse</label><br>
+  <label><input type="radio" name="q30" value="c" data-correct="true"> Parabola</label><br>
+  <label><input type="radio" name="q30" value="d"> Hyperbola</label>
+</div>
+
+<!-- ==================== QUESTION 31 ==================== -->
+<div class="question">
+  <p><strong>Q31.</strong> An orbit with \(e&gt;1\) is:</p>
+  <label><input type="radio" name="q31" value="a"> Circle</label><br>
+  <label><input type="radio" name="q31" value="b"> Ellipse</label><br>
+  <label><input type="radio" name="q31" value="c"> Parabola</label><br>
+  <label><input type="radio" name="q31" value="d" data-correct="true"> Hyperbola</label>
+</div>
+
+<!-- ==================== QUESTION 32 ==================== -->
+<div class="question">
+  <p><strong>Q32.</strong> For the attractive inverse-square potential with \(V(\infty)=0\), a negative total energy corresponds to:</p>
+  <label><input type="radio" name="q32" value="a" data-correct="true"> A bound orbit</label><br>
+  <label><input type="radio" name="q32" value="b"> A parabolic escape orbit</label><br>
+  <label><input type="radio" name="q32" value="c"> A hyperbolic orbit</label><br>
+  <label><input type="radio" name="q32" value="d"> No possible motion</label>
+</div>
+
+<!-- ==================== QUESTION 33 ==================== -->
+<div class="question">
+  <p><strong>Q33.</strong> For an inverse-square attractive force, zero total energy corresponds to:</p>
+  <label><input type="radio" name="q33" value="a"> Circle</label><br>
+  <label><input type="radio" name="q33" value="b"> Ellipse</label><br>
+  <label><input type="radio" name="q33" value="c" data-correct="true"> Parabola</label><br>
+  <label><input type="radio" name="q33" value="d"> Hyperbola</label>
+</div>
+
+<!-- ==================== QUESTION 34 ==================== -->
+<div class="question">
+  <p><strong>Q34.</strong> For an inverse-square attractive force, positive total energy corresponds to:</p>
+  <label><input type="radio" name="q34" value="a"> Circle</label><br>
+  <label><input type="radio" name="q34" value="b"> Ellipse</label><br>
+  <label><input type="radio" name="q34" value="c"> Parabola</label><br>
+  <label><input type="radio" name="q34" value="d" data-correct="true"> Hyperbola</label>
+</div>
+
+<!-- ==================== QUESTION 35 ==================== -->
+<div class="question">
+  <p><strong>Q35.</strong> A circular orbit of radius \(r_0\) corresponds to:</p>
+  <label><input type="radio" name="q35" value="a"> A maximum of \(V_{\text{eff}}\) in every case</label><br>
+  <label><input type="radio" name="q35" value="b" data-correct="true"> A stationary point of the effective potential</label><br>
+  <label><input type="radio" name="q35" value="c"> \(L=0\) necessarily</label><br>
+  <label><input type="radio" name="q35" value="d"> Infinite kinetic energy</label>
+</div>
+
+<!-- ==================== QUESTION 36 ==================== -->
+<div class="question">
+  <p><strong>Q36.</strong> The condition for a circular orbit at \(r=r_0\) is:</p>
+  <label><input type="radio" name="q36" value="a"> \(V_{\text{eff}}(r_0)=0\)</label><br>
+  <label><input type="radio" name="q36" value="b" data-correct="true"> \(\displaystyle \left.\frac{dV_{\text{eff}}}{dr}\right|_{r_0}=0\)</label><br>
+  <label><input type="radio" name="q36" value="c"> \(\displaystyle \left.\frac{dV_{\text{eff}}}{dr}\right|_{r_0}=1\)</label><br>
+  <label><input type="radio" name="q36" value="d"> \(V(r_0)=\infty\)</label>
+</div>
+
+<!-- ==================== QUESTION 37 ==================== -->
+<div class="question">
+  <p><strong>Q37.</strong> A circular orbit is stable if:</p>
+  <label><input type="radio" name="q37" value="a"> \(\displaystyle \frac{d^2V_{\text{eff}}}{dr^2}&lt;0\)</label><br>
+  <label><input type="radio" name="q37" value="b" data-correct="true"> \(\displaystyle \frac{d^2V_{\text{eff}}}{dr^2}&gt;0\)</label><br>
+  <label><input type="radio" name="q37" value="c"> \(V_{\text{eff}}=0\) only</label><br>
+  <label><input type="radio" name="q37" value="d"> \(L=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 38 ==================== -->
+<div class="question">
+  <p><strong>Q38.</strong> A minimum of the effective potential represents:</p>
+  <label><input type="radio" name="q38" value="a"> An unstable circular orbit</label><br>
+  <label><input type="radio" name="q38" value="b" data-correct="true"> A stable circular orbit</label><br>
+  <label><input type="radio" name="q38" value="c"> A parabolic orbit only</label><br>
+  <label><input type="radio" name="q38" value="d"> An impossible orbit</label>
+</div>
+
+<!-- ==================== QUESTION 39 ==================== -->
+<div class="question">
+  <p><strong>Q39.</strong> According to Bertrand's theorem, the two central-force potentials for which all bound orbits are closed are proportional to:</p>
+  <label><input type="radio" name="q39" value="a"> \(r\) and \(1/r^2\)</label><br>
+  <label><input type="radio" name="q39" value="b" data-correct="true"> \(r^2\) and \(-1/r\)</label><br>
+  <label><input type="radio" name="q39" value="c"> \(r^3\) and \(1/r^3\)</label><br>
+  <label><input type="radio" name="q39" value="d"> \(\ln r\) and \(r\)</label>
+</div>
+
+<!-- ==================== QUESTION 40 ==================== -->
+<div class="question">
+  <p><strong>Q40.</strong> Kepler's first law states that a planet moves:</p>
+  <label><input type="radio" name="q40" value="a"> In a circular orbit with the Sun at its centre</label><br>
+  <label><input type="radio" name="q40" value="b" data-correct="true"> In an elliptical orbit with the Sun at one focus</label><br>
+  <label><input type="radio" name="q40" value="c"> In a parabolic orbit</label><br>
+  <label><input type="radio" name="q40" value="d"> With constant linear velocity</label>
+</div>
+
+<!-- ==================== QUESTION 41 ==================== -->
+<div class="question">
+  <p><strong>Q41.</strong> Kepler's second law states that the line joining a planet and the Sun:</p>
+  <label><input type="radio" name="q41" value="a"> Has constant length</label><br>
+  <label><input type="radio" name="q41" value="b" data-correct="true"> Sweeps out equal areas in equal intervals of time</label><br>
+  <label><input type="radio" name="q41" value="c"> Rotates with constant angular velocity</label><br>
+  <label><input type="radio" name="q41" value="d"> Always remains perpendicular to the velocity</label>
+</div>
+
+<!-- ==================== QUESTION 42 ==================== -->
+<div class="question">
+  <p><strong>Q42.</strong> According to Kepler's third law:</p>
+  <label><input type="radio" name="q42" value="a"> \(T\propto a\)</label><br>
+  <label><input type="radio" name="q42" value="b"> \(T^2\propto a^2\)</label><br>
+  <label><input type="radio" name="q42" value="c" data-correct="true"> \(T^2\propto a^3\)</label><br>
+  <label><input type="radio" name="q42" value="d"> \(T^3\propto a^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 43 ==================== -->
+<div class="question">
+  <p><strong>Q43.</strong> A planet has a semi-major axis four times that of another planet. According to Kepler's third law, the ratio of their orbital periods is:</p>
+  <label><input type="radio" name="q43" value="a"> 2</label><br>
+  <label><input type="radio" name="q43" value="b"> 4</label><br>
+  <label><input type="radio" name="q43" value="c" data-correct="true"> 8</label><br>
+  <label><input type="radio" name="q43" value="d"> 16</label>
+</div>
+
+<!-- ==================== QUESTION 44 ==================== -->
+<div class="question">
+  <p><strong>Q44.</strong> If the semi-major axis of a planetary orbit becomes \(9\) times larger, its orbital period becomes:</p>
+  <label><input type="radio" name="q44" value="a"> 3 times</label><br>
+  <label><input type="radio" name="q44" value="b"> 9 times</label><br>
+  <label><input type="radio" name="q44" value="c" data-correct="true"> 27 times</label><br>
+  <label><input type="radio" name="q44" value="d"> 81 times</label>
+</div>
+
+<!-- ==================== QUESTION 45 ==================== -->
+<div class="question">
+  <p><strong>Q45.</strong> For a circular orbit of radius \(r\) around a mass \(M\), equating gravitational and centripetal forces gives:</p>
+  <label><input type="radio" name="q45" value="a"> \(\displaystyle \frac{GMm}{r}=\frac{mv^2}{r}\)</label><br>
+  <label><input type="radio" name="q45" value="b" data-correct="true"> \(\displaystyle \frac{GMm}{r^2}=\frac{mv^2}{r}\)</label><br>
+  <label><input type="radio" name="q45" value="c"> \(GMm=mv^2r^2\)</label><br>
+  <label><input type="radio" name="q45" value="d"> \(\displaystyle \frac{GMm}{r^3}=mv^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 46 ==================== -->
+<div class="question">
+  <p><strong>Q46.</strong> The orbital speed of a body in a circular orbit of radius \(r\) around a mass \(M\) is:</p>
+  <label><input type="radio" name="q46" value="a"> \(\sqrt{GMr}\)</label><br>
+  <label><input type="radio" name="q46" value="b" data-correct="true"> \(\sqrt{\frac{GM}{r}}\)</label><br>
+  <label><input type="radio" name="q46" value="c"> \(GM/r\)</label><br>
+  <label><input type="radio" name="q46" value="d"> \(\sqrt{GM/r^2}\)</label>
+</div>
+
+<!-- ==================== QUESTION 47 ==================== -->
+<div class="question">
+  <p><strong>Q47.</strong> A satellite moves in a circular orbit of radius \(r\) with speed \(v\). If the orbital radius becomes \(4r\), its circular orbital speed becomes:</p>
+  <label><input type="radio" name="q47" value="a"> \(4v\)</label><br>
+  <label><input type="radio" name="q47" value="b"> \(2v\)</label><br>
+  <label><input type="radio" name="q47" value="c" data-correct="true"> \(v/2\)</label><br>
+  <label><input type="radio" name="q47" value="d"> \(v/4\)</label>
+</div>
+
+<!-- ==================== QUESTION 48 ==================== -->
+<div class="question">
+  <p><strong>Q48.</strong> For a circular planetary orbit, Kepler's third law and Newton's gravitation give:</p>
+  <label><input type="radio" name="q48" value="a"> \(\displaystyle T^2=\frac{GM}{4\pi^2}r^3\)</label><br>
+  <label><input type="radio" name="q48" value="b" data-correct="true"> \(\displaystyle T^2=\frac{4\pi^2}{GM}r^3\)</label><br>
+  <label><input type="radio" name="q48" value="c"> \(\displaystyle T=\frac{4\pi^2r^3}{GM}\)</label><br>
+  <label><input type="radio" name="q48" value="d"> \(\displaystyle T^2=4\pi^2GMr^3\)</label>
+</div>
+
+<!-- ==================== QUESTION 49 ==================== -->
+<div class="question">
+  <p><strong>Q49.</strong> Suppose a planet moves in a circular orbit and Kepler's third law gives \(T^2\propto r^3\). The centripetal acceleration is therefore proportional to:</p>
+  <label><input type="radio" name="q49" value="a"> \(r\)</label><br>
+  <label><input type="radio" name="q49" value="b"> \(1/r\)</label><br>
+  <label><input type="radio" name="q49" value="c" data-correct="true"> \(1/r^2\)</label><br>
+  <label><input type="radio" name="q49" value="d"> \(r^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 50 ==================== -->
+<div class="question">
+  <p><strong>Q50.</strong> A planet moves in a circular orbit of radius \(r\) with period \(T\). Using Kepler's third law, the central force required to maintain the orbit varies with \(r\) as:</p>
+  <label><input type="radio" name="q50" value="a"> \(F\propto r\)</label><br>
+  <label><input type="radio" name="q50" value="b"> \(F\propto r^2\)</label><br>
+  <label><input type="radio" name="q50" value="c"> \(F\propto 1/r\)</label><br>
+  <label><input type="radio" name="q50" value="d" data-correct="true"> \(F\propto 1/r^2\)</label>
+</div>
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+      const Qtitle = document.getElementById("examtitle").value;
+
+
+      if (!name || !email || !roll||!Qtitle) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name],  ["", ""],["Email", email],  ["", ""],["Roll Number", roll],  ["", ""],["Exam Title", Qtitle],["", ""]];
+      const totalQuestions = 50;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const stitle = document.getElementById("examtitle").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText} Title: ${stitle}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>

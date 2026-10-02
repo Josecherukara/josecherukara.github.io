@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate Mechanics Quiz-II</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("3mhKzX8jwrQwggG4W"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+
+
+
+<body>
+    <h2>Student Details</h2>
+    <form id="examForm">
+      <label>Name: <input type="text" id="studentName" required></label><br><br>
+      <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+      <label>Roll Number: <input type="text" id="rollNumber" required></label><br><br>
+      <label>Exam Title: <input type="text" value="Class Mech UG Quiz 1"  id="examtitle" readonly></label><br><br>
+  
+<h2>Let's start with Module 3</h2>
+<form id="quizForm">
+
+ 
+<div class="question">
+  <p><strong>Q1.</strong> In Hamilton's principle, the action \(S\) is defined as:</p>
+  <label><input type="radio" name="q1" value="a"> \(S=\int T\,dt\)</label><br>
+  <label><input type="radio" name="q1" value="b"> \(S=\int V\,dt\)</label><br>
+  <label><input type="radio" name="q1" value="c" data-correct="true"> \(S=\int_{t_1}^{t_2} L\,dt\)</label><br>
+  <label><input type="radio" name="q1" value="d"> \(S=T+V\)</label>
+</div>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<div class="question">
+  <p><strong>Q2.</strong> For a conservative mechanical system, the Lagrangian is:</p>
+  <label><input type="radio" name="q2" value="a"> \(L=T+V\)</label><br>
+  <label><input type="radio" name="q2" value="b" data-correct="true"> \(L=T-V\)</label><br>
+  <label><input type="radio" name="q2" value="c"> \(L=V-T\)</label><br>
+  <label><input type="radio" name="q2" value="d"> \(L=TV\)</label>
+</div>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<div class="question">
+  <p><strong>Q3.</strong> Hamilton's principle is mathematically expressed as:</p>
+  <label><input type="radio" name="q3" value="a"> \(S=0\)</label><br>
+  <label><input type="radio" name="q3" value="b"> \(dS/dt=0\)</label><br>
+  <label><input type="radio" name="q3" value="c" data-correct="true"> \(\delta S=0\)</label><br>
+  <label><input type="radio" name="q3" value="d"> \(S=\infty\)</label>
+</div>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<div class="question">
+  <p><strong>Q4.</strong> The condition \(\delta S=0\) means that the actual path makes the action:</p>
+  <label><input type="radio" name="q4" value="a"> Always zero</label><br>
+  <label><input type="radio" name="q4" value="b"> Always maximum</label><br>
+  <label><input type="radio" name="q4" value="c" data-correct="true"> Stationary with respect to small variations of the path</label><br>
+  <label><input type="radio" name="q4" value="d"> Infinite</label>
+</div>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<div class="question">
+  <p><strong>Q5.</strong> In applying Hamilton's principle, the variations of generalized coordinates at the end points satisfy:</p>
+  <label><input type="radio" name="q5" value="a"> \(\delta q(t_1)=1\)</label><br>
+  <label><input type="radio" name="q5" value="b"> \(\delta q(t_2)=1\)</label><br>
+  <label><input type="radio" name="q5" value="c" data-correct="true"> \(\delta q(t_1)=\delta q(t_2)=0\)</label><br>
+  <label><input type="radio" name="q5" value="d"> \(\delta q(t_1)=\delta q(t_2)=\infty\)</label>
+</div>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<div class="question">
+  <p><strong>Q6.</strong> The principle of least action is more accurately described as a principle of:</p>
+  <label><input type="radio" name="q6" value="a"> Maximum force</label><br>
+  <label><input type="radio" name="q6" value="b"> Minimum kinetic energy</label><br>
+  <label><input type="radio" name="q6" value="c" data-correct="true"> Stationary action</label><br>
+  <label><input type="radio" name="q6" value="d"> Zero potential energy</label>
+</div>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<div class="question">
+  <p><strong>Q7.</strong> The shortest distance between two points in a plane is:</p>
+  <label><input type="radio" name="q7" value="a"> A parabola</label><br>
+  <label><input type="radio" name="q7" value="b"> A circle</label><br>
+  <label><input type="radio" name="q7" value="c" data-correct="true"> A straight line</label><br>
+  <label><input type="radio" name="q7" value="d"> A cycloid</label>
+</div>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<div class="question">
+  <p><strong>Q8.</strong> For a curve \(y(x)\), an infinitesimal arc length is:</p>
+  <label><input type="radio" name="q8" value="a"> \(ds=dx+dy\)</label><br>
+  <label><input type="radio" name="q8" value="b" data-correct="true"> \(ds=\sqrt{1+(dy/dx)^2}\,dx\)</label><br>
+  <label><input type="radio" name="q8" value="c"> \(ds=(dy/dx)dx\)</label><br>
+  <label><input type="radio" name="q8" value="d"> \(ds=dx/dy\)</label>
+</div>
+
+<!-- ==================== QUESTION 9 ==================== -->
+<div class="question">
+  <p><strong>Q9.</strong> The functional to be minimized in the shortest-distance problem is:</p>
+  <label><input type="radio" name="q9" value="a"> \(\int y\,dx\)</label><br>
+  <label><input type="radio" name="q9" value="b" data-correct="true"> \(\displaystyle \int\sqrt{1+y'^2}\,dx\)</label><br>
+  <label><input type="radio" name="q9" value="c"> \(\int y^2\,dx\)</label><br>
+  <label><input type="radio" name="q9" value="d"> \(\int y'\,dx\)</label>
+</div>
+
+<!-- ==================== QUESTION 10 ==================== -->
+<div class="question">
+  <p><strong>Q10.</strong> The brachistochrone problem asks for the curve along which a particle moves between two points:</p>
+  <label><input type="radio" name="q10" value="a"> With minimum distance</label><br>
+  <label><input type="radio" name="q10" value="b" data-correct="true"> In minimum time under gravity</label><br>
+  <label><input type="radio" name="q10" value="c"> With constant velocity</label><br>
+  <label><input type="radio" name="q10" value="d"> With zero acceleration</label>
+</div>
+
+<!-- ==================== QUESTION 11 ==================== -->
+<div class="question">
+  <p><strong>Q11.</strong> The solution of the brachistochrone problem is a:</p>
+  <label><input type="radio" name="q11" value="a"> Straight line</label><br>
+  <label><input type="radio" name="q11" value="b"> Parabola</label><br>
+  <label><input type="radio" name="q11" value="c"> Circle</label><br>
+  <label><input type="radio" name="q11" value="d" data-correct="true"> Cycloid</label>
+</div>
+
+<!-- ==================== QUESTION 12 ==================== -->
+<div class="question">
+  <p><strong>Q12.</strong> In the brachistochrone problem, the straight line is generally:</p>
+  <label><input type="radio" name="q12" value="a"> The path of minimum time</label><br>
+  <label><input type="radio" name="q12" value="b" data-correct="true"> The shortest path, but not the path of minimum time</label><br>
+  <label><input type="radio" name="q12" value="c"> Longer than every possible curve</label><br>
+  <label><input type="radio" name="q12" value="d"> Impossible for the particle to follow</label>
+</div>
+
+<!-- ==================== QUESTION 13 ==================== -->
+<div class="question">
+  <p><strong>Q13.</strong> The mathematical technique used to find the function that makes an integral stationary is called:</p>
+  <label><input type="radio" name="q13" value="a"> Vector algebra</label><br>
+  <label><input type="radio" name="q13" value="b"> Matrix mechanics</label><br>
+  <label><input type="radio" name="q13" value="c" data-correct="true"> Calculus of variations</label><br>
+  <label><input type="radio" name="q13" value="d"> Dimensional analysis</label>
+</div>
+
+<!-- ==================== QUESTION 14 ==================== -->
+<div class="question">
+  <p><strong>Q14.</strong> The Euler-Lagrange equation for a functional involving \(f(y,y',x)\) is:</p>
+  <label><input type="radio" name="q14" value="a"> \(\displaystyle \frac{\partial f}{\partial y}+\frac{d}{dx}\frac{\partial f}{\partial y'}=0\)</label><br>
+  <label><input type="radio" name="q14" value="b" data-correct="true"> \(\displaystyle \frac{\partial f}{\partial y}-\frac{d}{dx}\left(\frac{\partial f}{\partial y'}\right)=0\)</label><br>
+  <label><input type="radio" name="q14" value="c"> \(\displaystyle \frac{df}{dx}=0\)</label><br>
+  <label><input type="radio" name="q14" value="d"> \(\displaystyle \frac{\partial f}{\partial y'}=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 15 ==================== -->
+<div class="question">
+  <p><strong>Q15.</strong> Applying Hamilton's principle to \(S=\int L\,dt\) gives:</p>
+  <label><input type="radio" name="q15" value="a"> Newton's law of gravitation directly</label><br>
+  <label><input type="radio" name="q15" value="b" data-correct="true"> Lagrange's equations of motion</label><br>
+  <label><input type="radio" name="q15" value="c"> Kepler's third law only</label><br>
+  <label><input type="radio" name="q15" value="d"> Hooke's law only</label>
+</div>
+
+<!-- ==================== QUESTION 16 ==================== -->
+<div class="question">
+  <p><strong>Q16.</strong> Lagrange's equation obtained from the variational principle is:</p>
+  <label><input type="radio" name="q16" value="a"> \(\displaystyle \frac{d}{dt}\frac{\partial L}{\partial q_i}-\frac{\partial L}{\partial\dot q_i}=0\)</label><br>
+  <label><input type="radio" name="q16" value="b" data-correct="true"> \(\displaystyle \frac{d}{dt}\left(\frac{\partial L}{\partial\dot q_i}\right)-\frac{\partial L}{\partial q_i}=0\)</label><br>
+  <label><input type="radio" name="q16" value="c"> \(\displaystyle \frac{dL}{dt}=0\)</label><br>
+  <label><input type="radio" name="q16" value="d"> \(\displaystyle \frac{\partial L}{\partial t}=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 17 ==================== -->
+<div class="question">
+  <p><strong>Q17.</strong> In deriving Lagrange's equation from Hamilton's principle, integration by parts is used on the term containing:</p>
+  <label><input type="radio" name="q17" value="a"> \(\delta q_i\)</label><br>
+  <label><input type="radio" name="q17" value="b" data-correct="true"> \(\delta\dot q_i\)</label><br>
+  <label><input type="radio" name="q17" value="c"> \(V\)</label><br>
+  <label><input type="radio" name="q17" value="d"> \(T\) only</label>
+</div>
+
+<!-- ==================== QUESTION 18 ==================== -->
+<div class="question">
+  <p><strong>Q18.</strong> The generalized momentum conjugate to \(q_i\) is:</p>
+  <label><input type="radio" name="q18" value="a"> \(\displaystyle p_i=\frac{\partial L}{\partial q_i}\)</label><br>
+  <label><input type="radio" name="q18" value="b" data-correct="true"> \(\displaystyle p_i=\frac{\partial L}{\partial\dot q_i}\)</label><br>
+  <label><input type="radio" name="q18" value="c"> \(p_i=mq_i\)</label><br>
+  <label><input type="radio" name="q18" value="d"> \(p_i=Lq_i\)</label>
+</div>
+
+<!-- ==================== QUESTION 19 ==================== -->
+<div class="question">
+  <p><strong>Q19.</strong> The Hamiltonian is obtained from the Lagrangian through:</p>
+  <label><input type="radio" name="q19" value="a"> Fourier transformation</label><br>
+  <label><input type="radio" name="q19" value="b"> Coordinate rotation</label><br>
+  <label><input type="radio" name="q19" value="c" data-correct="true"> Legendre transformation</label><br>
+  <label><input type="radio" name="q19" value="d"> Laplace transformation</label>
+</div>
+
+<!-- ==================== QUESTION 20 ==================== -->
+<div class="question">
+  <p><strong>Q20.</strong> The Hamiltonian is defined by:</p>
+  <label><input type="radio" name="q20" value="a"> \(H=L-\sum_i p_i\dot q_i\)</label><br>
+  <label><input type="radio" name="q20" value="b" data-correct="true"> \(\displaystyle H=\sum_i p_i\dot q_i-L\)</label><br>
+  <label><input type="radio" name="q20" value="c"> \(H=T-V\)</label><br>
+  <label><input type="radio" name="q20" value="d"> \(H=LV\)</label>
+</div>
+
+<!-- ==================== QUESTION 21 ==================== -->
+<div class="question">
+  <p><strong>Q21.</strong> For many ordinary conservative mechanical systems, the Hamiltonian is equal to:</p>
+  <label><input type="radio" name="q21" value="a"> \(T-V\)</label><br>
+  <label><input type="radio" name="q21" value="b" data-correct="true"> \(T+V\)</label><br>
+  <label><input type="radio" name="q21" value="c"> \(T/V\)</label><br>
+  <label><input type="radio" name="q21" value="d"> \(V-T\)</label>
+</div>
+
+<!-- ==================== QUESTION 22 ==================== -->
+<div class="question">
+  <p><strong>Q22.</strong> Hamilton's first canonical equation is:</p>
+  <label><input type="radio" name="q22" value="a"> \(\displaystyle \dot q_i=-\frac{\partial H}{\partial p_i}\)</label><br>
+  <label><input type="radio" name="q22" value="b" data-correct="true"> \(\displaystyle \dot q_i=\frac{\partial H}{\partial p_i}\)</label><br>
+  <label><input type="radio" name="q22" value="c"> \(\displaystyle \dot q_i=\frac{\partial H}{\partial q_i}\)</label><br>
+  <label><input type="radio" name="q22" value="d"> \(\dot q_i=H\)</label>
+</div>
+
+<!-- ==================== QUESTION 23 ==================== -->
+<div class="question">
+  <p><strong>Q23.</strong> Hamilton's second canonical equation is:</p>
+  <label><input type="radio" name="q23" value="a"> \(\displaystyle \dot p_i=\frac{\partial H}{\partial q_i}\)</label><br>
+  <label><input type="radio" name="q23" value="b" data-correct="true"> \(\displaystyle \dot p_i=-\frac{\partial H}{\partial q_i}\)</label><br>
+  <label><input type="radio" name="q23" value="c"> \(\displaystyle \dot p_i=\frac{\partial H}{\partial p_i}\)</label><br>
+  <label><input type="radio" name="q23" value="d"> \(\dot p_i=0\) always</label>
+</div>
+
+<!-- ==================== QUESTION 24 ==================== -->
+<div class="question">
+  <p><strong>Q24.</strong> A system with \(n\) degrees of freedom has how many first-order Hamilton equations?</p>
+  <label><input type="radio" name="q24" value="a"> \(n/2\)</label><br>
+  <label><input type="radio" name="q24" value="b"> \(n\)</label><br>
+  <label><input type="radio" name="q24" value="c" data-correct="true"> \(2n\)</label><br>
+  <label><input type="radio" name="q24" value="d"> \(n^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 25 ==================== -->
+<div class="question">
+  <p><strong>Q25.</strong> Hamiltonian mechanics describes the state of a system using:</p>
+  <label><input type="radio" name="q25" value="a"> \(q_i\) only</label><br>
+  <label><input type="radio" name="q25" value="b"> \(p_i\) only</label><br>
+  <label><input type="radio" name="q25" value="c" data-correct="true"> Generalized coordinates \(q_i\) and conjugate momenta \(p_i\)</label><br>
+  <label><input type="radio" name="q25" value="d"> Forces only</label>
+</div>
+
+<!-- ==================== QUESTION 26 ==================== -->
+<div class="question">
+  <p><strong>Q26.</strong> The space whose coordinates are \((q_i,p_i)\) is called:</p>
+  <label><input type="radio" name="q26" value="a"> Configuration space</label><br>
+  <label><input type="radio" name="q26" value="b"> Real space</label><br>
+  <label><input type="radio" name="q26" value="c" data-correct="true"> Phase space</label><br>
+  <label><input type="radio" name="q26" value="d"> Euclidean plane only</label>
+</div>
+
+<!-- ==================== QUESTION 27 ==================== -->
+<div class="question">
+  <p><strong>Q27.</strong> The phase space of a system with 3 degrees of freedom has dimension:</p>
+  <label><input type="radio" name="q27" value="a"> 2</label><br>
+  <label><input type="radio" name="q27" value="b"> 3</label><br>
+  <label><input type="radio" name="q27" value="c" data-correct="true"> 6</label><br>
+  <label><input type="radio" name="q27" value="d"> 9</label>
+</div>
+
+<!-- ==================== QUESTION 28 ==================== -->
+<div class="question">
+  <p><strong>Q28.</strong> If the Hamiltonian has no explicit time dependence, then:</p>
+  <label><input type="radio" name="q28" value="a"> \(H=0\)</label><br>
+  <label><input type="radio" name="q28" value="b" data-correct="true"> \(H\) is conserved</label><br>
+  <label><input type="radio" name="q28" value="c"> Momentum must be zero</label><br>
+  <label><input type="radio" name="q28" value="d"> Position must be constant</label>
+</div>
+
+<!-- ==================== QUESTION 29 ==================== -->
+<div class="question">
+  <p><strong>Q29.</strong> Newtonian mechanics is primarily formulated in terms of:</p>
+  <label><input type="radio" name="q29" value="a" data-correct="true"> Forces and accelerations</label><br>
+  <label><input type="radio" name="q29" value="b"> Action only</label><br>
+  <label><input type="radio" name="q29" value="c"> Phase space only</label><br>
+  <label><input type="radio" name="q29" value="d"> Hamiltonian only</label>
+</div>
+
+<!-- ==================== QUESTION 30 ==================== -->
+<div class="question">
+  <p><strong>Q30.</strong> Lagrangian mechanics is primarily based on:</p>
+  <label><input type="radio" name="q30" value="a"> \(F=ma\) alone</label><br>
+  <label><input type="radio" name="q30" value="b" data-correct="true"> The Lagrangian and generalized coordinates</label><br>
+  <label><input type="radio" name="q30" value="c"> Momentum only</label><br>
+  <label><input type="radio" name="q30" value="d"> Torque only</label>
+</div>
+
+<!-- ==================== QUESTION 31 ==================== -->
+<div class="question">
+  <p><strong>Q31.</strong> Hamiltonian mechanics replaces \(n\) second-order Lagrange equations by:</p>
+  <label><input type="radio" name="q31" value="a"> One second-order equation</label><br>
+  <label><input type="radio" name="q31" value="b" data-correct="true"> \(2n\) first-order equations</label><br>
+  <label><input type="radio" name="q31" value="c"> \(n^2\) algebraic equations</label><br>
+  <label><input type="radio" name="q31" value="d"> Three vector equations</label>
+</div>
+
+<!-- ==================== QUESTION 32 ==================== -->
+<div class="question">
+  <p><strong>Q32.</strong> For a free particle in one dimension, \(H=p^2/(2m)\). Hamilton's first equation gives:</p>
+  <label><input type="radio" name="q32" value="a"> \(\dot x=p^2/m\)</label><br>
+  <label><input type="radio" name="q32" value="b" data-correct="true"> \(\dot x=p/m\)</label><br>
+  <label><input type="radio" name="q32" value="c"> \(\dot x=-p/m\)</label><br>
+  <label><input type="radio" name="q32" value="d"> \(\dot x=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 33 ==================== -->
+<div class="question">
+  <p><strong>Q33.</strong> The Hamiltonian of a one-dimensional linear harmonic oscillator is:</p>
+  <label><input type="radio" name="q33" value="a"> \(\displaystyle H=\frac{p^2}{2m}-\frac12kx^2\)</label><br>
+  <label><input type="radio" name="q33" value="b" data-correct="true"> \(\displaystyle H=\frac{p^2}{2m}+\frac12kx^2\)</label><br>
+  <label><input type="radio" name="q33" value="c"> \(H=px\)</label><br>
+  <label><input type="radio" name="q33" value="d"> \(H=p^2+kx^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 34 ==================== -->
+<div class="question">
+  <p><strong>Q34.</strong> For \(H=p^2/(2m)+kx^2/2\), Hamilton's first equation gives:</p>
+  <label><input type="radio" name="q34" value="a"> \(\dot x=kx\)</label><br>
+  <label><input type="radio" name="q34" value="b" data-correct="true"> \(\dot x=p/m\)</label><br>
+  <label><input type="radio" name="q34" value="c"> \(\dot x=-kx\)</label><br>
+  <label><input type="radio" name="q34" value="d"> \(\dot x=-p/m\)</label>
+</div>
+
+<!-- ==================== QUESTION 35 ==================== -->
+<div class="question">
+  <p><strong>Q35.</strong> For the same harmonic oscillator, Hamilton's second equation gives:</p>
+  <label><input type="radio" name="q35" value="a"> \(\dot p=kx\)</label><br>
+  <label><input type="radio" name="q35" value="b" data-correct="true"> \(\dot p=-kx\)</label><br>
+  <label><input type="radio" name="q35" value="c"> \(\dot p=p/m\)</label><br>
+  <label><input type="radio" name="q35" value="d"> \(\dot p=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 36 ==================== -->
+<div class="question">
+  <p><strong>Q36.</strong> Combining the two Hamilton equations for the harmonic oscillator gives:</p>
+  <label><input type="radio" name="q36" value="a"> \(m\ddot x-kx=0\)</label><br>
+  <label><input type="radio" name="q36" value="b" data-correct="true"> \(m\ddot x+kx=0\)</label><br>
+  <label><input type="radio" name="q36" value="c"> \(m\dot x+kx=0\)</label><br>
+  <label><input type="radio" name="q36" value="d"> \(m\ddot x=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 37 ==================== -->
+<div class="question">
+  <p><strong>Q37.</strong> For a harmonic oscillator with \(m=2\,\text{kg}\), \(k=8\,\text{N/m}\), its angular frequency is:</p>
+  <label><input type="radio" name="q37" value="a"> \(1\,\text{rad/s}\)</label><br>
+  <label><input type="radio" name="q37" value="b" data-correct="true"> \(2\,\text{rad/s}\)</label><br>
+  <label><input type="radio" name="q37" value="c"> \(4\,\text{rad/s}\)</label><br>
+  <label><input type="radio" name="q37" value="d"> \(8\,\text{rad/s}\)</label>
+</div>
+
+<!-- ==================== QUESTION 38 ==================== -->
+<div class="question">
+  <p><strong>Q38.</strong> For a simple pendulum of mass \(m\) and length \(l\), the momentum conjugate to \(\theta\) is:</p>
+  <label><input type="radio" name="q38" value="a"> \(p_\theta=m\dot\theta\)</label><br>
+  <label><input type="radio" name="q38" value="b"> \(p_\theta=ml\dot\theta\)</label><br>
+  <label><input type="radio" name="q38" value="c" data-correct="true"> \(p_\theta=ml^2\dot\theta\)</label><br>
+  <label><input type="radio" name="q38" value="d"> \(p_\theta=mgl\)</label>
+</div>
+
+<!-- ==================== QUESTION 39 ==================== -->
+<div class="question">
+  <p><strong>Q39.</strong> Taking the lowest point as zero potential energy, the Hamiltonian of a simple pendulum is:</p>
+  <label><input type="radio" name="q39" value="a"> \(\displaystyle H=\frac{p_\theta^2}{2ml^2}-mgl(1-\cos\theta)\)</label><br>
+  <label><input type="radio" name="q39" value="b" data-correct="true"> \(\displaystyle H=\frac{p_\theta^2}{2ml^2}+mgl(1-\cos\theta)\)</label><br>
+  <label><input type="radio" name="q39" value="c"> \(H=p_\theta+mgl\)</label><br>
+  <label><input type="radio" name="q39" value="d"> \(H=p_\theta^2/2m\)</label>
+</div>
+
+<!-- ==================== QUESTION 40 ==================== -->
+<div class="question">
+  <p><strong>Q40.</strong> Hamilton's equation for \(\dot\theta\) of a simple pendulum gives:</p>
+  <label><input type="radio" name="q40" value="a"> \(\dot\theta=p_\theta/m\)</label><br>
+  <label><input type="radio" name="q40" value="b" data-correct="true"> \(\displaystyle \dot\theta=\frac{p_\theta}{ml^2}\)</label><br>
+  <label><input type="radio" name="q40" value="c"> \(\dot\theta=-mgl\sin\theta\)</label><br>
+  <label><input type="radio" name="q40" value="d"> \(\dot\theta=ml^2p_\theta\)</label>
+</div>
+
+<!-- ==================== QUESTION 41 ==================== -->
+<div class="question">
+  <p><strong>Q41.</strong> Hamilton's equation for the conjugate momentum of the simple pendulum gives:</p>
+  <label><input type="radio" name="q41" value="a"> \(\dot p_\theta=mgl\sin\theta\)</label><br>
+  <label><input type="radio" name="q41" value="b" data-correct="true"> \(\dot p_\theta=-mgl\sin\theta\)</label><br>
+  <label><input type="radio" name="q41" value="c"> \(\dot p_\theta=p_\theta/ml^2\)</label><br>
+  <label><input type="radio" name="q41" value="d"> \(\dot p_\theta=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 42 ==================== -->
+<div class="question">
+  <p><strong>Q42.</strong> Combining Hamilton's equations for a simple pendulum gives:</p>
+  <label><input type="radio" name="q42" value="a"> \(\ddot\theta-\frac{g}{l}\sin\theta=0\)</label><br>
+  <label><input type="radio" name="q42" value="b" data-correct="true"> \(\ddot\theta+\frac{g}{l}\sin\theta=0\)</label><br>
+  <label><input type="radio" name="q42" value="c"> \(\ddot\theta+\frac{g}{l}\cos\theta=0\)</label><br>
+  <label><input type="radio" name="q42" value="d"> \(\ddot\theta=0\)</label>
+</div>
+
+<!-- ==================== QUESTION 43 ==================== -->
+<div class="question">
+  <p><strong>Q43.</strong> For small oscillations of a pendulum, the Hamiltonian approximately becomes:</p>
+  <label><input type="radio" name="q43" value="a"> \(\displaystyle H=\frac{p_\theta^2}{2ml^2}-\frac12mgl\theta^2\)</label><br>
+  <label><input type="radio" name="q43" value="b" data-correct="true"> \(\displaystyle H=\frac{p_\theta^2}{2ml^2}+\frac12mgl\theta^2\)</label><br>
+  <label><input type="radio" name="q43" value="c"> \(H=mgl\theta\)</label><br>
+  <label><input type="radio" name="q43" value="d"> \(H=p_\theta\theta\)</label>
+</div>
+
+<!-- ==================== QUESTION 44 ==================== -->
+<div class="question">
+  <p><strong>Q44.</strong> For planetary motion in polar coordinates, the kinetic energy of a particle of mass \(m\) is:</p>
+  <label><input type="radio" name="q44" value="a"> \(\frac12m(\dot r^2+r\dot\theta^2)\)</label><br>
+  <label><input type="radio" name="q44" value="b" data-correct="true"> \(\frac12m(\dot r^2+r^2\dot\theta^2)\)</label><br>
+  <label><input type="radio" name="q44" value="c"> \(\frac12mr^2\dot r^2\)</label><br>
+  <label><input type="radio" name="q44" value="d"> \(\frac12m\dot\theta^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 45 ==================== -->
+<div class="question">
+  <p><strong>Q45.</strong> The gravitational potential energy for a planet of mass \(m\) moving around a much heavier mass \(M\) is:</p>
+  <label><input type="radio" name="q45" value="a"> \(\displaystyle +\frac{GMm}{r}\)</label><br>
+  <label><input type="radio" name="q45" value="b" data-correct="true"> \(\displaystyle -\frac{GMm}{r}\)</label><br>
+  <label><input type="radio" name="q45" value="c"> \(GMmr\)</label><br>
+  <label><input type="radio" name="q45" value="d"> \(-GMmr^2\)</label>
+</div>
+
+<!-- ==================== QUESTION 46 ==================== -->
+<div class="question">
+  <p><strong>Q46.</strong> The Hamiltonian for planetary motion in a plane is:</p>
+  <label><input type="radio" name="q46" value="a"> \(\displaystyle H=\frac{p_r^2}{2m}+\frac{p_\theta^2}{2mr^2}+\frac{GMm}{r}\)</label><br>
+  <label><input type="radio" name="q46" value="b" data-correct="true"> \(\displaystyle H=\frac{p_r^2}{2m}+\frac{p_\theta^2}{2mr^2}-\frac{GMm}{r}\)</label><br>
+  <label><input type="radio" name="q46" value="c"> \(\displaystyle H=\frac{p_r^2+p_\theta^2}{2m}\)</label><br>
+  <label><input type="radio" name="q46" value="d"> \(H=p_rp_\theta-GMm/r\)</label>
+</div>
+
+<!-- ==================== QUESTION 47 ==================== -->
+<div class="question">
+  <p><strong>Q47.</strong> In the Hamiltonian for planetary motion, the coordinate \(\theta\) does not explicitly appear. Therefore:</p>
+  <label><input type="radio" name="q47" value="a"> \(r\) is constant</label><br>
+  <label><input type="radio" name="q47" value="b"> \(p_r\) is always zero</label><br>
+  <label><input type="radio" name="q47" value="c" data-correct="true"> \(p_\theta\) is conserved</label><br>
+  <label><input type="radio" name="q47" value="d"> The energy is zero</label>
+</div>
+
+<!-- ==================== QUESTION 48 ==================== -->
+<div class="question">
+  <p><strong>Q48.</strong> The conserved momentum \(p_\theta\) in planetary motion represents:</p>
+  <label><input type="radio" name="q48" value="a"> Linear momentum</label><br>
+  <label><input type="radio" name="q48" value="b"> Radial momentum</label><br>
+  <label><input type="radio" name="q48" value="c" data-correct="true"> Angular momentum</label><br>
+  <label><input type="radio" name="q48" value="d"> Potential energy</label>
+</div>
+
+<!-- ==================== QUESTION 49 ==================== -->
+<div class="question">
+  <p><strong>Q49.</strong> A particle of mass \(2\,\text{kg}\) has momentum \(6\,\text{kg m/s}\) and moves in a region where \(V=5\,\text{J}\). Its Hamiltonian \(H=p^2/(2m)+V\) is:</p>
+  <label><input type="radio" name="q49" value="a"> \(9\,\text{J}\)</label><br>
+  <label><input type="radio" name="q49" value="b"> \(11\,\text{J}\)</label><br>
+  <label><input type="radio" name="q49" value="c" data-correct="true"> \(14\,\text{J}\)</label><br>
+  <label><input type="radio" name="q49" value="d"> \(23\,\text{J}\)</label>
+</div>
+
+<!-- ==================== QUESTION 50 ==================== -->
+<div class="question">
+  <p><strong>Q50.</strong> Which statement best compares Newtonian, Lagrangian and Hamiltonian mechanics?</p>
+  <label><input type="radio" name="q50" value="a"> Only Newtonian mechanics gives correct equations of motion</label><br>
+  <label><input type="radio" name="q50" value="b"> Lagrangian mechanics is valid only for oscillators</label><br>
+  <label><input type="radio" name="q50" value="c"> Hamiltonian mechanics is valid only for planetary motion</label><br>
+  <label><input type="radio" name="q50" value="d" data-correct="true"> They are equivalent formulations of classical mechanics, expressed using different variables and methods</label>
+</div>
+<!-- Repeat similar structure for Q61 to Q70 or let me know if you'd like me to complete the remaining ones too -->
+
+   <!-- ===================== ANSWER 56 ===================== -->  
+</form>
+<!-- Quiz form content here (omitted for brevity) -->
+
+  <button type="button" onclick="downloadAndSendResults()">Submit & Email</button>
+  <button type="button" onclick="downloadCSVLocally()">Download CSV Locally</button>
+
+  <div class="result" id="resultArea"></div>
+
+  <script>
+    function calculateMarks(totalQuestions) {
+      let score = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        for (const opt of options) {
+          if (opt.checked && opt.getAttribute("data-correct") === "true") {
+            score++;
+          }
+        }
+      }
+      return score;
+    }
+    function generateCSVBlob() {
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const roll = document.getElementById("rollNumber").value;
+      const Qtitle = document.getElementById("examtitle").value;
+
+
+      if (!name || !email || !roll||!Qtitle) {
+        alert("Please fill in all student details.");
+        return null;
+      }
+
+      let data = [["Name", name],  ["", ""],["Email", email],  ["", ""],["Roll Number", roll],  ["", ""],["Exam Title", Qtitle],["", ""]];
+      const totalQuestions = 50;  // Update as needed
+      const score = calculateMarks(totalQuestions);
+      for (let i = 1; i <= totalQuestions; i++) {
+        const options = document.getElementsByName("q" + i);
+        let selected = "Not Answered";
+        for (const opt of options) {
+          if (opt.checked) selected = opt.value;
+        }
+        data.push(["Q" + i, selected]);
+      }
+
+      const csvContent = data.map(row => row.join(",")).join("\r\n");
+      //return new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+      return {
+        blob: new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }),
+          scoreText: `${score} / ${totalQuestions}`
+      };
+
+    }
+
+    function blobToBase64(blob, callback) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64data = reader.result.split(',')[1];
+        callback(base64data);
+      };
+      reader.readAsDataURL(blob);
+    }
+    function downloadAndSendResults() {
+      //const blob = generateCSVBlob();
+      const result = generateCSVBlob();
+if    (!result) return;
+
+      const { blob, scoreText } = result;
+
+      if (!blob) return;
+
+      const name = document.getElementById("studentName").value;
+      const roll = document.getElementById("rollNumber").value;
+      const smail = document.getElementById("studentEmail").value;
+      const stitle = document.getElementById("examtitle").value;
+      const reader = new FileReader();
+      reader.onload = function () {
+      const base64WithHeader = reader.result; // Full "data:text/csv;base64,..."
+          
+    emailjs.send("asdjoseqwe", "template_uwtu4bj", {
+      to_email: "josemathew@thecochincollege.edu.in",
+     message: `Student Response CSV from ${name} (${roll}), Email: ${smail}  Score: ${scoreText} Title: ${stitle}`,
+
+    })
+    .then(response => alert("✅ Email sent!"))
+    .catch(error => alert("❌ Failed to send: " + error.text));
+  };
+
+  reader.readAsDataURL(blob);  // ✅ Keep full base64 URI with header
+}
+
+   function downloadCSVLocally() {
+  const result = generateCSVBlob();
+  if (!result) return;
+
+  const { blob } = result;
+
+  saveAs(blob, "Answer_Sheet.csv");
+}
+
+  </script>
+  <h3>After completing the Quiz press Submit and Email</h3>
+  <h3>Please download the csv file and send to the email: josemathew@thecochincollege.edu.in</h3>
+</body>
+</html>
